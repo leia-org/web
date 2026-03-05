@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Tutorial: How to Create and Customize Your Own LEIA
+# How to Create and Customize Your Own LEIA
 
 Follow this guide to learn how to duplicate an existing LEIA, modify its problem and persona, and finally, create and test your new LEIA.
 
