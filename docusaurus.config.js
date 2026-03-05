@@ -48,17 +48,6 @@ const config = {
           // Enlaces "Edit this page" apuntando a tu repo
           editUrl: 'https://github.com/leia-org/leia-docs/tree/main/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          editUrl: 'https://github.com/leia-org/leia-docs/tree/main/',
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -124,7 +113,6 @@ const config = {
           {
             title: 'More',
             items: [
-              { label: 'Blog', to: '/blog' },
               { label: 'GitHub', href: 'https://github.com/leia-org/leia-docs' },
             ],
           },
