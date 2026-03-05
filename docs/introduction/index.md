@@ -39,7 +39,7 @@ The general workflow of LEIA follows four main steps:
 
 ### Workflow Diagram
 
-![Worflow Diagram](./img/workflow.svg)
+![Worflow Diagram](/img/introduction/workflow.svg)
 
 ---
 
@@ -48,20 +48,20 @@ The general workflow of LEIA follows four main steps:
 ### LEIA creation/design:
 Instructors do this task  using the [LEIA Designer](http://designer.leia.ovh/). Using this application instructors can view a listing of existing LEIAS:
 
-![LEIAs listing](./img/LEIA-designer-LEIA-listing.png)
+![LEIAs listing](/img/introduction/LEIA-designer-LEIA-listing.png)
 
 From the listing instructors can create new LEIAs using one of the elements in the listing as starting point:
 
-![LEIAs creation](./img/LEIA-designer-LEIA-DesignFromThis.png)
+![LEIAs creation](/img/introduction/LEIA-designer-LEIA-DesignFromThis.png)
 In the LEIA creation interface users can define:
    1. Instructors choose from an existing proces, problem and persona.
-![LEIAs component selection](./img/LEIA-designer-Step1.png)
+![LEIAs component selection](/img/introduction/LEIA-designer-Step1.png)
    3. [Optional] Instructors customize the problem or/and the persona.
-![LEIAs customization](./img/LEIA-designer-Step2.png)
+![LEIAs customization](/img/introduction/LEIA-designer-Step2.png)
    5. [Optional] Instructors can test de LEIA and interact with the chat to check the behaviour
-![LEIAs testing](./img/LEIA-designer-LeiaTesting.png)
+![LEIAs testing](/img/introduction/LEIA-designer-LeiaTesting.png)
    7. Instructors confirm the status and save the LEIA as private, and can ask admins (by e-mail) to make it public (after a review process).
-![LEIAs customization](./img/LEIA-designer-Step3.png)
+![LEIAs customization](/img/introduction/LEIA-designer-Step3.png)
 
 
 ### Experiment configuration
@@ -78,7 +78,7 @@ Instructors define:
   - Replicable sessions with unique codes.  
   - Selection of the LLM provider.
 
-![Excercises Listing Interface](./img/ExercisesListingInterface.png)
+![Excercises Listing Interface](/img/introduction/ExercisesListingInterface.png)
 
 
 ---
@@ -93,7 +93,7 @@ The instructor dashboard allows:
   - LEIA configuration  
   - Submission and evaluation settings  
 
-![Exercise Details Interface](./img/ExerciseDetailsInterface.png)
+![Exercise Details Interface](/img/introduction/ExerciseDetailsInterface.png)
 ---
 
 ## 3. Student Experience
@@ -105,7 +105,7 @@ Students log in using:
 - **Email address**, or  
 - **System-provided code** (to ensure anonymity if required).  
 
-![Student Login](./img/st_login_1.webp)
+![Student Login](/img/introduction/st_login_1.webp)
 ---
 
 ### Interaction with LEIA
@@ -114,7 +114,7 @@ Students log in using:
 - They can ask clarifying questions, gather requirements, and iteratively refine their understanding.  
 - If the session is replicable, they can leave and resume it later.  
 
-![Student Chat](./img/st_chat_1.webp)
+![Student Chat](/img/introduction/st_chat_1.webp)
 
 
 ---
@@ -127,7 +127,7 @@ Students log in using:
   - Suggests improvements.  
   - Allows students to re-enter the session and refine their work.  
 
-![Student Evaluation](./img/st_eval.webp)
+![Student Evaluation](/img/introduction/st_eval.webp)
 
 ---
 

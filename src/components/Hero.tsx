@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
               </button>
 
               <a
-                href="/docs/intro"
+                href="/docs"
                 className="modern-button modern-button--outline w-full sm:w-auto"
               >
                 Read the Docs

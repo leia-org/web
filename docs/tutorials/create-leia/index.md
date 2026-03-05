@@ -10,7 +10,7 @@ Follow this guide to learn how to duplicate an existing LEIA, modify its problem
 
 ### **Step 1: Duplicate an Existing LEIA**
 
-![Step 1: Duplicate LEIA](./pizza-example/Step1.PNG)
+![Step 1: Duplicate LEIA](/img/tutorials/create-leia/Step1.PNG)
 
 To begin, we will not create a LEIA from scratch but will instead use an existing one as a template.
 
@@ -22,9 +22,9 @@ To begin, we will not create a LEIA from scratch but will instead use an existin
 
 ### **Step 2: Edit the "Problem"**
 
-![Step 2: Edit the Problem](./pizza-example/Step2.PNG)
+![Step 2: Edit the Problem](/img/tutorials/create-leia/Step2.PNG)
 ⬇️
-![Step 2: Problem Details](./pizza-example/Step3.PNG)
+![Step 2: Problem Details](/img/tutorials/create-leia/Step3.PNG)
 
 Now, let's define the game's rules and solution.
 
@@ -67,9 +67,9 @@ Now, let's define the game's rules and solution.
 
 ### **Step 3: Edit the "Persona"**
 
-![Step 3: Edit the Persona](./pizza-example/Step4.PNG)
+![Step 3: Edit the Persona](/img/tutorials/create-leia/Step4.PNG)
 ⬇️
-![Step 3: Persona Details](./pizza-example/Step5.PNG)
+![Step 3: Persona Details](/img/tutorials/create-leia/Step5.PNG)
 
 Next, we will customize the character the user will interact with.
 
@@ -102,7 +102,7 @@ Next, we will customize the character the user will interact with.
 
 ### **Step 4: Name and Save Your LEIA**
 
-![Step 4: Create and Name](./pizza-example/Step6.PNG)
+![Step 4: Create and Name](/img/tutorials/create-leia/Step6.PNG)
 
 You are at the final configuration step, where you will assign the final names to all components.
 
@@ -117,7 +117,7 @@ You are at the final configuration step, where you will assign the final names t
 
 ### **Step 5: Test Your Creation!**
 
-![Step 5: LEIA Created](./pizza-example/Step7.PNG)
+![Step 5: LEIA Created](/img/tutorials/create-leia/Step7.PNG)
 
 Congratulations, your LEIA is now created and ready to use!
 
@@ -126,7 +126,7 @@ Congratulations, your LEIA is now created and ready to use!
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" /></svg>, marked with the number 15).
 * A chat window will open where "Timmy" will greet you in the pirate and mysterious style you defined, ready to play the game.
 
-![Step 5: Final Chat Result](./pizza-example/Step8.PNG)
+![Step 5: Final Chat Result](/img/tutorials/create-leia/Step8.PNG)
 
 ---
 
