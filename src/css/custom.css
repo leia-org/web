@@ -394,6 +394,64 @@ html[data-theme='dark'] .modern-hamburger:hover {
   box-shadow: inset 0 -2px 0 0 rgba(255, 255, 255, 0.05) !important;
 }
 
+/* --- Tags & Last Updated metadata --- */
+.theme-last-updated {
+  font-size: 0.82rem;
+  color: #64748b;
+  margin-top: 2rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='dark'] .theme-last-updated {
+  color: #94a3b8;
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Tag pills on doc pages — scoped to doc footer to avoid fighting tag cloud inline styles */
+.theme-doc-footer [class*="tag_"],
+[class*="tags_"] [class*="tag_"] {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.25rem 0.8rem;
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(37, 99, 235, 0.06));
+  color: #7c3aed;
+  border: 1px solid rgba(124, 58, 237, 0.25);
+  box-shadow: 0 1px 3px rgba(124, 58, 237, 0.08), inset 0 1px 0 rgba(255,255,255,0.6);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none !important;
+}
+
+[data-theme='dark'] .theme-doc-footer [class*="tag_"],
+[data-theme='dark'] [class*="tags_"] [class*="tag_"] {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.14), rgba(96, 165, 250, 0.08));
+  color: #c4b5fd;
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.theme-doc-footer [class*="tag_"]:hover,
+[class*="tags_"] [class*="tag_"]:hover {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(37, 99, 235, 0.12));
+  border-color: rgba(124, 58, 237, 0.5);
+  box-shadow: 0 3px 10px rgba(124, 58, 237, 0.18), inset 0 1px 0 rgba(255,255,255,0.6);
+  transform: translateY(-1px);
+  color: #6d28d9;
+  text-decoration: none !important;
+}
+
+[data-theme='dark'] .theme-doc-footer [class*="tag_"]:hover,
+[data-theme='dark'] [class*="tags_"] [class*="tag_"]:hover {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.25), rgba(96, 165, 250, 0.15));
+  border-color: rgba(139, 92, 246, 0.55);
+  box-shadow: 0 3px 10px rgba(139, 92, 246, 0.25), inset 0 1px 0 rgba(255,255,255,0.05);
+  color: #ddd6fe;
+}
+
 /* --- Force Mermaid Dark Mode Fallback --- */
 /* Docusaurus renders mermaid inside a div with class .docusaurus-mermaid-container */
 html[data-theme='dark'] .docusaurus-mermaid-container {
