@@ -22,6 +22,7 @@ export default function Home() {
           */}
         </main>
       </div>
+     <meta name="algolia-site-verification"  content="B4D79223C8F75C32" />
     </Layout>
   );
 }
