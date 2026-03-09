@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Contributing to LEIA
 
-Thank you for your interest in contributing to LEIA. Before diving into any individual repository, read this page — it explains how the system is structured, how services talk to each other, and how to run the full stack locally.
+Thank you for your interest in contributing to LEIA. Before diving into any individual repository, read this page. It explains how the system is structured, how services talk to each other, and how to run the full stack locally.
 
 ---
 
@@ -44,9 +44,9 @@ graph TD
 | Service | Role | Default Port | Auth method exposed | Database |
 | --- | --- | --- | --- | --- |
 | Designer Backend | REST API for LEIAs, personas, problems, experiments | `3000` | JWT + `x-api-key` | MongoDB (manager) |
-| Designer Frontend | Web UI for instructors to build LEIAs | `5173` | — | — |
+| Designer Frontend | Web UI for instructors to build LEIAs | `5173` | - | - |
 | Workbench Backend | REST API + Socket.IO for experiment sessions | `3001` | Admin secret, JWT, share token | MongoDB (workbench) |
-| Workbench Frontend | Web UI for participants and instructors | `8080` | — | — |
+| Workbench Frontend | Web UI for participants and instructors | `8080` | - | - |
 | Runner | AI session execution engine (LLM proxy) | `5002` | Bearer token | Redis |
 
 ---
@@ -70,7 +70,7 @@ Services authenticate with each other using shared pre-shared keys:
 
 ## Running the Full Stack Locally
 
-### 1 — Start infrastructure (MongoDB × 2 + Redis)
+### 1. Start infrastructure (MongoDB × 2 + Redis)
 
 ```bash
 # MongoDB for Designer Backend (port 27017)
@@ -83,7 +83,7 @@ docker run -d --name mongo-workbench -p 27018:27017 mongo:latest
 docker run -d --name redis -p 6379:6379 redis:latest
 ```
 
-### 2 — Configure and start the backends
+### 2. Configure and start the backends
 
 ```bash
 # Designer Backend
@@ -102,7 +102,7 @@ cp .env.example .env          # set OPENAI_API_KEY, RUNNER_KEY (same as Workbenc
 npm install && npm run dev    # http://localhost:5002
 ```
 
-### 3 — Start the frontends
+### 3. Start the frontends
 
 ```bash
 # Designer Frontend (new terminal)

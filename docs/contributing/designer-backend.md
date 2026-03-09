@@ -31,7 +31,7 @@ The backend service powering the LEIA Designer. It exposes a REST API for managi
 
 - **Node.js** >= 18.x (see `.nvmrc` for the pinned version)
 - **npm**
-- **MongoDB** running locally — or use the included Docker Compose setup
+- **MongoDB** running locally or use the included Docker Compose setup
 
 ---
 
@@ -82,17 +82,20 @@ Never commit your `.env` file. Change all default secrets (`JWT_SECRET`, `API_KE
 ## Local Development
 
 1. Fork and clone the repository:
+
    ```bash
    git clone <your-fork-url>
    cd leia-designer-backend
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Copy the environment template and configure your values:
+
    ```bash
    cp .env.example .env
    ```
@@ -100,6 +103,7 @@ Never commit your `.env` file. Change all default secrets (`JWT_SECRET`, `API_KE
 4. Make sure MongoDB is running locally (default port `27017`).
 
 5. Start the development server:
+
    ```bash
    npm run dev
    ```
@@ -111,19 +115,22 @@ Swagger documentation is served at `http://localhost:3000/api-docs`.
 
 ## Docker Development
 
-The repository includes a Docker Compose file that starts both MongoDB and the backend together — no local MongoDB installation required.
+The repository includes a Docker Compose file that starts both MongoDB and the backend together. No local MongoDB installation required.
 
 1. Copy the Docker environment file:
+
    ```bash
    cp .env.docker .env
    ```
 
 2. Start all services:
+
    ```bash
    docker-compose up -d
    ```
 
 3. To stop and remove the containers:
+
    ```bash
    docker-compose down
    ```
@@ -141,7 +148,7 @@ The Designer Backend implements role-based access control. Every authenticated u
 | `admin` | Full access to all resources and all users' data | Platform administrator |
 | `instructor` | Create and manage own experiments | Course instructor |
 | `advanced` | Create and modify personas, behaviours, problems, and LEIAs | Power user / researcher |
-| `read` | Read-only access — granted to service accounts via `API_KEY` | Workbench Backend |
+| `read` | Read-only access (granted to service accounts via `API_KEY`) | Workbench Backend |
 
 Service-to-service calls from the Workbench Backend use the `x-api-key` header instead of a JWT, and are treated as `read` role internally.
 
@@ -154,7 +161,7 @@ All routes are prefixed with `/api/v1`. JWT-authenticated endpoints require the 
 | Method | Endpoint | Auth | Description |
 | --- | --- | --- | --- |
 | `POST` | `/users` | JWT (admin) | Create a new user |
-| `POST` | `/auth/login` | — | Log in and receive a JWT |
+| `POST` | `/auth/login` | - | Log in and receive a JWT |
 | `GET` | `/personas` | JWT / API key | List all personas |
 | `POST` | `/personas` | JWT | Create a persona |
 | `GET` | `/personas/:id` | JWT / API key | Get a persona by ID |
@@ -196,11 +203,16 @@ All routes are prefixed with `/api/v1`. JWT-authenticated endpoints require the 
 ## Contributing
 
 1. Fork the repository and create a branch off `main`:
+
    ```bash
    git checkout -b feat/my-feature
    ```
 
-2. Follow the existing ESLint and Prettier configuration — do not disable rules without justification.
+2. Follow the existing ESLint and Prettier configuration.
+
+   :::danger
+   **Do not disable rules without justification.**
+   :::
 
 3. All new endpoints must include:
    - **Joi validation** for request bodies and query parameters.

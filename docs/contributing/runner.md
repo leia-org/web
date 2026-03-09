@@ -73,7 +73,7 @@ cp .env.example .env
 | `DEFAULT_MODEL` | `openai-assistant` | Default LLM model used for new sessions |
 
 :::warning
-`OPENAI_API_KEY` has no default — the server will not function without it. Change `RUNNER_KEY` from its default before any non-local deployment.
+`OPENAI_API_KEY` has no default value, which implies **the server will not function without it**. Change `RUNNER_KEY` from its default before any non-local deployment.
 :::
 
 ---
@@ -141,7 +141,7 @@ Authorization: Bearer <RUNNER_KEY>
 | `POST` | `/leias` | Create a new LEIA session instance |
 | `POST` | `/leias/:sessionId/messages` | Send a message to an active session |
 
-**`POST /leias` — request body:**
+**`POST /leias` request body:**
 
 ```json
 {
@@ -159,7 +159,7 @@ Authorization: Bearer <RUNNER_KEY>
 }
 ```
 
-**`POST /leias/:sessionId/messages` — request body:**
+**`POST /leias/:sessionId/messages` request body:**
 
 ```json
 { "message": "Hello, I need help with this problem." }

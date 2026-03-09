@@ -45,7 +45,8 @@ The general workflow of LEIA follows four main steps:
 
 ## 2. Instructor Experience
 
-### LEIA creation/design:
+### LEIA creation/design
+
 Instructors do this task  using the [LEIA Designer](http://designer.leia.ovh/). Using this application instructors can view a listing of existing LEIAS:
 
 ![LEIAs listing](./img/LEIA-designer-LEIA-listing.png)
@@ -54,15 +55,15 @@ From the listing instructors can create new LEIAs using one of the elements in t
 
 ![LEIAs creation](./img/LEIA-designer-LEIA-DesignFromThis.png)
 In the LEIA creation interface users can define:
+
    1. Instructors choose from an existing proces, problem and persona.
 ![LEIAs component selection](./img/LEIA-designer-Step1.png)
-   3. [Optional] Instructors customize the problem or/and the persona.
+   2. [Optional] Instructors customize the problem or/and the persona.
 ![LEIAs customization](./img/LEIA-designer-Step2.png)
-   5. [Optional] Instructors can test de LEIA and interact with the chat to check the behaviour
+   3. [Optional] Instructors can test de LEIA and interact with the chat to check the behaviour
 ![LEIAs testing](./img/LEIA-designer-LeiaTesting.png)
-   7. Instructors confirm the status and save the LEIA as private, and can ask admins (by e-mail) to make it public (after a review process).
+   4. Instructors confirm the status and save the LEIA as private, and can ask admins (by e-mail) to make it public (after a review process).
 ![LEIAs customization](./img/LEIA-designer-Step3.png)
-
 
 ### Experiment configuration
 
@@ -80,7 +81,6 @@ Instructors define:
 
 ![Excercises Listing Interface](./img/ExercisesListingInterface.png)
 
-
 ---
 
 ### Workbench dashboard
@@ -94,6 +94,7 @@ The instructor dashboard allows:
   - Submission and evaluation settings  
 
 ![Exercise Details Interface](./img/ExerciseDetailsInterface.png)
+
 ---
 
 ## 3. Student Experience
@@ -106,6 +107,7 @@ Students log in using:
 - **System-provided code** (to ensure anonymity if required).  
 
 ![Student Login](./img/st_login_1.webp)
+
 ---
 
 ### Interaction with LEIA
@@ -115,7 +117,6 @@ Students log in using:
 - If the session is replicable, they can leave and resume it later.  
 
 ![Student Chat](./img/st_chat_1.webp)
-
 
 ---
 

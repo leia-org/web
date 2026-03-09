@@ -6,7 +6,7 @@ sidebar_position: 2
 
 **Repository:** [leia-org/leia-infrastructure-docker](https://github.com/leia-org/leia-infrastructure-docker)
 
-Docker Compose configurations for orchestrating the complete LEIA system. The repository provides three deployment profiles — full stack, Designer-only, and Workbench-only — covering all 5 microservices, two MongoDB instances, and Redis.
+Docker Compose configurations for orchestrating the complete LEIA system. The repository provides three deployment profiles (full stack, Designer-only, and Workbench-only) covering all 5 microservices, two MongoDB instances, and Redis.
 
 ---
 
@@ -37,7 +37,7 @@ Inside a running Compose stack, services communicate with each other via their c
 | `workbench-frontend` | `workbench-backend` | `http://workbench-backend:80` | JWT / admin secret / share token |
 | `workbench-backend` | `designer-backend` | `http://designer-backend:80` | `x-api-key: <DESIGNER_BACKEND_KEY>` |
 | `workbench-backend` | `runner` | `http://runner:80` | `Authorization: Bearer <RUNNER_KEY>` |
-| `runner` | `redis` | `redis://redis:6379` | — |
+| `runner` | `redis` | `redis://redis:6379` | - |
 | `designer-backend` | `mongodb-designer` | `mongodb://mongodb-designer:27017` | Mongo credentials |
 | `workbench-backend` | `mongodb-workbench` | `mongodb://mongodb-workbench:27017` | Mongo credentials |
 
@@ -59,9 +59,9 @@ The keys `RUNNER_KEY` and `DESIGNER_BACKEND_KEY` must match their counterparts i
 
 ```text
 leia-infrastructure-docker/
-├── docker-compose.yaml          # Full stack — all 5 services + databases
-├── docker-compose-public.yaml   # Designer-only — backend, frontend, runner, MongoDB, Redis
-├── docker-compose-private.yaml  # Workbench-only — backend, frontend, runner, MongoDB, Redis
+├── docker-compose.yaml          # Full stack (all 5 services + databases)
+├── docker-compose-public.yaml   # Designer-only (backend, frontend, runner, MongoDB, Redis)
+├── docker-compose-private.yaml  # Workbench-only (backend, frontend, runner, MongoDB, Redis)
 ├── .env.example                 # Environment variable template
 └── .gitignore
 ```
@@ -164,7 +164,7 @@ The repository provides three Compose files for different deployment scenarios:
 
 ---
 
-## Quick Start — Full Stack
+## Quick Start: Full Stack
 
 Launch the complete LEIA system:
 

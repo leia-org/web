@@ -8,7 +8,7 @@ Follow this guide to learn how to duplicate an existing LEIA, modify its problem
 
 ---
 
-### **Step 1: Duplicate an Existing LEIA**
+## **Step 1: Duplicate an Existing LEIA**
 
 ![Step 1: Duplicate LEIA](../../img/tutorials/create-leia/Step1.PNG)
 
@@ -17,10 +17,9 @@ To begin, we will not create a LEIA from scratch but will instead use an existin
 * On your main dashboard, locate the LEIA you want to use as a base (in this example, `game-secretWord-Pizza`).
 * Click the **duplicate icon** (indicated by arrow 1) to create an editable copy.
 
-
 ---
 
-### **Step 2: Edit the "Problem"**
+## **Step 2: Edit the "Problem"**
 
 ![Step 2: Edit the Problem](../../img/tutorials/create-leia/Step2.PNG)
 ⬇️
@@ -30,9 +29,9 @@ Now, let's define the game's rules and solution.
 
 * On the "Step 2: Edit" screen, go to the **Problem** section and click the **Edit** button (arrow 2).
 * An editor will open where you will modify the following fields:
-    * **details (3):** Fill in this field to explain what the game is about. For example: "The game consists of guessing a secret word by asking the assistant questions that can only be answered with yes or no."
-    * **solution (4):** Define the secret word that the user must guess. For this tutorial, the word is `skull`.
-    * **personality (5):** "Extend" the base personality of the "Persona" to give it a specific theme. In this case, `"Pirates Mysterious Dark Punk"` has been added to give the game a mystery and pirate-themed atmosphere.
+  * **details (3):** Fill in this field to explain what the game is about. For example: "The game consists of guessing a secret word by asking the assistant questions that can only be answered with yes or no."
+  * **solution (4):** Define the secret word that the user must guess. For this tutorial, the word is `skull`.
+  * **personality (5):** "Extend" the base personality of the "Persona" to give it a specific theme. In this case, `"Pirates Mysterious Dark Punk"` has been added to give the game a mystery and pirate-themed atmosphere.
 * When you are finished, click **Save** (6) to apply the changes.
 
 **Problem Configuration Example:**
@@ -61,11 +60,9 @@ Now, let's define the game's rules and solution.
 }
 ```
 
-
-
 ---
 
-### **Step 3: Edit the "Persona"**
+## **Step 3: Edit the "Persona"**
 
 ![Step 3: Edit the Persona](../../img/tutorials/create-leia/Step4.PNG)
 ⬇️
@@ -75,8 +72,8 @@ Next, we will customize the character the user will interact with.
 
 * Back on the "Step 2: Edit" screen, go to the **Persona** section and click its **Edit** button (arrow 7).
 * In the persona editor:
-    * **description (8):** Describe the character to match the game's theme. For example: "Timmy is a 23-year-old guy cool drawn to skulls and the mysterious allure of pirate legends...".
-    * **personality (9):** Add adjectives that define their character. In this case, `"mysterious, passionate, rebellious"` is used.
+  * **description (8):** Describe the character to match the game's theme. For example: "Timmy is a 23-year-old guy cool drawn to skulls and the mysterious allure of pirate legends...".
+  * **personality (9):** Add adjectives that define their character. In this case, `"mysterious, passionate, rebellious"` is used.
 * To finish editing the character, click **Save** (10).
 
 **Persona Configuration Example:**
@@ -96,11 +93,9 @@ Next, we will customize the character the user will interact with.
 }
 ```
 
-
-
 ---
 
-### **Step 4: Name and Save Your LEIA**
+## **Step 4: Name and Save Your LEIA**
 
 ![Step 4: Create and Name](../../img/tutorials/create-leia/Step6.PNG)
 
@@ -111,11 +106,9 @@ You are at the final configuration step, where you will assign the final names t
 * **Persona (13):** Assign a name to the character you have created: `Timmy`.
 * Review the final preview. If everything is correct, click **Finish** (14) to save your new LEIA.
 
-
-
 ---
 
-### **Step 5: Test Your Creation!**
+## **Step 5: Test Your Creation!**
 
 ![Step 5: LEIA Created](../../img/tutorials/create-leia/Step7.PNG)
 
@@ -130,6 +123,6 @@ Congratulations, your LEIA is now created and ready to use!
 
 ---
 
-### **Final Note on Privacy**
+## **Final Note on Privacy**
 
-By default, all LEIAs you create will remain **private** to your account. If you wish to share your creation with the community and make it public, you can request it by contacting the team at **team@leia.ovh**.
+By default, all LEIAs you create will remain **private** to your account. If you wish to share your creation with the community and make it public, you can request it by contacting the team at **[team@leia.ovh](mailto:team@leia.ovh)**.

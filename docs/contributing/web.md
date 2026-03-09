@@ -6,7 +6,7 @@ sidebar_position: 8
 
 **Repository:** [leia-org/web](https://github.com/leia-org/web)
 
-The official LEIA documentation website — the site you are reading right now. Built with **Docusaurus 3**, **React 19**, and **TailwindCSS**. Deployed to GitHub Pages at [leia.ovh](https://leia.ovh).
+The official LEIA documentation website. This contains the site you are reading right now. Built with **Docusaurus 3**, **React 19**, and **TailwindCSS**. Deployed to GitHub Pages at [leia.ovh](https://leia.ovh).
 
 ---
 
@@ -48,7 +48,7 @@ web/
 ├── src/                         # React source code
 │   ├── components/              # Landing page components (Hero, Features, About…)
 │   ├── css/
-│   │   └── custom.css           # Global styles — Tailwind imports + custom utilities
+│   │   └── custom.css           # Global styles (Tailwind imports + custom utilities)
 │   ├── lib/
 │   │   └── utils.ts             # Shared utility functions
 │   ├── pages/
@@ -151,7 +151,7 @@ This creates a `versioned_docs/version-<version>/` folder and adds the version t
 - Global styles live in `src/css/custom.css`.
 - Use predefined Tailwind classes and custom utilities such as `.glass-card` and `.glass-panel`.
 - Follow the LEIA brand: **Vibrant Violet** primary (`#7c3aed`), dark slate backgrounds.
-- Do not add inline styles — use Tailwind classes or extend `custom.css`.
+- Do not add inline styles. Use Tailwind classes or extend `custom.css`.
 
 ---
 

@@ -126,7 +126,11 @@ Make sure the Designer Backend is running at the URL set in `VITE_APP_BACKEND`.
    git checkout -b feat/my-feature
    ```
 
-2. Follow the existing ESLint configuration — do not disable rules without justification.
+2. Follow the existing ESLint configuration
+
+   :::danger
+   **Do not disable rules without justification.**
+   :::
 
 3. Make sure the app builds without errors before opening a PR:
 

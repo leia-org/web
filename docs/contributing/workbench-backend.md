@@ -32,7 +32,7 @@ The backend API powering the LEIA Workbench. It manages experiments, student ses
 
 - **Node.js** >= 18.x (see `.nvmrc` for the pinned version)
 - **npm**
-- **MongoDB** running locally — or use the included Docker Compose setup
+- **MongoDB** running locally or use the included Docker Compose setup
 - A valid **OpenAI API key**
 
 ---
@@ -78,7 +78,7 @@ cp .env.example .env
 | `OPENAI_API_KEY` | _(required)_ | OpenAI API key for direct LLM calls |
 
 :::warning
-`OPENAI_API_KEY` has no default — the server will not function without it. Change all other default secrets (`JWT_SECRET`, `ADMIN_SECRET`, `RUNNER_KEY`, `MANAGER_KEY`) before any non-local deployment.
+`OPENAI_API_KEY` has no default value, which implies **the server will not function without it**. Change all other default secrets (`JWT_SECRET`, `ADMIN_SECRET`, `RUNNER_KEY`, `MANAGER_KEY`) before any non-local deployment.
 :::
 
 ---
@@ -121,7 +121,7 @@ Swagger documentation is served at `http://localhost:3001/api-docs`.
 
 ## Docker Development
 
-The repository includes a Docker Compose file that starts both MongoDB and the backend together — no local MongoDB installation required.
+The repository includes a Docker Compose file that starts both MongoDB and the backend together (no local MongoDB installation required).
 
 1. Copy the Docker environment file:
 
@@ -151,8 +151,8 @@ All routes are prefixed with `/api/v1`. Most endpoints require either an admin s
 
 | Method | Endpoint | Auth | Description |
 | --- | --- | --- | --- |
-| `POST` | `/secret` | — | Authenticate with the admin secret |
-| `POST` | `/interactions/start` | — | Start a new session for a participant |
+| `POST` | `/secret` | - | Authenticate with the admin secret |
+| `POST` | `/interactions/start` | - | Start a new session for a participant |
 | `POST` | `/interactions/:sessionId/messages` | Session token | Send a message in an active session |
 | `POST` | `/interactions/:sessionId/result` | Session token | Submit the final result and close the session |
 | `GET` | `/interactions/:sessionId` | Admin / JWT | Get session data |
@@ -224,7 +224,11 @@ The Workbench Backend uses Socket.IO for real-time communication. Connect to `ht
    git checkout -b feat/my-feature
    ```
 
-2. Follow the existing ESLint and Prettier configuration — do not disable rules without justification.
+2. Follow the existing ESLint and Prettier configuration
+
+   :::danger
+   **Do not disable rules without justification.**
+   :::
 
 3. All new endpoints must include:
    - **Joi validation** for request bodies and query parameters.
