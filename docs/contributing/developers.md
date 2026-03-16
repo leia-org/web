@@ -11,6 +11,11 @@ keywords:
   - contributing
   - installation
   - tools
+  - node.js
+  - docker-compose
+  - docker
+  - git
+  - github
 authors:
   - name: Dangalcan
     url: https://github.com/Dangalcan
