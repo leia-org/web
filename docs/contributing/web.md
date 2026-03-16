@@ -58,6 +58,7 @@ web/
 ├── docs/                        # All documentation content (Markdown / MDX)
 │   ├── img/                     # Images organised by category
 │   ├── introduction/            # Getting started docs
+│   ├── installation/            # Simple guide to install and deploy LEIA
 │   ├── tutorials/               # Step-by-step guides
 │   └── contributing/            # This section
 ├── src/                         # React source code
