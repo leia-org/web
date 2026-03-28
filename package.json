@@ -11,12 +11,15 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "lint:md": "markdownlint-cli2 \"docs/**/*.md\" \"versioned_docs/**/*.md\"",
+    "lint:md:fix": "markdownlint-cli2 --fix \"docs/**/*.md\" \"versioned_docs/**/*.md\"",
+    "docs:version": "docusaurus docs:version"
   },
   "dependencies": {
-    "@docusaurus/core": "3.8.1",
-    "@docusaurus/preset-classic": "3.8.1",
-    "@docusaurus/theme-mermaid": "^3.8.1",
+    "@docusaurus/core": "^3.9.2",
+    "@docusaurus/preset-classic": "^3.9.2",
+    "@docusaurus/theme-mermaid": "^3.9.2",
     "@mdx-js/react": "^3.0.0",
     "@tailwindcss/typography": "^0.5.16",
     "autoprefixer": "^10.4.21",
@@ -32,9 +35,10 @@
     "tailwindcss": "^3.4.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.8.1",
-    "@docusaurus/types": "3.8.1",
-    "@types/react": "^19.1.13"
+    "@docusaurus/module-type-aliases": "^3.9.2",
+    "@docusaurus/types": "^3.9.2",
+    "@types/react": "^19.1.13",
+    "markdownlint-cli2": "^0.17.2"
   },
   "browserslist": {
     "production": [

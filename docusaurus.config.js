@@ -30,9 +30,8 @@ const config = {
   deploymentBranch: 'gh-pages', // Branch used by Pages
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
 
-  // i18n (ajústalo si quieres usar 'es')
+  // i18n
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -45,19 +44,9 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Enlaces "Edit this page" apuntando a tu repo
           editUrl: 'https://github.com/leia-org/leia-docs/tree/main/',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          editUrl: 'https://github.com/leia-org/leia-docs/tree/main/',
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -68,6 +57,9 @@ const config = {
 
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
   },
   themes: ['@docusaurus/theme-mermaid'],
 
@@ -89,6 +81,17 @@ const config = {
             label: 'Docs',
           },
           {
+            type: 'docsVersionDropdown',
+            position: 'left',
+            dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
+            dropdownActiveClassDisabled: true,
+          },
+          {
+            to: '/docs/tags',
+            label: 'Tags',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/leia-org/leia-docs',
             label: 'GitHub',
             position: 'right',
@@ -103,7 +106,7 @@ const config = {
             items: [
               {
                 label: 'Getting Started',
-                to: '/docs/intro',
+                to: '/docs',
               },
             ],
           },
@@ -118,7 +121,6 @@ const config = {
           {
             title: 'More',
             items: [
-              { label: 'Blog', to: '/blog' },
               { label: 'GitHub', href: 'https://github.com/leia-org/leia-docs' },
             ],
           },
@@ -130,7 +132,17 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
       mermaid: {
-        theme: {light: 'neutral', dark: 'dark'},
+        theme: {
+          light: 'neutral',
+          dark: 'dark'
+        },
+      },
+      algolia: {
+        appId: 'WR7AJHB6S8',
+        apiKey: '6cef3f0cccb4068d98a80bbc7cccaeb6',
+        indexName: 'leia web docs crawler',
+        contextualSearch: true,
+        searchPagePath: 'search',
       },
     }),
 };

@@ -48,9 +48,9 @@ const Word = ({ children, progress, range }: WordProps) => {
 
   return (
     <span className="relative mr-2 inline-block">
-      <span className="text-gray-300">{children}</span>
+      <span className="text-gray-300 dark:text-secondary-700">{children}</span>
       <motion.span
-        className="text-gray-900 absolute inset-0"
+        className="text-gray-900 dark:text-white absolute inset-0"
         style={{ opacity }}
       >
         {children}

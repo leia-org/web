@@ -13,7 +13,7 @@ export default function Home() {
       description="LEIA (Learning Enabling Intelligent Assistant) boost the learning process with immersive experiences."
       wrapperClassName="homepage"
     >
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-transparent">
         <main>
           <Hero />
           {/* 
