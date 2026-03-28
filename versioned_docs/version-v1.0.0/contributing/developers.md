@@ -67,7 +67,7 @@ we recommend [VS-CODE](https://code.visualstudio.com/download)
 
 You will also need to install [node.js](https://nodejs.org/en/download). We strongly recommend also installing [nvm](https://github.com/nvm-sh/nvm) to be able to manage your node.js versions if you have it installed. Optionally, we recommend installing [redis](https://redis.io/docs/latest/operate/oss_and_stack/install/archive/install-redis/) and [MongoDB](https://www.mongodb.com/es/docs/manual/installation/). If you are missing one or more tools click in the links and this will guide you to the official installation page.
 
-One you have the proper tools, just install all the repos dependencies and prepare your `.env` files. Check each repo section to understand them better and be concerned about the `.env` variables. You will need to add at least three entities to designed database before proceeding. To do so, please check [designer backend local development section](./designer-backend.md/#local-development)
+One you have the proper tools, just install all the repos dependencies and prepare your `.env` files. Check each repo section to understand them better and be concerned about the `.env` variables. You will need to add at least three entities to designed database before proceeding. To do so, please check [designer backend local development section](./designer-backend.md#local-development)
 
 ```bash
 ## Designer
