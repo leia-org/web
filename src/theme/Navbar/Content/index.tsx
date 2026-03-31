@@ -101,7 +101,7 @@ function DesktopNavbar({ visible }: { visible?: boolean }): ReactNode {
         </NavbarSearch>
         <NavbarColorModeToggle className={styles.colorModeToggle} />
         <ModernButton href="/docs/" variant="dark">
-          Get Started
+          <span>Get Started</span>
         </ModernButton>
       </div>
     </motion.div>
@@ -183,7 +183,7 @@ ${JSON.stringify(item, null, 2)}`,
             </NavbarSearch>
             <NavbarColorModeToggle className={styles.colorModeToggle} />
             <ModernButton href="/docs/" variant="dark" className="mt-4 w-full">
-              Get Started
+              <span>Get Started</span>
             </ModernButton>
           </motion.div>
         )}

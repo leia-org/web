@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
                 className="modern-button w-full sm:w-auto hover:scale-105"
                 onClick={() => window.open('https://workbench.leia.ovh/?email=_test_webd&code=RMEWO1XRAK73U2YC4', '_blank')}
               >
-                View Live Demo
+                <span>View Live Demo</span>
                 <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
               </button>
 
@@ -67,7 +67,7 @@ const Hero: React.FC = () => {
                 href="/docs"
                 className="modern-button modern-button--outline w-full sm:w-auto"
               >
-                Read the Docs
+                <span>Read the Docs</span>
               </a>
             </motion.div>
           </div>
