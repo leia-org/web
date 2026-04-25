@@ -1,8 +1,52 @@
 import React from 'react'
-import { ArrowRight, Sparkles } from 'lucide-react'
-import { motion } from 'framer-motion'
-
+import { ArrowRight, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react'
+import { AnimatePresence, motion } from 'framer-motion'
+import universities from '../data/universities.json'
+import FromPreBuildComponentsGif from '../gifs/FromPreBuiltComponents.gif'
+import DesignUsingExistingLEIAsGif from '../gifs/DesignFromThis.gif'
+import ReplicateGif from '../gifs/Replicate.gif'
+import StudentsGif from '../gifs/Students.gif'
 const Hero: React.FC = () => {
+  const universityItems = universities as Array<{ name: string; icon: string }>
+  const featureTemplates = [
+    {
+      id: 1,
+      title: 'Design your LEIA',
+      description: 'You can create your own from pre-built components or design it using existing LEIAs, you can also try your new LEIA and then add it to an activity.',
+      gifs: [FromPreBuildComponentsGif, DesignUsingExistingLEIAsGif],
+    },    
+    {
+      id: 2,
+      title: 'Configurate your Activity',
+      description: 'Now you can replicate your activity and customize the LEIA configuration, such as the LLM provider and submission and evaluation settings.',
+      gifs: [ReplicateGif],
+    },
+    {
+      id: 3,
+      title: 'Interaction with the LEIA',
+      description: 'Students can interact with the LEIA in a deeply immersive way using natural language and submit their answers, which will be automatically graded with feedback provided.',
+      gifs: [StudentsGif],
+    },
+  ]
+  const [activeGifByTemplate, setActiveGifByTemplate] = React.useState<Record<number, number>>(
+    () => Object.fromEntries(featureTemplates.map((template) => [template.id, 0])),
+  )
+
+  const goToGif = (templateId: number, total: number, direction: 'next' | 'prev') => {
+    if (total <= 1) return
+    setActiveGifByTemplate((previous) => {
+      const current = previous[templateId] ?? 0
+      const nextIndex = direction === 'next'
+        ? (current + 1) % total
+        : (current - 1 + total) % total
+
+      return {
+        ...previous,
+        [templateId]: nextIndex,
+      }
+    })
+  }
+
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-secondary-950 transition-colors duration-300">
 
@@ -70,6 +114,93 @@ const Hero: React.FC = () => {
                 <span>Read the Docs</span>
               </a>
             </motion.div>
+            {/* Universities Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
+              className="mt-10 w-full max-w-3xl mx-auto"
+            >
+              <h4 className="text-lg md:text-xl font-semibold text-secondary-900 dark:text-white mb-5 text-center">
+                Universities involved
+              </h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                {universityItems.map((university) => (
+                  <div
+                    key={university.name}
+                    className="flex items-center justify-between gap-3 px-1 py-2"
+                  >
+                    <span className="text-sm text-secondary-700 dark:text-secondary-200 text-left">{university.name}</span>
+                    <img
+                      src={university.icon}
+                      alt={`Logo de ${university.name}`}
+                      className="w-10 h-10 object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+            {/*Explanation of highlighted features*/}
+            <div className="mt-12 space-y-6 max-w-5xl mx-auto">
+              {featureTemplates.map((template, index) => (
+                <motion.article
+                  key={template.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: 0.45 + index * 0.1, ease: "easeOut" }}
+                  className="p-5 md:p-6 rounded-2xl bg-white/70 dark:bg-secondary-900/70 border border-secondary-200/60 dark:border-secondary-700/50 shadow-sm"
+                >
+                  <h3 className="text-xl md:text-2xl font-semibold text-secondary-900 dark:text-white text-center mb-5">
+                    {template.title}
+                  </h3>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-6">
+                    <div className="relative w-full rounded-xl overflow-hidden shadow-md group">
+                      <div className="relative h-52 md:h-56">
+                        <AnimatePresence mode="sync" initial={false}>
+                          <motion.img
+                            key={`${template.id}-${activeGifByTemplate[template.id] ?? 0}`}
+                            src={template.gifs[activeGifByTemplate[template.id] ?? 0]}
+                            alt={`${template.title} preview`}
+                            className="absolute inset-0 w-full h-full object-cover"
+                            loading="lazy"
+                            initial={{ opacity: 0, scale: 1.01 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.99 }}
+                            transition={{ duration: 0.18, ease: 'easeOut' }}
+                          />
+                        </AnimatePresence>
+                      </div>
+
+                      { template.gifs.length>1 && (<button 
+                        type="button"
+                        onClick={() => goToGif(template.id, template.gifs.length, 'prev')}
+                        className="absolute left-2 top-1/2 -translate-y-1/2 p-0 bg-transparent border-0 shadow-none text-black transition-transform hover:scale-110 disabled:opacity-30 disabled:cursor-not-allowed focus:outline-none"
+                        disabled={template.gifs.length <= 1}
+                        aria-label={`Previous gif for ${template.title}`}
+                      >
+                        <ChevronLeft size={32} strokeWidth={2.5} />
+                      </button>)}
+
+                      { template.gifs.length>1 && (<button
+                        type="button"
+                        onClick={() => goToGif(template.id, template.gifs.length, 'next')}
+                        className="absolute right-2 top-1/2 -translate-y-1/2 p-0 bg-transparent border-0 shadow-none text-black transition-transform hover:scale-110 disabled:opacity-30 disabled:cursor-not-allowed focus:outline-none"
+                        disabled={template.gifs.length <= 1}
+                        aria-label={`Next gif for ${template.title}`}
+                      >
+                        <ChevronRight size={32} strokeWidth={2.5} />
+                      </button>)}
+                    </div>
+
+                    <p className="text-secondary-600 dark:text-secondary-300 leading-relaxed text-left">
+                      {template.description}
+                    </p>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
           </div>
         </div>
       </div>
