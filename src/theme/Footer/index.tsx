@@ -1,9 +1,10 @@
 import React from 'react'
-import { Mail, MapPin, Linkedin, Twitter, Github } from 'lucide-react'
+import { Linkedin, Twitter, Github } from 'lucide-react'
+import people from '../../data/people.json'
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
-
+  const peopleItems = people as Array<{ name: string; photo: string }>
   const footerLinks = {
     producto: [
       { name: 'Features', href: '#caracteristicas' },
@@ -42,24 +43,28 @@ const Footer: React.FC = () => {
     <footer id="contacto" className="bg-black text-white">
       {/* Main Footer Content */}
       <div className="container-max py-24">
-        {/* Newsletter Signup */}
-        <div className="bg-gray-900 rounded-2xl p-12 mb-16">
-          <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-3xl font-semibold text-white mb-4">
-              Stay updated
-            </h3>
-            <p className="text-gray-400 mb-8 text-lg">
-              Receive the latest news, updates, and AI tips directly in your inbox.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="team@leia.ovh"
-                className="flex-1 px-4 py-3 rounded-lg bg-gray-800 text-white placeholder-gray-400 border border-gray-700 focus:border-gray-500 focus:outline-none"
-              />
-              <button className="bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors whitespace-nowrap">
-                Subscribe
-              </button>
+
+        {/* People */}
+        <div className="mb-12">
+          <div>
+            <h4 className="text-xl font-semibold text-white mb-6 text-center lg:text-left">
+              People involved
+            </h4>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 sm:gap-x-10 md:gap-x-14">
+              {peopleItems.map((person) => (
+                <div
+                  key={person.name}
+                  className="flex items-center justify-between gap-3 px-1 py-2"
+                >
+                  <span className="text-sm text-gray-200">{person.name}</span>
+                  <img
+                    src={person.photo}
+                    alt={`Foto de ${person.name}`}
+                    className="w-10 h-10 rounded-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
