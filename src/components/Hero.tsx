@@ -2,10 +2,10 @@ import React from 'react'
 import { ArrowRight, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import universities from '../data/universities.json'
-import FromPreBuildComponentsGif from '../gifs/FromPreBuiltComponents.gif'
-import DesignUsingExistingLEIAsGif from '../gifs/DesignFromThis.gif'
-import ReplicateGif from '../gifs/Replicate.gif'
-import StudentsGif from '../gifs/Students.gif'
+import FromPrebuiltComponentsGif from '../../static/gifs/FromPrebuiltComponents.gif'
+import DesignUsingExistingLEIAsGif from '../../static/gifs/DesignFromThis.gif'
+import ReplicateGif from '../../static/gifs/Replicate.gif'
+import StudentsGif from '../../static/gifs/Students.gif'
 const Hero: React.FC = () => {
   const universityItems = universities as Array<{ name: string; icon: string }>
   const featureTemplates = [
@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
       id: 1,
       title: 'Design your LEIA',
       description: 'You can create your own from pre-built components or design it using existing LEIAs, you can also try your new LEIA and then add it to an activity.',
-      gifs: [FromPreBuildComponentsGif, DesignUsingExistingLEIAsGif],
+      gifs: [FromPrebuiltComponentsGif, DesignUsingExistingLEIAsGif],
     },    
     {
       id: 2,
