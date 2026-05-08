@@ -134,7 +134,7 @@ const Hero: React.FC = () => {
                     <img
                       src={university.icon}
                       alt={`Logo de ${university.name}`}
-                      className="w-10 h-10 object-contain"
+                      className="w-12 h-12 object-contain"
                       loading="lazy"
                     />
                   </div>
