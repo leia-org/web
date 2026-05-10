@@ -1,0 +1,63 @@
+---
+sidebar_position: 5
+tags:
+  - team
+  - leia
+  - ai
+  - education
+keywords:
+  - LEIA
+  - AI assistant
+  - educational platform
+  - simulation
+  - instructor
+  - student
+authors:
+  - name: pabpergas
+    url: https://github.com/pabpergas
+    image_url: https://github.com/pabpergas.png
+  - name: japarejo
+    url: https://github.com/japarejo
+    image_url: https://github.com/japarejo.png
+  - name: pafmon
+    url: https://github.com/pafmon
+    image_url: https://github.com/pafmon.png
+---
+
+import people from '@site/src/data/people.json';
+
+# Team
+
+LEIA is maintained by a small team focused on product design, engineering, and documentation.
+
+## Core Team
+
+<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  {people.map((person) => (
+    <div
+      key={person.name}
+      className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition hover:shadow-md dark:border-gray-800 dark:bg-gray-900"
+    >
+      <img
+        src={person.photo}
+        alt={person.name}
+        className="mb-3 h-12 w-12 rounded-full object-cover"
+      />
+      <h3 className="mb-1 text-lg font-semibold">{person.name}</h3>
+      <p className="text-sm text-gray-600 dark:text-gray-300">Team member</p>
+    </div>
+  ))}
+</div>
+
+## What We Do
+
+- Product design and learning flow definition.
+- Backend and frontend development.
+- Documentation, versioned content, and maintenance.
+- Support for educational simulations and AI-assisted scenarios.
+
+## About This Project
+
+LEIA is a platform that helps instructors design interactive simulations and students practice realistic scenarios with AI support.
+
+If you want to contribute or report an issue, start by reviewing the project documentation and the relevant versioned section for your use case.
