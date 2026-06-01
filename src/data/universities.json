@@ -1,6 +1,23 @@
 [
   {
-    "name": "Escuela Técnica Superior de Ingeniería Informática (ETSII) - US",
-    "icon": "https://www.ucm.es/al-acmes/file/logo-universidad-sevilla/?ver"
+    "name": "University of Seville",
+    "icon": "/universities_images/seville.jpeg"
+  },
+  {
+    "name": "UC Berkley",
+    "icon": "/universities_images/Berkley.svg"
+  },
+  {
+    "name": "Carnegie Mellon University",
+    "icon": "/universities_images/Carnegie_Mellon_University_seal.svg.png"
+  },
+  {
+    "name": "U. de Glasgow",
+    "icon": "/universities_images/UofG_Coat_of_Arms.png"
+  },
+  {
+    "name": "Aalto University",
+    "icon": "/universities_images/AAlto.png"
   }
+
 ]

@@ -1,26 +1,26 @@
 [
     {
         "name": "LEIA Voice Mode",
-        "description": "You can interact with the LEIA using your own voice! Just click the microphone button and start talking. LEIA will listen to your commands and respond accordingly. This feature allows for a more natural and intuitive way to interact with the LEIA, making it easier to use while coding or when your hands are busy.",
-        "image": "https://images.unsplash.com/photo-1689308271305-58e75832289b?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "You can interact with the LEIA using your own voice! Just click the microphone button and start talking. LEIA will listen to your commands and respond accordingly, making it easier to use while coding or when your hands are busy.",
+        "image": "/leias_images/Leia_voice_mode.png",
         "link": "https://pre.workbench.leia.ovh/?code=RMA9OPRHXS1Q4QSMM&email=_test_demo"
     },
     {
         "name": "LEIA Programming Lesson",
         "description": "Some LEIAs can teach you how to code, from JavaScript to Python and beyond. They can run tests to check your solution and help you improve. You can even interact with them using your voice!",
-        "image": "https://images.unsplash.com/photo-1689308271305-58e75832289b?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "/leias_images/Leia_programming_lesson.png",
         "link": "https://pre.workbench.leia.ovh/?code=RMOSQ406MUAFPNWVS&email=_test_demo"
     },
     {
         "name": "LEIA Requirements Elicitation",
         "description": "There's a LEIA that helps you gather requirements for your software projects. You can model your requirements directly on our platform, and LEIA will review them, correct them, and explain any flaws it finds.",
-        "image": "https://images.unsplash.com/photo-1689308271305-58e75832289b?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "/leias_images/Requirements_elicitation.png",
         "link": "https://pre.workbench.leia.ovh/?code=RMEWO1XRAK73U2YC4&email=_test_demo"
     },
     {
         "name": "LEIA Game Mode",
         "description": "You can play games with the LEIA! Whether it's a trivia quiz or a finding a word game, the LEIA is ready to challenge you and have fun together.",
-        "image": "https://images.unsplash.com/photo-1689308271305-58e75832289b?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "/leias_images/Leia_game_mode.png",
         "link": "https://pre.workbench.leia.ovh/?code=RMP134IP0FJX8PQS3&email=_test_demo"
     }
 ]

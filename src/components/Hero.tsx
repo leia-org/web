@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
     },    
     {
       id: 2,
-      title: 'Configurate your Activity',
+      title: 'Configure your Activity',
       description: 'Now you can replicate your activity and customize the LEIA configuration, such as the LLM provider and submission and evaluation settings.',
       gifs: [ReplicateGif],
     },
@@ -105,55 +105,7 @@ const Hero: React.FC = () => {
               </motion.p>
             </div>
 
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10"
-            >
-              <button
-                className="modern-button w-full sm:w-auto hover:scale-105"
-                onClick={() => window.open('https://workbench.leia.ovh/?email=_test_webd&code=RMEWO1XRAK73U2YC4', '_blank')}
-              >
-                <span>View Live Demo</span>
-                <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
-
-              <a
-                href="/docs"
-                className="modern-button modern-button--outline w-full sm:w-auto"
-              >
-                <span>Read the Docs</span>
-              </a>
-            </motion.div>
-            {/* Universities Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
-              className="mt-10 w-full max-w-3xl mx-auto"
-            >
-              <h4 className="text-lg md:text-xl font-semibold text-secondary-900 dark:text-white mb-5 text-center">
-                Universities involved
-              </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {universityItems.map((university) => (
-                  <div
-                    key={university.name}
-                    className="flex items-center justify-between gap-3 px-1 py-2"
-                  >
-                    <span className="text-sm text-secondary-700 dark:text-secondary-200 text-left">{university.name}</span>
-                    <img
-                      src={university.icon}
-                      alt={`Logo de ${university.name}`}
-                      className="w-12 h-12 object-contain"
-                      loading="lazy"
-                    />
-                  </div>
-                ))}
-              </div>
-            </motion.div>
+            
             {/* Leia's Carrusel */}
             <div className="mt-12 space-y-6 max-w-5xl mx-auto">
               {leiasItems.length > 0 && (
@@ -240,6 +192,33 @@ const Hero: React.FC = () => {
                 </motion.div>
               )}
             </div>
+            {/* Universities Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
+              className="mt-10 w-full max-w-3xl mx-auto"
+            >
+              <h4 className="text-lg md:text-xl font-semibold text-secondary-900 dark:text-white mb-5 text-center">
+                Used By
+              </h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                {universityItems.map((university) => (
+                  <div
+                    key={university.name}
+                    className="flex flex-col items-center justify-between gap-3 px-1 py-2"
+                  >
+                    <img
+                      src={university.icon}
+                      alt={`Logo de ${university.name}`}
+                      className="w-24 h-24 object-contain"
+                      loading="lazy"
+                    />
+                    <span className="text-sm text-secondary-700 dark:text-secondary-200 text-center">{university.name}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
             {/*Explanation of highlighted features*/}
             <div className="mt-12 space-y-6 max-w-5xl mx-auto">
               {featureTemplates.map((template, index) => (
