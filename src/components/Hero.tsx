@@ -2,12 +2,14 @@ import React from 'react'
 import { ArrowRight, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import universities from '../data/universities.json'
+import leias from '../data/leias.json'
 import FromPrebuiltComponentsGif from '../../static/gifs/FromPrebuiltComponents.gif'
 import DesignUsingExistingLEIAsGif from '../../static/gifs/DesignFromThis.gif'
 import ReplicateGif from '../../static/gifs/Replicate.gif'
 import StudentsGif from '../../static/gifs/Students.gif'
 const Hero: React.FC = () => {
   const universityItems = universities as Array<{ name: string; icon: string }>
+  const leiasItems = leias as Array<{ name: string; description: string; image: string; link: string }>
   const featureTemplates = [
     {
       id: 1,
@@ -17,7 +19,7 @@ const Hero: React.FC = () => {
     },    
     {
       id: 2,
-      title: 'Configurate your Activity',
+      title: 'Configure your Activity',
       description: 'Now you can replicate your activity and customize the LEIA configuration, such as the LLM provider and submission and evaluation settings.',
       gifs: [ReplicateGif],
     },
@@ -31,6 +33,7 @@ const Hero: React.FC = () => {
   const [activeGifByTemplate, setActiveGifByTemplate] = React.useState<Record<number, number>>(
     () => Object.fromEntries(featureTemplates.map((template) => [template.id, 0])),
   )
+  const [activeLeiaIndex, setActiveLeiaIndex] = React.useState(0)
 
   const goToGif = (templateId: number, total: number, direction: 'next' | 'prev') => {
     if (total <= 1) return
@@ -47,6 +50,16 @@ const Hero: React.FC = () => {
     })
   }
 
+  const goToLeia = (direction: 'next' | 'prev') => {
+    if (leiasItems.length <= 1) return
+    setActiveLeiaIndex((current) => {
+      const nextIndex = direction === 'next'
+        ? (current + 1) % leiasItems.length
+        : (current - 1 + leiasItems.length) % leiasItems.length
+      return nextIndex
+    })
+  }
+
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-secondary-950 transition-colors duration-300">
 
@@ -58,7 +71,7 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="container-max relative z-10 w-full pt-20 pb-16">
-        <div className="max-w-4xl mx-auto text-center flex flex-col items-center justify-center">
+        <div className="max-w-6xl mx-auto text-center flex flex-col items-center justify-center">
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -92,28 +105,93 @@ const Hero: React.FC = () => {
               </motion.p>
             </div>
 
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10"
-            >
-              <button
-                className="modern-button w-full sm:w-auto hover:scale-105"
-                onClick={() => window.open('https://workbench.leia.ovh/?email=_test_webd&code=RMEWO1XRAK73U2YC4', '_blank')}
-              >
-                <span>View Live Demo</span>
-                <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
+            
+            {/* Leia's Carrusel */}
+            <div className="mt-12 space-y-6 max-w-5xl mx-auto">
+              {leiasItems.length > 0 && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: 0.5, ease: "easeOut" }}
+                  className="p-5 md:p-6 rounded-2xl bg-white/70 dark:bg-secondary-900/70 border border-secondary-200/60 dark:border-secondary-700/50 shadow-sm"
+                >
+                  <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-6">
+                    {/* Carrusel de imágenes */}
+                    <div className="relative w-full rounded-xl overflow-hidden shadow-md group">
+                      <div className="relative h-64 md:h-80 ">
+                        <AnimatePresence mode="sync" initial={false}>
+                          <motion.img
+                            key={`leia-${activeLeiaIndex}`}
+                            src={leiasItems[activeLeiaIndex].image}
+                            alt={leiasItems[activeLeiaIndex].name}
+                            className="absolute inset-0 w-full h-full object-cover"
+                            loading="lazy"
+                            initial={{ opacity: 0, scale: 1.01 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.99 }}
+                            transition={{ duration: 0.18, ease: 'easeOut' }}
+                          />
+                        </AnimatePresence>
+                      </div>
 
-              <a
-                href="/docs"
-                className="modern-button modern-button--outline w-full sm:w-auto"
-              >
-                <span>Read the Docs</span>
-              </a>
-            </motion.div>
+                      {leiasItems.length > 1 && (
+                        <>
+                          <button
+                            type="button"
+                            onClick={() => goToLeia('prev')}
+                            className="absolute left-2 top-1/2 -translate-y-1/2 p-0 bg-transparent border-0 shadow-none text-white transition-transform hover:scale-110 disabled:opacity-30 disabled:cursor-not-allowed focus:outline-none"
+                            aria-label="Previous LEIA"
+                          >
+                            <ChevronLeft size={32} strokeWidth={2.5} />
+                          </button>
+
+                          <button
+                            type="button"
+                            onClick={() => goToLeia('next')}
+                            className="absolute right-2 top-1/2 -translate-y-1/2 p-0 bg-transparent border-0 shadow-none text-white transition-transform hover:scale-110 disabled:opacity-30 disabled:cursor-not-allowed focus:outline-none"
+                            aria-label="Next LEIA"
+                          >
+                            <ChevronRight size={32} strokeWidth={2.5} />
+                          </button>
+
+                          {/* Dots indicator */}
+                          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+                            {leiasItems.map((_, index) => (
+                              <button
+                                key={index}
+                                onClick={() => setActiveLeiaIndex(index)}
+                                className={`h-2 rounded-full transition-all ${
+                                  index === activeLeiaIndex
+                                    ? 'w-6 bg-white'
+                                    : 'w-2 bg-white/50 hover:bg-white/75'
+                                }`}
+                                aria-label={`Go to LEIA ${index + 1}`}
+                              />
+                            ))}
+                          </div>
+                        </>
+                      )}
+                    </div>
+
+                    {/* Contenido de texto */}
+                    <div className="space-y-3">
+                      <h3 className="text-2xl md:text-3xl font-semibold text-secondary-900 dark:text-white">
+                        {leiasItems[activeLeiaIndex].name}
+                      </h3>
+                      <p className="text-secondary-600 dark:text-secondary-300 leading-relaxed">
+                        {leiasItems[activeLeiaIndex].description}
+                      </p>
+                      <button
+                        onClick={() => window.open(leiasItems[activeLeiaIndex].link, '_blank')}
+                        className="modern-button w-full sm:w-auto hover:scale-105"
+                      >
+                        <span>Try Out!</span>
+                      </button>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </div>
             {/* Universities Section */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -122,21 +200,21 @@ const Hero: React.FC = () => {
               className="mt-10 w-full max-w-3xl mx-auto"
             >
               <h4 className="text-lg md:text-xl font-semibold text-secondary-900 dark:text-white mb-5 text-center">
-                Universities involved
+                Used By
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {universityItems.map((university) => (
                   <div
                     key={university.name}
-                    className="flex items-center justify-between gap-3 px-1 py-2"
+                    className="flex flex-col items-center justify-between gap-3 px-1 py-2"
                   >
-                    <span className="text-sm text-secondary-700 dark:text-secondary-200 text-left">{university.name}</span>
                     <img
                       src={university.icon}
                       alt={`Logo de ${university.name}`}
-                      className="w-10 h-10 object-contain"
+                      className="w-24 h-24 object-contain"
                       loading="lazy"
                     />
+                    <span className="text-sm text-secondary-700 dark:text-secondary-200 text-center">{university.name}</span>
                   </div>
                 ))}
               </div>

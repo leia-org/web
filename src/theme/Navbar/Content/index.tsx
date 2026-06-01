@@ -100,7 +100,7 @@ function DesktopNavbar({ visible }: { visible?: boolean }): ReactNode {
           <SearchBar />
         </NavbarSearch>
         <NavbarColorModeToggle className={styles.colorModeToggle} />
-        <ModernButton href="/docs/" variant="dark">
+        <ModernButton href="https://pre.designer.leia.ovh/login" variant="dark">
           <span>Get Started</span>
         </ModernButton>
       </div>
@@ -182,7 +182,7 @@ ${JSON.stringify(item, null, 2)}`,
               <SearchBar />
             </NavbarSearch>
             <NavbarColorModeToggle className={styles.colorModeToggle} />
-            <ModernButton href="/docs/" variant="dark" className="mt-4 w-full">
+            <ModernButton href="https://pre.designer.leia.ovh/login" variant="dark" className="mt-4 w-full">
               <span>Get Started</span>
             </ModernButton>
           </motion.div>

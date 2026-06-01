@@ -44,30 +44,6 @@ const Footer: React.FC = () => {
       {/* Main Footer Content */}
       <div className="container-max py-24">
 
-        {/* People */}
-        <div className="mb-12">
-          <div>
-            <h4 className="text-xl font-semibold text-white mb-6 text-center lg:text-left">
-              People involved
-            </h4>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 sm:gap-x-10 md:gap-x-14">
-              {peopleItems.map((person) => (
-                <div
-                  key={person.name}
-                  className="flex items-center justify-between gap-3 px-1 py-2"
-                >
-                  <span className="text-sm text-gray-200">{person.name}</span>
-                  <img
-                    src={person.photo}
-                    alt={`Foto de ${person.name}`}
-                    className="w-10 h-10 rounded-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
 
         {/* Bottom Footer */}
         <div className="border-t border-gray-800 pt-8">
