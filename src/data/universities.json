@@ -1,11 +1,11 @@
 [
   {
     "name": "University of Seville",
-    "icon": "/universities_images/seville.jpeg"
+    "icon": "/universities_images/seville.png"
   },
   {
     "name": "UC Berkley",
-    "icon": "/universities_images/Berkley.svg"
+    "icon": "/universities_images/Berkley.jpg"
   },
   {
     "name": "Carnegie Mellon University",
@@ -17,7 +17,12 @@
   },
   {
     "name": "Aalto University",
-    "icon": "/universities_images/AAlto.png"
+    "icon": "/universities_images/AAlto.jpg"
+  },
+  {
+    "name": "University of Córdoba",
+    "icon": "/universities_images/Logo_UCO.png"
   }
+
 
 ]

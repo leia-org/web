@@ -1,15 +1,15 @@
 [
     {
         "name": "LEIA Voice Mode",
-        "description": "You can interact with the LEIA using your own voice! Just click the microphone button and start talking. LEIA will listen to your commands and respond accordingly, making it easier to use while coding or when your hands are busy.",
+        "description": "You can interact with the LEIA using your own voice! Just click the microphone button and start talking. LEIA will listen to your commands and respond accordingly, making it easier to use while coding or when your hands are busy. Try coding with it!",
         "image": "/leias_images/Leia_voice_mode.png",
-        "link": "https://pre.workbench.leia.ovh/?code=RMA9OPRHXS1Q4QSMM&email=_test_demo"
+        "link": "https://pre.workbench.leia.ovh/?code=RMOSQ406MUAFPNWVS&email=_test_demo"
     },
     {
         "name": "LEIA Programming Lesson",
         "description": "Some LEIAs can teach you how to code, from JavaScript to Python and beyond. They can run tests to check your solution and help you improve. You can even interact with them using your voice!",
         "image": "/leias_images/Leia_programming_lesson.png",
-        "link": "https://pre.workbench.leia.ovh/?code=RMOSQ406MUAFPNWVS&email=_test_demo"
+        "link": "https://pre.workbench.leia.ovh/?code=RMPZWHU7U486S3BWT&email=_test_demo"
     },
     {
         "name": "LEIA Requirements Elicitation",
