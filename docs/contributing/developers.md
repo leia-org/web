@@ -138,7 +138,9 @@ Once you have everything ready, please **modify your .env to include at least OP
 Now simply start LEIA as normal. Please note that we will start all services but actually you can use the other compose files if they adapt better to your needs.
 
 ```bash
-docker-compose -f docker-compose.yaml up -d
+docker compose up -d
+# Or to build from local source:
+docker compose up -d --build
 ```
 
 After some time you will have all LEIA services running. Now it is time to stop and remove the containers that you will modify so you can run locally the forks. Clone your forks, install the dependencies and run them. 

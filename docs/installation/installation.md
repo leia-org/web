@@ -37,45 +37,59 @@ Use Docker secrets so you improve your security.
 :::
 
 ```bash
-# Database
+# PORTS CONFIGURATION (External Host Ports)
+PORT_AUTH=3005
+PORT_DESIGNER_BACKEND=3000
+PORT_DESIGNER_FRONTEND=5173
+PORT_WORKBENCH_BACKEND=3001
+PORT_WORKBENCH_FRONTEND=8080
+PORT_RUNNER=5002
+
+# DATABASE & CACHE CONFIGURATION
+MONGO_PORT=27017
 MONGO_USERNAME=admin
 MONGO_PASSWORD=changeme
-MONGO_PORT_DESIGNER=27017
-MONGO_PORT_WORKBENCH=27018
 REDIS_PORT=6379
 
-# Security
-JWT_SECRET=your-jwt-secret-here
-API_KEY=your-api-key-here
-RUNNER_KEY=your-runner-key-here
-DESIGNER_BACKEND_KEY=your-designer-backend-key-here
-ADMIN_SECRET=your-admin-secret-here
+# LOCAL S3 STORAGE (MinIO)
+S3_PORT=9000
+S3_CONSOLE_PORT=9001
+S3_ROOT_USER=minio
+S3_ROOT_PASSWORD=changeme123
+S3_ACCESS_KEY_ID=minio
+S3_SECRET_ACCESS_KEY=changeme123
+S3_REGION=us-east-1
+S3_BUCKET=leia-images
+
+# SECURITY & SECRETS
+JWT_SECRET=your-jwt-secret-change-this-in-production
+API_KEY=your-api-key-change-this-in-production
+RUNNER_KEY=your-runner-key-change-this-in-production
+ADMIN_SECRET=your-admin-secret-change-this-in-production
+INTERN_TOKEN=your-intern-token-change-this-in-production
+API_KEY_STORAGE_SECRET=13af25e58655f106648d94972678da29d6cce43bb40a48f1ed049adcff962be6
+
+# DEFAULT ADMIN USER
+DEFAULT_ADMIN_EMAIL=admin@leia.org
+DEFAULT_ADMIN_PASSWORD=admin123
+
+# AI / LLM CONFIGURATION
 OPENAI_API_KEY=sk-your-openai-api-key-here
+GEMINI_API_KEY=
+OPENAI_EVALUATION_MODEL=gpt-5.4-mini
+DEFAULT_MODEL=openai-responses
 
-# Service Configuration
-NODE_ENV=development
-DEFAULT_ADMIN_EMAIL=admin@example.com
-DEFAULT_ADMIN_PASSWORD=changeme
-
-# AI/ML Configuration
-OPENAI_EVALUATION_MODEL=gpt-4o
-DEFAULT_MODEL=openai
-
-# Service URLs (Internal - Docker network)
-DESIGNER_BACKEND_URL=http://designer-backend:80
-WORKBENCH_BACKEND_URL=http://workbench-backend:80
-RUNNER_URL=http://runner:80
-
-# Frontend URLs (External)
-DESIGNER_FRONTEND_URL=http://localhost:3004
-WORKBENCH_FRONTEND_URL=http://localhost:3005
-
-# Service Ports (External)
-PORT_DESIGNER_BACKEND=3001
-PORT_WORKBENCH_BACKEND=3002
-PORT_RUNNER=3003
-PORT_DESIGNER_FRONTEND=3004
-PORT_WORKBENCH_FRONTEND=3005
+# ENVIRONMENT
+NODE_ENV=production
 ```
 
-Now you will be required to use strong passwords and keys. Do not forget to include your generated OpenAI apikey.
+Now you will be required to use strong passwords and keys. Do not forget to include your generated OpenAI API key.
+
+To start the platform, run:
+
+```bash
+docker compose up -d
+# Or to build from local code:
+docker compose up -d --build
+```
+

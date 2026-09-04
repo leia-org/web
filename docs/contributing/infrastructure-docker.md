@@ -21,44 +21,49 @@ authors:
 
 **Repository:** [leia-org/leia-infrastructure-docker](https://github.com/leia-org/leia-infrastructure-docker)
 
-Docker Compose configurations for orchestrating the complete LEIA system. The repository provides three deployment profiles (full stack, Designer-only, and Workbench-only) covering all 5 microservices, two MongoDB instances, and Redis.
+Docker Compose configuration for orchestrating the complete LEIA system with a single command. It covers all 6 microservices, a unified MongoDB instance, Redis, and local S3 storage (MinIO).
 
 ---
 
 ## System Architecture
 
-The LEIA stack is composed of **5 application services** backed by **3 infrastructure services**:
+The LEIA stack is composed of **6 application services** backed by **3 infrastructure services**:
 
 | Service | Image | Exposed Port | Role |
 | --- | --- | --- | --- |
-| `designer-backend` | `ghcr.io/leia-org/leia-designer-backend:latest` | `PORT_DESIGNER_BACKEND` (3001) | REST API for LEIAs, personas, and experiments |
-| `designer-frontend` | `ghcr.io/leia-org/leia-designer-frontend:latest` | `PORT_DESIGNER_FRONTEND` (3004) | Web UI for instructors |
-| `workbench-backend` | `ghcr.io/leia-org/leia-workbench-backend:latest` | `PORT_WORKBENCH_BACKEND` (3002) | REST API for experiments and sessions |
-| `workbench-frontend` | `ghcr.io/leia-org/leia-workbench-frontend:latest` | `PORT_WORKBENCH_FRONTEND` (3005) | Web UI for workbench users |
-| `runner` | `ghcr.io/leia-org/leia-runner:latest` | `PORT_RUNNER` (3003) | AI session execution engine |
-| `mongodb-designer` | `mongo:latest` | `MONGO_PORT_DESIGNER` (27017) | Database for Designer |
-| `mongodb-workbench` | `mongo:latest` | `MONGO_PORT_WORKBENCH` (27018) | Database for Workbench |
+| `auth` | `ghcr.io/leia-org/leia-auth:latest` | `PORT_AUTH` (3005) | Central authentication and API key management |
+| `designer-backend` | `ghcr.io/leia-org/leia-designer-backend:latest` | `PORT_DESIGNER_BACKEND` (3000) | REST API for LEIAs, personas, and problems |
+| `designer-frontend` | `ghcr.io/leia-org/leia-designer-frontend:latest` | `PORT_DESIGNER_FRONTEND` (5173) | Web UI for instructors |
+| `workbench-backend` | `ghcr.io/leia-org/leia-workbench-backend:latest` | `PORT_WORKBENCH_BACKEND` (3001) | REST API for experiments and sessions |
+| `workbench-frontend` | `ghcr.io/leia-org/leia-workbench-frontend:latest` | `PORT_WORKBENCH_FRONTEND` (8080) | Web UI for workbench users |
+| `runner` | `ghcr.io/leia-org/leia-runner:latest` | `PORT_RUNNER` (5002) | AI session execution engine |
+| `mongodb` | `mongo:latest` | `MONGO_PORT` (27017) | Unified MongoDB database (`auth`, `designer`, `workbench` DBs) |
 | `redis` | `redis:latest` | `REDIS_PORT` (6379) | Cache and task queue for Runner |
+| `minio` | `quay.io/minio/minio:latest` | `S3_PORT` (9000), `S3_CONSOLE_PORT` (9001) | Local S3-compatible object storage for Designer images |
 
-All application images are pulled from the **GitHub Container Registry (GHCR)** and are built automatically via GitHub Actions in each service repository.
+All application images are pulled from the **GitHub Container Registry (GHCR)** or can be built locally via Docker Compose.
 
 ### Inter-service communication
 
-Inside a running Compose stack, services communicate with each other via their container names. No external URLs are needed.
+Inside a running Compose stack, services communicate with each other via their container names in the `leia-network` bridge network.
 
-| Caller | Callee | Container URL | Auth header |
+| Caller | Callee | Container URL | Auth header / Mechanism |
 | --- | --- | --- | --- |
+| `designer-frontend` | `auth` | `http://auth:80` | JWT / API key |
 | `designer-frontend` | `designer-backend` | `http://designer-backend:80` | `Authorization: Bearer <jwt>` |
+| `workbench-frontend` | `auth` | `http://auth:80` | JWT / API key |
 | `workbench-frontend` | `workbench-backend` | `http://workbench-backend:80` | JWT / admin secret / share token |
-| `workbench-backend` | `designer-backend` | `http://designer-backend:80` | `x-api-key: <DESIGNER_BACKEND_KEY>` |
+| `workbench-backend` | `designer-backend` | `http://designer-backend:80` | `x-api-key: <API_KEY>` |
+| `workbench-backend` | `auth` | `http://auth:80` | `x-intern-token: <INTERN_TOKEN>` |
 | `workbench-backend` | `runner` | `http://runner:80` | `Authorization: Bearer <RUNNER_KEY>` |
+| `designer-backend` | `auth` | `http://auth:80` | `x-intern-token: <INTERN_TOKEN>` |
+| `designer-backend` | `runner` | `http://runner:80` | `Authorization: Bearer <RUNNER_KEY>` |
+| `designer-backend` | `minio` | `http://minio:9000` | S3 credentials (`MINIO_ROOT_USER`/`MINIO_ROOT_PASSWORD`) |
+| `runner` | `auth` | `http://auth:80` | `x-intern-token: <INTERN_TOKEN>` |
 | `runner` | `redis` | `redis://redis:6379` | - |
-| `designer-backend` | `mongodb-designer` | `mongodb://mongodb-designer:27017` | Mongo credentials |
-| `workbench-backend` | `mongodb-workbench` | `mongodb://mongodb-workbench:27017` | Mongo credentials |
-
-:::info
-The keys `RUNNER_KEY` and `DESIGNER_BACKEND_KEY` must match their counterparts in the callee's environment (`RUNNER_KEY` in the Runner, `API_KEY` in the Designer Backend). See the [Environment Variables](#environment-variables) section.
-:::
+| `auth` | `mongodb` | `mongodb://mongodb:27017/auth` | Mongo credentials |
+| `designer-backend` | `mongodb` | `mongodb://mongodb:27017/designer` | Mongo credentials |
+| `workbench-backend` | `mongodb` | `mongodb://mongodb:27017/workbench` | Mongo credentials |
 
 ---
 
@@ -66,7 +71,6 @@ The keys `RUNNER_KEY` and `DESIGNER_BACKEND_KEY` must match their counterparts i
 
 - **Docker** and **Docker Compose** installed.
 - A valid **OpenAI API key** (required by the Runner service).
-- Docker images for all 5 LEIA services published to GHCR (happens automatically via GitHub Actions on each service repo).
 
 ---
 
@@ -74,11 +78,9 @@ The keys `RUNNER_KEY` and `DESIGNER_BACKEND_KEY` must match their counterparts i
 
 ```text
 leia-infrastructure-docker/
-├── docker-compose.yaml          # Full stack (all 5 services + databases)
-├── docker-compose-public.yaml   # Designer-only (backend, frontend, runner, MongoDB, Redis)
-├── docker-compose-private.yaml  # Workbench-only (backend, frontend, runner, MongoDB, Redis)
+├── docker-compose.yaml          # Unified stack (all 6 services + databases)
 ├── .env.example                 # Environment variable template
-└── .gitignore
+└── README.md
 ```
 
 ---
@@ -91,95 +93,34 @@ Copy the example file and fill in all values before starting any services:
 cp .env.example .env
 ```
 
-### Database
+### Database & Storage
 
 | Variable | Default | Description |
 | --- | --- | --- |
 | `MONGO_USERNAME` | `admin` | MongoDB root username |
 | `MONGO_PASSWORD` | `password123` | MongoDB root password |
-| `MONGO_PORT_DESIGNER` | `27017` | Host port for the Designer MongoDB |
-| `MONGO_PORT_WORKBENCH` | `27018` | Host port for the Workbench MongoDB |
+| `MONGO_PORT` | `27017` | Host port for MongoDB |
 | `REDIS_PORT` | `6379` | Host port for Redis |
+| `S3_PORT` | `9000` | Host port for MinIO S3 API |
+| `S3_CONSOLE_PORT` | `9001` | Host port for MinIO Web Console |
+| `S3_ACCESS_KEY_ID` | `minio` | MinIO root username / Access Key |
+| `S3_SECRET_ACCESS_KEY` | `minio123` | MinIO root password / Secret Key |
+| `S3_BUCKET` | `leia-images` | Bucket for storing Designer images |
 
 ### Service Ports
 
 | Variable | Default | Description |
 | --- | --- | --- |
-| `PORT_DESIGNER_BACKEND` | `3001` | Host port for the Designer Backend |
-| `PORT_WORKBENCH_BACKEND` | `3002` | Host port for the Workbench Backend |
-| `PORT_RUNNER` | `3003` | Host port for the Runner |
-| `PORT_DESIGNER_FRONTEND` | `3004` | Host port for the Designer Frontend |
-| `PORT_WORKBENCH_FRONTEND` | `3005` | Host port for the Workbench Frontend |
-
-### Internal Service URLs
-
-These are used for **inter-service communication inside the Docker network**. Do not change them unless you rename a service.
-
-| Variable | Default | Description |
-| --- | --- | --- |
-| `DESIGNER_BACKEND_URL` | `http://designer-backend:80` | Designer Backend URL seen by other services |
-| `WORKBENCH_BACKEND_URL` | `http://workbench-backend:80` | Workbench Backend URL seen by other services |
-| `RUNNER_URL` | `http://runner:80` | Runner URL seen by backend services |
-
-### External Frontend URLs
-
-Used by backend services to configure CORS. Set these to the URL **users will access in their browser**.
-
-| Variable | Default | Description |
-| --- | --- | --- |
-| `DESIGNER_FRONTEND_URL_EXTERNAL` | `http://localhost:3004` | Public URL of the Designer Frontend |
-| `WORKBENCH_FRONTEND_URL_EXTERNAL` | `http://localhost:3005` | Public URL of the Workbench Frontend |
-
-### Authentication and Security
-
-:::warning
-All secrets below have insecure defaults. **Change every one of them** before deploying to any non-local environment.
-:::
-
-| Variable | Description |
-| --- | --- |
-| `JWT_SECRET` | Secret used to sign and verify JWT tokens |
-| `API_KEY` | Key for internal API authentication |
-| `RUNNER_KEY` | Authentication key shared between backends and the Runner |
-| `DESIGNER_BACKEND_KEY` | Key used by the Workbench Backend to call the Designer Backend |
-| `ADMIN_SECRET` | Admin-level secret for privileged Workbench operations |
-
-### Default Admin Account
-
-| Variable | Default | Description |
-| --- | --- | --- |
-| `DEFAULT_ADMIN_EMAIL` | `admin@leia.org` | Email of the auto-created admin user |
-| `DEFAULT_ADMIN_PASSWORD` | `admin123` | Password of the auto-created admin user |
-
-### AI / LLM Configuration
-
-| Variable | Default | Description |
-| --- | --- | --- |
-| `OPENAI_API_KEY` | _(required)_ | OpenAI API key used by the Runner |
-| `OPENAI_EVALUATION_MODEL` | `gpt-4` | Model used for LEIA evaluation |
-| `DEFAULT_MODEL` | `gpt-3.5-turbo` | Default LLM model for AI sessions |
-
-### Environment
-
-| Variable | Default | Description |
-| --- | --- | --- |
-| `NODE_ENV` | `production` | Runtime environment for all services |
+| `PORT_AUTH` | `3005` | Host port for Auth Service |
+| `PORT_DESIGNER_BACKEND` | `3000` | Host port for Designer Backend |
+| `PORT_WORKBENCH_BACKEND` | `3001` | Host port for Workbench Backend |
+| `PORT_RUNNER` | `5002` | Host port for Runner |
+| `PORT_DESIGNER_FRONTEND` | `5173` | Host port for Designer Frontend |
+| `PORT_WORKBENCH_FRONTEND` | `8080` | Host port for Workbench Frontend |
 
 ---
 
-## Deployment Options
-
-The repository provides three Compose files for different deployment scenarios:
-
-| File | Use case | Services included |
-| --- | --- | --- |
-| `docker-compose.yaml` | Full LEIA stack | All 5 services + 2 MongoDB + Redis |
-| `docker-compose-public.yaml` | Designer only | designer-backend, designer-frontend, runner, mongodb-designer, redis |
-| `docker-compose-private.yaml` | Workbench only | workbench-backend, workbench-frontend, runner, mongodb-workbench, redis |
-
----
-
-## Quick Start: Full Stack
+## Quick Start
 
 Launch the complete LEIA system:
 
@@ -201,48 +142,27 @@ Launch the complete LEIA system:
 3. Start all services:
 
    ```bash
-   docker-compose -f docker-compose.yaml up -d
+   docker compose up -d
    ```
 
 4. Verify all containers are running:
 
    ```bash
-   docker-compose -f docker-compose.yaml ps
+   docker compose ps
    ```
 
 Once running, the services are accessible at:
 
 | Service | URL |
 | --- | --- |
-| Designer Frontend | `http://localhost:3004` |
-| Workbench Frontend | `http://localhost:3005` |
-| Designer Backend API | `http://localhost:3001` |
-| Workbench Backend API | `http://localhost:3002` |
-| Runner API | `http://localhost:3003` |
-
----
-
-## Partial Deployments
-
-### Designer Only
-
-Runs only the Designer microservices (backend, frontend, runner, MongoDB, Redis):
-
-```bash
-docker-compose -f docker-compose-public.yaml up -d
-```
-
-Use this profile to work on the LEIA configuration workflow without spinning up the Workbench.
-
-### Workbench Only
-
-Runs only the Workbench microservices (backend, frontend, runner, MongoDB, Redis):
-
-```bash
-docker-compose -f docker-compose-private.yaml up -d
-```
-
-Use this profile when working on the experiment execution and student session flow.
+| Designer Frontend | `http://localhost:5173` |
+| Workbench Frontend | `http://localhost:8080` |
+| Auth Service API | `http://localhost:3005` |
+| Designer Backend API | `http://localhost:3000` |
+| Workbench Backend API | `http://localhost:3001` |
+| Runner API | `http://localhost:5002` |
+| MinIO S3 API | `http://localhost:9000` |
+| MinIO Console | `http://localhost:9001` |
 
 ---
 
@@ -250,37 +170,8 @@ Use this profile when working on the experiment execution and student session fl
 
 ```bash
 # Stop and remove containers (data volumes are preserved)
-docker-compose -f docker-compose.yaml down
+docker compose down
 
 # Stop and also remove data volumes (full reset)
-docker-compose -f docker-compose.yaml down -v
+docker compose down -v
 ```
-
-:::warning
-Using `down -v` will permanently delete all MongoDB and Redis data. Use only when you want a clean reset.
-:::
-
----
-
-## Contributing
-
-1. Fork the repository and create a branch off `main`:
-
-   ```bash
-   git checkout -b feat/my-change
-   ```
-
-2. Copy `.env.example` to `.env` and configure it for local testing.
-
-3. Make your changes to the relevant Compose file (`docker-compose.yaml`, `docker-compose-public.yaml`, or `docker-compose-private.yaml`).
-
-4. Test your changes locally before opening a PR:
-
-   ```bash
-   docker-compose -f docker-compose.yaml up -d
-   docker-compose -f docker-compose.yaml ps
-   ```
-
-5. Use **Conventional Commits** for your commit messages (`feat:`, `fix:`, `docs:`, etc.).
-
-6. Open a Pull Request with a clear description of the infrastructure changes and their impact on service connectivity or environment variables.
