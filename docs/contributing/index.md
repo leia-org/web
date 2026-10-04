@@ -26,7 +26,7 @@ Thank you for your interest in contributing to LEIA. Before diving into any indi
 ## System Architecture
 
 :::important
-Right now LEIA only supports OpenAI as a provider, but in the future it will support more providers and even custom ones, so users can connect to the desired one.
+The Runner supports four LLM providers: OpenAI, Gemini, Ollama (local models) and ALMA (alma.us.es). Each user stores their own provider API keys, which live in the **leia-auth** service and are resolved by the Runner for every session.
 :::
 
 LEIA is made up of **5 application services** supported by **2 databases and 1 cache**:
@@ -49,7 +49,8 @@ graph TD
     DB --- MDB1
     WB --- MDB2
     RN --- RDS
-    RN -- "OpenAI API" --> OAI[OpenAI]
+    RN -- "x-intern-token / HTTP" --> AUTH[leia-auth\nlocalhost:3005]
+    RN -- "LLM APIs" --> LLM[OpenAI / Gemini / Ollama / ALMA]
 ```
 
 ---
@@ -76,6 +77,7 @@ Services authenticate with each other using shared pre-shared keys:
 | Workbench Frontend | Workbench Backend | `Authorization: Bearer <jwt>` / Socket.IO auth | User JWT / Admin secret / share token |
 | Workbench Backend | Designer Backend | `x-api-key: <key>` | `MANAGER_KEY` → `API_KEY` |
 | Workbench Backend | Runner | `Authorization: Bearer <key>` | `RUNNER_KEY` (both sides) |
+| Runner | leia-auth | `x-intern-token: <token>` | `INTERN_TOKEN` (both sides) |
 
 :::info
 `RUNNER_KEY` must be set to the **same value** in both the Workbench Backend and the Runner. `MANAGER_KEY` in the Workbench Backend must match `API_KEY` in the Designer Backend.
@@ -113,7 +115,7 @@ npm install && npm run dev    # http://localhost:3001
 
 # Runner (new terminal)
 cd leia-runner
-cp .env.example .env          # set OPENAI_API_KEY, RUNNER_KEY (same as Workbench)
+cp .env.example .env          # set RUNNER_KEY (same as Workbench), VITE_AUTH_SERVICE_BACKEND, INTERN_TOKEN
 npm install && npm run dev    # http://localhost:5002
 ```
 

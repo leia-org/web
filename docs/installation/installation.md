@@ -20,7 +20,7 @@ authors:
 
 This section is meant to be a simple step-by-step guide in order to install LEIA with ease. Please if you are a developer and your are meant to extend the system just move on to [contributing section](../contributing/index.md).
 
-First of all, we will require to clone the infrastructure repo, prepare the enviroment variables and start LEIA. Before proceeding make sure you have [Docker](https://docs.docker.com/engine/install/) and [docker-compose](https://docs.docker.com/compose/install/) installed on your system, and create an OpenAI apikey. If you do not know how to generate an OpenAI apikey, follow this [tutorial](https://developers.openai.com/api/docs/quickstart/).
+First of all, we will require to clone the infrastructure repo, prepare the enviroment variables and start LEIA. Before proceeding make sure you have [Docker](https://docs.docker.com/engine/install/) and [docker-compose](https://docs.docker.com/compose/install/) installed on your system, and create an OpenAI apikey. If you do not know how to generate an OpenAI apikey, follow this [tutorial](https://developers.openai.com/api/docs/quickstart/). The LEIA sessions themselves use the provider API keys (OpenAI, Gemini, Ollama or ALMA) that each user adds in the app, which are stored by the leia-auth service.
 
 Now simply clone the infrastructure repository, change the environment variables to the desired ones and test LEIA.
 
@@ -59,7 +59,10 @@ DEFAULT_ADMIN_PASSWORD=changeme
 
 # AI/ML Configuration
 OPENAI_EVALUATION_MODEL=gpt-4o
-DEFAULT_MODEL=openai
+DEFAULT_MODEL=openai-responses
+SESSION_TTL_SECONDS=86400
+ALMA_BASE_URL=https://alma.us.es/api/models/llama-3.1-8b-instruct/v1
+ALMA_MODEL=meta-llama/Llama-3.1-8B-Instruct
 
 # Service URLs (Internal - Docker network)
 DESIGNER_BACKEND_URL=http://designer-backend:80
