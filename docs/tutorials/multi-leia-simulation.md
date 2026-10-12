@@ -75,5 +75,5 @@ At the end the student submits the solution of the shared problem and the evalua
 
 - Keep the number of characters small. Three is already a lot for a student to manage.
 - Give the characters visible disagreements. The orchestrator uses roles to decide who speaks, and conflicting roles make for a richer meeting.
-- Put the supervisor on the shared problem's LEIA if you want flags. The supervisor of the session follows that LEIA.
+- The supervisor is configured per LEIA, not per activity. If you rely on its flags, run a **Test MultiLEIA** session first and check that they appear in the Live dashboard.
 - The conversation flow and the list of LEIAs freeze when you publish. Prepare a second activity if you want to try another combination.

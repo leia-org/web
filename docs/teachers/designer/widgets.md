@@ -35,14 +35,16 @@ Widgets belong to the **problem**. They are configured in the **Activity setup**
 
 | # | Field | What it does |
 |---|---|---|
-| 1 | **Add widget** | Adds a widget. The **Widget** selector only offers **Editor** for now. |
-| 2 | **Slot** | Where the panel goes on the student's screen. **Left**, **Right** or **Main (center)**. The chat takes the other half. |
-| 3 | **Language** | **JavaScript**, **Python** or **Plain text**. The student cannot change it. Plain text has no tests and no execution. |
-| 4 | **Function name** | The function the tests call, for example `fizzbuzz`. Hidden for plain text. |
-| 5 | **Problem description** | The statement shown above the editor. For plain text it is called **Statement / instructions**. |
-| 6 | **Starter code** | The content preloaded in the editor. For plain text it is called **Starter text**. |
+| 1 | **Add widget** | Adds a widget. |
+| 2 | **Widget** | The kind of widget. Only **Editor** is offered for now. |
+| 3 | **Slot** | Where the panel goes on the student's screen. **Left**, **Right** or **Main (center)**. The chat takes the other half. |
+| 4 | **Language** | **JavaScript**, **Python** or **Plain text**. The student cannot change it. Plain text has no tests and no execution. |
+| 5 | **Function name** | The function the tests call, for example `fizzbuzz`. Hidden for plain text. |
+| 6 | **Problem description** | The statement shown above the editor. For plain text it is called **Statement / instructions**. |
+| 7 | **Starter code** | The content preloaded in the editor. For plain text it is called **Starter text**. |
+| 8 | **Remove widget** | Deletes the widget. |
 
-**Remove widget** deletes the widget. **Reset to default** restores the example problem, a `twoSum` function with three tests.
+**Configure problem & tests** folds and unfolds the fields from **Language** downwards.
 
 ## Tests and tools
 
@@ -51,11 +53,12 @@ Widgets belong to the **problem**. They are configured in the **Activity setup**
 | # | Field | What it does |
 |---|---|---|
 | 1 | A test | **Test name**, the **args** as a JSON array with the arguments of the call, and the **expected** result as JSON. The example `[[2,7,11,15], 9]` calls the function with a list and a number. |
-| 2 | **Add test** | Adds an empty test row. |
-| 3 | **Read code** | Lets LEIA read the current content of the editor. |
-| 4 | **Apply edits** | Lets LEIA change the student's code with search and replace operations. LEIA uses it to add comments or fix a line. |
-| 5 | **Run tests** | Lets LEIA run the test suite against the student's code and read the results. |
-| 6 | **When should LEIA use this tool in this activity?** | Optional guidance per tool. For example "Only run the tests when the student asks you to check the code". |
+| 2 | **Add test** | Adds an empty test row. The bin icon next to a test removes it. |
+| 3 | **Reset to default** | Restores the example problem, a `twoSum` function with three tests. |
+| 4 | **Read code** | Lets LEIA read the current content of the editor. |
+| 5 | **Apply edits** | Lets LEIA change the student's code with search and replace operations. LEIA uses it to add comments or fix a line. |
+| 6 | **Run tests** | Lets LEIA run the test suite against the student's code and read the results. |
+| 7 | **When should LEIA use this tool in this activity?** | Optional guidance per tool. For example "Only run the tests when the student asks you to check the code". |
 
 Each tool has a switch. A tool that is off cannot be used by LEIA at all.
 

@@ -72,7 +72,7 @@ When **Data Usage Consent Acceptance** is enabled in the replication, the first 
 | 1 | Timer | Counts down the **Duration** of the replication. It turns orange in the last minute and red at zero. Shown only when a duration is set. |
 | 2 | **Notes** | A floating notepad saved in the student's browser only. It is not sent to you. |
 | 3 | **Instructions** | Reopens the statement. A **Guidance** button appears next to it when **Show during exercise** is on and the LEIA has a student infographic. |
-| 4 | **Go to Editor**, **Finish Session** or **Send Solution** | The main button. **Go to Editor** opens the solution editor when **Ask for student solution** is on. **Finish Session** ends the session when no solution is asked for. **Send Solution** appears instead when the LEIA has a code editor widget. |
+| 4 | **Go to Editor**, **Finish Session** or **Send Solution** | The main button. **Go to Editor** opens the solution editor when **Ask for student solution** is on. **Finish Session** ends the session when no solution is asked for. **Send Solution** appears instead when the LEIA has a code editor widget. The button stays disabled until the student has sent a first message. |
 | 5 | Message box | Enter sends, Shift+Enter adds a line. |
 | 6 | **Send** | Sends the message. |
 
@@ -102,7 +102,7 @@ There is no run button. Students ask the LEIA to check their code, the LEIA runs
 
 ![MultiLEIA conversation](../../img/teachers/students/07-multileia.webp)
 
-Each LEIA message carries the name of the character who speaks (1). After one student message one or more characters answer, up to the limit set in the activity. If a character fails to answer, an amber notice says that the round ended early and the conversation continues.
+Each LEIA message carries the name of the character who speaks, Helen (1) and Omar (2) in the example. After one student message one or more characters answer, up to the limit set in the activity. If a character fails to answer, an amber notice says that the round ended early and the conversation continues.
 
 ### Supervisor nudge
 
@@ -137,7 +137,8 @@ If the time runs out while the student is in the editor, the session is closed w
 |---|---|---|
 | 1 | Evaluation | The automatic evaluation, when **Automatic evaluation** is on. Otherwise a simple "Solution submitted successfully". |
 | 2 | Conversation viewer link | A link to a read-only view of the conversation, valid for one year, with a **Copy Link** button. Students can keep it or hand it in. |
-| 3 | **Home** and **Open Form** | **Home** returns to the login page. **Open Form** appears when the replication has an **External form URL**. |
+| 3 | **Home** | Returns to the login page. |
+| 4 | **Open Form** | Opens the questionnaire. Shown only when the replication has an **External form URL**. |
 
 Once the dialog is closed the editor shows the reference **Problem Solution** next to **Your Solution**, so the student can compare.
 

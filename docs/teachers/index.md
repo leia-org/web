@@ -22,7 +22,7 @@ authors:
 This guide explains every screen, button and field that a teacher meets while designing a LEIA, running it with students and reviewing the results. Read this page first. It introduces the vocabulary and the two applications, and it tells you which page of the guide answers each task.
 
 :::info Which version is described
-Due to updates some features may suffer minor changes
+Due to updates some features may suffer minor changes.
 :::
 
 ## What a LEIA is
@@ -105,6 +105,6 @@ flowchart LR
 
 - An account in the Designer. Anyone can register, but new accounts get the **instructor** role, which cannot create behaviours nor enter the Workbench. Ask the LEIA team for the **advanced** role before you plan a class. The details are in [Accounts and roles](accounts-and-roles.md).
 - A language model key. The AI assistant that builds LEIAs, the supervisor and the code editor widget all need an **OpenAI** key. Your administrator may have shared system keys with you already. See [API keys and models](api-keys.md).
-- A modern browser. Voice modes need a microphone and Chrome or Edge.
+- A modern browser. Voice modes need a microphone and permission to use it.
 
 If you prefer to learn by doing, start with the [quick start](../tutorials/create-leia/index.md), which creates a LEIA from an existing one in about ten minutes.

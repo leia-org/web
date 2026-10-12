@@ -26,7 +26,7 @@ Thank you for your interest in contributing to LEIA. Before diving into any indi
 ## System Architecture
 
 :::important
-Right now LEIA only supports OpenAI as a provider, but in the future it will support more providers and even custom ones, so users can connect to the desired one.
+The production release only supports OpenAI as a provider. The development branches add Gemini, Ollama and ALMA as bring your own key providers, and more may follow.
 :::
 
 LEIA is made up of **5 application services** supported by **2 databases and 1 cache**:
