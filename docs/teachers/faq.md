@@ -84,6 +84,8 @@ Honest answers to the questions teachers ask most, plus the limits of the curren
 - **Generate in transcription mode fails** with "Failed to create transcription session". Use **Auto Generate** or **JSON Edit**.
 - **New replications start with a model called "default" that no longer exists**, so the first activation fails with "Some Leias have invalid runner configurations". Pick a real model in every LEIA and save.
 - **Watch live and Share link do nothing**, the server refuses to create the spectate token.
+- **The Live dashboard does not show the flags raised before you opened it.** They are all in the Conversations page.
+- **Older replications do not appear in the list on a tall window.** The list loads ten at a time when you scroll, and a window where ten fit never scrolls. Make the window shorter.
 - **The Configuration view of a session is empty**, "No replication configuration was stored for this conversation".
 - **Data Usage settings cannot be saved**, the server answers that the route does not exist.
 - **The automatic transcript generator writes in Spanish** regardless of the language of the behaviour.
