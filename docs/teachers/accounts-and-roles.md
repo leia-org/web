@@ -117,4 +117,4 @@ Everything you create is **private** by default. Other users only see it once an
 
 ## Log out
 
-Use **Logout** at the bottom of the sidebar or in the account menu. Logging out of the Designer also ends the Workbench session, because both share the same login service.
+Use **Logout** at the bottom of the sidebar or in the account menu. The Workbench has its own **Logout** entry under **Admin** in its sidebar.

@@ -35,7 +35,7 @@ Your administrator may have shared **system keys** with your account. They appea
 
 | Provider | Key type | What you get | Notes |
 |---|---|---|---|
-| **OpenAI** | `openai` | Text conversations, tool calls for widgets, the AI assistant of the Designer, the supervisor, transcription generation | Required for the AI assistant, the supervisor and any LEIA with widgets |
+| **OpenAI** | `openai` | Text conversations, tool calls for widgets, the AI assistant of the Designer, the supervisor | Required for the AI assistant, the supervisor and any LEIA with widgets |
 | **Google Gemini** | `gemini` | Text conversations and the avatar and infographic images of a LEIA | Required to regenerate images |
 | **Ollama** | `ollama` | Open models served by an Ollama server you run yourself | Needs the **Base URL** of the server |
 | **ALMA** | `alma` | Models served by the ALMA platform of the University of Seville | Needs a Base URL and an ALMA key |
