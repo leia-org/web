@@ -47,14 +47,19 @@ If you came from a link such as **Replicate** in the Designer, you are sent to t
 | # | Control | What it does |
 |---|---|---|
 | 1 | Sidebar | **Replications**, **Experiments** and **API Keys** under Workspace, **Logout** under Admin. |
-| 2 | **Search replications** | Filters by name and code. |
-| 3 | **Filters** | Status (**Active** or **Inactive**), **Repeatable** or **Single-run**, **Has time limit** or **Untimed**. |
-| 4 | Sort | **Name**, **Last updated** (the default), **Created**, **Code** or **Status**, ascending or descending. |
-| 5 | A replication | A green dot means students can join. The line shows the experiment, the time limit and whether it is repeatable, then the code and the time of the last change. |
-| 6 | Detail panel | The code, click to copy, the experiment, the duration, the repeatable flag and the dates. |
-| 7 | **Open**, **Live**, **Conversations** | The replication workspace, the live dashboard and the results of the selected replication. |
+| 2 | **Search replications** | Filters the loaded list by name and code. |
+| 3 | **Open filters** | Status (**Active** or **Inactive**), **Repeatable** or **Single-run**, **Has time limit** or **Untimed**, and the sort order, **Name**, **Last updated** (the default), **Created**, **Code** or **Status**. |
+| 4 | A replication | A green dot means students can join. The line shows the experiment, the time limit and whether it is repeatable, then the code and the time of the last change. |
+| 5 | Detail panel | The state, the code, the experiment, the duration, the repeatable flag and the dates. |
+| 6 | **Open** | The replication workspace. |
+| 7 | **Live** | The live dashboard of the selected replication. |
+| 8 | **Conversations** | The results of the selected replication. |
 
 Administrators see every replication with the email of its owner. Advanced users see only their own, under the title **My replications**. The list panel can be widened by dragging its edge.
+
+:::caution The list loads ten replications at a time
+The list is sorted by last update and loads ten more replications each time you scroll to its bottom. The search box only filters the replications already loaded, so an old replication may not appear until you have scrolled far enough. On a tall window where ten replications fit without scrolling, the development version never loads the next ten. Make the window shorter, or open the replication from the **Replicate** button of its activity in the Designer.
+:::
 
 **New Replication** at the top right goes to the experiments list.
 
@@ -80,10 +85,17 @@ The filters offer **Published** or **Unpublished** and the modes found in the li
 |---|---|---|
 | 1 | Preview | The activity as the Designer stored it, in JSON. Scroll it to check the LEIAs and the conversation flow before you replicate. |
 | 2 | **Create Replication** | Opens the naming dialog. |
-| 3 | **Replication Name** | A unique name. It is prefilled with the name of the experiment. Add the group or the date, for example `Library interview, group B, 14 October`. |
-| 4 | **Create** | Creates the replication and opens its workspace. |
+| 3 | **Go back** | Returns to the experiments list. |
 
-A replication starts **inactive**, **not repeatable**, **untimed** and in English. Its LEIAs are preconfigured with your default API key and its model, if you have one. Everything is adjustable in the workspace.
+![Create Replication dialog](../../img/teachers/workbench/05-replication-name-dialog.webp)
+
+| # | Control | What it does |
+|---|---|---|
+| 1 | **Replication Name** | A unique name. It is prefilled with the name of the experiment. Add the group or the date, for example `Library interview, group B, 14 October`. |
+| 2 | **Create** | Creates the replication and opens its workspace. |
+| 3 | **Cancel** | Closes the dialog. |
+
+A replication starts **inactive**, **not repeatable**, **untimed** and in English. Its LEIAs are preconfigured with your default API key, but the model must be chosen and saved in every LEIA before the replication can be activated. See [LEIA settings in a replication](leia-settings.md#runner). Everything else is adjustable in the workspace.
 
 :::tip The short way
 **Quick replication** in the Designer library does all of this for a single LEIA in one click, including publishing an activity named after the LEIA. Use the Workbench route when an activity has several LEIAs or when you want several replications of the same activity.

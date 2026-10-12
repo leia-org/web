@@ -40,11 +40,14 @@ In the development version the dashboard only sends the login token for administ
 |---|---|---|
 | 1 | Tabs | **Active** lists the sessions in progress, with a pulsing dot and a counter. **Finished** and **All** list the others. |
 | 2 | A session | The email of the student, or **Anonymous**, the number of messages and the last message, the start time, and a red flag counter when the supervisor raised flags. |
-| 3 | **Supervisor flags** | In the detail panel, each flag with its category, its severity, the note of the supervisor and the quoted message. New flags appear while you watch. See [The supervisor](../designer/supervisor.md). |
-| 4 | **Watch live** | Opens the spectator view of the selected session in a new tab. |
-| 5 | **Share link** | Shows a spectate link valid for one hour, with **Copy to clipboard**. Give it to a colleague or show it on the projector. |
+| 3 | **Watch live** | Opens the spectator view of the selected session in a new tab. |
+| 4 | **Share link** | Shows a spectate link valid for one hour, with **Copy to clipboard**. Give it to a colleague or show it on the projector. |
 
-The detail panel also shows the last message, the start and end times, the duration, the message count and the LEIA, which opens the LEIA preview drawer when clicked. **Refresh** reloads the list, and the search box filters by email.
+The detail panel shows the last message, the start and end times, the duration, the message count and the LEIA, which opens the LEIA preview drawer when clicked. When the supervisor raises a flag while you watch, a **Supervisor flags** block appears under it with the category, the severity, the note of the supervisor and the quoted message. See [The supervisor](../designer/supervisor.md). **Refresh** reloads the list, and the search box filters by email.
+
+:::note Flags raised before you opened the dashboard
+In the development version the dashboard only shows the flags it receives while it is open. The flags of a session are always listed in the Conversations page. See [Results, grading and export](results-and-export.md#a-session-in-detail).
+:::
 
 The dashboard receives new messages, session ends and supervisor flags live, through a websocket. If the connection drops, a red message says "WebSocket connection error" and **Refresh** brings the list up to date.
 

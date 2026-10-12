@@ -39,14 +39,14 @@ Open **Activities** in the sidebar.
 | # | Control | What it does |
 |---|---|---|
 | 1 | **New Activity** | Asks for a name and creates an empty activity. Names are unique, "An activity with that name already exists" means you must choose another one. |
-| 2 | LEIA count | How many LEIAs the activity holds. |
-| 3 | **MultiLEIA** chip | Shown when the conversation flow is set to MultiLEIA. |
-| 4 | **Published** chip | Shown once the activity is published. |
-| 5 | **Publish** | Makes the activity available to the Workbench. Only before publishing. |
-| 6 | **Delete** | Deletes the activity immediately, without confirmation. Only before publishing. |
-| 7 | Arrow | Expands the activity to show its conversation flow and its LEIAs. |
-
-The search box filters activities by name.
+| 2 | Search | Filters the activities already loaded by name. The page loads more activities as you scroll down. |
+| 3 | LEIA count | How many LEIAs the activity holds. A **MultiLEIA** chip appears next to it when the conversation flow is set to MultiLEIA, and a **Published** chip once the activity is published. |
+| 4 | **Publish** | Makes the activity available to the Workbench. Only before publishing. |
+| 5 | **Delete** | Deletes the activity immediately, without confirmation. Only before publishing. |
+| 6 | Arrow | Expands or collapses the activity to show its conversation flow and its LEIAs. |
+| 7 | Eye | Opens the read-only view of the LEIA. |
+| 8 | **Mode** | **standard** or **transcription**. See [Mode](#mode). |
+| 9 | **Delete LEIA** | Removes the LEIA from the activity, without confirmation. Only before publishing. |
 
 ## Add LEIAs
 
@@ -63,7 +63,7 @@ The same dialog opens from the **Add to activity** button of a library row and f
 
 ## Each LEIA inside the activity
 
-Expand the activity to see its LEIAs. Each one has an eye icon that opens the read-only view, a **Mode** selector and, before publishing, a **Delete LEIA** button that removes it from the activity without confirmation.
+Expand the activity to see its LEIAs. Each one has the eye icon, the **Mode** selector and, before publishing, the **Delete LEIA** button described above.
 
 ### Mode
 
@@ -86,7 +86,7 @@ Expand the activity to see its LEIAs. Each one has an eye icon that opens the re
 
 Every update replaces the previous transcript, the page warns "Any transcription update overwrites previous data".
 
-**Auto Generate** opens a **Transcription Preview** dialog while the platform writes the conversation. It shows the messages with the character on the left and the student on the right, and two buttons, **Save Transcription** and **Cancel**. The generator writes in Spanish unless the behaviour says otherwise, so read the result before saving.
+**Auto Generate** opens a **Transcription Preview** dialog while the platform writes the conversation. It shows the messages with the character on the left and the student on the right, and two buttons, **Save Transcription** and **Cancel**. On the development version the generator wrote in Spanish even for an English behaviour, so read the result before saving.
 
 When you arrive in the chat from **Generate**, the header gains a **Save Transcription** button. Have the conversation you want students to read, then press it. On the development version this path currently fails with "Failed to create transcription session", so prefer **Auto Generate** or **JSON Edit** there.
 

@@ -38,8 +38,9 @@ A replication has three sections of settings that apply to every LEIA in it. **G
 | 1 | **Student link** | The address to give students. It opens the Workbench with the code already filled in. Click to copy. |
 | 2 | **Demo / test link** | The same address with a throwaway identity. Each visit creates a fresh test student, and test sessions never appear in the results. Use it to try the activity yourself or to demonstrate it in class. |
 | 3 | **Shared access** | When on, anyone with the share link can manage this replication without an account. A **Share token** chip appears with **Copy share link** and **Regenerate**. Regenerating invalidates the previous link. |
-| 4 | **Name** and **Rename** | The name of the replication in your list. Names are unique. |
-| 5 | **Code** and **Regenerate code** | The code students type. Regenerating gives a new code and the old one stops working for new students. Sessions already started continue. |
+| 4 | **Rename** | Changes the name of the replication in your list. Names are unique. |
+| 5 | **Code** | The code students type. Click to copy. |
+| 6 | **Regenerate code** | Gives a new code. The old one stops working for new students, sessions already started continue. |
 
 Below the identity block, **Experiment**, **Created** and **Last updated** are read only.
 
@@ -50,15 +51,17 @@ Below the identity block, **Experiment**, **Created** and **Last updated** are r
 | 1 | **Language** | The language of the conversation, the evaluation and the feedback. Free text, for example `Spanish` or `es`. The edit button is labelled **Rename**. The LEIA may still switch language if a student clearly writes in another one. |
 | 2 | **Active** | Whether students can join. A new replication starts inactive. Activation checks that every LEIA has a model and a key, and refuses with a list of the LEIAs to fix otherwise. Turning it off stops new joins but does not interrupt sessions in progress. |
 | 3 | **Repeatable** | Whether a student who finished may start again with the same email. When off, a finished student gets "Session Already Completed". An unfinished session is always resumed, repeatable or not. |
-| 4 | **Duration** | The time limit per session. **No time limit** by default. **Add timer** opens the dialog below, **Change** edits it and **Remove** clears it. |
+| 4 | **Duration** | The time limit per session. **No time limit** by default. |
+| 5 | **Change** | Opens the dialog below. The button reads **Add timer** while there is no limit, and **Remove** next to it clears the limit. |
 
 ![Set replication duration dialog](../../img/teachers/replication-settings/03-duration-dialog.webp)
 
 | # | Control | What it does |
 |---|---|---|
 | 1 | **Hours**, **Minutes**, **Seconds** | The limit, from one second up to 23 hours. |
-| 2 | Quick presets | **15m**, **30m**, **45m**, **1h**, **1h 30m**, **2h**. |
-| 3 | **Total** | The resulting limit. **Save** needs a total above zero. |
+| 2 | **Quick presets** | **15m**, **30m**, **45m**, **1h**, **1h 30m**, **2h**. |
+| 3 | **Total** | The resulting limit. |
+| 4 | **Save** | Applies the limit. It needs a total above zero. |
 
 :::caution The timer lives in the student's browser
 The countdown is shown and enforced by the student's browser. The server does not close sessions on its own, so a student who reloads at the right moment or disables the timer may continue. Use the **Started** and **Finished** times of the results to check, and treat the limit as guidance rather than as a hard wall. When the time runs out while the student is in the solution editor, the session closes without submitting.

@@ -50,8 +50,16 @@ The **Conversations** section of a replication is where you read what happened, 
 |---|---|---|
 | 1 | Transcript | Every message with its time. In MultiLEIA sessions each message carries the name of the character. When the student declined consent and automatic removal was on, the panel explains that no conversation is available. |
 | 2 | **Evaluation** | The text produced by the automatic evaluation, when it was enabled. |
-| 3 | **Supervisor flags** | The flags raised during the session, each with its severity, category, note and quoted message. See [The supervisor](../designer/supervisor.md). |
-| 4 | **Submitted result** | The solution sent by the student. Mermaid diagrams are drawn, other formats are shown as text. |
+
+Two more blocks follow the evaluation when they have content.
+
+![Supervisor flags of a session](../../img/teachers/results/02b-supervisor-flags.webp)
+
+**Supervisor flags** (1) lists the flags raised during the session, each with its severity, category, note and quoted message. See [The supervisor](../designer/supervisor.md).
+
+![Submitted result of a session](../../img/teachers/results/02c-submitted-result.webp)
+
+**Submitted result** (1) is the solution sent by the student. Mermaid diagrams are drawn, other formats are shown as text.
 
 Three buttons switch the detail view.
 
@@ -65,7 +73,8 @@ Three buttons switch the detail view.
 
 | # | Control | What it shows |
 |---|---|---|
-| 1 | **Configuration** | Switches to the snapshot view. In the development version the snapshot is not stored yet and the view reads "No replication configuration was stored for this conversation". |
+| 1 | **Conversation** | Switches back to the transcript. |
+| 2 | **Configuration** | Switches to the snapshot view. In the development version the snapshot is not stored yet and the view reads "No replication configuration was stored for this conversation". |
 | 3 | **Data Usage** | Switches to the consent view. |
 
 ## Scores

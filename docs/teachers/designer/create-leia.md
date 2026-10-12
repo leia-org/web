@@ -157,7 +157,7 @@ Press **Review LEIA**.
 
 | # | Field | What it does |
 |---|---|---|
-| 1 | **New LEIA name** | The name of the LEIA in the library. It must be unique. The example uses `docs-demo-secret-word`. |
+| 1 | **New LEIA name** | The name of the LEIA in the library. It must be unique. The screenshot shows another LEIA of this guide, `docs-demo-secret-word`. |
 | 2 | **Labels** | Pick existing labels or type a new name and press Enter. A new label opens a small dialog with its colours and is created when you finish. |
 | 3 | **Supervisor (AI background monitor)** | The second AI that watches the conversation. Off by default. See [The supervisor](supervisor.md). |
 | 4 | **Enabled** | Turns the supervisor on and reveals its settings. |

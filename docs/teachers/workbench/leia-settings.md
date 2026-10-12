@@ -56,14 +56,14 @@ In a MultiLEIA activity a banner **MultiLEIA activity** summarises the flow and 
 | # | Control | What it does |
 |---|---|---|
 | 1 | **Model** | The language model that plays this LEIA. The list only contains models of providers for which you have an active key. The icon shows the provider. A model that is no longer available is marked and must be replaced. |
-| 2 | **API key** | The key that pays for the conversations. Shown only when more than one key fits the chosen model, otherwise the only compatible key is used. The default key is marked **(Default)**. |
-| 3 | **Audio mode** | **None** for a written chat, **Legacy (OpenAI Realtime)** or **Luke** for a spoken conversation. See [Voice](#voice). |
-| 4 | **Hide audio transcription** | In voice modes, hides the text of the conversation from the student. The transcript is still saved for you. |
-| 5 | **Luke provider** and **Luke voice** | The engine and the voice of the Luke mode, with a play button to hear a sample. The voices are filtered by the pronouns of the persona. |
+| 2 | **Audio mode** | **None** for a written chat, **Legacy (OpenAI Realtime)** or **Luke** for a spoken conversation. See [Voice](#voice). |
+| 3 | **Hide audio transcription** | In voice modes, hides the text of the conversation from the student. The transcript is still saved for you. |
+| 4 | **Luke provider** | The engine of the Luke mode, **OpenAI** or **Gemini**. |
+| 5 | **Luke voice** | The voice, with a play button to hear a sample. The voices are filtered by the pronouns of the persona. |
 | 6 | **Save** | Writes the runner block. "Please select a valid model and API key" means a field is missing. |
 | 7 | **Reset** | Discards the unsaved changes. |
 
-Next to **Model** two links appear, **Dashboard** when the key has a management URL and **Manage Keys**, which opens the API keys page.
+An **API key** selector appears under **Model** when more than one of your keys fits the chosen model. Otherwise the only compatible key is used, which is the case in the screenshot. The default key is marked **(Default)**. Next to **Model** two links appear, **Dashboard** when the key has a management URL and **Manage Keys**, which opens the API keys page.
 
 When the activity has widgets the block warns "This activity uses widgets, so its tool functions require a tool-capable provider. Currently, only OpenAI models are available." and the model list shrinks accordingly.
 
