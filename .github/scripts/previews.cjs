@@ -13,15 +13,27 @@ async function resolve({ github, context, core }) {
   let action = 'production';
   let pr;
   let run;
-  if (context.eventName === 'workflow_run') {
-    run = context.payload.workflow_run;
+  const manualRun = context.eventName === 'workflow_dispatch' && context.payload.inputs?.preview_run_id;
+  if (context.eventName === 'workflow_run' || manualRun) {
+    if (manualRun) {
+      const id = Number(manualRun);
+      if (!Number.isSafeInteger(id) || id <= 0) throw new Error('Invalid CI run ID');
+      ({ data: run } = await github.rest.actions.getWorkflowRun({ ...context.repo, run_id: id }));
+      if (run.status !== 'completed' || run.conclusion !== 'success') {
+        throw new Error('Manual previews require a completed, successful Documentation CI run');
+      }
+    } else {
+      run = context.payload.workflow_run;
+    }
     if (run.event !== 'pull_request' || run.path !== '.github/workflows/ci.yml') {
       core.setOutput('action', 'skip');
       return;
     }
     // Derive identity from GitHub, never from a file supplied by the PR.
     const prs = await openPullRequests(github, context);
-    pr = prs.find(candidate => candidate.head.sha === run.head_sha);
+    const associated = new Set((run.pull_requests || []).map(item => item.number));
+    pr = prs.find(candidate => candidate.head.sha === run.head_sha &&
+      (associated.size === 0 || associated.has(candidate.number)));
     if (!pr) {
       core.info('Ignoring a closed or superseded pull request build.');
       core.setOutput('action', 'skip');

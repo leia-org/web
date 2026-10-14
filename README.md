@@ -70,6 +70,18 @@ executes PR code.
 open at activation, push a new commit or rerun their Documentation CI build.
 The deployment workflow also supports a manual production run from Actions.
 
+For the initial CI/CD PR, maintainers can publish a preview before merging:
+run the deployment workflow from its reviewed repository branch and set
+`preview_run_id` to the successful Documentation CI run for the current PR
+commit. Temporarily allow that exact branch in the `github-pages` environment,
+then remove that branch policy after deployment. Manual runs use deployment
+scripts from the explicitly selected commit; automatic runs continue using
+`main`. Production is always built from `main`.
+
+```bash
+gh workflow run deploy.yml --ref ci/docs-pr-previews -f preview_run_id=<ci-run-id>
+```
+
 To test a preview locally:
 
 ```bash

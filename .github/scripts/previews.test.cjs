@@ -159,3 +159,19 @@ test('late comments and reopened cleanup are ignored; deployment failures and cl
   await comment({ ...closed, env: { ...env, PREVIEW_ACTION: 'remove' } });
   assert.match(closed.writes[0].body, /preview removed/);
 });
+
+test('manual bootstrap downloads only a successful current Documentation CI artifact', async () => {
+  const f = fixture();
+  const run = { ...runContext().payload.workflow_run, status: 'completed', pull_requests: [{ number: 12 }] };
+  f.github.rest.actions = { getWorkflowRun: async () => ({ data: run }) };
+  const manual = { ...context, eventName: 'workflow_dispatch', payload: { inputs: { preview_run_id: '99' } } };
+  await resolve({ ...f, context: manual });
+  assert.deepEqual(f.outputs, { action: 'preview', pr: 12, sha, 'run-id': 99 });
+  run.pull_requests = [{ number: 999 }];
+  await resolve({ ...f, context: manual });
+  assert.equal(f.outputs.action, 'skip');
+  run.conclusion = 'failure';
+  await assert.rejects(resolve({ ...f, context: manual }), /completed, successful/);
+  manual.payload.inputs.preview_run_id = '../evil';
+  await assert.rejects(resolve({ ...f, context: manual }), /Invalid CI run ID/);
+});
