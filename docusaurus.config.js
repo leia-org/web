@@ -20,13 +20,14 @@ const config = {
   },
 
   // Production URL of your site
-  url: 'https://leia.ovh',
+  url: process.env.DOCUSAURUS_URL || 'https://leia.ovh',
   // For project pages on GitHub, baseUrl must be '/<repo>/'
-  baseUrl: '/',
+  baseUrl: process.env.DOCUSAURUS_BASE_URL || '/',
+  noIndex: process.env.DOCUSAURUS_PREVIEW === 'true',
 
   // GitHub pages deployment config.
   organizationName: 'leia-org', // GitHub org name
-  projectName: 'leia-docs',     // Repo name
+  projectName: 'web',          // Repo name
   deploymentBranch: 'gh-pages', // Branch used by Pages
 
   onBrokenLinks: 'throw',
@@ -44,7 +45,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          editUrl: 'https://github.com/leia-org/leia-docs/tree/main/',
+          editUrl: 'https://github.com/leia-org/web/tree/main/',
           showLastUpdateTime: true,
           showLastUpdateAuthor: true,
         },
@@ -92,7 +93,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://github.com/leia-org/leia-docs',
+            href: 'https://github.com/leia-org/web',
             label: 'GitHub',
             position: 'right',
           },
@@ -137,13 +138,13 @@ const config = {
           dark: 'dark'
         },
       },
-      algolia: {
+      ...(process.env.DOCUSAURUS_PREVIEW === 'true' ? {} : { algolia: {
         appId: 'WR7AJHB6S8',
         apiKey: '6cef3f0cccb4068d98a80bbc7cccaeb6',
         indexName: 'leia web docs crawler',
         contextualSearch: true,
         searchPagePath: 'search',
-      },
+      }}),
     }),
 };
 
