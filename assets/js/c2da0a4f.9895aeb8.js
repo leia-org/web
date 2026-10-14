@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkleia_docs=self.webpackChunkleia_docs||[]).push([[3358],{90785:e=>{e.exports=JSON.parse('{"tag":{"label":"web","permalink":"/docs/tags/web","allTagsPath":"/docs/tags","count":1,"items":[{"id":"contributing/web","title":"Web (Documentation)","description":"Repository: leia-org/web","permalink":"/docs/contributing/web"}],"unlisted":false}}')}}]);
