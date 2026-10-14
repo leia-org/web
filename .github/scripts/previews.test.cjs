@@ -175,3 +175,18 @@ test('manual bootstrap downloads only a successful current Documentation CI arti
   manual.payload.inputs.preview_run_id = '../evil';
   await assert.rejects(resolve({ ...f, context: manual }), /Invalid CI run ID/);
 });
+
+test('stacked PRs are discovered and preserved regardless of their base branch', async (t) => {
+  const stacked = { ...pr, base: { ref: 'docs/runner-providers' } };
+  const f = fixture([stacked]);
+  f.github.paginate = async (method, args) => {
+    assert.equal(method, 'pulls');
+    assert.equal(args.base, undefined);
+    return [stacked];
+  };
+  await resolve({ ...f, context: runContext() });
+  assert.equal(f.outputs.action, 'preview');
+  const root = await site(t);
+  await prepare({ ...f, env: { ...env, PREVIEW_ACTION: 'production' }, root });
+  assert.equal(await fs.readFile(path.join(root, 'site', 'pr-preview', 'pr-12', 'obsolete.html'), 'utf8'), 'old');
+});
