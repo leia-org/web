@@ -38,7 +38,7 @@ npm start
 
 ## CI/CD and pull request previews
 
-Every pull request targeting `main` runs the deployment-script tests,
+Every pull request, including those targeting another PR branch in a stack, runs the deployment-script tests,
 Markdown lint and a Docusaurus build. Successful builds are published at
 `https://leia.ovh/pr-preview/pr-<number>/`. A single bot comment in the pull
 request links to the documentation and website, identifies the commit and
