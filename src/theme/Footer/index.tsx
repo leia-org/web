@@ -1,43 +1,7 @@
 import React from 'react'
-import { Linkedin, Twitter, Github } from 'lucide-react'
-import people from '../../data/people.json'
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
-  const peopleItems = people as Array<{ name: string; photo: string }>
-  const footerLinks = {
-    producto: [
-      { name: 'Features', href: '#caracteristicas' },
-      { name: 'Documentation', href: '/docs/intro' },
-      { name: 'API', href: '/docs/api' },
-      { name: 'Tutorials', href: '/docs/tutorial-basics/create-a-document' }
-    ],
-    empresa: [
-      { name: 'About', href: '#acerca' },
-      { name: 'Blog', href: '/blog' },
-      { name: 'Team', href: '#team' },
-      { name: 'Contact', href: '#contacto' }
-    ],
-    soporte: [
-      { name: 'Help Center', href: '/docs/intro' },
-      { name: 'Documentation', href: '/docs' },
-      { name: 'Community', href: '#comunidad' },
-      { name: 'Contact', href: '#contacto' }
-    ],
-    legal: [
-      { name: 'Privacy', href: '#privacidad' },
-      { name: 'Terms', href: '#terminos' },
-      { name: 'Cookies', href: '#cookies' },
-      { name: 'Security', href: '#seguridad' }
-    ]
-  }
-
-  const socialLinks = [
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Github, href: '#', label: 'GitHub' }
-  ]
-
   return (
     
     <footer id="contacto" className="bg-black text-white">

@@ -1,149 +1,101 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 tags:
   - tutorial
   - leia
-  - customization
+  - quick start
 keywords:
   - LEIA
   - create LEIA
-  - customize
+  - design from this
+  - quick start
   - persona
-  - tutorial
-  - duplicate
+  - problem
 authors:
-  - name: pabpergas
-    url: https://github.com/pabpergas
-    image_url: https://github.com/pabpergas.png
-  - name: japarejo
-    url: https://github.com/japarejo
-    image_url: https://github.com/japarejo.png
-  - name: pafmon
-    url: https://github.com/pafmon
-    image_url: https://github.com/pafmon.png
+  - name: Dangalcan
+    url: https://github.com/Dangalcan
+    image_url: https://github.com/Dangalcan.png
 ---
 
-# How to Create and Customize Your Own LEIA
+# Quick start, your first LEIA in ten minutes
 
-Follow this guide to learn how to duplicate an existing LEIA, modify its problem and persona, and finally, create and test your new LEIA.
+:::info Who can do this
+Every role, including **instructor**. This path reuses the behaviour of an existing LEIA, so it never creates a behaviour.
+:::
 
----
+The fastest way to get a LEIA of your own is to start from one that already exists, change the character and the exercise, and save the result under a new name. You will reuse the behaviour, which is the part that tells the language model how to act, and you will only touch what makes your version different.
 
-## **Step 1: Duplicate an Existing LEIA**
+## 1. Pick a LEIA to start from
 
-![Step 1: Duplicate LEIA](../../img/tutorials/create-leia/Step1.PNG)
+Open the [LEIA library](../../teachers/designer/index.md) and find a public LEIA close to what you want. Set **Visibility** to **Public** to see only the LEIAs published by the LEIA team. For an interview exercise pick one whose description mentions requirements. For a game pick a guessing game.
 
-To begin, we will not create a LEIA from scratch but will instead use an existing one as a template.
+Press **View** on the row to read its problem and persona. When you have found a good candidate, move the mouse over the row and press **Design from this**.
 
-* On your main dashboard, locate the LEIA you want to use as a base (in this example, `game-secretWord-Pizza`).
-* Click the **duplicate icon** (indicated by arrow 1) to create an editable copy.
+![Design from this](../../img/tutorials/create-leia/01-design-from-this.webp)
 
----
+| # | What you see | What it means |
+|---|---|---|
+| 1 | Three filled cards in the preview | The persona, behaviour and problem of the original LEIA are loaded. Nothing has been copied yet. |
+| 2 | Title | The name of the original LEIA. You will change it in the last step. |
+| 3 | **Review LEIA** | Already enabled, because the three components combine. |
 
-## **Step 2: Edit the "Problem"**
+## 2. Change the character
 
-![Step 2: Edit the Problem](../../img/tutorials/create-leia/Step2.PNG)
-⬇️
-![Step 2: Problem Details](../../img/tutorials/create-leia/Step3.PNG)
+Click the **Persona** card. The persona editor opens.
 
-Now, let's define the game's rules and solution.
+![Persona editor](../../img/teachers/components/01-persona-editor.webp)
 
-* On the "Step 2: Edit" screen, go to the **Problem** section and click the **Edit** button (arrow 2).
-* An editor will open where you will modify the following fields:
-  * **details (3):** Fill in this field to explain what the game is about. For example: "The game consists of guessing a secret word by asking the assistant questions that can only be answered with yes or no."
-  * **solution (4):** Define the secret word that the user must guess. For this tutorial, the word is `skull`.
-  * **personality (5):** "Extend" the base personality of the "Persona" to give it a specific theme. In this case, `"Pirates Mysterious Dark Punk"` has been added to give the game a mystery and pirate-themed atmosphere.
-* When you are finished, click **Save** (6) to apply the changes.
+Change at least these fields.
 
-**Problem Configuration Example:**
+- **Persona name** (2), a new identifier, for example `maria-lopez-bookshop-owner`. A persona name that already exists is refused when you finish.
+- **Full Name** (3) and **First Name** (4).
+- **Description** (5), who the character is and what they want.
+- **Personality** (6), a few adjectives.
+- The four pronoun fields (7 to 10) if the character's gender changed.
 
-```json
-{
-  "spec": {
-    "description": "You are going to play with your friend Timmy a \"Secret Word\" game. Your friend can answer only yes or no. Good luck!",
-    "details": "The game consists in guessing a secret word by the user, during the game only yes or no questions should be allowed. The AI assistant can't say the secret word explicitly  until the user guesses it.",
-    "solution": "the user guesses the secret word 'skull'",
-    "solutionFormat": "text",
-    "process": [
-      "game"
-    ],
-    "extends": {
-      "persona": {
-        "spec": {
-          "personality": [
-            "Pirates Mysterious Dark Punk"
-          ]
-        }
-      }
-    }
-  },
-  "apiVersion": "v1"
-}
-```
+Press **Save** (11).
 
----
+## 3. Change the exercise
 
-## **Step 3: Edit the "Persona"**
+Click the **Problem** card.
 
-![Step 3: Edit the Persona](../../img/tutorials/create-leia/Step4.PNG)
-⬇️
-![Step 3: Persona Details](../../img/tutorials/create-leia/Step5.PNG)
+![Problem editor](../../img/teachers/components/02-problem-editor.webp)
 
-Next, we will customize the character the user will interact with.
+Change at least these fields.
 
-* Back on the "Step 2: Edit" screen, go to the **Persona** section and click its **Edit** button (arrow 7).
-* In the persona editor:
-  * **description (8):** Describe the character to match the game's theme. For example: "Timmy is a 23-year-old guy cool drawn to skulls and the mysterious allure of pirate legends...".
-  * **personality (9):** Add adjectives that define their character. In this case, `"mysterious, passionate, rebellious"` is used.
-* To finish editing the character, click **Save** (10).
+- **Problem name** (1), a new identifier.
+- **Description** (3), what the student sees.
+- **Details** (5), what only the character knows.
+- **Solution** (6), the reference answer in the chosen **Solution Format** (8).
+- **Evaluation Prompt** (9) if you want the grader to focus on something.
 
-**Persona Configuration Example:**
+Leave **Process** (10) as it is. The behaviour you are reusing expects that process. Press **Save** (12).
 
-```json
-{
-  "spec": {
-    "fullName": "Timmy",
-    "description": "Timmy is a 23-year-old soul drawn to skulls and the mysterious allure of pirate legends, while also enjoying parties and spending time with friends. Timmy is passionate and friendly, yet carries an enigmatic vibe.",
-    "personality": "mysterious, passionate, rebellious, Pirates Mysterious Dark Punk",
-    "subjectPronoum": "he",
-    "objectPronoum": "his",
-    "possesivePronoum": "his",
-    "possesiveAdjective": "his"
-  },
-  "apiVersion": "v1"
-}
-```
+:::tip Placeholders keep working
+If the original behaviour uses `{{persona.firstName}}` or `{{problem.details}}`, your new persona and problem are inserted automatically. See [Placeholders](../../teachers/designer/components-reference.md#placeholders).
+:::
 
----
+## 4. Try it
 
-## **Step 4: Name and Save Your LEIA**
+Press **Test LEIA** in the preview panel and have a short conversation. The draft is saved before the chat opens, and **Continue Configuration** brings you back. Details in [Test a LEIA](../../teachers/designer/test-leia.md).
 
-![Step 4: Create and Name](../../img/tutorials/create-leia/Step6.PNG)
+## 5. Name it and finish
 
-You are at the final configuration step, where you will assign the final names to all components.
+Press **Review LEIA**.
 
-* **LEIA (11):** Assign a general name to your new creation. In the example: `game-secretWord-Skull`.
-* **Problem (12):** Give a name to the problem you have configured: `secretWord-skull`.
-* **Persona (13):** Assign a name to the character you have created: `Timmy`.
-* Review the final preview. If everything is correct, click **Finish** (14) to save your new LEIA.
+![Review step](../../img/teachers/create-leia/08-step2-review.webp)
 
----
+- Type the **New LEIA name** (1).
+- Add a **Label** (2) if you want to find it quickly later.
+- Check the **Persona name** (7) and the **Problem name** (6). The **Behaviour name** (5) stays as it is, since you reuse it.
+- Press **Finish LEIA** (10).
 
-## **Step 5: Test Your Creation!**
+![Success dialog](../../img/teachers/create-leia/10-success-dialog.webp)
 
-![Step 5: LEIA Created](../../img/tutorials/create-leia/Step7.PNG)
+Press **Go to LEIAs**. Your LEIA is in the library, private to your account, with the **Test LEIA** button ready.
 
-Congratulations, your LEIA is now created and ready to use!
+## What next
 
-* Your new LEIA, `game-secretWord-Skull`, will appear in your list.
-* To interact with it, simply click the **Try button** (the white button with <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" /></svg>, marked with the number 15).
-* A chat window will open where "Timmy" will greet you in the pirate and mysterious style you defined, ready to play the game.
-
-![Step 5: Final Chat Result](../../img/tutorials/create-leia/Step8.PNG)
-
----
-
-## **Final Note on Privacy**
-
-By default, all LEIAs you create will remain **private** to your account. If you wish to share your creation with the community and make it public, you can request it by contacting the team at **[team@leia.ovh](mailto:team@leia.ovh)**.
+- Advanced and admin accounts can press **Quick replication** on the new row to open it for students at once. See [Workbench overview](../../teachers/workbench/index.md).
+- Instructor accounts cannot run replications yet. Ask the LEIA team at [team@leia.ovh](mailto:team@leia.ovh) for the advanced role, or ask a colleague with that role to replicate your LEIA.
+- To build a LEIA from scratch with the AI assistant, follow [Create a LEIA with the AI assistant](../../teachers/designer/create-leia.md).
