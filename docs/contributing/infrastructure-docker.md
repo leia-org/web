@@ -65,7 +65,7 @@ The keys `RUNNER_KEY` and `DESIGNER_BACKEND_KEY` must match their counterparts i
 ## Prerequisites
 
 - **Docker** and **Docker Compose** installed.
-- A valid **OpenAI API key** (required by the Runner service).
+- An **OpenAI API key** for the Workbench voice features and the Runner's generation helpers. LEIA sessions use the provider API keys (OpenAI, Gemini, Ollama or ALMA) that each user stores in the **leia-auth** service, which has to be deployed alongside this stack.
 - Docker images for all 5 LEIA services published to GHCR (happens automatically via GitHub Actions on each service repo).
 
 ---
@@ -155,9 +155,13 @@ All secrets below have insecure defaults. **Change every one of them** before de
 
 | Variable | Default | Description |
 | --- | --- | --- |
-| `OPENAI_API_KEY` | _(required)_ | OpenAI API key used by the Runner |
-| `OPENAI_EVALUATION_MODEL` | `gpt-4` | Model used for LEIA evaluation |
-| `DEFAULT_MODEL` | `gpt-3.5-turbo` | Default LLM model for AI sessions |
+| `OPENAI_API_KEY` | _(required)_ | OpenAI API key for the Workbench voice features and the Runner's generation helpers |
+| `OPENAI_EVALUATION_MODEL` | `gpt-4o` | Model used for LEIA evaluation |
+| `DEFAULT_MODEL` | `openai-responses` | Runner provider module used when a session does not name one |
+| `SESSION_TTL_SECONDS` | `86400` | Seconds a Runner session lives in Redis after its last activity. `0` disables expiration |
+| `ALMA_BASE_URL` | `https://alma.us.es/api/models/llama-3.1-8b-instruct/v1` | Base URL of one ALMA model, overridden by the base URL of the user's key |
+| `ALMA_MODEL` | `meta-llama/Llama-3.1-8B-Instruct` | Model id sent to ALMA (the Hugging Face repo id behind that base URL) |
+| `ALMA_MAX_TOKENS` / `ALMA_EVALUATION_MAX_TOKENS` | `1024` / `2048` | Token limits per ALMA reply and per evaluation |
 
 ### Environment
 
@@ -196,7 +200,7 @@ Launch the complete LEIA system:
    cp .env.example .env
    ```
 
-   At minimum, set your `OPENAI_API_KEY` and change all default secrets.
+   At minimum, set your `OPENAI_API_KEY` and change all default secrets. Provider keys for LEIA sessions are added later by each user in the app.
 
 3. Start all services:
 
