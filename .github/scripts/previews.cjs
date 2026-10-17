@@ -5,7 +5,7 @@ const marker = '<!-- leia-docs-preview -->';
 
 async function openPullRequests(github, context) {
   return github.paginate(github.rest.pulls.list, {
-    ...context.repo, state: 'open', base: 'main', per_page: 100,
+    ...context.repo, state: 'open', per_page: 100,
   });
 }
 
