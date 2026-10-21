@@ -58,8 +58,9 @@ web/
 ├── docs/                        # All documentation content (Markdown / MDX)
 │   ├── img/                     # Images organised by category
 │   ├── introduction/            # Getting started docs
+│   ├── teachers/                # Teacher guide (Designer, Workbench, students, FAQ)
+│   ├── tutorials/               # Quick start and teaching scenarios
 │   ├── installation/            # Simple guide to install and deploy LEIA
-│   ├── tutorials/               # Step-by-step guides
 │   └── contributing/            # This section
 ├── src/                         # React source code
 │   ├── components/              # Landing page components (Hero, Features, About…)

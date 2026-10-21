@@ -183,12 +183,21 @@ const Hero: React.FC = () => {
                       <p className="text-secondary-600 dark:text-secondary-300 leading-relaxed">
                         {leiasItems[activeLeiaIndex].description}
                       </p>
-                      <button
-                        onClick={() => window.open(leiasItems[activeLeiaIndex].link, '_blank')}
-                        className="modern-button w-full sm:w-auto hover:scale-105"
-                      >
-                        <span>Try Out!</span>
-                      </button>
+                      <div className="flex flex-col sm:flex-row gap-3">
+                        <button
+                          onClick={() => window.open(leiasItems[activeLeiaIndex].link, '_blank')}
+                          className="modern-button w-full sm:w-auto hover:scale-105"
+                        >
+                          <span>Try Out!</span>
+                        </button>
+                        {/* The teacher guide lives in the "next" docs version until a new docs version is cut. */}
+                        <a
+                          href="/docs/next/teachers/"
+                          className="modern-button w-full sm:w-auto hover:scale-105 text-center"
+                        >
+                          <span>Teacher guide</span>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </motion.div>
