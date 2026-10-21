@@ -70,7 +70,7 @@ Inside a running Compose stack, services communicate with each other via their c
 ## Prerequisites
 
 - **Docker** and **Docker Compose** installed.
-- A valid **OpenAI API key** (required by the Runner service).
+- An **OpenAI API key** for the Workbench voice features and the Runner's generation helpers. LEIA sessions use the provider API keys (OpenAI, Gemini, Ollama or ALMA) that each user stores in the **leia-auth** service, which has to be deployed alongside this stack.
 
 ---
 
@@ -118,6 +118,19 @@ cp .env.example .env
 | `PORT_DESIGNER_FRONTEND` | `5173` | Host port for Designer Frontend |
 | `PORT_WORKBENCH_FRONTEND` | `8080` | Host port for Workbench Frontend |
 
+### AI / LLM
+
+| Variable | Default | Description |
+| --- | --- | --- |
+| `OPENAI_API_KEY` | _(required)_ | OpenAI API key for the Workbench voice features and the Runner's generation helpers |
+| `GEMINI_API_KEY` | _(empty)_ | Optional Gemini API key |
+| `OPENAI_EVALUATION_MODEL` | `gpt-5.4-mini` | Model used for LEIA evaluation |
+| `DEFAULT_MODEL` | `openai-responses` | Runner provider module used when a session does not name one |
+| `SESSION_TTL_SECONDS` | `86400` | Seconds a Runner session lives in Redis after its last activity. `0` disables expiration |
+| `ALMA_BASE_URL` | `https://alma.us.es/api/models/llama-3.1-8b-instruct/v1` | Base URL of one ALMA model, overridden by the base URL of the user's key |
+| `ALMA_MODEL` | `meta-llama/Llama-3.1-8B-Instruct` | Model id sent to ALMA |
+| `ALMA_MAX_TOKENS` / `ALMA_EVALUATION_MAX_TOKENS` | `1024` / `2048` | Token limits per ALMA reply and per evaluation |
+
 ---
 
 ## Quick Start
@@ -137,7 +150,7 @@ Launch the complete LEIA system:
    cp .env.example .env
    ```
 
-   At minimum, set your `OPENAI_API_KEY` and change all default secrets.
+   At minimum, set your `OPENAI_API_KEY` and change all default secrets. Provider keys for LEIA sessions are added later by each user in the app.
 
 3. Start all services:
 

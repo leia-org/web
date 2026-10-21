@@ -1,4 +1,5 @@
 import React from 'react'
+import { useBaseUrlUtils } from '@docusaurus/useBaseUrl'
 import { ArrowRight, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import universities from '../data/universities.json'
@@ -8,6 +9,7 @@ import DesignUsingExistingLEIAsGif from '../../static/gifs/DesignFromThis.gif'
 import ReplicateGif from '../../static/gifs/Replicate.gif'
 import StudentsGif from '../../static/gifs/Students.gif'
 const Hero: React.FC = () => {
+  const { withBaseUrl } = useBaseUrlUtils()
   const universityItems = universities as Array<{ name: string; icon: string }>
   const leiasItems = leias as Array<{ name: string; description: string; image: string; link: string }>
   const featureTemplates = [
@@ -122,7 +124,7 @@ const Hero: React.FC = () => {
                         <AnimatePresence mode="sync" initial={false}>
                           <motion.img
                             key={`leia-${activeLeiaIndex}`}
-                            src={leiasItems[activeLeiaIndex].image}
+                            src={withBaseUrl(leiasItems[activeLeiaIndex].image)}
                             alt={leiasItems[activeLeiaIndex].name}
                             className="absolute inset-0 w-full h-full object-cover"
                             loading="lazy"
@@ -209,7 +211,7 @@ const Hero: React.FC = () => {
                     className="flex flex-col items-center justify-between gap-3 px-1 py-2"
                   >
                     <img
-                      src={university.icon}
+                      src={withBaseUrl(university.icon)}
                       alt={`Logo de ${university.name}`}
                       className="w-24 h-24 object-contain"
                       loading="lazy"

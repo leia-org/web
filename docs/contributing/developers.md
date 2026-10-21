@@ -143,7 +143,7 @@ docker compose up -d
 docker compose up -d --build
 ```
 
-After some time you will have all LEIA services running. Now it is time to stop and remove the containers that you will modify so you can run locally the forks. Clone your forks, install the dependencies and run them. 
+After some time you will have all LEIA services running. Now it is time to stop and remove the containers that you will modify so you can run locally the forks. Clone your forks, install the dependencies and run them.
 
 :::danger
 It is important to adapt env variables to your needs, because depending on what you are touching your will need to change some URLs or others. **Be advised that you must ensure that env variables are fine in both docker-compose `.env` and in your forked repos `.env`.**
