@@ -23,6 +23,46 @@
     "institution": "US",
     "github": "https://github.com/Dangalcan",
     "linkedin": "https://www.linkedin.com/in/daniel-galvan-cancio/"
+  },
+  {
+    "name": "Michael Hilton",
+    "photo": "https://avatars.githubusercontent.com/u/1170420?v=4",
+    "role": "Researcher",
+    "institution": "CMU",
+    "github": "https://github.com/MichaelHilton",
+    "linkedin": "https://www.linkedin.com/in/michael-hilton-0218b819/"
+  },
+  {
+    "name": "Juho Leinonen",
+    "photo": "https://avatars.githubusercontent.com/u/3277178?v=4",
+    "role": "Researcher",
+    "institution": "Aalto",
+    "github": "https://github.com/Mession",
+    "linkedin": ""
+  },
+  {
+    "name": "Armando Fox",
+    "photo": "https://avatars.githubusercontent.com/u/271948?v=4",
+    "role": "Researcher",
+    "institution": "UC Berkeley",
+    "github": "https://github.com/armandofox",
+    "linkedin": ""
+  },
+  {
+    "name": "José Raúl Romero Salguero",
+    "photo": "https://avatars.githubusercontent.com/u/16683876?v=4",
+    "role": "Researcher",
+    "institution": "UCO",
+    "github": "https://github.com/jrromero",
+    "linkedin": "https://www.linkedin.com/in/jos%c3%a9-ra%c3%bal-romero-6078031"
+  },
+  {
+    "name": "Carlos García Martínez",
+    "photo": "https://avatars.githubusercontent.com/u/42171969?v=4",
+    "role": "Researcher",
+    "institution": "UCO",
+    "github": "https://github.com/cgarcia-UCO",
+    "linkedin": ""
   }
   ],
   "Engineering": [
