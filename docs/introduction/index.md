@@ -23,99 +23,77 @@ authors:
   - name: pafmon
     url: https://github.com/pafmon
     image_url: https://github.com/pafmon.png
+  - name: Dangalcan
+    url: https://github.com/Dangalcan
+    image_url: https://github.com/Dangalcan.png
 ---
 
 # How to Use LEIA
 
-LEIA (Learning with an Educational Intelligent Assistant) is a platform that enables instructors to design interactive simulations and students to practice in realistic scenarios with AI support.  
+LEIA (Learning with an Educational Intelligent Assistant) is a platform that lets instructors design interactive simulations and lets students practise in realistic scenarios with AI support. A LEIA is an AI character with a role, a personality and an exercise behind it. Students talk to it, by text or by voice, and may hand in a solution that the platform grades.
+
+This page gives the big picture. The [Teacher guide](../teachers/index.md) explains every screen, button and field, and the [Tutorials](../tutorials/create-leia/index.md) walk through complete examples.
 
 ---
 
 ## 1. General Workflow
 
-The general workflow of LEIA follows four main steps:
+The workflow of LEIA has five steps.
 
-1. **Instructor designs the LEIA**
-   - Chooses a process/behaviour (currently, either a conversational game, information requirements elicitacion, or process requirements elicitation).
-   - Defines the problem (including the expected solution).
-   - Chooses or customizes the persona whith which students will interact. Including personality traits.  
-2. **Instructor configures an experiment**  
-   - Defines the scenario (conditioning of LEIA).  
-   - Adjusts operational parameters (time limits, replicable sessions, etc.).  
-   - (Optional) Provides an auto-grader for automated evaluation.  
-
-3. **Students access the activity**  
-   - Each student/group receives their own dedicated session.  
-   - The instructor specifies if the activity must be completed in a single session or across multiple ones.  
-
-4. **Submission and evaluation**  
-   - Students upload their work product (e.g., UML diagrams in Mermaid syntax).  
-   - The work is evaluated either by an auto-grader or manually.  
-
-5. **Review of results**  
-   - The instructor can download session data (CSV/JSON), including:  
-     - Full conversation transcripts  
-     - Student submissions  
-     - Metadata and timestamps  
-   - This supports grading, detailed analysis, or research studies.
+1. **The instructor designs the LEIA** in the Designer.
+   - Describes the activity to an AI assistant or starts from an existing LEIA.
+   - Chooses the process, either a requirements elicitation interview, a conversational game or any other role play.
+   - Defines the problem, including the expected solution and how it is evaluated.
+   - Chooses or customises the persona the students will talk to, with its personality traits.
+2. **The instructor prepares an activity and a replication.**
+   - Groups one or more LEIAs in an activity and publishes it.
+   - Creates a replication in the Workbench with a join code and operational settings, time limit, repeatable sessions, language, model and voice.
+   - Optionally enables the automatic evaluation and a supervisor that watches the conversations.
+3. **Students join the activity** with the code and an email address, no account needed.
+   - Each student gets a private session that can be resumed if it was not finished.
+   - The instructor decides whether a student may repeat the activity.
+4. **Submission and evaluation.**
+   - Students write their solution in the editor, for example a UML class diagram in Mermaid syntax, or send the code from the editor widget.
+   - The solution is graded automatically against the reference solution, and the instructor can adjust the score.
+5. **Review of results.**
+   - The instructor watches sessions live, reads the transcripts, the submissions, the evaluations and the supervisor flags, and downloads a CSV with every message.
+   - The data supports grading, qualitative analysis and research.
 
 ### Workflow Diagram
 
-![Worflow Diagram](../img/introduction/workflow.svg)
+![Workflow diagram](../img/introduction/workflow.svg)
 
 ---
 
 ## 2. Instructor Experience
 
-### LEIA creation/design
+### LEIA creation and design
 
-Instructors do this task  using the [LEIA Designer](http://designer.leia.ovh/). Using this application instructors can view a listing of existing LEIAS:
+Instructors work in the [LEIA Designer](https://designer.leia.ovh/). Its home page is the library of LEIAs that the instructor can see, test and reuse.
 
-![LEIAs listing](../img/introduction/LEIA-designer-LEIA-listing.png)
+![LEIA library](../img/teachers/library/01-overview.webp)
 
-From the listing instructors can create new LEIAs using one of the elements in the listing as starting point:
+From the library an instructor can test any LEIA, start a new design from an existing one with **Design from this**, or press **New LEIA** and describe the activity to the AI assistant, which writes the persona, the behaviour and the problem.
 
-![LEIAs creation](../img/introduction/LEIA-designer-LEIA-DesignFromThis.png)
-In the LEIA creation interface users can define:
+![Design screen with the assistant's result](../img/teachers/create-leia/04-step1-ready.webp)
 
-   1. Instructors choose from an existing proces, problem and persona.
-![LEIAs component selection](../img/introduction/LEIA-designer-Step1.png)
-   2. [Optional] Instructors customize the problem or/and the persona.
-![LEIAs customization](../img/introduction/LEIA-designer-Step2.png)
-   3. [Optional] Instructors can test de LEIA and interact with the chat to check the behaviour
-![LEIAs testing](../img/introduction/LEIA-designer-LeiaTesting.png)
-   4. Instructors confirm the status and save the LEIA as private, and can ask admins (by e-mail) to make it public (after a review process).
-![LEIAs customization](../img/introduction/LEIA-designer-Step3.png)
+Every component can be adjusted by hand. The problem editor holds the statement, the hidden details, the reference solution with a live preview, the solution format, the evaluation prompt and the optional code editor widget.
 
-### Experiment configuration
+![Problem editor](../img/teachers/components/02-problem-editor.webp)
 
-Instructors define:
+A LEIA can be tested from the Designer before any student sees it, and it stays private to the instructor until an administrator publishes it. The full walkthrough is in [Create a LEIA with the AI assistant](../teachers/designer/create-leia.md).
 
-- **Content:**  
-  - Scenario for LEIA (e.g., a simulated client interview, process discovery interview, or conversational game).  
-  - How students should submit their solutions.  
-  - Whether to use an auto-grader or manual evaluation.  
+### Activities and replications
 
-- **Operational parameters:**  
-  - Time limits.  
-  - Replicable sessions with unique codes.  
-  - Selection of the LLM provider.
+Published activities are replicated in the [LEIA Workbench](https://workbench.leia.ovh/). A replication has its own code, links and switches.
 
-![Excercises Listing Interface](../img/introduction/ExercisesListingInterface.png)
+![Replication settings](../img/teachers/replication-settings/01-general-links.webp)
 
----
+In the replication the instructor chooses, per LEIA, the language model and the key that pay for it, the voice mode, whether students must submit a solution and whether it is evaluated automatically. The details are in [Replication settings](../teachers/workbench/replication-settings.md) and [LEIA settings in a replication](../teachers/workbench/leia-settings.md).
 
 ### Workbench dashboard
 
-The instructor dashboard allows:  
-
-- Viewing all instantiated sessions.  
-- Inspecting a specific session's details:  
-  - Metadata  
-  - LEIA configuration  
-  - Submission and evaluation settings  
-
-![Exercise Details Interface](../img/introduction/ExerciseDetailsInterface.png)
+The Workbench shows the sessions in progress with the supervisor flags, lets the instructor watch any conversation live, and lists every finished session with its transcript, evaluation and score. See [Live dashboard and spectating](../teachers/workbench/live-and-spectate.md) and [Results, grading and export](../teachers/workbench/results-and-export.md).
 
 ---
 
@@ -123,39 +101,30 @@ The instructor dashboard allows:
 
 ### Access
 
-Students log in using:  
+Students open the link shared by the instructor, or [workbench.leia.ovh](https://workbench.leia.ovh/), and type an email address and the replication code. The email is only an identifier. There is no password.
 
-- **Email address**, or  
-- **System-provided code** (to ensure anonymity if required).  
-
-![Student Login](../img/introduction/st_login_1.webp)
-
----
+![Student login](../img/teachers/students/01-login.webp)
 
 ### Interaction with LEIA
 
-- Students initiate a chat session with the assistant.  
-- They can ask clarifying questions, gather requirements, and iteratively refine their understanding.  
-- If the session is replicable, they can leave and resume it later.  
+Students read the instructions, then talk to the character. They can ask clarifying questions, gather requirements and refine their understanding. If the replication is repeatable they can start again later.
 
-![Student Chat](../img/introduction/st_chat_1.webp)
+![Student chat](../img/teachers/students/04-chat.webp)
 
----
+### Submissions and feedback
 
-### Submissions and Feedback
+Students submit their solution in the format chosen by the instructor. When the automatic evaluation is enabled they get feedback at once, with a score and an explanation of what is missing, and they can compare their solution with the reference one.
 
-- Students submit their solution (e.g., UML diagram in Mermaid syntax).  
-- If enabled, the **auto-grader** provides immediate feedback:  
-  - Highlights missing elements or errors.  
-  - Suggests improvements.  
-  - Allows students to re-enter the session and refine their work.  
+![Evaluation shown to the student](../img/teachers/students/10-evaluation.webp)
 
-![Student Evaluation](../img/introduction/st_eval.webp)
+The whole path is described in [What students see](../teachers/workbench/students.md).
 
 ---
 
 ## 4. Use Cases
 
-- **Requirements Elicitation training:** simulate client interviews and model requirements with UML.  
-- **Educational simulations:** role-play consulting scenarios or analysis meetings.  
-- **Iterative activities:** allow multiple sessions with feedback loops.
+- **Requirements elicitation training.** Simulate client interviews and model the requirements in UML. See the [scenario](../tutorials/requirements-elicitation.md).
+- **Conversational games.** Guessing games, quizzes and role play with rules. See the [scenario](../tutorials/conversational-game.md).
+- **Programming tutoring.** A tutor that reads the student's code and runs the tests. See the [scenario](../tutorials/programming-exercise.md).
+- **Group simulations.** Several characters in one meeting. See the [scenario](../tutorials/multi-leia-simulation.md).
+- **Iterative activities.** Repeatable sessions with feedback loops and a supervisor that coaches the student.

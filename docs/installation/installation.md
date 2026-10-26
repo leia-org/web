@@ -18,9 +18,9 @@ authors:
 
 # Installation and deployment
 
-This section is meant to be a simple step-by-step guide in order to install LEIA with ease. Please if you are a developer and your are meant to extend the system just move on to [contributing section](../contributing/index.md).
+This section is meant to be a simple step-by-step guide in order to install LEIA with ease. If you are a developer who wants to extend the system, move on to the [contributing section](../contributing/index.md).
 
-First of all, we will require to clone the infrastructure repo, prepare the enviroment variables and start LEIA. Before proceeding make sure you have [Docker](https://docs.docker.com/engine/install/) and [docker-compose](https://docs.docker.com/compose/install/) installed on your system, and create an OpenAI apikey. If you do not know how to generate an OpenAI apikey, follow this [tutorial](https://developers.openai.com/api/docs/quickstart/). The LEIA sessions themselves use the provider API keys (OpenAI, Gemini, Ollama or ALMA) that each user adds in the app, which are stored by the leia-auth service.
+First of all, we will require to clone the infrastructure repo, prepare the environment variables and start LEIA. Before proceeding make sure you have [Docker](https://docs.docker.com/engine/install/) and [docker-compose](https://docs.docker.com/compose/install/) installed on your system, and create an OpenAI apikey. If you do not know how to generate an OpenAI apikey, follow this [tutorial](https://developers.openai.com/api/docs/quickstart/). The LEIA sessions themselves use the provider API keys (OpenAI, Gemini, Ollama or ALMA) that each user adds in the app, which are stored by the leia-auth service.
 
 Now simply clone the infrastructure repository, change the environment variables to the desired ones and test LEIA.
 
