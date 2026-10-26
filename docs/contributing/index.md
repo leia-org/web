@@ -26,7 +26,7 @@ Thank you for your interest in contributing to LEIA. Before diving into any indi
 ## System Architecture
 
 :::important
-The Runner supports four LLM providers: OpenAI, Gemini, Ollama (local models) and ALMA (alma.us.es). Each user stores their own provider API keys, which live in the **leia-auth** service and are resolved by the Runner for every session.
+The production release only supports OpenAI as a provider. The development branches add Gemini, Ollama and ALMA as bring your own key providers, and more may follow. Each user stores their own provider API keys, which live in the **leia-auth** service and are resolved by the Runner for every session.
 :::
 
 LEIA is made up of **5 application services** supported by **2 databases and 1 cache**:
