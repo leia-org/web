@@ -73,7 +73,7 @@ If you came from a link such as **Replicate** in the Designer, you are sent to t
 Administrators see every replication with the email of its owner. Advanced users see only their own, under the title **My replications**. The list panel can be widened by dragging its edge.
 
 :::caution The list loads ten replications at a time
-The list is sorted by last update and loads ten more replications each time you scroll to its bottom. The search box only filters the replications already loaded, so an old replication may not appear until you have scrolled far enough. On a tall window where ten replications fit without scrolling, the development version never loads the next ten. Make the window shorter, or open the replication from the **Replicate** button of its activity in the Designer.
+The list fetches ten replications at a time, oldest first, and fetches ten more when you scroll near its bottom. It keeps fetching on its own until the panel can scroll. The sort order, the filters and the search box only work on the replications already loaded, so **Last updated** may not put your latest replications on top until you have scrolled far enough. If a replication seems to be missing, scroll to the end of the list first.
 :::
 
 **New Replication** at the top right goes to the experiments list.
@@ -119,7 +119,7 @@ The workspace of the new replication opens. **Replicate** in the Designer takes 
 | 2 | **Create** | Creates the replication and opens its workspace. |
 | 3 | **Cancel** | Closes the dialog. |
 
-A replication starts **inactive**, **not repeatable**, **untimed** and in English. Its LEIAs are preconfigured with your default API key, but the model must be chosen and saved in every LEIA before the replication can be activated. See [LEIA settings in a replication](leia-settings.md#runner). Everything else is adjustable in the workspace.
+A replication starts **inactive**, **not repeatable**, **untimed** and in English. Its LEIAs are preconfigured with your default API key and its default model. If you have no default key, a model and a key must be chosen and saved in every LEIA before the replication can be activated. See [LEIA settings in a replication](leia-settings.md#runner). Everything else is adjustable in the workspace.
 
 :::tip The short way
 **Quick replication** in the Designer library does all of this for a single LEIA in one click, including publishing an activity named after the LEIA. Use the Workbench route when an activity has several LEIAs or when you want several replications of the same activity.
@@ -134,7 +134,7 @@ Each replication has a sub-menu on the left.
 | **General** | The student link, the code, the name, the language, the **Active** and **Repeatable** switches and the time limit | [Replication settings](replication-settings.md) |
 | **LEIAs** | One entry per LEIA with the solution and evaluation switches, the infographic options and the model, key and voice | [LEIA settings in a replication](leia-settings.md) |
 | **Settings** | The external form shown after the activity | [Replication settings](replication-settings.md#settings) |
-| **Data Usage** | Consent and automatic removal of conversations | [Replication settings](replication-settings.md#data-usage) |
+| **Data Usage** | Consent and automatic removal of conversations, which do not work at the moment | [Replication settings](replication-settings.md#data-usage) |
 | **Conversations** | Transcripts, submissions, evaluations, scores and the CSV export | [Results, grading and export](results-and-export.md) |
 | **Live** | Sessions in progress, supervisor flags and spectate links | [Live dashboard and spectating](live-and-spectate.md) |
 

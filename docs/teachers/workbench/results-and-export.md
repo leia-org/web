@@ -61,7 +61,7 @@ The **Conversations** section of a replication is where you read what happened, 
 
 | # | Item | What it is |
 |---|---|---|
-| 1 | Transcript | Every message with its time. In MultiLEIA sessions each message carries the name of the character. When the student declined consent and automatic removal was on, the panel explains that no conversation is available. |
+| 1 | Transcript | Every message with its time. In MultiLEIA sessions each message carries the name of the character. |
 | 2 | **Evaluation** | The text produced by the automatic evaluation, when it was enabled. |
 
 Two more blocks follow the evaluation when they have content.
@@ -79,16 +79,16 @@ Three buttons switch the detail view.
 | View | Content |
 |---|---|
 | **Conversation** | The transcript, the evaluation, the flags and the submission described above. |
-| **Configuration** | A snapshot of how the replication and the LEIA were configured when the session ran. Name, duration, repeatable, form, mode, the solution switches, the solution format, the provider, the model and the audio settings. Useful when you change settings between groups. |
-| **Data Usage** | Whether consent was required, what the student answered and when, and whether the conversation was removed. |
+| **Configuration** | Meant to show a snapshot of how the replication and the LEIA were configured when the session ran. No snapshot is stored at the moment, so the view reads "No replication configuration was stored for this conversation". |
+| **Data Usage** | Meant to show whether consent was required and what the student answered. Consent does not work at the moment, so the view reads "No data usage configuration was stored for this conversation". See [Data Usage](replication-settings.md#data-usage). |
 
 ![Configuration view](../../img/teachers/results/03-session-config.webp)
 
 | # | Control | What it shows |
 |---|---|---|
 | 1 | **Conversation** | Switches back to the transcript. |
-| 2 | **Configuration** | Switches to the snapshot view. In the development version the snapshot is not stored yet and the view reads "No replication configuration was stored for this conversation". |
-| 3 | **Data Usage** | Switches to the consent view. |
+| 2 | **Configuration** | Switches to the snapshot view, empty at the moment. |
+| 3 | **Data Usage** | Switches to the consent view, empty at the moment. |
 
 ## Scores
 
@@ -112,7 +112,7 @@ Automatic scores use 0 to 10, manual scores accept 0 to 100. Decide one scale fo
 1. Press **Download CSV** (4 in the conversations page above).
 2. Save the file, which is named after the replication.
 
-**Download CSV** produces one row per message, so a session with twenty messages occupies twenty rows that share the session columns.
+**Download CSV** produces one row per message, so a session with twenty messages occupies twenty rows that share the session columns. A session with no messages gets one row with "No messages" in **Message**, and **Is LEIA** and **Timestamp** empty.
 
 | Column | Content |
 |---|---|
@@ -120,12 +120,12 @@ Automatic scores use 0 to 10, manual scores accept 0 to 100. Decide one scale fo
 | User | The email the student typed, or **Anonymous**. |
 | Started At, Finished At | Timestamps of the session. |
 | Message | The text of the message. |
-| Is LEIA | `true` for messages written by the LEIA, `false` for the student. |
+| Is LEIA | `TRUE` for messages written by the LEIA, `FALSE` for the student. |
 | Timestamp | When the message was sent. |
-| Score | The score of the session, repeated on every row. |
+| Score | The score of the session, repeated on every row. A score of 0 is exported as an empty cell. |
 | Evaluation | The evaluation text, repeated on every row. |
 
-The submitted solution, the supervisor flags and the configuration snapshot are not in the file. Read them in the detail panel. The production version of the Workbench adds columns with the replication configuration and the consent status.
+The submitted solution and the supervisor flags are not in the file. Read them in the detail panel. The file has only the columns above, so nothing about the configuration of the replication.
 
 ### Analyse the file in a spreadsheet
 

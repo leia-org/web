@@ -90,7 +90,7 @@ flowchart LR
 |---|---|
 | Create an account | [Register](accounts-and-roles.md#register) |
 | Understand what my role allows | [The three roles](accounts-and-roles.md#the-three-roles) |
-| Add an OpenAI, Gemini, Ollama or ALMA key | [Add a key](api-keys.md#add-a-key) |
+| Add an OpenAI, Gemini or Ollama key | [Add a key](api-keys.md#add-a-key) |
 | Find a LEIA | [Find a LEIA](designer/index.md#find-a-leia) |
 | Test a LEIA | [Start a test](designer/test-leia.md#start-a-test) |
 | Start a new LEIA from an existing one | [Start a new LEIA from this one](designer/index.md#start-a-new-leia-from-this-one) |

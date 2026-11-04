@@ -251,7 +251,7 @@ The **Code preview** accordion of each component shows the exact JSON that will 
 4. Creates the LEIA with version 1.0.0 and the supervisor settings if enabled.
 
 :::caution If Finish fails with "Failed to create problem resource"
-The server refuses a problem whose **Initial Solution** is empty text, and the assistant sometimes leaves it empty. Go back to step 1, open the problem, write something in **Initial Solution**, save and finish again. Removing the `initialSolution` line in the **Code Editor** tab is not enough, the visual editor sends the field as empty text anyway. Your work is kept in the draft.
+The server refuses a problem whose **Evaluation Prompt** is empty text, and the assistant can leave it empty. Go back to step 1, open the problem, write at least one line in **Evaluation Prompt**, save and finish again. An empty **Tooltip** has the same effect on the behaviour, with "Failed to create behaviour resource". An empty **Initial Solution** is accepted. Your work is kept in the draft.
 :::
 
 ### Open the new LEIA to students
