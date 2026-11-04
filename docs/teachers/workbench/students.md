@@ -27,9 +27,38 @@ Students need no account. Teachers can walk the same path with the **Demo / test
 
 This page follows a student from the join code to the end of the session, so you know what to explain in class and what each switch of the replication changes on their screen.
 
+## Steps to give your students
+
+Copy this list into your course page and add the link or the code.
+
+1. Open the link your teacher gave you, or [workbench.leia.ovh](https://workbench.leia.ovh).
+2. Type your **Email** and the **Replication code** and press **Start session**.
+3. Read the instructions and press **Continue Task**.
+4. Talk to the LEIA. Type your message and press **Send**.
+5. When you are ready, press the main button at the top. It reads **Go to Editor**, **Send Solution** or **Finish Session**, depending on the activity.
+6. If the editor opens, write your solution, press **Send Solution** and confirm with **Conclude Problem**.
+7. Read the evaluation if there is one, and press **Open Form** if it appears.
+
+To come back to an unfinished session, repeat the first two steps with the same email.
+
+## Walk the path yourself
+
+1. Open the replication and choose **General** in its sub-menu.
+2. Click the **Demo / test link** to copy it.
+3. Open it in a new private browser window.
+4. Follow the steps above as a student would.
+
+Your test session never appears in the results.
+
 ## Join
 
 Students open [workbench.leia.ovh](https://workbench.leia.ovh) or the **Student link** you copied from the replication, which prefills the code.
+
+1. Type the **Email** (1).
+2. Type the **Replication code** (2). The **Student link** fills it in.
+3. Press **Start session** (3).
+
+The instructions appear. To resume an unfinished session, repeat these steps with the same email.
 
 ![Student login](../../img/teachers/students/01-login.webp)
 
@@ -112,6 +141,14 @@ When the supervisor is enabled with nudges, the student may receive a short ambe
 
 ## Submit a solution
 
+1. Press **Go to Editor** (4 in the chat screenshot above).
+2. Write the solution in the editor (1).
+3. Check the live preview (2).
+4. Press **Send Solution** (3).
+5. Press **Conclude Problem** (1 in the confirmation below).
+
+The evaluation appears when **Automatic evaluation** is on, or otherwise a simple confirmation.
+
 ![Solution editor of the student](../../img/teachers/students/09-solution-editor.webp)
 
 | # | Control | What it does |
@@ -128,6 +165,11 @@ The confirmation says "This action will conclude the problem and you will not be
 :::caution The timer and the editor
 If the time runs out while the student is in the editor, the session is closed without submitting the editor content. Tell students to submit a minute before the end.
 :::
+
+### Finish without a solution
+
+1. Press **Finish Session** (4 in the chat screenshot above).
+2. In the **Session Completed** dialog, press **Home**, or **Open Form** if it appears.
 
 ## After submitting
 

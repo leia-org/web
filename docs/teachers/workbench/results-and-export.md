@@ -31,6 +31,13 @@ The **Conversations** section of a replication is where you read what happened, 
 
 ## The conversations page
 
+### Open the results
+
+1. Open a replication and choose **Conversations** in its sub-menu.
+2. Press **Open conversations**. **Conversations** on the replications list opens the same page.
+3. Read the counters (1).
+4. Type an email in **Search by email** (2) to find one student.
+
 ![Conversations page](../../img/teachers/results/01-conversations.webp)
 
 | # | Control | What it shows or does |
@@ -43,6 +50,12 @@ The **Conversations** section of a replication is where you read what happened, 
 **Live** in the header jumps to the live dashboard.
 
 ## A session in detail
+
+1. Click a session (3 in the conversations page above).
+2. Read the transcript (1).
+3. Read the **Evaluation** (2), when there is one.
+4. Scroll down to **Supervisor flags** and **Submitted result**, when they have content.
+5. Press **Configuration** or **Data Usage** to switch the detail view, and **Conversation** to come back.
 
 ![Session detail](../../img/teachers/results/02-session-detail.webp)
 
@@ -79,6 +92,15 @@ Three buttons switch the detail view.
 
 ## Scores
 
+Only administrators can change a score.
+
+1. Click a session in the list.
+2. Click its **Score** chip.
+3. Type a score from 0 to 100, with one decimal at most.
+4. Press the tick to save, or the cross to discard.
+
+The chip shows the new score, which replaces the automatic one.
+
 Each session shows a **Score** chip. The automatic evaluation returns a score from **0 to 10** and stores it there. Administrators can click the chip to type a manual score from **0 to 100** with one decimal, which replaces the automatic one. The field refuses values outside that range with "Please enter a valid score between 0 and 100", the tick saves and the cross discards. Advanced accounts see the chip but cannot edit it.
 
 :::caution Two scales
@@ -86,6 +108,9 @@ Automatic scores use 0 to 10, manual scores accept 0 to 100. Decide one scale fo
 :::
 
 ## The CSV file
+
+1. Press **Download CSV** (4 in the conversations page above).
+2. Save the file, which is named after the replication.
 
 **Download CSV** produces one row per message, so a session with twenty messages occupies twenty rows that share the session columns.
 
@@ -102,11 +127,15 @@ Automatic scores use 0 to 10, manual scores accept 0 to 100. Decide one scale fo
 
 The submitted solution, the supervisor flags and the configuration snapshot are not in the file. Read them in the detail panel. The production version of the Workbench adds columns with the replication configuration and the consent status.
 
-In a spreadsheet, filter on **Is LEIA** equal to `false` to count student messages, or build a pivot table on **Session ID** to get one line per student with the score and the number of messages.
+### Analyse the file in a spreadsheet
+
+1. Open the file in your spreadsheet.
+2. Filter **Is LEIA** on `FALSE` to count the student messages.
+3. Build a pivot table on **Session ID** to get one line per student with the score and the number of messages.
 
 ## Suggested grading routine
 
-1. Sort the list by score and open the lowest ones first. A very low score often means an empty or malformed submission rather than a bad interview.
+1. Open the sessions with the lowest scores first. A very low score often means an empty or malformed submission rather than a bad interview.
 2. Read the transcript before the evaluation. The evaluation only sees the submission and the reference solution, not the conversation.
 3. Check the supervisor flags for students who asked the character for the answer.
 4. Adjust the score when you disagree with the model, or keep your own grades outside LEIA and use the CSV as evidence.

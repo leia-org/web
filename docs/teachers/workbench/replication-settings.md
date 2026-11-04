@@ -31,6 +31,40 @@ A replication has three sections of settings that apply to every LEIA in it. **G
 
 ## General
 
+### Share the activity with students
+
+1. Choose **General** in the sub-menu of the replication.
+2. Click the **Student link** (1) to copy it, or click the **Code** (5) to copy the code.
+3. Paste it in your course page or in a message to your students.
+
+Students can join as soon as **Active** is on.
+
+### Try the activity yourself
+
+1. Click the **Demo / test link** (2) to copy it.
+2. Open it in a new private browser window.
+
+Each visit creates a fresh test student that never appears in the results.
+
+### Let a colleague manage the replication
+
+1. Turn on **Shared access** (3). The **Share token** chip appears.
+2. Press **Copy share link**.
+3. Send the link to your colleague.
+
+To cancel the access, press **Regenerate** next to the chip. The previous link stops working.
+
+### Rename the replication
+
+1. Press **Rename** (4).
+2. Type the new name. Names are unique.
+3. Press **Save**.
+
+### Regenerate the code
+
+1. Press **Regenerate code** (6).
+2. Give the new **Code** (5) to your students. The old one stops working for new students, and sessions already started continue.
+
 ![General section, links and identity](../../img/teachers/replication-settings/01-general-links.webp)
 
 | # | Control | What it does |
@@ -44,6 +78,26 @@ A replication has three sections of settings that apply to every LEIA in it. **G
 
 Below the identity block, **Experiment**, **Created** and **Last updated** are read only.
 
+### Change the language
+
+1. Press the button next to **Language** (1).
+2. Type the language in the dialog, for example `Spanish` or `es`.
+3. Press **Save**.
+
+### Open or close the replication
+
+1. Give every LEIA a model and a key. See [Runner](leia-settings.md#runner).
+2. Turn on **Active** (2).
+
+Students can join. If the switch stays off, see [Activation errors](#activation-errors). To close the replication after the class, turn **Active** (2) off. New students cannot join and sessions in progress continue.
+
+### Let students repeat the activity
+
+1. Turn on **Repeatable** (3).
+2. Tell students to enter the code again with the same email when they finish.
+
+A student who finished starts a fresh session.
+
 ![General section, state switches](../../img/teachers/replication-settings/02-general-controls.webp)
 
 | # | Control | What it does |
@@ -53,6 +107,15 @@ Below the identity block, **Experiment**, **Created** and **Last updated** are r
 | 3 | **Repeatable** | Whether a student who finished may start again with the same email. When off, a finished student gets "Session Already Completed". An unfinished session is always resumed, repeatable or not. |
 | 4 | **Duration** | The time limit per session. **No time limit** by default. |
 | 5 | **Change** | Opens the dialog below. The button reads **Add timer** while there is no limit, and **Remove** next to it clears the limit. |
+
+### Set a time limit
+
+1. Press **Add timer** (5 in the switches above). The button reads **Change** when a limit already exists.
+2. Type the **Hours**, **Minutes** and **Seconds** (1), or press one of the **Quick presets** (2).
+3. Check the **Total** (3).
+4. Press **Save** (4).
+
+**Duration** shows the limit. To clear it, press **Remove** next to **Change**.
 
 ![Set replication duration dialog](../../img/teachers/replication-settings/03-duration-dialog.webp)
 
@@ -71,9 +134,22 @@ The countdown is shown and enforced by the student's browser. The server does no
 
 ![Activation refused](../../img/teachers/replication-settings/04-activation-error.webp)
 
-When a LEIA has no model or no key, the **Active** switch stays off, a message lists the LEIAs concerned and the **Model** field of each one is outlined in red. Open the LEIA, pick a model and a key, press **Save** and try again. A MultiLEIA replication also needs at least two LEIAs, no audio mode and the same process on every LEIA.
+When a LEIA has no model or no key, the **Active** switch stays off, a message lists the LEIAs concerned and the **Model** field of each one is outlined in red. A MultiLEIA replication also needs at least two LEIAs, no audio mode and the same process on every LEIA.
+
+1. Choose **LEIAs** in the sub-menu and open a LEIA of the message.
+2. Pick a **Model** and an **API key**.
+3. Press **Save**.
+4. Repeat with the other LEIAs of the message.
+5. Choose **General** in the sub-menu and turn on **Active** again.
 
 ## Settings
+
+1. Choose **Settings** in the sub-menu.
+2. Press **Change** (2).
+3. Type the address, starting with `http` or `https`.
+4. Press **Save**.
+
+**External form URL** (1) shows the link and students get an **Open Form** button when they finish. To clear it, press **Delete** (2).
 
 ![External form](../../img/teachers/replication-settings/05-settings-form.webp)
 
@@ -83,6 +159,14 @@ When a LEIA has no model or no key, the **Active** switch stays off, a message l
 | 2 | **Change** and **Delete** | Set or clear the link. |
 
 ## Data Usage
+
+1. Choose **Data Usage** in the sub-menu.
+2. Enable **Data Usage Consent Acceptance** (1).
+3. Replace the **Consent message** (2) with the wording your institution requires.
+4. Enable **Conversation automated removal** (3) if the conversations of students who decline must be deleted.
+5. Press **Save** (4).
+
+If **Save** returns an error, leave consent off and collect consent outside LEIA.
 
 ![Data usage section](../../img/teachers/replication-settings/06-data-usage.webp)
 

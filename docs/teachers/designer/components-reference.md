@@ -40,6 +40,15 @@ Text between double braces, such as `{{persona.firstName}}`, is a placeholder th
 
 The persona is the character. Everything here is about who the character is, not about the exercise.
 
+1. Click the **Persona** card in the preview panel of the design screen.
+2. Type the **Persona name** (2).
+3. Type the **Full Name** (3) and the **First Name** (4).
+4. Write the **Description** (5) and the **Personality** (6).
+5. Fill in the four pronoun fields (7 to 10).
+6. Press **Save** (11).
+
+The **Persona** card shows the new values.
+
 ![Persona editor](../../img/teachers/components/01-persona-editor.webp)
 
 | # | Field | What it does |
@@ -62,6 +71,20 @@ In the JSON view the pronoun fields are spelled `subjectPronoum`, `objectPronoum
 
 The problem is the exercise. It holds what the student sees, what the LEIA knows, how the solution must be written and how it is graded.
 
+1. Click the **Problem** card in the preview panel of the design screen.
+2. Type the **Problem name** (1).
+3. Write the **Description** (3), the statement students see.
+4. Write the **Persona Background** (4) and the **Details** (5), which only the LEIA knows.
+5. Choose the **Solution Format** (8).
+6. Write the **Solution** (6). For a Mermaid format, check the diagram in the preview under the field.
+7. Write the **Initial Solution** (7), the text preloaded in the student's editor.
+8. Write the **Evaluation Prompt** (9). The server refuses an empty prompt when you finish, so write at least one line.
+9. Choose the **Process** (10).
+10. Add **Widgets & tools** (11) if the exercise needs them. See [Code editor widget](widgets.md).
+11. Press **Save** (12).
+
+The **Problem** card shows the new values.
+
 ![Problem editor](../../img/teachers/components/02-problem-editor.webp)
 
 | # | Field | What it does |
@@ -82,6 +105,13 @@ The problem is the exercise. It holds what the student sees, what the LEIA knows
 :::caution Empty Initial Solution
 The server refuses a problem whose **Initial Solution** is an empty text. If **Finish LEIA** fails with "Failed to create problem resource", open the problem and write something in the field, a skeleton or a one-line instruction. Removing the `initialSolution` line in the **Code Editor** tab is not enough, the visual editor sends the field as empty text anyway.
 :::
+
+### Download the statement as a PDF
+
+1. Click the **Problem** card in the preview panel of the design screen.
+2. Press **PDF** (2 in the problem editor above).
+
+The browser downloads the file, ready to hand to students.
 
 ### Solution formats
 
@@ -111,6 +141,12 @@ The process of the problem always wins over the process of the behaviour. When y
 
 Three keys of the problem have no field in the visual editor. They let a problem customise or restrict the persona and the behaviour it is combined with.
 
+1. Click the **Problem** card in the preview panel of the design screen.
+2. Press **Code Editor**.
+3. Add the keys inside `spec`, as in the example below.
+4. Press **Save**. "Cannot save: Invalid JSON format" means the JSON has a mistake.
+5. Check the preview panel. A constraint that is not met shows "Constraint not met".
+
 ```json
 {
   "spec": {
@@ -139,6 +175,15 @@ The keys must point at `persona.spec.*`, `behaviour.spec.*` or `problem.spec.*`.
 
 The behaviour tells the language model how to act. Its **Description** becomes the system prompt of the conversation, together with an instruction about the language of the replication.
 
+1. Click the **Behaviour** card in the preview panel of the design screen.
+2. Type the **Behaviour name** (1).
+3. Write the **Description** (2), the instructions to the character.
+4. Write the **Role** (3).
+5. Write the **Tooltip** (4). The server refuses an empty tooltip when you finish.
+6. Press **Save** (6).
+
+The **Behaviour** card shows the new values.
+
 ![Behaviour editor](../../img/teachers/components/04-behaviour-editor.webp)
 
 | # | Field | What it does |
@@ -166,7 +211,18 @@ A placeholder is `{{component.field}}` where the component is `persona`, `proble
 
 A placeholder that stands alone in a field takes the whole value, even when it is a list. An unknown placeholder is left as it is, so check the preview when you type one by hand.
 
+### Use a placeholder
+
+1. Open the editor of a component.
+2. Type the placeholder in a field, for example `{{persona.firstName}}`. It turns purple.
+3. Press **Save**.
+4. Check the preview panel. An unknown placeholder is left as it is.
+
 ## The code view
+
+1. Press **Code Editor** (1) in any of the three editors.
+2. Change the JSON in the editor (2).
+3. Press **Save**.
 
 ![Code Editor tab](../../img/teachers/components/03-code-tab.webp)
 

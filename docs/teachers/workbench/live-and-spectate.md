@@ -28,11 +28,37 @@ The **Live** section of a replication shows the sessions as they happen. You see
 
 ## The dashboard
 
-Open a replication and choose **Live** in its sub-menu, then **Open live dashboard**, or press **Live** on the replications list or on the Conversations page.
+### Open the dashboard
+
+1. Open a replication and choose **Live** in its sub-menu.
+2. Press **Open live dashboard**.
+
+**Live** on the replications list and on the Conversations page opens it too.
 
 :::caution Advanced accounts and the dashboard
 In the development version the dashboard only sends the login token for administrator accounts. An advanced account that opens it directly is sent back to the replications list. The workaround is the share link. Turn on **Shared access** in the **General** section, press **Copy share link**, and open that link, which carries a token the dashboard accepts. The link keeps working for the Live and Conversations pages of that replication.
 :::
+
+### Follow a session
+
+1. Choose a tab (1). **Active** lists the sessions in progress.
+2. Type an email in the search box if you are looking for one student.
+3. Click a session (2). The detail panel shows its last message, its times and its flags.
+4. Press **Refresh** if the list stops updating.
+
+### Watch a session as it happens
+
+1. Click a session (2).
+2. Press **Watch live** (3). The spectator view opens in a new tab.
+
+### Share a spectate link
+
+1. Click a session (2).
+2. Press **Share link** (4). The **Spectate link** dialog opens.
+3. Press **Copy to clipboard**.
+4. Send the link or open it on the projector. It works for one hour.
+
+If **Watch live** or **Share link** shows "Failed to generate spectate link", the spectator view is not available. Close the blank tab if one opened, and read the conversation in [Conversations](results-and-export.md) instead.
 
 ![Live dashboard](../../img/teachers/live/01-dashboard.webp)
 
