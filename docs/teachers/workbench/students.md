@@ -81,7 +81,7 @@ In an activity with several LEIAs and **Single LEIA assignment**, each new stude
 
 ## Consent
 
-When **Data Usage Consent Acceptance** is enabled in the replication, the first thing the student sees is the consent dialog with your message and two buttons, **No, I do not consent** and **Yes, I consent**. The choice is recorded with the session and cannot be skipped. With automatic removal enabled, a student who declines still does the activity, but the conversation is deleted afterwards. See [Data Usage](replication-settings.md#data-usage).
+The Workbench has a consent dialog, but it does not appear at the moment, because the server has no support for consent. Students go straight to the instructions. If your institution requires consent, collect it outside LEIA. See [Data Usage](replication-settings.md#data-usage).
 
 ## Instructions
 

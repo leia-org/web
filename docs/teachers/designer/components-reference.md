@@ -95,15 +95,15 @@ The **Problem** card shows the new values.
 | 4 | **Persona Background** | Context that connects the character with this exercise, for instance why Helen needs a booking system. The LEIA knows it, students do not see it. |
 | 5 | **Details** | Everything the LEIA must know to play the exercise well. Facts to reveal when asked, facts to keep secret, the rules of a game. Students never see this field. |
 | 6 | **Solution** | The reference answer used by the automatic evaluation. For a Mermaid format a live preview of the diagram appears under the field. |
-| 7 | **Initial Solution** | Text that is preloaded in the student's editor, for example a skeleton of the expected diagram or document. It must not be empty, see the caution below. |
+| 7 | **Initial Solution** | Text that is preloaded in the student's editor, for example a skeleton of the expected diagram or document. It can be left empty. |
 | 8 | **Solution Format** | How the student writes the solution. See [the formats](#solution-formats). |
-| 9 | **Evaluation Prompt** | Instructions for the grader. Say what matters, what is optional and how strict to be. Without it the grader simply compares the submission with the solution. |
+| 9 | **Evaluation Prompt** | Instructions for the grader. Say what matters, what is optional and how strict to be. Without it the grader simply compares the submission with the solution. Empty text is refused when you finish, see the caution below. |
 | 10 | **Process** | The kind of activity. See [the processes](#processes). |
 | 11 | **Widgets & tools** | Extra panels for the student, such as the code editor. See [Code editor widget](widgets.md). |
 | 12 | **Save** | Keeps the changes in the draft. |
 
-:::caution Empty Initial Solution
-The server refuses a problem whose **Initial Solution** is an empty text. If **Finish LEIA** fails with "Failed to create problem resource", open the problem and write something in the field, a skeleton or a one-line instruction. Removing the `initialSolution` line in the **Code Editor** tab is not enough, the visual editor sends the field as empty text anyway.
+:::caution Empty Evaluation Prompt
+The server refuses a problem whose **Evaluation Prompt** is empty text. If **Finish LEIA** fails with "Failed to create problem resource", open the problem and write at least one line in the field. An empty **Initial Solution** is accepted.
 :::
 
 ### Download the statement as a PDF

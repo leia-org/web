@@ -133,7 +133,7 @@ The chip reads **Chat Messages**.
 
 The chip reads **Chat Messages**.
 
-**To write it by talking to the LEIA.**
+**To write it by talking to the LEIA.** At the moment **Generate** fails with "Failed to create transcription session", so use **Auto Generate** or **JSON Edit** instead. The steps below describe what it is meant to do.
 
 1. Press **Generate** (3). The test chat opens.
 2. Have the conversation you want students to read.
@@ -147,15 +147,15 @@ The chip reads **Chat Messages**.
 |---|---|---|
 | 1 | **Mode** | Set to **transcription**. A chip shows whether the transcript is an **External Link** or **Chat Messages**, or warns "No transcription available". |
 | 2 | **Add Link** | Stores a URL. Students get an **Open Transcription** button that opens it in a new tab. |
-| 3 | **Generate** | Opens the test chat so you write the conversation yourself with the LEIA, then press **Save Transcription**. |
+| 3 | **Generate** | Meant to open the test chat so you write the conversation yourself with the LEIA, then press **Save Transcription**. Fails at the moment, see above. |
 | 4 | **Auto Generate** | Asks the platform to write a whole conversation from the behaviour. A preview opens and **Save Transcription** stores it. |
 | 5 | **JSON Edit** | Paste or edit the messages as JSON. Each message has `text`, an ISO `timestamp` and `isLeia` set to true or false. |
 
 Every update replaces the previous transcript, the page warns "Any transcription update overwrites previous data".
 
-**Auto Generate** opens a **Transcription Preview** dialog while the platform writes the conversation. It shows the messages with the character on the left and the student on the right, and two buttons, **Save Transcription** and **Cancel**. On the development version the generator wrote in Spanish even for an English behaviour, so read the result before saving.
+**Auto Generate** opens a **Transcription Preview** dialog while the platform writes the conversation. It shows the messages with the character on the left and the student on the right, and two buttons, **Save Transcription** and **Cancel**. The generator writes in Spanish even for an English behaviour, so read the result before saving.
 
-When you arrive in the chat from **Generate**, the header gains a **Save Transcription** button. Have the conversation you want students to read, then press it. On the development version this path currently fails with "Failed to create transcription session", so prefer **Auto Generate** or **JSON Edit** there.
+When you arrive in the chat from **Generate**, the header gains a **Save Transcription** button. Have the conversation you want students to read, then press it. This path fails at the moment with "Failed to create transcription session", so prefer **Auto Generate** or **JSON Edit**.
 
 ![Saved transcript viewer](../../img/teachers/activities/04-transcription-view.webp)
 
