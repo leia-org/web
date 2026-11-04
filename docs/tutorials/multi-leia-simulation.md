@@ -31,19 +31,32 @@ In a MultiLEIA activity the student talks to several characters in the same chat
 
 Design one LEIA per character with the assistant. Each needs its own persona and behaviour. The problem matters only for the LEIA you will choose as the **Shared problem**, so for the others a short placeholder problem with the same process is enough.
 
-For the meeting example the two briefs were
+1. Press **Design** in the sidebar of the Designer and send the brief of the first character. For the meeting example it was
 
-> Create a requirements-elicitation activity about a library booking system. The persona is Helen Park, the manager of a small university library ... (the LEIA of the [requirements interview scenario](requirements-elicitation.md))
+   > Create a requirements-elicitation activity about a library booking system. The persona is Helen Park, the manager of a small university library ... (the LEIA of the [requirements interview scenario](requirements-elicitation.md))
 
-> Create a requirements-elicitation activity for a meeting about a library booking system. The persona is Omar Haddad, the IT manager of the university, who cares about security, single sign-on and hosting costs and often disagrees with the library manager about priorities.
+2. Click the **Behaviour** card and ask for short answers in **Description**. In a group conversation long monologues are tiring. Press **Save**.
+3. Press **Review LEIA**, type the **New LEIA name** and press **Finish LEIA**.
+4. Press **Go to LEIAs**, then **Design** again, and repeat with the next character. For the meeting example the second brief was
 
-Give the behaviours short answers. In a group conversation long monologues are tiring.
+   > Create a requirements-elicitation activity for a meeting about a library booking system. The persona is Omar Haddad, the IT manager of the university, who cares about security, single sign-on and hosting costs and often disagrees with the library manager about priorities.
+
+The library lists one LEIA per character.
 
 ## 2. Build the activity
 
 1. Open **Activities** and press **New Activity**. Name it, for example `Library booking requirements meeting`.
 2. In the library press **Add to activity** on each LEIA and choose the activity.
-3. Expand the activity and open **Conversation flow**.
+3. Back in **Activities**, expand the activity and find **Conversation flow**.
+4. Fill in the fields with the values below.
+5. Press **Save flow** and check that no warning remains.
+6. Press **Publish**. There is no confirmation and it cannot be undone.
+
+The activity shows the **Published** chip and the **Replicate** button. See [Activities](../teachers/designer/activities.md#conversation-flow).
+
+:::caution
+**Add to activity** may fail in the current production version, which blocks this scenario until the fix is released. See [Add LEIAs](../teachers/designer/activities.md#add-leias).
+:::
 
 ![Conversation flow editor](../img/teachers/activities/05-conversation-flow.webp)
 
@@ -55,13 +68,17 @@ Give the behaviours short answers. In a group conversation long monologues are t
 | **Shared problem** | Helen's LEIA, whose problem has the solution and the evaluation |
 | **Shared task** | "A requirements meeting for the library booking web application. Helen represents the library, Omar represents IT. The student must gather the requirements and the constraints of both sides." |
 
-Press **Save flow**, check that no warning remains and press **Publish**. See [Activities](../teachers/designer/activities.md#conversation-flow).
-
 ## 3. Replicate and configure
 
-Open the Workbench, create a replication of the activity and open its **LEIAs** section. A **MultiLEIA activity** banner summarises the flow and offers **Test MultiLEIA**. Set a model and a key for every LEIA, otherwise the replication cannot be activated. Voice is not available in MultiLEIA, so leave **Audio mode** on **None**. See [LEIA settings in a replication](../teachers/workbench/leia-settings.md).
+1. Press **Replicate** on the published activity. The Workbench opens.
+2. Press **Create Replication**, type the **Replication Name** and press **Create**.
+3. Choose **LEIAs** in the sub-menu of the replication. A **MultiLEIA activity** banner summarises the flow.
+4. Open each LEIA, set its **Model** and **API key**, leave **Audio mode** on **None** and press **Save**. Without a model and a key on every LEIA the replication cannot be activated, and voice is not available in MultiLEIA.
+5. Press **Test MultiLEIA** on the banner and try the meeting.
+6. Choose **General** in the sub-menu and turn on **Active**.
+7. Copy the **Student link** and give it to your students.
 
-Try the meeting with **Test MultiLEIA** before activating.
+See [LEIA settings in a replication](../teachers/workbench/leia-settings.md).
 
 ## 4. What students experience
 

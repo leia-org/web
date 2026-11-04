@@ -34,6 +34,28 @@ The simplest activity has one LEIA. You get one for free with **Quick replicatio
 
 Open **Activities** in the sidebar.
 
+### Create an activity
+
+1. Press **New Activity** (1).
+2. Type the **Activity Name** in the **Create New Activity** dialog.
+3. Press **Create Activity**.
+
+The empty activity appears in the list. "An activity with that name already exists" means you must choose another name.
+
+### Remove a LEIA from an activity
+
+1. Press the arrow (6) of the activity to expand it.
+2. Press **Delete LEIA** (9) on the LEIA. It happens at once, without confirmation.
+
+The LEIA disappears from the activity and stays in the library.
+
+### Delete an activity
+
+1. Find the activity in the list. The search box (2) helps if you have many.
+2. Press **Delete** (5). It happens at once, without confirmation.
+
+The activity disappears from the list.
+
 ![Activities page](../../img/teachers/activities/01-activities-list.webp)
 
 | # | Control | What it does |
@@ -51,6 +73,17 @@ Open **Activities** in the sidebar.
 ## Add LEIAs
 
 There is no add button inside the activity. LEIAs come from the library and from the design screen.
+
+1. In the LEIA library, move the mouse over a row and press **Add to activity**. After finishing a LEIA you can press **Add to Activity** in the success dialog instead.
+2. Choose an activity in **Select an Activity** (1), or type a new name to create one on the spot.
+3. Press **Add to Activity** (2).
+4. Repeat for each LEIA of the activity.
+
+Open **Activities** and expand the activity to see its LEIAs.
+
+:::caution Current production version
+In the current production version this dialog may fail to open, and there is no other way to put a LEIA in an activity. A fix is on its way. Until it is released, you cannot complete the steps of this page for transcription mode, the conversation flow or publishing. To open a single LEIA to students, use [Quick replication](index.md#open-a-leia-to-students-with-a-quick-replication), which creates and publishes its own activity.
+:::
 
 ![Add to activity dialog](../../img/teachers/activities/02-add-to-activity.webp)
 
@@ -74,6 +107,40 @@ Expand the activity to see its LEIAs. Each one has the eye icon, the **Mode** se
 
 ### Transcription mode
 
+Expand the activity and set the **Mode** (1) of the LEIA to **transcription**. Then choose one of these four ways to supply the conversation.
+
+**To link an external transcript.**
+
+1. Press **Add Link** (2).
+2. Type the **Transcription URL**.
+3. Press **Add**.
+
+The chip reads **External Link**.
+
+**To let the platform write it.**
+
+1. Press **Auto Generate** (4). The **Transcription Preview** dialog opens.
+2. Read the result.
+3. Press **Save Transcription**.
+
+The chip reads **Chat Messages**.
+
+**To write or paste it as JSON.**
+
+1. Press **JSON Edit** (5).
+2. Write or paste the messages.
+3. Press **Save Changes**.
+
+The chip reads **Chat Messages**.
+
+**To write it by talking to the LEIA.**
+
+1. Press **Generate** (3). The test chat opens.
+2. Have the conversation you want students to read.
+3. Press **Save Transcription** in the header.
+
+The chip reads **Chat Messages**.
+
 ![LEIA in transcription mode](../../img/teachers/activities/03-leia-mode-transcription.webp)
 
 | # | Control | What it does |
@@ -96,6 +163,27 @@ Once a transcript is stored, the chip turns into **Chat Messages** and the eye i
 
 ## Conversation flow
 
+### Give each student one LEIA
+
+1. Expand the activity.
+2. Set **Activity mode** (1) to **Single LEIA assignment**.
+3. Press **Save flow** (6).
+
+Each new student receives the LEIA with the fewest sessions so far.
+
+### Put every LEIA in one conversation
+
+1. Check that the activity has at least two LEIAs, none in transcription mode, and that every behaviour has the same process.
+2. Expand the activity.
+3. Set **Activity mode** (1) to **MultiLEIA conversation**.
+4. Choose the **Preferred first LEIA** (2).
+5. Set the **Maximum LEIA messages per round** (3).
+6. Choose the **Shared problem** (4).
+7. Write the **Shared task** (5).
+8. Press **Save flow** (6).
+
+A **MultiLEIA** chip appears next to the LEIA count.
+
 ![Conversation flow editor](../../img/teachers/activities/05-conversation-flow.webp)
 
 | # | Field | What it does |
@@ -114,6 +202,18 @@ With **Single LEIA assignment** and several LEIAs, each student is given the LEI
 :::
 
 ## Publish and replicate
+
+### Publish an activity
+
+1. Expand the activity and check its LEIAs, their modes and the conversation flow. They cannot change afterwards.
+2. Press **Publish** (4 in the activities page above). There is no confirmation dialog.
+
+A **Published** chip (1) appears and the activity becomes available in the Workbench.
+
+### Replicate a published activity
+
+1. Press **Replicate** (2). The activity opens in the Workbench.
+2. Create the replication. See [Create a replication](../workbench/index.md#create-a-replication).
 
 ![Published activity](../../img/teachers/activities/06-published-card.webp)
 

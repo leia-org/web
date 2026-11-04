@@ -33,6 +33,28 @@ The **LEIAs** section of a replication lists every LEIA of the activity. Each on
 
 ## The LEIA page
 
+### Ask for a solution and grade it
+
+1. Choose **LEIAs** in the sub-menu of the replication and open the LEIA.
+2. Turn on **Ask for student solution** (4).
+3. Turn on **Automatic evaluation** (5) if the language model should grade it.
+
+Both switches are saved at once.
+
+### Offer the infographic
+
+1. Turn on **Show during exercise** (6). It is disabled when the LEIA has no infographic. To generate one, see [Regenerate the images](../designer/index.md#regenerate-the-images).
+2. Press **View solution** (7) to read the version with the solution, which is for you only.
+
+Students get a **Guidance** button in the chat.
+
+### Try the LEIA as a student
+
+1. Press **Test session** (2). If the runner block has unsaved changes you are asked to save first.
+2. Work in the new tab as a student would.
+
+The session never appears in the results.
+
 ![LEIA card in a replication](../../img/teachers/leia-settings/01-leia-card.webp)
 
 | # | Control | What it does |
@@ -49,7 +71,22 @@ The infographics are generated in the Designer, from the **View** dialog of the 
 
 In a MultiLEIA activity a banner **MultiLEIA activity** summarises the flow and offers **Test MultiLEIA**, which starts a session with every LEIA at once.
 
+### Test a MultiLEIA activity
+
+1. Choose **LEIAs** in the sub-menu of the replication.
+2. Press **Test MultiLEIA** on the **MultiLEIA activity** banner.
+
+A session starts with every LEIA at once.
+
 ## Runner
+
+1. Choose **LEIAs** in the sub-menu of the replication and open the LEIA.
+2. Choose the **Model** (1). If the list is empty, press **Manage Keys** and add a key for that provider.
+3. If the **API key** selector appears, choose the key that pays for it.
+4. Leave **Audio mode** (2) on **None** for a written chat, or see [Voice](#voice).
+5. Press **Save** (6).
+
+The LEIA is ready for activation. To discard the changes before saving, press **Reset** (7).
 
 ![Runner block](../../img/teachers/leia-settings/02-runner.webp)
 
@@ -69,7 +106,23 @@ When the activity has widgets the block warns "This activity uses widgets, so it
 
 If you leave the page with unsaved runner changes, or press **Test session** or the **Active** switch, a dialog **Unsaved Changes** asks whether to save first. If a saved model disappears from the catalogue, a dialog **Model not available** lists the LEIAs to fix.
 
+### Replace a model that is no longer available
+
+1. Read the list of LEIAs in the **Model not available** dialog.
+2. Open each LEIA and choose another **Model** (1 in the runner block above).
+3. Press **Save** (6 in the runner block above).
+
 ## Voice
+
+The numbers refer to the screenshot of the [Runner](#runner) block.
+
+1. Choose **LEIAs** in the sub-menu of the replication and open the LEIA.
+2. Set **Audio mode** (2) to **Luke** or **Legacy (OpenAI Realtime)**.
+3. With **Luke**, choose the **Luke provider** (4) and the **Luke voice** (5). The play button lets you hear a sample.
+4. With **Legacy (OpenAI Realtime)**, choose the **Realtime voice**. **Show all voices** lifts the filter.
+5. To hide the text of the conversation from the student, turn on **Hide audio transcription** (3).
+6. Press **Save** (6).
+7. Press **Test session** and allow the microphone to hear the result.
 
 | Mode | Engine | Voices | Notes |
 |---|---|---|---|

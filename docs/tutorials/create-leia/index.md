@@ -27,9 +27,13 @@ The fastest way to get a LEIA of your own is to start from one that already exis
 
 ## 1. Pick a LEIA to start from
 
-Open the [LEIA library](../../teachers/designer/index.md) and find a public LEIA close to what you want. Set **Visibility** to **Public** to see only the LEIAs published by the LEIA team. For an interview exercise pick one whose description mentions requirements. For a game pick a guessing game.
+1. Open the [LEIA library](../../teachers/designer/index.md).
+2. Set **Visibility** to **Public** to see only the LEIAs published by the LEIA team.
+3. Type a word in **Search by name or description**. For an interview exercise look for one whose description mentions requirements. For a game look for a guessing game.
+4. Move the mouse over a row to reveal its buttons and press **View** to read its problem and persona. Close the dialog when you have read them.
+5. When you have found a good candidate, press **Design from this** on its row.
 
-Press **View** on the row to read its problem and persona. When you have found a good candidate, move the mouse over the row and press **Design from this**.
+The design screen opens with the three cards already filled.
 
 ![Design from this](../../img/tutorials/create-leia/01-design-from-this.webp)
 
@@ -41,35 +45,32 @@ Press **View** on the row to read its problem and persona. When you have found a
 
 ## 2. Change the character
 
-Click the **Persona** card. The persona editor opens.
+1. Click the **Persona** card. The persona editor opens.
+2. Type a new **Persona name** (2), for example `maria-lopez-bookshop-owner`. A persona name that already exists is refused when you finish.
+3. Change **Full Name** (3) and **First Name** (4).
+4. Rewrite **Description** (5), who the character is and what they want.
+5. Write a few adjectives in **Personality** (6).
+6. If the character's pronouns change, update the four pronoun fields (7 to 10).
+7. Press **Save** (11).
+
+The **Persona** card of the preview now shows your character.
 
 ![Persona editor](../../img/teachers/components/01-persona-editor.webp)
 
-Change at least these fields.
-
-- **Persona name** (2), a new identifier, for example `maria-lopez-bookshop-owner`. A persona name that already exists is refused when you finish.
-- **Full Name** (3) and **First Name** (4).
-- **Description** (5), who the character is and what they want.
-- **Personality** (6), a few adjectives.
-- The four pronoun fields (7 to 10) if the character's gender changed.
-
-Press **Save** (11).
-
 ## 3. Change the exercise
 
-Click the **Problem** card.
+1. Click the **Problem** card. The problem editor opens.
+2. Type a new **Problem name** (1).
+3. Rewrite **Description** (3), what the student sees.
+4. Rewrite **Details** (5), what only the character knows.
+5. Rewrite **Solution** (6), the reference answer in the chosen **Solution Format** (8).
+6. Adjust **Evaluation Prompt** (9) if you want the grader to focus on something. The server refuses an empty prompt when you finish, so keep at least one line.
+7. Leave **Process** (10) as it is. The behaviour you are reusing expects that process.
+8. Press **Save** (12).
+
+The **Problem** card of the preview now shows your exercise.
 
 ![Problem editor](../../img/teachers/components/02-problem-editor.webp)
-
-Change at least these fields.
-
-- **Problem name** (1), a new identifier.
-- **Description** (3), what the student sees.
-- **Details** (5), what only the character knows.
-- **Solution** (6), the reference answer in the chosen **Solution Format** (8).
-- **Evaluation Prompt** (9) if you want the grader to focus on something.
-
-Leave **Process** (10) as it is. The behaviour you are reusing expects that process. Press **Save** (12).
 
 :::tip Placeholders keep working
 If the original behaviour uses `{{persona.firstName}}` or `{{problem.details}}`, your new persona and problem are inserted automatically. See [Placeholders](../../teachers/designer/components-reference.md#placeholders).
@@ -77,22 +78,26 @@ If the original behaviour uses `{{persona.firstName}}` or `{{problem.details}}`,
 
 ## 4. Try it
 
-Press **Test LEIA** in the preview panel and have a short conversation. The draft is saved before the chat opens, and **Continue Configuration** brings you back. Details in [Test a LEIA](../../teachers/designer/test-leia.md).
+1. Press **Test LEIA** in the preview panel. The draft is saved before the chat opens.
+2. Have a short conversation and check that the character behaves as you expect.
+3. Press **Continue Configuration** to come back to the design screen.
+
+Details in [Test a LEIA](../../teachers/designer/test-leia.md).
 
 ## 5. Name it and finish
 
-Press **Review LEIA**.
+1. Press **Review LEIA**.
+2. Type the **New LEIA name** (1).
+3. Add a label in **Labels** (2) if you want to find it quickly later.
+4. Check the **Persona name** (7) and the **Problem name** (6). Leave the **Behaviour name** (5) as it is, since you reuse it.
+5. Press **Finish LEIA** (10). The success dialog opens.
+6. Press **Go to LEIAs** (1 in the success dialog).
+
+Your LEIA is in the library, private to your account, with the **Test LEIA** button ready.
 
 ![Review step](../../img/teachers/create-leia/08-step2-review.webp)
 
-- Type the **New LEIA name** (1).
-- Add a **Label** (2) if you want to find it quickly later.
-- Check the **Persona name** (7) and the **Problem name** (6). The **Behaviour name** (5) stays as it is, since you reuse it.
-- Press **Finish LEIA** (10).
-
 ![Success dialog](../../img/teachers/create-leia/10-success-dialog.webp)
-
-Press **Go to LEIAs**. Your LEIA is in the library, private to your account, with the **Test LEIA** button ready.
 
 ## What next
 
