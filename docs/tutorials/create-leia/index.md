@@ -103,3 +103,4 @@ Press **Go to LEIAs**. Your LEIA is in the library, private to your account, wit
 - Advanced and admin accounts can press **Quick replication** on the new row to open it for students at once. See [Workbench overview](../../teachers/workbench/index.md).
 - Instructor accounts cannot run replications yet. Ask the LEIA team at [team@leia.ovh](mailto:team@leia.ovh) for the advanced role, or ask a colleague with that role to replicate your LEIA.
 - To build a LEIA from scratch with the AI assistant, follow [Create a LEIA with the AI assistant](../../teachers/designer/create-leia.md).
+- To write the three components yourself, without the assistant, follow [A LEIA by hand, without the assistant](../create-from-scratch.md).

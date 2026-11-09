@@ -163,4 +163,5 @@ Instructor accounts do not see **Quick Replication**. Press **Go to LEIAs** inst
 
 - Browse the other [featured LEIAs](../featured-leias/index.md) for the exercise closest to your course; each page says what to keep and what to change.
 - To build a LEIA from scratch with the AI assistant, including a new behaviour, follow [Create a LEIA with the AI assistant](../teachers/designer/create-leia.md).
+- To write the three components yourself, without the assistant, follow [A LEIA by hand, without the assistant](create-from-scratch.md).
 - The scenario tutorials go deeper into one kind of exercise each: [requirements elicitation](requirements-elicitation.md), [conversational game](conversational-game.md), [programming exercise](programming-exercise.md), [group simulation](multi-leia-simulation.md).

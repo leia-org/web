@@ -204,3 +204,4 @@ Instructors only see **Go to LEIAs**.
 - Test the LEIA from the library with the model your students will use. See [Test a LEIA](test-leia.md).
 - Put it in an activity and publish it. See [Activities](activities.md).
 - Open the Workbench and create a replication. See [Workbench overview](../workbench/index.md).
+- To type the persona, the behaviour and the problem yourself instead of asking the assistant, administrators can follow [A LEIA by hand, without the assistant](../../tutorials/create-from-scratch.md).
