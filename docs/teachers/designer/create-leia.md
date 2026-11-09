@@ -26,6 +26,10 @@ authors:
 The **advanced** and **admin** roles. An instructor can follow every step but **Finish LEIA** will be refused, because the assistant creates a new behaviour and instructors cannot create behaviours. Instructors should use the [quick start](../../tutorials/create-leia/index.md) instead.
 :::
 
+:::info Start from a featured LEIA
+If you want a new exercise similar to one that already exists, start from a [featured LEIA](../../featured-leias/index.md) with **Design from this**. The tutorial [Your own LEIA from a featured one](../../tutorials/create-from-featured.md) shows every step.
+:::
+
 This page follows the creation of a complete LEIA from a one-paragraph description, and explains every control of the design screen on the way. The example is a requirements interview with Helen Park, the manager of a small university library. Expect fifteen minutes the first time.
 
 ## Before you start

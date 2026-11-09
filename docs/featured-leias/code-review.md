@@ -71,7 +71,7 @@ An interview usually takes between ten and twenty questions. The student presses
 ## Use it in your course
 
 1. Open the [LEIA library](../teachers/designer/index.md), set **Label** to **featured** and find `code-review`.
-2. Press **Quick replication** to get your own activity code, or **Design from this** to change the language of the code, the areas the interview must cover or the shape of the report, all of which live in the problem.
+2. Press **Quick replication** to get your own activity code, or **Design from this** to change the language of the code, the areas the interview must cover or the shape of the report, all of which live in the problem. The [tutorial](../tutorials/create-from-featured.md) shows the steps.
 3. In the Workbench, choose an OpenAI model in the [LEIA settings](../teachers/workbench/leia-settings.md), because Sara reads the editor through tool calls. The report she writes at the end appears in the conversation, so read the transcript in the [results](../teachers/workbench/results-and-export.md) to grade.
 
 Pair it with the [Python loops tutor](code-tutor-loops.md) or the [JavaScript anagram tutor](code-tutor-anagram.md): students write code with one LEIA and defend it with this one.

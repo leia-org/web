@@ -66,7 +66,7 @@ The **voice** demos need a microphone. The chat is replaced by a stage with the 
 Featured LEIAs are public, so every teacher account can build on them:
 
 1. Open the [LEIA library](../teachers/designer/index.md) in the Designer and set **Label** to **featured**.
-2. Press **Quick replication** on a row to get your own activity with your own code, or **Design from this** to change the character or the exercise first. The [quick start tutorial](../tutorials/create-leia/index.md) walks through the second path.
+2. Press **Quick replication** on a row to get your own activity with your own code, or **Design from this** to change the character or the exercise first. The tutorial [Your own LEIA from a featured one](../tutorials/create-from-featured.md) walks through the second path with a worked example.
 3. In the Workbench, adjust the [replication settings](../teachers/workbench/replication-settings.md) and the [LEIA settings](../teachers/workbench/leia-settings.md): model, voice, automatic evaluation.
 
 The coding LEIAs need an OpenAI model, because the code editor relies on tool calls. See the [code editor widget](../teachers/designer/widgets.md).

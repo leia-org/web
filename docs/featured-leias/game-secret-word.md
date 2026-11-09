@@ -65,7 +65,7 @@ The secret word is fixed in the problem, and the name of the LEIA in the library
 ## Use it in your course
 
 1. Open the [LEIA library](../teachers/designer/index.md), set **Label** to **featured** and find `game-secretWord-pizza`.
-2. Press **Design from this**, keep the behaviour `game-conversational`, and write a new problem with your own secret word and rules. The [conversational game tutorial](../tutorials/conversational-game.md) does exactly this, step by step.
+2. Press **Design from this**, keep the behaviour `game-conversational`, and write a new problem with your own secret word and rules. The tutorial [Your own LEIA from a featured one](../tutorials/create-from-featured.md) shows the steps; to build a game from scratch with the AI assistant, follow the [conversational game tutorial](../tutorials/conversational-game.md).
 3. In the Workbench, turn off **Ask for student solution** in the [LEIA settings](../teachers/workbench/leia-settings.md) if you prefer the game to end with **Finish Session**.
 
 Games like this one are also a gentle way to introduce students to the Workbench before a graded activity.

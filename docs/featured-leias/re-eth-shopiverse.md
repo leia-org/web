@@ -69,7 +69,7 @@ When the interview is over the student presses **Go to Editor** and writes the a
 ## Use it in your course
 
 1. Open the [LEIA library](../teachers/designer/index.md), set **Label** to **featured** and find `re-eth-shopiverse`.
-2. Press **Quick replication** for your own activity code, or **Design from this** to write a different ethically loaded project. The behaviour `re-ethical` expects the problem **Details** to list the requirements and the **Solution** to hold the risk analysis the student should arrive at.
+2. Press **Quick replication** for your own activity code, or **Design from this** to write a different ethically loaded project. The behaviour `re-ethical` expects the problem **Details** to list the requirements and the **Solution** to hold the risk analysis the student should arrive at. The [tutorial](../tutorials/create-from-featured.md) shows the steps.
 3. In the Workbench, keep **Ask for student solution** and **Automatic evaluation** on in the [LEIA settings](../teachers/workbench/leia-settings.md). Expect long sessions: a thorough interview takes a while.
 
 This LEIA has been used in class with hundreds of students in requirements engineering and ethics courses. The [requirements elicitation tutorial](../tutorials/requirements-elicitation.md) covers the common pattern.

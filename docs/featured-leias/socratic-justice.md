@@ -68,7 +68,7 @@ At the end the student presses **Go to Editor**, writes the position they have r
 ## Use it in your course
 
 1. Open the [LEIA library](../teachers/designer/index.md), set **Label** to **featured** and find `socratic-justice`.
-2. Press **Quick replication** for your own activity code, or **Design from this** to change the topic: the behaviour `socratic-philosopher-en` works for any concept you describe in the problem (virtue, knowledge, freedom, the good life).
+2. Press **Quick replication** for your own activity code, or **Design from this** to change the topic: the behaviour `socratic-philosopher-en` works for any concept you describe in the problem (virtue, knowledge, freedom, the good life). The [tutorial](../tutorials/create-from-featured.md) shows the steps.
 3. In the Workbench, turn off **Ask for student solution** in the [LEIA settings](../teachers/workbench/leia-settings.md) if you only want the conversation, or keep it on to collect a written conclusion from each student.
 
 A good fit for philosophy, ethics and critical thinking courses, and for the voice mode, where the dialogue feels closest to the original.

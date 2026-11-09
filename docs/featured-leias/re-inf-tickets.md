@@ -67,7 +67,7 @@ When the student has enough, they press **Go to Editor** and write the conceptua
 ## Use it in your course
 
 1. Open the [LEIA library](../teachers/designer/index.md), set **Label** to **featured** and find `re-inf-tickets`.
-2. Press **Quick replication** for your own activity code, or **Design from this** to keep the client behaviour and describe a different business. The behaviour `re-information` is shared by many requirements LEIAs, so you only change the persona and the problem.
+2. Press **Quick replication** for your own activity code, or **Design from this** to keep the client behaviour and describe a different business. The behaviour `re-information` is shared by many requirements LEIAs, so you only change the persona and the problem. The [tutorial](../tutorials/create-from-featured.md) shows the steps.
 3. In the Workbench, decide whether students submit a model (**Ask for student solution**) and whether it is graded (**Automatic evaluation**) in the [LEIA settings](../teachers/workbench/leia-settings.md). Turn on **Luke** and **Hide audio transcription** for the spoken version.
 
 The [requirements elicitation tutorial](../tutorials/requirements-elicitation.md) uses this LEIA as its starting point.

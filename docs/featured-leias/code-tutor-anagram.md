@@ -68,7 +68,7 @@ The ideas the student is expected to discover on their own are comparing lengths
 ## Use it in your course
 
 1. Open the [LEIA library](../teachers/designer/index.md), set **Label** to **featured** and find `code-tutor-anagram`.
-2. Press **Quick replication** for your own copy of the activity, or **Design from this** to swap the exercise: the function name, the tests and the starter code live in the **Activity setup** panel described in [code editor widget](../teachers/designer/widgets.md).
+2. Press **Quick replication** for your own copy of the activity, or **Design from this** to swap the exercise: the function name, the tests and the starter code live in the **Activity setup** panel described in [code editor widget](../teachers/designer/widgets.md). The [tutorial](../tutorials/create-from-featured.md) shows the steps.
 3. In the Workbench, pick an OpenAI model in the [LEIA settings](../teachers/workbench/leia-settings.md), since the editor needs tool calls. Turn on **Luke** for the voice version.
 
 The [programming exercise tutorial](../tutorials/programming-exercise.md) shows the whole process.

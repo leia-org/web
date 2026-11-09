@@ -68,7 +68,7 @@ When the picture is complete, the student presses **Go to Editor** and writes th
 ## Use it in your course
 
 1. Open the [LEIA library](../teachers/designer/index.md), set **Label** to **featured** and find `re-proc-loans`.
-2. Press **Quick replication** for your own activity code, or **Design from this** to describe another process. The behaviour `re-process` is built for process discovery: write the process in the problem **Details** and the expected diagram in the **Solution**, and Maxine, or your own expert, will disclose it piece by piece.
+2. Press **Quick replication** for your own activity code, or **Design from this** to describe another process. The behaviour `re-process` is built for process discovery: write the process in the problem **Details** and the expected diagram in the **Solution**, and Maxine, or your own expert, will disclose it piece by piece. The [tutorial](../tutorials/create-from-featured.md) shows the steps.
 3. In the Workbench, keep **Ask for student solution** and **Automatic evaluation** on in the [LEIA settings](../teachers/workbench/leia-settings.md) so that students draw and get feedback on their diagram.
 
 The [requirements elicitation tutorial](../tutorials/requirements-elicitation.md) explains the interview-then-model pattern this LEIA follows.

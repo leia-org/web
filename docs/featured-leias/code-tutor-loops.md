@@ -67,7 +67,7 @@ The editor opens with the function signature and a `pass` body. **Run tests** ex
 ## Use it in your course
 
 1. Open the [LEIA library](../teachers/designer/index.md), set **Label** to **featured** and find `code-tutor-loops`.
-2. Press **Quick replication** for a copy of this activity with its own code, or **Design from this** to change the function, the tests or the starter code in the **Activity setup** panel. The [code editor widget](../teachers/designer/widgets.md) page explains every field.
+2. Press **Quick replication** for a copy of this activity with its own code, or **Design from this** to change the function, the tests or the starter code in the **Activity setup** panel. The [code editor widget](../teachers/designer/widgets.md) page explains every field. The [tutorial](../tutorials/create-from-featured.md) shows the steps.
 3. In the Workbench, choose an OpenAI model in the [LEIA settings](../teachers/workbench/leia-settings.md): the editor relies on tool calls, which only OpenAI models support. Turn on **Luke** if you want the voice version.
 
 The [programming exercise tutorial](../tutorials/programming-exercise.md) builds a LEIA like this one from scratch.

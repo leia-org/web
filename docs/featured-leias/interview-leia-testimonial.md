@@ -69,4 +69,4 @@ When the interview is over, the person presses **Go to Editor**, writes a short 
 
 1. Open the [LEIA library](../teachers/designer/index.md), set **Label** to **featured** and find `interview-leia-testimonial`.
 2. Press **Quick replication** to collect feedback about LEIA from your own students at the end of a course: share the code, then read the answers in [results and export](../teachers/workbench/results-and-export.md).
-3. Or press **Design from this** and change the problem to interview students about any other experience: a project, an internship, a reading. The behaviour `testimonial-learning-experience-v2` only needs the topic and the areas to cover.
+3. Or press **Design from this** and change the problem to interview students about any other experience: a project, an internship, a reading. The behaviour `testimonial-learning-experience-v2` only needs the topic and the areas to cover. The [tutorial](../tutorials/create-from-featured.md) shows the steps.

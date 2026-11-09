@@ -23,6 +23,10 @@ authors:
 Every role, including **instructor**. This path reuses the behaviour of an existing LEIA, so it never creates a behaviour.
 :::
 
+:::info Start from a featured LEIA
+If you want a new exercise similar to one that already exists, start from a [featured LEIA](../../featured-leias/index.md) with **Design from this**. The tutorial [Your own LEIA from a featured one](../create-from-featured.md) shows every step.
+:::
+
 The fastest way to get a LEIA of your own is to start from one that already exists, change the character and the exercise, and save the result under a new name. You will reuse the behaviour, which is the part that tells the language model how to act, and you will only touch what makes your version different.
 
 ## 1. Pick a LEIA to start from
