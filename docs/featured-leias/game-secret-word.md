@@ -41,7 +41,7 @@ The secret word is fixed in the problem, and the name of the LEIA in the library
 - **Yes or no.** Timmy answers the questions and never says the secret word until the student guesses it.
 - **Passive.** He does not ask questions or steer the game; the student drives.
 - **In character.** Funny, ironic, not tech-savvy and enthusiastic about Italian culture, which colours his answers.
-- **No evaluation.** The problem has no evaluation criteria; the fun is in the guessing.
+- **Checked at the end.** Automatic evaluation is on, so the word you send is compared with the secret word. The problem defines no further evaluation criteria; the fun is in the guessing.
 
 ## Instructions shown to the student
 
@@ -57,7 +57,7 @@ The secret word is fixed in the problem, and the name of the LEIA in the library
 | Persona | `timmy` |
 | Behaviour | `game-conversational`, in the role of friend |
 | Problem | `secretWord-pizza` |
-| Solution | The guessed word, asked for at the end |
+| Solution | The guessed word, asked for at the end and checked against the secret word |
 | Language | English |
 | Text demo | Activity code `RMW20H00NP1G9OO5G` |
 | Voice demo | Activity code `RMW20I71S0Q8DGIR8`, Luke mode, Gemini voice Charon |

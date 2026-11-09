@@ -58,7 +58,7 @@ The **voice** demos need a microphone. The chat is replaced by a stage with the 
 
 - **One LEIA, one activity.** Each demo is a replication with a single LEIA, so the link always opens the same character. The text and voice demos of a LEIA share the same persona, problem and behaviour; only the Workbench settings differ.
 - **Instructions first.** The activity opens with an **Instructions** dialog that holds the problem description quoted on each page. The **Instructions** button in the header reopens it.
-- **A deliverable at the end.** Except for the game, every demo asks for a solution when you press the main button in the header (**Go to Editor** or **Send Solution**) and grades it with the language model. The pages say what each LEIA expects.
+- **A deliverable at the end.** Every demo asks for a solution when you press the main button in the header (**Go to Editor** or **Send Solution**) and grades it with the language model. The pages say what each LEIA expects; in the game it is simply the word you guessed.
 - **Voice is the Luke mode.** The voice demos use the **Luke** audio mode described in [LEIA settings](../teachers/workbench/leia-settings.md#voice). The coding LEIAs keep their code editor next to the avatar.
 
 ## Use a featured LEIA in your own course
