@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 tags:
   - tutorial
   - scenario
@@ -17,6 +17,10 @@ authors:
 ---
 
 # Scenario, a conversational game
+
+:::info Start from a featured LEIA
+If you want a new exercise similar to one that already exists, start from a [featured LEIA](../featured-leias/index.md) with **Design from this**. The tutorial [Your own LEIA from a featured one](create-from-featured.md) shows every step.
+:::
 
 A guessing game is the simplest LEIA and a good first activity for a class that has never used the platform. The example is a secret word game. The character thinks of a word, the student asks questions that can only be answered with yes or no, and wins by naming the word.
 

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 tags:
   - tutorial
   - scenario
@@ -18,6 +18,10 @@ authors:
 ---
 
 # Scenario, a group simulation with several LEIAs
+
+:::info Start from a featured LEIA
+If you want a new exercise similar to one that already exists, start from a [featured LEIA](../featured-leias/index.md) with **Design from this**. The tutorial [Your own LEIA from a featured one](create-from-featured.md) shows every step.
+:::
 
 In a MultiLEIA activity the student talks to several characters in the same chat. An orchestrator decides which character answers each message, so a meeting with a client and an IT manager, a focus group of users or a team retrospective become possible. The example puts Helen Park, the library manager, and Omar Haddad, the IT manager of the university, in one requirements meeting.
 

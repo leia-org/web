@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 tags:
   - tutorial
   - scenario
@@ -20,6 +20,10 @@ authors:
 ---
 
 # Scenario, a programming exercise with the code editor
+
+:::info Start from a featured LEIA
+If you want a new exercise similar to one that already exists, start from a [featured LEIA](../featured-leias/index.md) with **Design from this**. The tutorial [Your own LEIA from a featured one](create-from-featured.md) shows every step.
+:::
 
 A LEIA with the **Editor** widget becomes a programming tutor. The student writes code in an editor next to the chat, the LEIA reads it, comments on it and runs the tests you defined. The example is the FizzBuzz function in Python with Ada Okafor, a patient tutor who asks guiding questions instead of giving the answer.
 
