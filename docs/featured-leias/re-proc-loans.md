@@ -9,7 +9,7 @@ keywords:
   - featured
   - process elicitation
   - BPMN
-  - Mermaid
+  - XML
   - domain expert
   - interview
 authors:
@@ -36,7 +36,7 @@ Press **Start session**, then **Continue Task**. Suggested first message: "Hi Ma
 
 The student runs a process discovery interview. The loan application goes through several checks carried out by different roles, some of them in parallel, before a decision is taken and the outcome is sent to the applicant. Maxine never tells the whole story at once: each answer covers one part of the process, and the student has to ask about who does what, what comes before and after, and what happens when a check fails.
 
-When the picture is complete, the student presses **Go to Editor** and writes the process as a BPMN diagram in Mermaid flowchart syntax, with a live preview. **Send Solution** submits it and the language model compares it with the reference process, including the order of the steps, the parallel branches and the decision.
+When the picture is complete, the student presses **Go to Editor** and writes the process as a BPMN 2.0 XML model (`<process>` with its events, tasks, gateways and sequence flows). The editor checks that the XML is well formed; there is no diagram preview. **Send Solution** submits it and the language model compares it with the reference process, including the order of the steps, the parallel branches and the decision.
 
 ## How the LEIA behaves
 
@@ -48,7 +48,7 @@ When the picture is complete, the student presses **Go to Editor** and writes th
 
 ## Instructions shown to the student
 
-> You have been hired to identify the workflow behind the loan application process of a finance company named "Europe Financial Corp". You need to discover this process by interviewing Maxine Mazatzin, the Credit Analyst of the company. The ultimate goal is to model the business process using BPMN (Business Process Model and Notation) in mermaid diagram syntax.
+> You have been hired to identify the workflow behind the loan application process of a finance company named "Europe Financial Corp". You need to discover this process by interviewing Maxine Mazatzin, the Credit Analyst of the company. The ultimate goal is to model the business process in BPMN (Business Process Model and Notation), written as BPMN 2.0 XML.
 
 ![Infographic of the loan application process exercise](../img/featured-leias/re-proc-loans-infographic.webp)
 
@@ -59,8 +59,8 @@ When the picture is complete, the student presses **Go to Editor** and writes th
 | Name in the library | `re-proc-loans`, version 1.0.0 |
 | Persona | `maxine-mazatzin` |
 | Behaviour | `re-process`, in the role of credit analyst |
-| Problem | `finance-loan-app-problem` |
-| Solution | A Mermaid flowchart (BPMN), asked for and evaluated automatically |
+| Problem | `bpmn-process-loans` |
+| Solution | A BPMN 2.0 XML model (no `bpmndi` diagram section needed), asked for and evaluated automatically |
 | Language | English |
 | Text demo | Activity code `RMW20P7WLCK9S4R2J` |
 | Voice demo | Activity code `RMW20QAA4M9IXI433`, Luke mode, Gemini voice Kore |
@@ -68,7 +68,7 @@ When the picture is complete, the student presses **Go to Editor** and writes th
 ## Use it in your course
 
 1. Open the [LEIA library](../teachers/designer/index.md), set **Label** to **featured** and find `re-proc-loans`.
-2. Press **Quick replication** for your own activity code, or **Design from this** to describe another process. The behaviour `re-process` is built for process discovery: write the process in the problem **Details** and the expected diagram in the **Solution**, and Maxine, or your own expert, will disclose it piece by piece. The [tutorial](../tutorials/create-from-featured.md) shows the steps.
-3. In the Workbench, keep **Ask for student solution** and **Automatic evaluation** on in the [LEIA settings](../teachers/workbench/leia-settings.md) so that students draw and get feedback on their diagram.
+2. Press **Quick replication** for your own activity code, or **Design from this** to describe another process. The behaviour `re-process` is built for process discovery: write the process in the problem **Details** and the expected process as BPMN 2.0 XML in the **Solution**, and Maxine, or your own expert, will disclose it piece by piece. The [tutorial](../tutorials/create-from-featured.md) shows the steps.
+3. In the Workbench, keep **Ask for student solution** and **Automatic evaluation** on in the [LEIA settings](../teachers/workbench/leia-settings.md) so that students submit their model and get feedback on it.
 
 The [requirements elicitation tutorial](../tutorials/requirements-elicitation.md) explains the interview-then-model pattern this LEIA follows.

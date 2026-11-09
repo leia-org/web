@@ -37,7 +37,7 @@ Keep the behaviour: it is the part that tells the language model how to act, and
 | You want | Start from | Change |
 |---|---|---|
 | A client interview that ends in a conceptual model | [Ticket platform requirements](../featured-leias/re-inf-tickets.md) | Persona; problem (description, details, Mermaid solution) and its overrides. This tutorial. |
-| A process discovery interview that ends in BPMN | [Loan application process](../featured-leias/re-proc-loans.md) | Persona; problem with the process in **Details** and the BPMN flowchart in **Solution**. |
+| A process discovery interview that ends in BPMN | [Loan application process](../featured-leias/re-proc-loans.md) | Persona; problem with the process in **Details** and the BPMN 2.0 XML in **Solution**. |
 | A requirements interview with an ethical and legal analysis | [Shopiverse v2](../featured-leias/re-eth-shopiverse.md) | Persona; problem with the requirements in **Details** and the risk analysis in **Solution**. |
 | A Socratic dialogue on another concept | [A Socratic dialogue on justice](../featured-leias/socratic-justice.md) | Only the problem. Sócrates stays. |
 | A guessing game with another word or other rules | [The secret word game](../featured-leias/game-secret-word.md) | Only the problem: the word and the rules go in **Details** and **Solution**. The persona if you want another friend. |
