@@ -50,7 +50,7 @@ Open the **Problem** card and shape the exercise.
 - **Evaluation Prompt** (9) tells the grader what matters. For example "Check that the diagram contains bookings, rooms, books, loans and users, with sensible multiplicities. Do not penalise different class names if the meaning is the same".
 - **Initial Solution** (7) can hold a skeleton such as `classDiagram` with one class, so students start from valid syntax. It must not be left empty.
 
-Open the **Behaviour** card and read the description. A good client behaviour answers only what is asked, stays in role, gives realistic answers and never produces a list of requirements on request. The **Tooltip** can be "Hello Helen, could you tell me about your library?".
+Open the **Behaviour** card and read the description. A good client behaviour answers only what is asked, stays in role, gives realistic answers and never produces a list of requirements on request. The **Tooltip** can be "Hello {{persona.firstName}}, could you tell me about your library?": the placeholder becomes the persona's first name, so the line still fits if you swap the persona.
 
 Finish the LEIA with a clear name and a label for your course.
 

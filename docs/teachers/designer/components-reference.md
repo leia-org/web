@@ -118,7 +118,7 @@ Three keys of the problem have no field in the visual editor. They let a problem
       "persona": { "spec": { "personality": ["mysterious", "pirate"] } }
     },
     "overrides": {
-      "behaviour": { "spec": { "tooltip": "Ask Helen about the library" } }
+      "behaviour": { "spec": { "tooltip": "Hi {{persona.firstName}}, could you tell me about your library?" } }
     },
     "constrainedTo": {
       "behaviour": { "spec": { "process": ["requirements-elicitation"] } }
