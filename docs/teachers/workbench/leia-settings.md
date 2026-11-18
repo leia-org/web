@@ -38,7 +38,7 @@ The **LEIAs** section of a replication lists every LEIA of the activity. Each on
 | # | Control | What it does |
 |---|---|---|
 | 1 | **View content** | Opens a drawer with the persona, the behaviour and the problem of the LEIA, and a **Raw JSON** tab. |
-| 2 | **Test session** | Starts a session for you with this LEIA, in a new tab. Test sessions skip the consent dialog and never appear in the results. If the runner block has unsaved changes you are asked to save first. |
+| 2 | **Test session** | Starts a session for you with this LEIA, in a new tab. Test sessions skip the consent dialog and never appear in the results, unlike sessions started with the **Demo / test link** of the replication. If the runner block has unsaved changes you are asked to save first. |
 | 3 | **Mode** and **Sessions** | The mode of the LEIA in the activity (**standard** or **transcription**) and how many sessions it has run. |
 | 4 | **Ask for student solution** | When on, the student's main button becomes **Go to Editor** (or **Send Solution** with a code widget) and the session ends with a submission. When off, the student simply presses **Finish Session**. |
 | 5 | **Automatic evaluation** | When on, the submission is graded by the language model against the problem's solution and the student sees the evaluation at once. Requires the previous switch. |

@@ -27,7 +27,7 @@ authors:
 The owner of the replication, administrators and anyone with its share link. Editing a score is reserved to administrators in the current interface.
 :::
 
-The **Conversations** section of a replication is where you read what happened, check the automatic evaluation, change a score and download everything. Test sessions, those started with **Test session** or with the **Demo / test link**, are not listed and are not exported.
+The **Conversations** section of a replication is where you read what happened, check the automatic evaluation, change a score and download everything. Sessions started with **Test session** are not listed and are not exported. Sessions started with the **Demo / test link** are listed and exported like any student session, under a `demo…@test.com` address, so skip those rows if you demonstrated the activity that way.
 
 ## The conversations page
 

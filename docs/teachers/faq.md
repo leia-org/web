@@ -76,7 +76,7 @@ Honest answers to the questions teachers ask most, plus the limits of the curren
 
 **Why does a conversation say "No conversation is available because the participant did not consent"?** The replication asked for consent, the student declined and **Conversation automated removal** was on. Only the metadata of the session is kept.
 
-**Are test sessions in the results?** No. Sessions started with **Test session** in the Workbench or through the **Demo / test link** are hidden from the Conversations page and from the CSV.
+**Are test sessions in the results?** It depends on how you started them. Sessions started with **Test session** on the LEIA page of a replication are hidden from the Conversations page and from the CSV. Sessions started through the **Demo / test link** are ordinary sessions under a throwaway identity, `demo` followed by random letters at `@test.com`, and they do appear in the Conversations page, in the counters and in the CSV. Recognise them by the `@test.com` address and leave those rows out of your grading. See [Results, grading and export](workbench/results-and-export.md).
 
 ## Known problems of the development version
 

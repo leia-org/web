@@ -36,7 +36,7 @@ A replication has three sections of settings that apply to every LEIA in it. **G
 | # | Control | What it does |
 |---|---|---|
 | 1 | **Student link** | The address to give students. It opens the Workbench with the code already filled in. Click to copy. |
-| 2 | **Demo / test link** | The same address with a throwaway identity. Each visit creates a fresh test student, and test sessions never appear in the results. Use it to try the activity yourself or to demonstrate it in class. |
+| 2 | **Demo / test link** | The same address with a throwaway identity. Each visit creates a fresh student whose email is `demo`, sixteen random letters and `@test.com`, so you can start over as often as you like. These sessions are ordinary sessions: they appear in **Conversations**, in the counters and in the CSV, and you recognise them by the `@test.com` address. Use it to demonstrate the activity in class. To try a LEIA without leaving a trace in the results, use **Test session** on the [LEIA page](leia-settings.md#the-leia-page) instead. |
 | 3 | **Shared access** | When on, anyone with the share link can manage this replication without an account. A **Share token** chip appears with **Copy share link** and **Regenerate**. Regenerating invalidates the previous link. |
 | 4 | **Rename** | Changes the name of the replication in your list. Names are unique. |
 | 5 | **Code** | The code students type. Click to copy. |
@@ -97,7 +97,7 @@ When a LEIA has no model or no key, the **Active** switch stays off, a message l
 Consent and automatic removal are present in the Workbench interface of the development version but the matching server support has not reached that version yet, so **Save** may fail there. The production version supports them. If **Save** returns an error, leave consent off and collect consent outside LEIA.
 :::
 
-Test sessions started with the **Demo / test link** or with **Test session** skip the consent dialog.
+Sessions started with **Test session** skip the consent dialog. Sessions started with the **Demo / test link** are ordinary sessions, so they see the dialog and their answer is recorded like any other.
 
 ## A checklist for a class session
 

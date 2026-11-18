@@ -120,6 +120,6 @@ Each replication has a sub-menu on the left.
 2. **Ask for student solution** and **Automatic evaluation** are set the way you want for each LEIA.
 3. The **Language** is the language of your class.
 4. The **Duration** is set, or deliberately left without limit.
-5. You tried the activity with **Test session** or with the **Demo / test link**.
+5. You tried the activity with **Test session**, or with the **Demo / test link** if a `demo…@test.com` row in the results does not bother you.
 6. **Active** is on.
 7. You copied the **Student link** or the code into your course page.

@@ -22,7 +22,7 @@ authors:
 # What students see
 
 :::info Who can do this
-Students need no account. Teachers can walk the same path with the **Demo / test link** of a replication, which creates a throwaway identity that is excluded from the results.
+Students need no account. Teachers can walk the same path with the **Demo / test link** of a replication, which fills in a fresh throwaway identity, `demo…@test.com`, on every visit. Those sessions appear in the results like any other, recognisable by the `@test.com` address. For a run that stays out of the results, use **Test session** on the [LEIA page](leia-settings.md#the-leia-page) of the replication.
 :::
 
 This page follows a student from the join code to the end of the session, so you know what to explain in class and what each switch of the replication changes on their screen.
