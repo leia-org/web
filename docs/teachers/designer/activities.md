@@ -81,10 +81,6 @@ There is no add button inside the activity. LEIAs come from the library and from
 
 Open **Activities** and expand the activity to see its LEIAs.
 
-:::caution Current production version
-In the current production version this dialog may fail to open, and there is no other way to put a LEIA in an activity. A fix is on its way. Until it is released, you cannot complete the steps of this page for transcription mode, the conversation flow or publishing. To open a single LEIA to students, use [Quick replication](index.md#open-a-leia-to-students-with-a-quick-replication), which creates and publishes its own activity.
-:::
-
 ![Add to activity dialog](../../img/teachers/activities/02-add-to-activity.webp)
 
 | # | Control | What it does |

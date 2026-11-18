@@ -74,7 +74,7 @@ Honest answers to the questions teachers ask most, plus the limits of the curren
 
 **Where are the supervisor flags in the export?** They are not in the CSV. Read them in the Conversations page.
 
-**Are test sessions in the results?** No. Sessions started with **Test session** in the Workbench or through the **Demo / test link** are hidden from the Conversations page and from the CSV.
+**Are test sessions in the results?** It depends on how you started them. Sessions started with **Test session** on the LEIA page of a replication are hidden from the Conversations page and from the CSV. Sessions started through the **Demo / test link** are ordinary sessions under a throwaway identity, `demo` followed by random letters at `@test.com`, and they do appear in the Conversations page, in the counters and in the CSV. Recognise them by the `@test.com` address and leave those rows out of your grading. See [Results, grading and export](workbench/results-and-export.md).
 
 ## Known problems {#known-problems-of-the-development-version}
 

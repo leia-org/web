@@ -44,7 +44,7 @@ Students can join as soon as **Active** is on.
 1. Click the **Demo / test link** (2) to copy it.
 2. Open it in a new private browser window.
 
-Each visit creates a fresh test student that never appears in the results.
+Each visit creates a fresh student with a `demo…@test.com` address. That session appears in **Conversations** and in the CSV like a student's, so leave it out of your grading. To try a LEIA without leaving a trace in the results, use [Test session](leia-settings.md#try-the-leia-as-a-student) instead.
 
 ### Let a colleague manage the replication
 
@@ -70,7 +70,7 @@ To cancel the access, press **Regenerate** next to the chip. The previous link s
 | # | Control | What it does |
 |---|---|---|
 | 1 | **Student link** | The address to give students. It opens the Workbench with the code already filled in. Click to copy. |
-| 2 | **Demo / test link** | The same address with a throwaway identity. Each visit creates a fresh test student, and test sessions never appear in the results. Use it to try the activity yourself or to demonstrate it in class. |
+| 2 | **Demo / test link** | The same address with a throwaway identity. Each visit creates a fresh student whose email is `demo`, sixteen random letters and `@test.com`, so you can start over as often as you like. These sessions are ordinary sessions: they appear in **Conversations**, in the counters and in the CSV, and you recognise them by the `@test.com` address. Use it to demonstrate the activity in class. To try a LEIA without leaving a trace in the results, use **Test session** on the [LEIA page](leia-settings.md#the-leia-page) instead. |
 | 3 | **Shared access** | When on, anyone with the share link can manage this replication without an account. A **Share token** chip appears with **Copy share link** and **Regenerate**. Regenerating invalidates the previous link. |
 | 4 | **Rename** | Changes the name of the replication in your list. Names are unique. |
 | 5 | **Code** | The code students type. Click to copy. |

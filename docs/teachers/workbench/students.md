@@ -22,7 +22,7 @@ authors:
 # What students see
 
 :::info Who can do this
-Students need no account. Teachers can walk the same path with the **Demo / test link** of a replication, which creates a throwaway identity that is excluded from the results.
+Students need no account. Teachers can walk the same path with the **Demo / test link** of a replication, which fills in a fresh throwaway identity, `demo…@test.com`, on every visit. Those sessions appear in the results like any other, recognisable by the `@test.com` address. For a run that stays out of the results, use **Test session** on the [LEIA page](leia-settings.md#the-leia-page) of the replication.
 :::
 
 This page follows a student from the join code to the end of the session, so you know what to explain in class and what each switch of the replication changes on their screen.
@@ -48,7 +48,7 @@ To come back to an unfinished session, repeat the first two steps with the same 
 3. Open it in a new private browser window.
 4. Follow the steps above as a student would.
 
-Your test session never appears in the results.
+Your session appears in the results like a student's, under a `demo…@test.com` address, so leave it out of your grading.
 
 ## Join
 
@@ -113,7 +113,7 @@ The LEIA answers in the **Language** of the replication. If an answer is slow a 
 
 ### Voice modes
 
-With **Audio mode** set to **Luke**, the chat is replaced by a full-screen stage with the character's avatar, a microphone button and a **Show transcript** panel. With **Legacy (OpenAI Realtime)**, a floating card shows **Mute Microphone**, a visualiser and the connection state. In both cases the student speaks, the LEIA answers with a voice, and the text of the exchange is saved as a transcript unless you enabled **Hide audio transcription**. See [LEIA settings in a replication](leia-settings.md#runner).
+With **Audio mode** set to **Luke**, the chat is replaced by a full-screen stage with the character's avatar, a microphone button and a **Show transcript** panel. With **Legacy (OpenAI Realtime)**, a floating card shows **Mute Microphone**, a visualiser and the connection state. In both cases the student speaks, the LEIA answers with a voice, and the text of the exchange is saved as a transcript. **Hide audio transcription** only hides that text from the student, the transcript is still saved. See [LEIA settings in a replication](leia-settings.md#runner).
 
 ### Widgets
 

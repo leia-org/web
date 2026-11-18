@@ -270,10 +270,6 @@ The server refuses a problem whose **Evaluation Prompt** is empty text, and the 
 
 Instructors only see **Go to LEIAs**.
 
-:::caution
-**Add to Activity** may fail in the current production version. See [Add LEIAs](activities.md#add-leias).
-:::
-
 ## What to do next
 
 - Test the LEIA from the library with the model your students will use. See [Test a LEIA](test-leia.md).

@@ -54,10 +54,6 @@ The library lists one LEIA per character.
 
 The activity shows the **Published** chip and the **Replicate** button. See [Activities](../teachers/designer/activities.md#conversation-flow).
 
-:::caution
-**Add to activity** may fail in the current production version, which blocks this scenario until the fix is released. See [Add LEIAs](../teachers/designer/activities.md#add-leias).
-:::
-
 ![Conversation flow editor](../img/teachers/activities/05-conversation-flow.webp)
 
 | Field | Value for this scenario |

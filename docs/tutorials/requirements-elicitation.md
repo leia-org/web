@@ -110,7 +110,7 @@ The same LEIA can be run as a spoken interview.
 3. Pick a voice that matches the persona's pronouns.
 4. Press **Save**.
 
-Students then talk to Helen through the microphone and still write the diagram in the editor at the end. Voice uses the platform's keys and the transcript is saved like a text conversation, unless you enable **Hide audio transcription**. See [LEIA settings in a replication](../teachers/workbench/leia-settings.md#runner).
+Students then talk to Helen through the microphone and still write the diagram in the editor at the end. Voice uses the platform's keys and the transcript is saved like a text conversation. **Hide audio transcription** only hides the transcript from the student, the transcript is still saved for you. See [LEIA settings in a replication](../teachers/workbench/leia-settings.md#runner).
 
 ## Variations
 
