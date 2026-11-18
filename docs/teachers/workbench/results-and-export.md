@@ -27,7 +27,7 @@ authors:
 The owner of the replication, administrators and anyone with its share link. Editing a score is reserved to administrators in the current interface.
 :::
 
-The **Conversations** section of a replication is where you read what happened, check the automatic evaluation, change a score and download everything. Test sessions, those started with **Test session** or with the **Demo / test link**, are not listed and are not exported.
+The **Conversations** section of a replication is where you read what happened, check the automatic evaluation, change a score and download everything. Sessions started with **Test session** are not listed and are not exported. Sessions started with the **Demo / test link** are listed and exported like any student session, under a `demo…@test.com` address, so skip those rows if you demonstrated the activity that way.
 
 ## The conversations page
 
@@ -61,7 +61,7 @@ The **Conversations** section of a replication is where you read what happened, 
 
 | # | Item | What it is |
 |---|---|---|
-| 1 | Transcript | Every message with its time. In MultiLEIA sessions each message carries the name of the character. When the student declined consent and automatic removal was on, the panel explains that no conversation is available. |
+| 1 | Transcript | Every message with its time. In MultiLEIA sessions each message carries the name of the character. |
 | 2 | **Evaluation** | The text produced by the automatic evaluation, when it was enabled. |
 
 Two more blocks follow the evaluation when they have content.
@@ -80,7 +80,7 @@ Three buttons switch the detail view.
 |---|---|
 | **Conversation** | The transcript, the evaluation, the flags and the submission described above. |
 | **Configuration** | A snapshot of how the replication and the LEIA were configured when the session ran. Name, duration, repeatable, form, mode, the solution switches, the solution format, the provider, the model and the audio settings. Useful when you change settings between groups. |
-| **Data Usage** | Whether consent was required, what the student answered and when, and whether the conversation was removed. |
+| **Data Usage** | Meant to show whether consent was required and what the student answered. Consent does not work at the moment, so the view reads "No data usage configuration was stored for this conversation". See [Data Usage](replication-settings.md#data-usage). |
 
 ![Configuration view](../../img/teachers/results/03-session-config.webp)
 
@@ -88,7 +88,7 @@ Three buttons switch the detail view.
 |---|---|---|
 | 1 | **Conversation** | Switches back to the transcript. |
 | 2 | **Configuration** | Switches to the snapshot view. In the development version the snapshot is not stored yet and the view reads "No replication configuration was stored for this conversation". |
-| 3 | **Data Usage** | Switches to the consent view. |
+| 3 | **Data Usage** | Switches to the consent view, empty at the moment. |
 
 ## Scores
 

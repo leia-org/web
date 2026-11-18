@@ -27,7 +27,7 @@ authors:
 The owner of the replication and administrators. People who received a **share link** can change the switches and regenerate the code but not rename the replication, change its language or manage sharing.
 :::
 
-A replication has three sections of settings that apply to every LEIA in it. **General** holds the links, the code and the switches that decide when and how students can join. **Settings** holds the external form. **Data Usage** holds the consent options. The per-LEIA settings, such as the model and the automatic evaluation, are on the [LEIA settings page](leia-settings.md).
+A replication has three sections of settings that apply to every LEIA in it. **General** holds the links, the code and the switches that decide when and how students can join. **Settings** holds the external form. **Data Usage** holds the consent options, which do not work at the moment. The per-LEIA settings, such as the model and the automatic evaluation, are on the [LEIA settings page](leia-settings.md).
 
 ## General
 
@@ -44,7 +44,7 @@ Students can join as soon as **Active** is on.
 1. Click the **Demo / test link** (2) to copy it.
 2. Open it in a new private browser window.
 
-Each visit creates a fresh test student that never appears in the results.
+Each visit creates a fresh student with a `demo…@test.com` address. That session appears in **Conversations** and in the CSV like a student's, so leave it out of your grading. To try a LEIA without leaving a trace in the results, use [Test session](leia-settings.md#try-the-leia-as-a-student) instead.
 
 ### Let a colleague manage the replication
 
@@ -70,7 +70,7 @@ To cancel the access, press **Regenerate** next to the chip. The previous link s
 | # | Control | What it does |
 |---|---|---|
 | 1 | **Student link** | The address to give students. It opens the Workbench with the code already filled in. Click to copy. |
-| 2 | **Demo / test link** | The same address with a throwaway identity. Each visit creates a fresh test student, and test sessions never appear in the results. Use it to try the activity yourself or to demonstrate it in class. |
+| 2 | **Demo / test link** | The same address with a throwaway identity. Each visit creates a fresh student whose email is `demo`, sixteen random letters and `@test.com`, so you can start over as often as you like. These sessions are ordinary sessions: they appear in **Conversations**, in the counters and in the CSV, and you recognise them by the `@test.com` address. Use it to demonstrate the activity in class. To try a LEIA without leaving a trace in the results, use **Test session** on the [LEIA page](leia-settings.md#the-leia-page) instead. |
 | 3 | **Shared access** | When on, anyone with the share link can manage this replication without an account. A **Share token** chip appears with **Copy share link** and **Regenerate**. Regenerating invalidates the previous link. |
 | 4 | **Rename** | Changes the name of the replication in your list. Names are unique. |
 | 5 | **Code** | The code students type. Click to copy. |
@@ -160,28 +160,24 @@ When a LEIA has no model or no key, the **Active** switch stays off, a message l
 
 ## Data Usage
 
+:::caution Not working at the moment
+The **Data Usage** section is in the Workbench interface, but the server has no support for it. **Save** always fails with "Error updating data usage settings", nothing is stored, students never see a consent dialog and no conversation is removed. Collect consent outside LEIA. The steps and the table below describe what the section is meant to do.
+:::
+
 1. Choose **Data Usage** in the sub-menu.
 2. Enable **Data Usage Consent Acceptance** (1).
 3. Replace the **Consent message** (2) with the wording your institution requires.
 4. Enable **Conversation automated removal** (3) if the conversations of students who decline must be deleted.
 5. Press **Save** (4).
 
-If **Save** returns an error, leave consent off and collect consent outside LEIA.
-
 ![Data usage section](../../img/teachers/replication-settings/06-data-usage.webp)
 
 | # | Control | What it does |
 |---|---|---|
-| 1 | **Data Usage Consent Acceptance** | When enabled, every student must accept or decline before the first message. The choice is stored with the session and shown in the results. |
+| 1 | **Data Usage Consent Acceptance** | Meant to make every student accept or decline before the first message, and to show the choice in the results. |
 | 2 | **Consent message** | The text of the dialog. A default text about educational and research purposes is provided, replace it with the wording your institution requires. |
-| 3 | **Conversation automated removal** | When enabled, the conversation of a student who **declined** is deleted after the session ends. Only the metadata of the session is kept. Available only while consent is enabled. |
-| 4 | **Save** | Writes the three settings together. Disabled while consent is on and the message is empty. |
-
-:::caution Availability
-Consent and automatic removal are present in the Workbench interface of the development version but the matching server support has not reached that version yet, so **Save** may fail there. The production version supports them. If **Save** returns an error, leave consent off and collect consent outside LEIA.
-:::
-
-Test sessions started with the **Demo / test link** or with **Test session** skip the consent dialog.
+| 3 | **Conversation automated removal** | Meant to delete the conversation of a student who **declined** after the session ends, keeping only the metadata of the session. Available only while consent is enabled. |
+| 4 | **Save** | Meant to write the three settings together. Disabled while consent is on and the message is empty. |
 
 ## A checklist for a class session
 

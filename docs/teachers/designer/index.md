@@ -79,7 +79,7 @@ The new LEIA appears in the library and the original stays as it was.
 3. Choose one of your unpublished activities in **Select an Activity**, or type a new name.
 4. Press **Add to Activity**.
 
-The LEIA is listed inside the activity. [Add LEIAs](activities.md#add-leias) explains a current limitation of this dialog.
+The LEIA is listed inside the activity.
 
 ### Open a LEIA to students with a quick replication
 
