@@ -23,6 +23,10 @@ authors:
 Every role, including **instructor**. This path reuses the behaviour of an existing LEIA, so it never creates a behaviour.
 :::
 
+:::info Start from a featured LEIA
+If you want a new exercise similar to one that already exists, start from a [featured LEIA](../../featured-leias/index.md) with **Design from this**. The tutorial [Your own LEIA from a featured one](../create-from-featured.md) shows every step.
+:::
+
 The fastest way to get a LEIA of your own is to start from one that already exists, change the character and the exercise, and save the result under a new name. You will reuse the behaviour, which is the part that tells the language model how to act, and you will only touch what makes your version different.
 
 ## 1. Pick a LEIA to start from
@@ -99,3 +103,4 @@ Press **Go to LEIAs**. Your LEIA is in the library, private to your account, wit
 - Advanced and admin accounts can press **Quick replication** on the new row to open it for students at once. See [Workbench overview](../../teachers/workbench/index.md).
 - Instructor accounts cannot run replications yet. Ask the LEIA team at [team@leia.ovh](mailto:team@leia.ovh) for the advanced role, or ask a colleague with that role to replicate your LEIA.
 - To build a LEIA from scratch with the AI assistant, follow [Create a LEIA with the AI assistant](../../teachers/designer/create-leia.md).
+- To write the three components yourself, without the assistant, follow [A LEIA by hand, without the assistant](../create-from-scratch.md).
