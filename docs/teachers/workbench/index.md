@@ -27,7 +27,14 @@ The Workbench is where activities meet students. You create a **replication** of
 
 ## Sign in
 
-Open [workbench.leia.ovh/login](https://workbench.leia.ovh/login) with the same email and password as the Designer.
+Use the same email and password as in the Designer.
+
+1. Open [workbench.leia.ovh/login](https://workbench.leia.ovh/login).
+2. Type your **Email** (1) and your **Password** (2).
+3. Wait for the verification check (3) to pass.
+4. Press **Sign in** (4).
+
+The replications list opens.
 
 ![Workbench sign-in](../../img/teachers/workbench/01-login.webp)
 
@@ -41,6 +48,14 @@ Open [workbench.leia.ovh/login](https://workbench.leia.ovh/login) with the same 
 If you came from a link such as **Replicate** in the Designer, you are sent to that page after signing in.
 
 ## Find your way around
+
+### Find a replication
+
+1. Choose **Replications** in the sidebar (1).
+2. Type part of the name or the code in **Search replications** (2). It only filters the replications already loaded, so scroll down to load more.
+3. Press **Open filters** (3) to narrow the list or change its order.
+4. Click a replication (4). The detail panel (5) shows its state and its code.
+5. Press **Open** (6), **Live** (7) or **Conversations** (8).
 
 ![Replications list](../../img/teachers/workbench/02-replications-list.webp)
 
@@ -79,6 +94,15 @@ The filters offer **Published** or **Unpublished** and the modes found in the li
 
 ## Create a replication
 
+1. Press **New Replication** at the top right of the replications list, or choose **Experiments** in the sidebar.
+2. Click the experiment (1 in the experiments list above).
+3. Press **Create Replication from this Experiment** (3 in the experiments list above).
+4. Check the preview (1) and press **Create Replication** (2).
+5. Type the **Replication Name** (1 in the naming dialog below).
+6. Press **Create** (2 in the naming dialog below).
+
+The workspace of the new replication opens. **Replicate** in the Designer takes you straight to step 4.
+
 ![Experiment preview and Create Replication dialog](../../img/teachers/workbench/04-create-replication.webp)
 
 | # | Control | What it does |
@@ -110,7 +134,7 @@ Each replication has a sub-menu on the left.
 | **General** | The student link, the code, the name, the language, the **Active** and **Repeatable** switches and the time limit | [Replication settings](replication-settings.md) |
 | **LEIAs** | One entry per LEIA with the solution and evaluation switches, the infographic options and the model, key and voice | [LEIA settings in a replication](leia-settings.md) |
 | **Settings** | The external form shown after the activity | [Replication settings](replication-settings.md#settings) |
-| **Data Usage** | Consent and automatic removal of conversations | [Replication settings](replication-settings.md#data-usage) |
+| **Data Usage** | Consent and automatic removal of conversations, which do not work at the moment | [Replication settings](replication-settings.md#data-usage) |
 | **Conversations** | Transcripts, submissions, evaluations, scores and the CSV export | [Results, grading and export](results-and-export.md) |
 | **Live** | Sessions in progress, supervisor flags and spectate links | [Live dashboard and spectating](live-and-spectate.md) |
 
@@ -120,6 +144,6 @@ Each replication has a sub-menu on the left.
 2. **Ask for student solution** and **Automatic evaluation** are set the way you want for each LEIA.
 3. The **Language** is the language of your class.
 4. The **Duration** is set, or deliberately left without limit.
-5. You tried the activity with **Test session** or with the **Demo / test link**.
+5. You tried the activity with **Test session**, or with the **Demo / test link** if a `demo…@test.com` row in the results does not bother you.
 6. **Active** is on.
 7. You copied the **Student link** or the code into your course page.

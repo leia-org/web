@@ -37,7 +37,35 @@ There are three ways to start.
 
 If the LEIA has a code editor widget only OpenAI models are offered, because the widget's tools need them.
 
+### Test from the library
+
+1. Move the mouse over the row of the LEIA.
+2. Press **Test LEIA**.
+
+The chat opens with your default key and its model.
+
+### Test with a model you choose
+
+1. Move the mouse over the row of the LEIA.
+2. Press **Test settings**.
+3. Choose the **Model** and the **API Key**.
+4. Press **Start**.
+
+The chat opens with that model and key.
+
+### Test from the design screen
+
+1. Press **Test LEIA** in the preview panel. The draft is saved first.
+2. When you finish, press **Continue Configuration** to return to the design screen.
+
 ## The chat screen
+
+### Talk to the LEIA
+
+1. Read the statement at the top of the chat. **Instructions** (2) shows or hides it.
+2. Type a message in the message box (4) and press **Send** (5).
+3. Keep talking. If an answer takes too long, press **Retry** in the LEIA's bubble.
+4. When you want to try a solution, press **Solution Editor** (1).
 
 ![Test chat](../../img/teachers/test-leia/01-chat.webp)
 
@@ -61,6 +89,14 @@ When you open this screen from the **Generate** button of a LEIA in transcriptio
 
 ## The solution editor
 
+1. Press **Solution Editor** (1 in the chat screen above).
+2. Write your solution in the editor (1).
+3. Check the live preview on the right half.
+4. Fix any format error shown under the editor. **Evaluate Solution** (2) stays disabled while the text has a syntax error.
+5. Press **Evaluate Solution** (2).
+
+The evaluation appears.
+
 ![Solution editor](../../img/teachers/test-leia/02-solution-editor.webp)
 
 | # | Control | What it does |
@@ -75,6 +111,10 @@ The right half is a live preview. Mermaid diagrams are drawn and can be zoomed, 
 The editor checks the format as you type. JSON, YAML and XML errors are shown under the editor, and YAML refuses tabs.
 
 ## Read the evaluation
+
+1. Read the **Score** (1) and the evaluation text.
+2. Press **Back to editor** (2).
+3. Improve the text and press **Evaluate Solution** again.
 
 ![Evaluation result](../../img/teachers/test-leia/03-evaluation.webp)
 
@@ -91,8 +131,8 @@ Submit a deliberately incomplete solution and a complete one. If both get simila
 
 ## What to check before a class
 
-- The character stays in role and does not reveal the solution when asked directly.
-- The first message students see makes sense. Students get a **Try typing** hint taken from the behaviour's **Tooltip**.
-- The solution format is the one you expect students to use.
-- The evaluation rewards the right things.
-- If you plan a time limit, the conversation fits in it.
+1. Ask for the solution directly. The character should stay in role and not reveal it.
+2. Read the first message as a student would. Students get a **Try typing** hint taken from the behaviour's **Tooltip**, so check that it makes sense.
+3. Press **Solution Editor** and check that the format is the one you expect students to use.
+4. Evaluate an incomplete solution and a complete one, and check that the evaluation rewards the right things.
+5. If you plan a time limit, run a whole conversation and check that it fits.
