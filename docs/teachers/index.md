@@ -100,6 +100,7 @@ flowchart LR
 | Watch a session while it happens | [Live dashboard and spectating](workbench/live-and-spectate.md) |
 | Read transcripts, change a score or download the data | [Results, grading and export](workbench/results-and-export.md) |
 | Check a limitation before planning a class | [Limitations and FAQ](faq.md) |
+| Get help with a problem or report a bug | [Help and support](../support.md), or ask in [leia-users on Telegram](https://t.me/leia_users) |
 
 ## Before you start
 

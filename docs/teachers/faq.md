@@ -18,7 +18,7 @@ authors:
 
 # Limitations and FAQ
 
-Honest answers to the questions teachers ask most, plus the limits of the current version that are worth knowing before you plan a class.
+Honest answers to the questions teachers ask most, plus the limits of the current version that are worth knowing before you plan a class. If your problem is not here, ask in [leia-users on Telegram](https://t.me/leia_users). See [Help and support](../support.md).
 
 ## Accounts and roles
 
@@ -89,6 +89,8 @@ Honest answers to the questions teachers ask most, plus the limits of the curren
 - **The Configuration view of a session is empty**, "No replication configuration was stored for this conversation".
 - **Data Usage settings cannot be saved**, the server answers that the route does not exist.
 - **The automatic transcript generator writes in Spanish** regardless of the language of the behaviour.
+
+If you find a problem that is not in this list, report it in [leia-users on Telegram](https://t.me/leia_users).
 
 ## Small things you may notice
 

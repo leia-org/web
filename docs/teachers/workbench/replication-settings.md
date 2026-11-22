@@ -73,6 +73,8 @@ The countdown is shown and enforced by the student's browser. The server does no
 
 When a LEIA has no model or no key, the **Active** switch stays off, a message lists the LEIAs concerned and the **Model** field of each one is outlined in red. Open the LEIA, pick a model and a key, press **Save** and try again. A MultiLEIA replication also needs at least two LEIAs, no audio mode and the same process on every LEIA.
 
+If the switch still refuses to turn on, ask in [leia-users on Telegram](https://t.me/leia_users) with the message you see, but without the code of the replication.
+
 ## Settings
 
 ![External form](../../img/teachers/replication-settings/05-settings-form.webp)
