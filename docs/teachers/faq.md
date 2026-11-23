@@ -30,7 +30,7 @@ Honest answers to the questions teachers ask most, plus the limits of the curren
 
 ## Designing
 
-**Finish LEIA fails with "Failed to create problem resource".** The most common cause is an empty **Initial Solution** written by the assistant. Open the problem and write something in **Initial Solution**, a skeleton or a one-line instruction. Removing the line in the **Code Editor** tab does not help, the visual editor sends the field as empty text anyway. See [Persona, Problem and Behaviour fields](designer/components-reference.md#problem).
+**Finish LEIA fails with "Failed to create problem resource".** The most common cause is an empty **Evaluation Prompt**, which the assistant can leave empty. Open the problem and write at least one line in **Evaluation Prompt**. An empty **Initial Solution** is accepted. See [Persona, Problem and Behaviour fields](designer/components-reference.md#problem).
 
 **The assistant created a problem and my behaviour disappeared.** Applying a new problem clears the behaviour on purpose, because the behaviour must match the problem. Ask the assistant to apply a behaviour again.
 
@@ -87,7 +87,7 @@ Honest answers to the questions teachers ask most, plus the limits of the curren
 - **The Live dashboard does not show the flags raised before you opened it.** They are all in the Conversations page.
 - **Older replications do not appear in the list on a tall window.** The list loads ten at a time when you scroll, and a window where ten fit never scrolls. Make the window shorter.
 - **The Configuration view of a session is empty**, "No replication configuration was stored for this conversation".
-- **Data Usage settings cannot be saved**, the server answers that the route does not exist.
+- **Data Usage settings cannot be saved**, **Save** answers "Error updating data usage settings". Students never see a consent dialog, so collect consent outside LEIA.
 - **The automatic transcript generator writes in Spanish** regardless of the language of the behaviour.
 
 If you find a problem that is not in this list, report it in [leia-users on Telegram](https://t.me/leia_users).

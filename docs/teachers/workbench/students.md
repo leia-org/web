@@ -27,9 +27,38 @@ Students need no account. Teachers can walk the same path with the **Demo / test
 
 This page follows a student from the join code to the end of the session, so you know what to explain in class and what each switch of the replication changes on their screen.
 
+## Steps to give your students
+
+Copy this list into your course page and add the link or the code.
+
+1. Open the link your teacher gave you, or [workbench.leia.ovh](https://workbench.leia.ovh).
+2. Type your **Email** and the **Replication code** and press **Start session**.
+3. Read the instructions and press **Continue Task**.
+4. Talk to the LEIA. Type your message and press **Send**.
+5. When you are ready, press the main button at the top. It reads **Go to Editor**, **Send Solution** or **Finish Session**, depending on the activity.
+6. If the editor opens, write your solution, press **Send Solution** and confirm with **Conclude Problem**.
+7. Read the evaluation if there is one, and press **Open Form** if it appears.
+
+To come back to an unfinished session, repeat the first two steps with the same email.
+
+## Walk the path yourself
+
+1. Open the replication and choose **General** in its sub-menu.
+2. Click the **Demo / test link** to copy it.
+3. Open it in a new private browser window.
+4. Follow the steps above as a student would.
+
+Your session appears in the results like a student's, under a `demo…@test.com` address, so leave it out of your grading.
+
 ## Join
 
 Students open [workbench.leia.ovh](https://workbench.leia.ovh) or the **Student link** you copied from the replication, which prefills the code.
+
+1. Type the **Email** (1).
+2. Type the **Replication code** (2). The **Student link** fills it in.
+3. Press **Start session** (3).
+
+The instructions appear. To resume an unfinished session, repeat these steps with the same email.
 
 ![Student login](../../img/teachers/students/01-login.webp)
 
@@ -52,7 +81,7 @@ In an activity with several LEIAs and **Single LEIA assignment**, each new stude
 
 ## Consent
 
-When **Data Usage Consent Acceptance** is enabled in the replication, the first thing the student sees is the consent dialog with your message and two buttons, **No, I do not consent** and **Yes, I consent**. The choice is recorded with the session and cannot be skipped. With automatic removal enabled, a student who declines still does the activity, but the conversation is deleted afterwards. See [Data Usage](replication-settings.md#data-usage).
+The Workbench has a consent dialog, but it does not appear at the moment, because the server has no support for consent. Students go straight to the instructions. If your institution requires consent, collect it outside LEIA. See [Data Usage](replication-settings.md#data-usage).
 
 ## Instructions
 
@@ -84,7 +113,7 @@ The LEIA answers in the **Language** of the replication. If an answer is slow a 
 
 ### Voice modes
 
-With **Audio mode** set to **Luke**, the chat is replaced by a full-screen stage with the character's avatar, a microphone button and a **Show transcript** panel. With **Legacy (OpenAI Realtime)**, a floating card shows **Mute Microphone**, a visualiser and the connection state. In both cases the student speaks, the LEIA answers with a voice, and the text of the exchange is saved as a transcript unless you enabled **Hide audio transcription**. See [LEIA settings in a replication](leia-settings.md#runner).
+With **Audio mode** set to **Luke**, the chat is replaced by a full-screen stage with the character's avatar, a microphone button and a **Show transcript** panel. With **Legacy (OpenAI Realtime)**, a floating card shows **Mute Microphone**, a visualiser and the connection state. In both cases the student speaks, the LEIA answers with a voice, and the text of the exchange is saved as a transcript. **Hide audio transcription** only hides that text from the student, the transcript is still saved. See [LEIA settings in a replication](leia-settings.md#runner).
 
 ### Widgets
 
@@ -112,6 +141,14 @@ When the supervisor is enabled with nudges, the student may receive a short ambe
 
 ## Submit a solution
 
+1. Press **Go to Editor** (4 in the chat screenshot above).
+2. Write the solution in the editor (1).
+3. Check the live preview (2).
+4. Press **Send Solution** (3).
+5. Press **Conclude Problem** (1 in the confirmation below).
+
+The evaluation appears when **Automatic evaluation** is on, or otherwise a simple confirmation.
+
 ![Solution editor of the student](../../img/teachers/students/09-solution-editor.webp)
 
 | # | Control | What it does |
@@ -128,6 +165,11 @@ The confirmation says "This action will conclude the problem and you will not be
 :::caution The timer and the editor
 If the time runs out while the student is in the editor, the session is closed without submitting the editor content. Tell students to submit a minute before the end.
 :::
+
+### Finish without a solution
+
+1. Press **Finish Session** (4 in the chat screenshot above).
+2. In the **Session Completed** dialog, press **Home**, or **Open Form** if it appears.
 
 ## After submitting
 

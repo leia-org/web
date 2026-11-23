@@ -46,6 +46,13 @@ The list of models offered for each provider is maintained by the platform, so i
 
 Open **API keys** in the sidebar of the Designer. The Workbench has the same page under **API Keys**, and both show the same list.
 
+### Mark a key as default
+
+1. Press the star (4) of the key.
+2. A confirmation appears in Spanish, "¿Desea marcar esta clave como predeterminada?". Press **Marcar como predeterminada**.
+
+That key is preselected from now on, and the previous default key is unmarked.
+
 ![List of API keys](../img/teachers/api-keys/02-key-list.webp)
 
 | # | Item | What it shows or does |
@@ -63,6 +70,17 @@ Keys of your own also show an **Edit** and a **Delete** icon.
 
 ## Add a key
 
+1. Open **API keys** in the sidebar.
+2. Press **New API key** (8 in the list above).
+3. Type a **Key Name (Description)** (1) you will recognise.
+4. Paste the secret issued by the provider in **API Key Value** (2).
+5. Choose the provider in **API Key Type** (3).
+6. Choose a **Default Model** (5).
+7. If you want this key preselected everywhere, tick **Make this the default API Key** (8).
+8. Press **Create Key** (9).
+
+The key appears in the list with the **Active** chip. If the form rejects the value, check it for typos, because the provider checks its format.
+
 ![Add New API Key form](../img/teachers/api-keys/01-add-key-dialog.webp)
 
 | # | Field | What it does |
@@ -79,11 +97,47 @@ Keys of your own also show an **Edit** and a **Delete** icon.
 
 Administrators also see **Make this a System API Key**. A system key is available to every user whose account has system access enabled.
 
+### Add a key for a self-hosted provider
+
+Ollama runs on a server of your own, so LEIA needs its address.
+
+1. Follow the steps of [Add a key](#add-a-key) and choose `ollama` in **API Key Type** (3 in the form above).
+2. Before you press **Create Key** (9 in the form above), type the address of the server in **Base URL** (6 in the form above).
+
+The key appears in the list like any other.
+
+### Create a system key
+
+Only administrators can do this.
+
+1. Follow the steps of [Add a key](#add-a-key).
+2. Before you press **Create Key** (9 in the form above), tick **Make this a System API Key**.
+
+The key is available to every user whose account has system access enabled, with a **System** chip.
+
 ### Edit, disable and delete
 
-- **Edit** opens the same form. The value field is empty and the current secret is kept unless you type a new one.
-- To stop a key temporarily, edit it and set **Status** to **Inactive**. Replications that used it will show the model as unavailable until you pick another key.
-- **Delete** asks for confirmation. Any replication still using the key stops working immediately, so change the model of those replications first.
+**To edit a key.**
+
+1. Press the **Edit** icon of the key. The same form opens.
+2. Change the fields. The value field is empty and the current secret is kept unless you type a new one.
+3. Press **Save Changes**.
+
+**To stop a key temporarily.**
+
+1. Press the **Edit** icon of the key.
+2. Set **Status** to **Inactive**.
+3. Press **Save Changes**.
+
+Replications that used it will show the model as unavailable until you pick another key.
+
+**To delete a key.**
+
+1. Change the model of any replication still using the key, because those replications stop working immediately.
+2. Press the **Delete** icon of the key.
+3. Press **Delete** in the **Delete API Key?** dialog.
+
+The key disappears from the list.
 
 ### Which key is used where
 
