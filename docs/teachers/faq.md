@@ -18,7 +18,7 @@ authors:
 
 # Limitations and FAQ
 
-Honest answers to the questions teachers ask most, plus the limits of the current version that are worth knowing before you plan a class.
+Honest answers to the questions teachers ask most, plus the limits of the current version that are worth knowing before you plan a class. If your problem is not here, ask in [leia-users on Telegram](https://t.me/leia_users). See [Help and support](../support.md).
 
 ## Accounts and roles
 
@@ -74,6 +74,8 @@ Honest answers to the questions teachers ask most, plus the limits of the curren
 
 **Where are the supervisor flags in the export?** They are not in the CSV. Read them in the Conversations page.
 
+**Why does a conversation say "No conversation is available because the participant did not consent"?** The replication asked for consent, the student declined and **Conversation automated removal** was on. Only the metadata of the session is kept.
+
 **Are test sessions in the results?** It depends on how you started them. Sessions started with **Test session** on the LEIA page of a replication are hidden from the Conversations page and from the CSV. Sessions started through the **Demo / test link** are ordinary sessions under a throwaway identity, `demo` followed by random letters at `@test.com`, and they do appear in the Conversations page, in the counters and in the CSV. Recognise them by the `@test.com` address and leave those rows out of your grading. See [Results, grading and export](workbench/results-and-export.md).
 
 ## Known problems of the development version
@@ -87,6 +89,8 @@ Honest answers to the questions teachers ask most, plus the limits of the curren
 - **The Configuration view of a session is empty**, "No replication configuration was stored for this conversation".
 - **Data Usage settings cannot be saved**, **Save** answers "Error updating data usage settings". Students never see a consent dialog, so collect consent outside LEIA.
 - **The automatic transcript generator writes in Spanish** regardless of the language of the behaviour.
+
+If you find a problem that is not in this list, report it in [leia-users on Telegram](https://t.me/leia_users).
 
 ## Small things you may notice
 

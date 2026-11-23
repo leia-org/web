@@ -32,7 +32,7 @@ authors:
 
 LEIA (Learning with an Educational Intelligent Assistant) is a platform that lets instructors design interactive simulations and lets students practise in realistic scenarios with AI support. A LEIA is an AI character with a role, a personality and an exercise behind it. Students talk to it, by text or by voice, and may hand in a solution that the platform grades.
 
-This page gives the big picture. The [Teacher guide](../teachers/index.md) explains every screen, button and field, and the [Tutorials](../tutorials/create-leia/index.md) walk through complete examples.
+This page gives the big picture. The [Teacher guide](../teachers/index.md) explains every screen, button and field, and the [Tutorials](../tutorials/create-leia/index.md) walk through complete examples. For questions and problems, join [leia-users on Telegram](https://t.me/leia_users). See [Help and support](../support.md).
 
 ---
 

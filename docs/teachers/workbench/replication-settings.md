@@ -142,6 +142,8 @@ When a LEIA has no model or no key, the **Active** switch stays off, a message l
 4. Repeat with the other LEIAs of the message.
 5. Choose **General** in the sub-menu and turn on **Active** again.
 
+If the switch still refuses to turn on, ask in [leia-users on Telegram](https://t.me/leia_users) with the message you see, but without the code of the replication.
+
 ## Settings
 
 1. Choose **Settings** in the sub-menu.
