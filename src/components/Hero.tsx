@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from '@docusaurus/Link'
 import { useBaseUrlUtils } from '@docusaurus/useBaseUrl'
 import { ArrowRight, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -190,13 +191,12 @@ const Hero: React.FC = () => {
                         >
                           <span>Try Out!</span>
                         </button>
-                        {/* The teacher guide lives in the "next" docs version until a new docs version is cut. */}
-                        <a
-                          href="/docs/next/teachers/"
+                        <Link
+                          to="/docs/featured-leias/"
                           className="modern-button w-full sm:w-auto hover:scale-105 text-center"
                         >
-                          <span>Teacher guide</span>
-                        </a>
+                          <span>See more examples</span>
+                        </Link>
                       </div>
                     </div>
                   </div>

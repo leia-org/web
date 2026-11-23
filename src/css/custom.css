@@ -318,6 +318,40 @@ html[data-theme='dark'] .modern-button--outline:hover {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
 }
 
+/* Small pill button for demo links in docs tables (TryItButton component) */
+.try-it-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #7c3aed, #3b82f6);
+  color: #ffffff !important;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none !important;
+  box-shadow: 0 4px 10px -3px rgba(124, 58, 237, 0.45);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.try-it-button:hover {
+  background: linear-gradient(135deg, #8b5cf6, #60a5fa);
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px -4px rgba(124, 58, 237, 0.5);
+}
+
+.try-it-button:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 2px;
+}
+
+.try-it-button svg {
+  flex-shrink: 0;
+}
+
 .modern-hamburger {
   padding: 0.5rem;
   border-radius: 0.5rem;
