@@ -56,24 +56,28 @@ LEIA is maintained by a small team focused on product design, engineering, and d
       <h3 className="mb-1 text-lg font-semibold">{person.name}</h3>
       <p className="text-sm text-gray-600 dark:text-gray-300">{person.role}</p>
       <div className="mt-3 flex items-center justify-center gap-12">
-          <a
-            href={person.github}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="GitHub"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-black transition hover:bg-gray-100 dark:bg-white dark:text-black dark:hover:bg-gray-100"
-          >
-            <Github className="h-4 w-4" />
-          </a>
-          <a
-            href={person.linkedin}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="LinkedIn"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-black transition hover:bg-gray-100 dark:bg-white dark:text-black dark:hover:bg-gray-100"
-          >
-            <Linkedin className="h-4 w-4" />
-          </a>
+          {person.github && (
+            <a
+              href={person.github}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-black transition hover:bg-gray-100 dark:bg-white dark:text-black dark:hover:bg-gray-100"
+            >
+              <Github className="h-4 w-4" />
+            </a>
+          )}
+          {person.linkedin && (
+            <a
+              href={person.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-black transition hover:bg-gray-100 dark:bg-white dark:text-black dark:hover:bg-gray-100"
+            >
+              <Linkedin className="h-4 w-4" />
+            </a>
+          )}
       </div>
     </div>
   ))}
@@ -104,24 +108,28 @@ LEIA is maintained by a small team focused on product design, engineering, and d
       <p className="text-sm text-gray-600 dark:text-gray-300">{person.role}</p>
       <div className="mt-3 flex items-center justify-center gap-12">
         
-          <a
-            href={person.github}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="GitHub"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-black transition hover:bg-gray-100 dark:bg-white dark:text-black dark:hover:bg-gray-100"
-          >
-            <Github className="h-4 w-4" />
-          </a>
-          <a
-            href={person.linkedin}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="LinkedIn"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-black transition hover:bg-gray-100 dark:bg-white dark:text-black dark:hover:bg-gray-100"
-          >
-            <Linkedin className="h-4 w-4" />
-          </a>
+          {person.github && (
+            <a
+              href={person.github}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-black transition hover:bg-gray-100 dark:bg-white dark:text-black dark:hover:bg-gray-100"
+            >
+              <Github className="h-4 w-4" />
+            </a>
+          )}
+          {person.linkedin && (
+            <a
+              href={person.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-black transition hover:bg-gray-100 dark:bg-white dark:text-black dark:hover:bg-gray-100"
+            >
+              <Linkedin className="h-4 w-4" />
+            </a>
+          )}
       </div>
     </div>
   ))}

@@ -31,6 +31,17 @@ Widgets belong to the **problem**. They are configured in the **Activity setup**
 
 ## Add the editor
 
+1. Open the design screen of a LEIA that already has a problem. **Add widget** (1) appears in the **Activity setup** panel.
+2. Press **Add widget** (1).
+3. Leave **Widget** (2) on **Editor**.
+4. Choose the **Slot** (3) where the panel goes.
+5. Choose the **Language** (4).
+6. Type the **Function name** (5), unless the language is plain text.
+7. Write the **Problem description** (6).
+8. Write the **Starter code** (7).
+
+The **Problem** card of the preview counts the new widget.
+
 ![Editor widget configuration](../../img/teachers/widgets/01-editor-widget.webp)
 
 | # | Field | What it does |
@@ -46,7 +57,20 @@ Widgets belong to the **problem**. They are configured in the **Activity setup**
 
 **Configure problem & tests** folds and unfolds the fields from **Language** downwards.
 
+### Remove a widget
+
+1. Find the widget in the **Activity setup** panel.
+2. Press **Remove widget** (8 in the screenshot above).
+
 ## Tests and tools
+
+1. Press **Add test** (2) once per test.
+2. Fill in each test (1) with its name, its **args** and its **expected** result.
+3. Turn on the tools you want LEIA to use, **Read code** (4), **Apply edits** (5) and **Run tests** (6).
+4. If you want to guide LEIA, write when it should use each tool in **When should LEIA use this tool in this activity?** (7).
+5. Press **Test LEIA** in the preview panel and ask the LEIA to check some code.
+
+The test strip under the editor shows the results. **Reset to default** (3) restores the example problem if you want to start again.
 
 ![Tests and tools of the editor widget](../../img/teachers/widgets/02-tests-tools.webp)
 

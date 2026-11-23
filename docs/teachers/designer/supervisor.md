@@ -31,6 +31,17 @@ Typical uses are watching for students who ask the character for the answer inst
 
 The supervisor is configured in the **Review** step of the design screen, so it belongs to the LEIA. Every replication of that LEIA runs with the same supervisor settings.
 
+1. Press **Review LEIA** on the design screen.
+2. Turn on **Enabled** (1).
+3. Choose the **OpenAI API key** (2) and the **Model** (3).
+4. Fill in **What should the supervisor watch for?** (4).
+5. Choose the **Sensitivity** (5).
+6. Choose **When it runs** (6). With **Every N messages** also set the period (7).
+7. If the supervisor may coach the student, turn on **Let the supervisor nudge the student** (8) and write the coaching instructions (9).
+8. Press **Finish LEIA**.
+
+The settings are saved with the LEIA.
+
 ![Supervisor card](../../img/teachers/supervisor/01-supervisor-card.webp)
 
 | # | Field | What it does |
@@ -47,6 +58,18 @@ The supervisor is configured in the **Review** step of the design screen, so it 
 
 Flags already reported are not repeated, so a student who keeps doing the same thing produces one flag, not one per message.
 
+### Change the supervisor of a LEIA
+
+Supervisor settings are part of the LEIA, so a change means a new LEIA.
+
+1. In the library, move the mouse over the row and press **Design from this**.
+2. Press **Review LEIA**.
+3. Change the settings of the supervisor.
+4. Type a different **New LEIA name**.
+5. Press **Finish LEIA**.
+
+The new LEIA runs with the new settings.
+
 ## Where the reports appear
 
 | Place | What you see |
@@ -56,6 +79,13 @@ Flags already reported are not repeated, so a student who keeps doing the same t
 | The student's chat | Only the nudge, as an amber card the student can dismiss. Flags never reach the student. |
 
 Each flag has a **category** chosen by the supervisor, a **severity** (low, medium or high), a short **note** and the **quote** of the student's message.
+
+### Read the flags of a session
+
+1. Open the replication in the Workbench and choose **Conversations** in its sub-menu.
+2. Press **Open conversations**.
+3. Click the session.
+4. Scroll down to **Supervisor flags**, under the transcript.
 
 ## Limits worth knowing
 
