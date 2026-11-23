@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 4
 tags:
   - tutorial
   - scenario
@@ -19,6 +19,10 @@ authors:
 ---
 
 # Scenario, a requirements elicitation interview
+
+:::info Start from a featured LEIA
+If you want a new exercise similar to one that already exists, start from a [featured LEIA](../featured-leias/index.md) with **Design from this**. The tutorial [Your own LEIA from a featured one](create-from-featured.md) shows every step.
+:::
 
 The classic LEIA. The student plays the analyst, the LEIA plays a client who knows what they need but does not know how to say it, and the deliverable is a model of what the student discovered. The example used throughout the teacher guide is Helen Park, the manager of a small university library who wants a room booking and lending application.
 
@@ -49,6 +53,9 @@ The classic LEIA. The student plays the analyst, the LEIA plays a client who kno
 
 The success dialog confirms that the LEIA exists.
 
+Open the **Behaviour** card and read the description. A good client behaviour answers only what is asked, stays in role, gives realistic answers and never produces a list of requirements on request. The **Tooltip** can be "Hello `{{persona.firstName}}`, could you tell me about your library?": the placeholder becomes the persona's first name, so the line still fits if you swap the persona.
+
+Finish the LEIA with a clear name and a label for your course.
 ![Problem editor](../img/teachers/components/02-problem-editor.webp)
 
 ## 2. Test the interview and the grading
