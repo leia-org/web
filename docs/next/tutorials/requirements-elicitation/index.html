@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Scenario, a requirements elicitation interview | LEIA</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://leia.ovh/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://leia.ovh/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://leia.ovh/docs/next/tutorials/requirements-elicitation"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Scenario, a requirements elicitation interview | LEIA"><meta data-rh="true" name="description" content="The classic LEIA. The student plays the analyst, the LEIA plays a client who knows what they need but does not know how to say it, and the deliverable is a model of what the student discovered. The example used throughout the teacher guide is Helen Park, the manager of a small university library who wants a room booking and lending application."><meta data-rh="true" property="og:description" content="The classic LEIA. The student plays the analyst, the LEIA plays a client who knows what they need but does not know how to say it, and the deliverable is a model of what the student discovered. The example used throughout the teacher guide is Helen Park, the manager of a small university library who wants a room booking and lending application."><meta data-rh="true" name="keywords" content="LEIA,requirements elicitation,interview,client,UML,Mermaid,scenario"><link data-rh="true" rel="icon" href="/img/LEIALogo.png"><link data-rh="true" rel="canonical" href="https://leia.ovh/docs/next/tutorials/requirements-elicitation"><link data-rh="true" rel="alternate" href="https://leia.ovh/docs/next/tutorials/requirements-elicitation" hreflang="en"><link data-rh="true" rel="alternate" href="https://leia.ovh/docs/next/tutorials/requirements-elicitation" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://WR7AJHB6S8-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tutorials","item":"https://leia.ovh/docs/next/category/tutorials"},{"@type":"ListItem","position":2,"name":"Scenario, a requirements elicitation interview","item":"https://leia.ovh/docs/next/tutorials/requirements-elicitation"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="LEIA" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.ecb6dc55.css">
-<script src="/assets/js/runtime~main.37130a37.js" defer="defer"></script>
-<script src="/assets/js/main.a835e156.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.8b24955b.js" defer="defer"></script>
+<script src="/assets/js/main.8aab12de.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -20,40 +20,103 @@
 <li class="">A reference solution in mind. For a class diagram, sketch the classes and relationships you expect before you start.</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-design-the-leia">1. Design the LEIA<a href="#1-design-the-leia" class="hash-link" aria-label="Direct link to 1. Design the LEIA" title="Direct link to 1. Design the LEIA" translate="no">​</a></h2>
-<p>Open <strong>Design</strong> and describe the interview.</p>
+<ol>
+<li class="">
+<p>Press <strong>Design</strong> in the sidebar of the Designer.</p>
+</li>
+<li class="">
+<p>Type the description of the interview in the message box and press <strong>Send message</strong>. The brief used here was</p>
 <blockquote>
 <p>Create a requirements-elicitation activity about a library booking system. The persona is Helen Park, the manager of a small university library. She wants a web application so students can book study rooms and borrow books. Students must interview Helen to discover the requirements and deliver a UML class diagram in Mermaid syntax as their solution.</p>
 </blockquote>
-<p>The assistant produces a persona, a behaviour that answers questions without volunteering the whole picture, and a problem with a Mermaid solution.</p>
+</li>
+<li class="">
+<p>Wait for the green confirmation lines. The assistant produces a persona, a behaviour that answers questions without volunteering the whole picture, and a problem with a Mermaid solution.</p>
+</li>
+<li class="">
+<p>Click the <strong>Problem</strong> card to shape the exercise.</p>
+</li>
+<li class="">
+<p>In <strong>Description</strong> (3) write the brief students read. Say who they are meeting and what they must deliver.</p>
+</li>
+<li class="">
+<p>In <strong>Details</strong> (5) list the facts the client knows. The more concrete the list, the more consistent the interview. Mention the facts the client should only reveal when asked.</p>
+</li>
+<li class="">
+<p>In <strong>Solution</strong> (6) write the reference class diagram. The preview under the field shows it, so you can check the Mermaid syntax.</p>
+</li>
+<li class="">
+<p>In <strong>Evaluation Prompt</strong> (9) tell the grader what matters. For example &quot;Check that the diagram contains bookings, rooms, books, loans and users, with sensible multiplicities. Do not penalise different class names if the meaning is the same&quot;.</p>
+</li>
+<li class="">
+<p>In <strong>Initial Solution</strong> (7) write a skeleton such as <code>classDiagram</code> with one class, so students start from valid syntax.</p>
+</li>
+<li class="">
+<p>Press <strong>Save</strong> (12).</p>
+</li>
+<li class="">
+<p>Click the <strong>Behaviour</strong> card and read <strong>Description</strong>. A good client behaviour answers only what is asked, stays in role, gives realistic answers and never produces a list of requirements on request.</p>
+</li>
+<li class="">
+<p>Write an opening line in <strong>Tooltip</strong>, for example &quot;Hello Helen, could you tell me about your library?&quot;. Press <strong>Save</strong>.</p>
+</li>
+<li class="">
+<p>Press <strong>Review LEIA</strong>, type a clear <strong>New LEIA name</strong>, add a label for your course in <strong>Labels</strong> and press <strong>Finish LEIA</strong>.</p>
+</li>
+</ol>
+<p>The success dialog confirms that the LEIA exists.</p>
 <p><img decoding="async" loading="lazy" alt="Problem editor" src="/assets/images/02-problem-editor-a5fdcb3b641cfda807b2adb423a00cba.webp" width="1232" height="1727" class="img_ev3q"></p>
-<p>Open the <strong>Problem</strong> card and shape the exercise.</p>
-<ul>
-<li class=""><strong>Description</strong> (3) is the brief students read. Say who they are meeting and what they must deliver.</li>
-<li class=""><strong>Details</strong> (5) lists the facts the client knows. The more concrete the list, the more consistent the interview. Mention the facts the client should only reveal when asked.</li>
-<li class=""><strong>Solution</strong> (6) is the reference class diagram. The preview under the field shows it, so you can check the Mermaid syntax.</li>
-<li class=""><strong>Evaluation Prompt</strong> (9) tells the grader what matters. For example &quot;Check that the diagram contains bookings, rooms, books, loans and users, with sensible multiplicities. Do not penalise different class names if the meaning is the same&quot;.</li>
-<li class=""><strong>Initial Solution</strong> (7) can hold a skeleton such as <code>classDiagram</code> with one class, so students start from valid syntax. It must not be left empty.</li>
-</ul>
-<p>Open the <strong>Behaviour</strong> card and read the description. A good client behaviour answers only what is asked, stays in role, gives realistic answers and never produces a list of requirements on request. The <strong>Tooltip</strong> can be &quot;Hello Helen, could you tell me about your library?&quot;.</p>
-<p>Finish the LEIA with a clear name and a label for your course.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-test-the-interview-and-the-grading">2. Test the interview and the grading<a href="#2-test-the-interview-and-the-grading" class="hash-link" aria-label="Direct link to 2. Test the interview and the grading" title="Direct link to 2. Test the interview and the grading" translate="no">​</a></h2>
-<p>Test the LEIA from the library. Ask open questions and check that the character reveals the facts in <strong>Details</strong> gradually. Then open the <strong>Solution Editor</strong>, paste a partial diagram and evaluate it. Repeat with the full reference solution. The scores should be clearly different. See <a class="" href="/docs/next/teachers/designer/test-leia">Test a LEIA</a>.</p>
+<ol>
+<li class="">Press <strong>Go to LEIAs</strong> in the success dialog.</li>
+<li class="">Move the mouse over the row of your LEIA and press <strong>Test LEIA</strong>.</li>
+<li class="">Ask open questions and check that the character reveals the facts in <strong>Details</strong> gradually.</li>
+<li class="">Press <strong>Solution Editor</strong>, paste a partial diagram and press <strong>Evaluate Solution</strong>. Note the score and press <strong>Back to editor</strong>.</li>
+<li class="">Replace the text with the full reference solution and press <strong>Evaluate Solution</strong> again.</li>
+</ol>
+<p>The two scores should be clearly different. See <a class="" href="/docs/next/teachers/designer/test-leia">Test a LEIA</a>.</p>
 <p><img decoding="async" loading="lazy" alt="Evaluation result" src="/assets/images/03-evaluation-d429d317032c46b5b62621a61c50f957.webp" width="932" height="875" class="img_ev3q"></p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-replicate">3. Replicate<a href="#3-replicate" class="hash-link" aria-label="Direct link to 3. Replicate" title="Direct link to 3. Replicate" translate="no">​</a></h2>
-<p>Use <strong>Quick replication</strong> on the row or create an activity and publish it. In the Workbench configure the replication.</p>
+<ol>
+<li class="">In the library, press <strong>Quick replication</strong> on the row. The replication opens in the Workbench in a new tab. To prepare the activity yourself instead, follow <a class="" href="/docs/next/teachers/designer/activities">Activities</a>.</li>
+<li class="">Choose <strong>LEIAs</strong> in the sub-menu of the replication and open your LEIA.</li>
+<li class="">Check that <strong>Model</strong> and <strong>API key</strong> are set. If you change them, press <strong>Save</strong>.</li>
+<li class="">Set <strong>Ask for student solution</strong>, <strong>Automatic evaluation</strong> and <strong>Show during exercise</strong> with the values below.</li>
+<li class="">Choose <strong>General</strong> in the sub-menu and set <strong>Duration</strong>, <strong>Repeatable</strong> and <strong>Language</strong> with the values below.</li>
+<li class="">Turn on <strong>Active</strong>.</li>
+<li class="">Copy the <strong>Student link</strong> or the <strong>Code</strong> and give it to your students.</li>
+</ol>
 <table><thead><tr><th>Setting</th><th>Suggested value</th><th>Why</th></tr></thead><tbody><tr><td><strong>Ask for student solution</strong></td><td>on</td><td>The diagram is the deliverable.</td></tr><tr><td><strong>Automatic evaluation</strong></td><td>on</td><td>Students get feedback at once and you get a score.</td></tr><tr><td><strong>Duration</strong></td><td>30 to 45 minutes</td><td>Enough for an interview and a diagram.</td></tr><tr><td><strong>Repeatable</strong></td><td>off</td><td>One interview per student. Turn it on for practice sessions.</td></tr><tr><td><strong>Language</strong></td><td>the language of your class</td><td>The client answers in it and the evaluation is written in it.</td></tr><tr><td><strong>Show during exercise</strong></td><td>on, if you generated the student infographic</td><td>Students can re-read the brief without leaving the chat.</td></tr></tbody></table>
 <p>See <a class="" href="/docs/next/teachers/workbench/replication-settings">Replication settings</a> and <a class="" href="/docs/next/teachers/workbench/leia-settings">LEIA settings in a replication</a>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-during-the-class">4. During the class<a href="#4-during-the-class" class="hash-link" aria-label="Direct link to 4. During the class" title="Direct link to 4. During the class" translate="no">​</a></h2>
-<p>Open the <strong>Live</strong> dashboard to see who has started, how many messages each student has exchanged and the supervisor flags if you enabled one. <strong>Watch live</strong> opens any conversation in real time. See <a class="" href="/docs/next/teachers/workbench/live-and-spectate">Live dashboard and spectating</a>.</p>
+<ol>
+<li class="">Choose <strong>Live</strong> in the sub-menu of the replication and press <strong>Open live dashboard</strong>.</li>
+<li class="">Check who has started, how many messages each student has exchanged and the supervisor flags if you enabled one.</li>
+<li class="">To read a conversation as it happens, select the session and press <strong>Watch live</strong>. If you get &quot;Failed to generate spectate link&quot;, read it in <strong>Conversations</strong> instead.</li>
+</ol>
+<p>See <a class="" href="/docs/next/teachers/workbench/live-and-spectate">Live dashboard and spectating</a>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-grade">5. Grade<a href="#5-grade" class="hash-link" aria-label="Direct link to 5. Grade" title="Direct link to 5. Grade" translate="no">​</a></h2>
-<p>In <strong>Conversations</strong> read each transcript, the submitted diagram, which is rendered, and the evaluation. Adjust the score if you disagree with the grader. Download the CSV for your records. See <a class="" href="/docs/next/teachers/workbench/results-and-export">Results, grading and export</a>.</p>
+<ol>
+<li class="">Choose <strong>Conversations</strong> in the sub-menu of the replication and press <strong>Open conversations</strong>.</li>
+<li class="">Click a session and read the transcript, the evaluation and the submitted diagram, which is rendered.</li>
+<li class="">If you have an administrator account and disagree with the grader, click the <strong>Score</strong> chip and type another score. Other accounts keep their own grades outside LEIA.</li>
+<li class="">Press <strong>Download CSV</strong> for your records.</li>
+</ol>
+<p>See <a class="" href="/docs/next/teachers/workbench/results-and-export">Results, grading and export</a>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="voice-variant">Voice variant<a href="#voice-variant" class="hash-link" aria-label="Direct link to Voice variant" title="Direct link to Voice variant" translate="no">​</a></h2>
-<p>The same LEIA can be run as a spoken interview. In the replication set <strong>Audio mode</strong> to <strong>Luke</strong> or <strong>Legacy (OpenAI Realtime)</strong> and pick a voice that matches the persona&#x27;s pronouns. Students then talk to Helen through the microphone and still write the diagram in the editor at the end. Voice uses the platform&#x27;s keys and the transcript is saved like a text conversation, unless you enable <strong>Hide audio transcription</strong>. See <a class="" href="/docs/next/teachers/workbench/leia-settings#runner">LEIA settings in a replication</a>.</p>
+<p>The same LEIA can be run as a spoken interview.</p>
+<ol>
+<li class="">Choose <strong>LEIAs</strong> in the sub-menu of the replication and open your LEIA.</li>
+<li class="">Set <strong>Audio mode</strong> to <strong>Luke</strong> or <strong>Legacy (OpenAI Realtime)</strong>.</li>
+<li class="">Pick a voice that matches the persona&#x27;s pronouns.</li>
+<li class="">Press <strong>Save</strong>.</li>
+</ol>
+<p>Students then talk to Helen through the microphone and still write the diagram in the editor at the end. Voice uses the platform&#x27;s keys and the transcript is saved like a text conversation. <strong>Hide audio transcription</strong> only hides the transcript from the student, the transcript is still saved for you. See <a class="" href="/docs/next/teachers/workbench/leia-settings#runner">LEIA settings in a replication</a>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="variations">Variations<a href="#variations" class="hash-link" aria-label="Direct link to Variations" title="Direct link to Variations" translate="no">​</a></h2>
 <ul>
 <li class="">Two clients with conflicting needs in one activity with <strong>MultiLEIA conversation</strong>. See <a class="" href="/docs/next/tutorials/multi-leia-simulation">Scenario, a group simulation with several LEIAs</a>.</li>
 <li class="">A transcript to analyse instead of an interview to conduct. Put the LEIA in <strong>transcription</strong> mode in the activity and let the platform generate the conversation. See <a class="" href="/docs/next/teachers/designer/activities#transcription-mode">Activities</a>.</li>
 <li class="">A process discovery interview. Change the deliverable to a Mermaid flowchart or sequence diagram and adapt the evaluation prompt.</li>
-</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-tags-row"><div class="col"><b>Tags:</b><ul class="tags_jXut padding--none margin-left--sm"><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/docs/next/tags/tutorial">tutorial</a></li><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/docs/next/tags/scenario">scenario</a></li><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/docs/next/tags/requirements">requirements</a></li></ul></div></div><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/leia-org/web/tree/main/docs/tutorials/requirements-elicitation.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"><span class="theme-last-updated">Last updated<!-- --> on <b><time datetime="2026-10-12T13:56:11.000Z" itemprop="dateModified">Oct 12, 2026</time></b> by <b>dangalcan</b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/next/tutorials/create-leia/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Quick start, your first LEIA in ten minutes</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/next/tutorials/conversational-game"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Scenario, a conversational game</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#what-you-need" class="table-of-contents__link toc-highlight">What you need</a></li><li><a href="#1-design-the-leia" class="table-of-contents__link toc-highlight">1. Design the LEIA</a></li><li><a href="#2-test-the-interview-and-the-grading" class="table-of-contents__link toc-highlight">2. Test the interview and the grading</a></li><li><a href="#3-replicate" class="table-of-contents__link toc-highlight">3. Replicate</a></li><li><a href="#4-during-the-class" class="table-of-contents__link toc-highlight">4. During the class</a></li><li><a href="#5-grade" class="table-of-contents__link toc-highlight">5. Grade</a></li><li><a href="#voice-variant" class="table-of-contents__link toc-highlight">Voice variant</a></li><li><a href="#variations" class="table-of-contents__link toc-highlight">Variations</a></li></ul></div></div></div></div></main></div></div></div><footer id="contacto" class="bg-black text-white"><div class="container-max py-24"><div class="border-t border-gray-800 pt-8"><div class="flex flex-col md:flex-row justify-between items-center gap-4"><div class="text-gray-400 text-sm">© <!-- -->2026<!-- --> LEIA Team. All rights reserved.</div></div></div></div></footer></div>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-tags-row"><div class="col"><b>Tags:</b><ul class="tags_jXut padding--none margin-left--sm"><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/docs/next/tags/tutorial">tutorial</a></li><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/docs/next/tags/scenario">scenario</a></li><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/docs/next/tags/requirements">requirements</a></li></ul></div></div><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/leia-org/web/tree/main/docs/tutorials/requirements-elicitation.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"><span class="theme-last-updated">Last updated<!-- --> on <b><time datetime="2026-11-18T10:38:05.000Z" itemprop="dateModified">Nov 18, 2026</time></b> by <b>dangalcan</b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/next/tutorials/create-leia/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Quick start, your first LEIA in ten minutes</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/next/tutorials/conversational-game"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Scenario, a conversational game</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#what-you-need" class="table-of-contents__link toc-highlight">What you need</a></li><li><a href="#1-design-the-leia" class="table-of-contents__link toc-highlight">1. Design the LEIA</a></li><li><a href="#2-test-the-interview-and-the-grading" class="table-of-contents__link toc-highlight">2. Test the interview and the grading</a></li><li><a href="#3-replicate" class="table-of-contents__link toc-highlight">3. Replicate</a></li><li><a href="#4-during-the-class" class="table-of-contents__link toc-highlight">4. During the class</a></li><li><a href="#5-grade" class="table-of-contents__link toc-highlight">5. Grade</a></li><li><a href="#voice-variant" class="table-of-contents__link toc-highlight">Voice variant</a></li><li><a href="#variations" class="table-of-contents__link toc-highlight">Variations</a></li></ul></div></div></div></div></main></div></div></div><footer id="contacto" class="bg-black text-white"><div class="container-max py-24"><div class="border-t border-gray-800 pt-8"><div class="flex flex-col md:flex-row justify-between items-center gap-4"><div class="text-gray-400 text-sm">© <!-- -->2026<!-- --> LEIA Team. All rights reserved.</div></div></div></div></footer></div>
 </body>
 </html>

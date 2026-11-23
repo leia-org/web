@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Scenario, a conversational game | LEIA</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://leia.ovh/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://leia.ovh/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://leia.ovh/docs/next/tutorials/conversational-game"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Scenario, a conversational game | LEIA"><meta data-rh="true" name="description" content="A guessing game is the simplest LEIA and a good first activity for a class that has never used the platform. The example is a secret word game. The character thinks of a word, the student asks questions that can only be answered with yes or no, and wins by naming the word."><meta data-rh="true" property="og:description" content="A guessing game is the simplest LEIA and a good first activity for a class that has never used the platform. The example is a secret word game. The character thinks of a word, the student asks questions that can only be answered with yes or no, and wins by naming the word."><meta data-rh="true" name="keywords" content="LEIA,game,secret word,conversational game,scenario"><link data-rh="true" rel="icon" href="/img/LEIALogo.png"><link data-rh="true" rel="canonical" href="https://leia.ovh/docs/next/tutorials/conversational-game"><link data-rh="true" rel="alternate" href="https://leia.ovh/docs/next/tutorials/conversational-game" hreflang="en"><link data-rh="true" rel="alternate" href="https://leia.ovh/docs/next/tutorials/conversational-game" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://WR7AJHB6S8-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tutorials","item":"https://leia.ovh/docs/next/category/tutorials"},{"@type":"ListItem","position":2,"name":"Scenario, a conversational game","item":"https://leia.ovh/docs/next/tutorials/conversational-game"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="LEIA" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.ecb6dc55.css">
-<script src="/assets/js/runtime~main.37130a37.js" defer="defer"></script>
-<script src="/assets/js/main.a835e156.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.8b24955b.js" defer="defer"></script>
+<script src="/assets/js/main.8aab12de.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -19,38 +19,92 @@
 <li class="">An OpenAI key or a system key.</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-design-the-leia">1. Design the LEIA<a href="#1-design-the-leia" class="hash-link" aria-label="Direct link to 1. Design the LEIA" title="Direct link to 1. Design the LEIA" translate="no">​</a></h2>
-<p>Open <strong>Design</strong> and give the assistant a brief like this one.</p>
+<ol>
+<li class="">
+<p>Press <strong>Design</strong> in the sidebar of the Designer.</p>
+</li>
+<li class="">
+<p>Type a brief in the message box and press <strong>Send message</strong>. For example</p>
 <blockquote>
 <p>Create a conversational game where the student has to guess a secret word by asking questions that can only be answered with yes or no. The persona is Nico Ferreira, a 24-year-old sound engineer who loves riddles. The secret word is lighthouse. Nico must never say the word until the student guesses it.</p>
 </blockquote>
-<p>The assistant writes the three components. Check the result in the preview.</p>
+</li>
+<li class="">
+<p>Wait for the assistant to write the three components and check the result in the preview.</p>
+</li>
+<li class="">
+<p>Click the <strong>Problem</strong> card.</p>
+</li>
+<li class="">
+<p>Check that <strong>Details</strong> holds the secret word and the rules. Students never see this field.</p>
+</li>
+<li class="">
+<p>Check that <strong>Solution</strong> states what counts as winning, for example &quot;the student says lighthouse&quot;.</p>
+</li>
+<li class="">
+<p>Check that <strong>Solution Format</strong> is <strong>Plain Text</strong>. The student types the word in the solution editor at the end, or you can turn the solution step off in the replication.</p>
+</li>
+<li class="">
+<p>Check that <strong>Process</strong> is <strong>Game</strong>.</p>
+</li>
+<li class="">
+<p>Write a short instruction in <strong>Initial Solution</strong>, such as &quot;Write the word you think is the secret word&quot;.</p>
+</li>
+<li class="">
+<p>Press <strong>Save</strong>.</p>
+</li>
+<li class="">
+<p>Click the <strong>Behaviour</strong> card and make sure <strong>Description</strong> says that the character only answers yes or no, never reveals the word and congratulates the student when the word is named.</p>
+</li>
+<li class="">
+<p>Write the first hint students see in <strong>Tooltip</strong>. Something like &quot;Is it an object?&quot; works well. Press <strong>Save</strong>.</p>
+</li>
+</ol>
 <p><img decoding="async" loading="lazy" alt="Assistant finished" src="/assets/images/04-step1-ready-404cf62dedb25110e1346f6643805563.webp" width="1440" height="900" class="img_ev3q"></p>
-<p>Open the <strong>Problem</strong> card and check these points.</p>
-<ul>
-<li class=""><strong>Details</strong> holds the secret word and the rules. Students never see this field.</li>
-<li class=""><strong>Solution</strong> states what counts as winning, for example &quot;the student says lighthouse&quot;.</li>
-<li class=""><strong>Solution Format</strong> is <strong>Plain Text</strong>. The student types the word in the solution editor at the end, or you can turn the solution step off in the replication.</li>
-<li class=""><strong>Process</strong> is <strong>Game</strong>.</li>
-<li class=""><strong>Initial Solution</strong> is not empty. Write a short instruction such as &quot;Write the word you think is the secret word&quot;. An empty field blocks <strong>Finish LEIA</strong>.</li>
-</ul>
-<p>Open the <strong>Behaviour</strong> card and make sure the description says that the character only answers yes or no, never reveals the word and congratulates the student when the word is named. The <strong>Tooltip</strong> is the first hint students see, something like &quot;Is it an object?&quot; works well.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-add-the-supervisor">2. Add the supervisor<a href="#2-add-the-supervisor" class="hash-link" aria-label="Direct link to 2. Add the supervisor" title="Direct link to 2. Add the supervisor" translate="no">​</a></h2>
-<p>In the <strong>Review</strong> step enable the supervisor and ask it to flag students who ask for the word directly or who ask open questions. Turn on the nudge so the student is reminded of the rules. See <a class="" href="/docs/next/teachers/designer/supervisor">The supervisor</a>.</p>
+<ol>
+<li class="">Press <strong>Review LEIA</strong>.</li>
+<li class="">Turn on <strong>Enabled</strong> (1) in the supervisor card.</li>
+<li class="">Choose an <strong>OpenAI API key</strong> (2) and a <strong>Model</strong> (3).</li>
+<li class="">In <strong>What should the supervisor watch for?</strong> (4) ask it to flag students who ask for the word directly or who ask open questions.</li>
+<li class="">Turn on <strong>Let the supervisor nudge the student</strong> (8) and ask it, in the coaching instructions (9), to remind the student of the rules.</li>
+<li class="">Type the <strong>New LEIA name</strong>, add a label in <strong>Labels</strong> and press <strong>Finish LEIA</strong>.</li>
+</ol>
+<p>See <a class="" href="/docs/next/teachers/designer/supervisor">The supervisor</a>.</p>
 <p><img decoding="async" loading="lazy" alt="Supervisor card" src="/assets/images/01-supervisor-card-c160e57374dd6c0ece2310170fd1e868.webp" width="1347" height="459" class="img_ev3q"></p>
-<p>Name the LEIA, add a label and press <strong>Finish LEIA</strong>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-test-it">3. Test it<a href="#3-test-it" class="hash-link" aria-label="Direct link to 3. Test it" title="Direct link to 3. Test it" translate="no">​</a></h2>
-<p>Press <strong>Test LEIA</strong> in the library, ask a few questions, then try to cheat. Ask for the word directly, or ask an open question. The character should refuse politely. See <a class="" href="/docs/next/teachers/designer/test-leia">Test a LEIA</a>.</p>
+<ol>
+<li class="">Press <strong>Go to LEIAs</strong> in the success dialog.</li>
+<li class="">Move the mouse over the row of your LEIA and press <strong>Test LEIA</strong>.</li>
+<li class="">Ask a few yes or no questions.</li>
+<li class="">Try to cheat. Ask for the word directly, or ask an open question.</li>
+</ol>
+<p>The character should refuse politely. See <a class="" href="/docs/next/teachers/designer/test-leia">Test a LEIA</a>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-open-it-to-students">4. Open it to students<a href="#4-open-it-to-students" class="hash-link" aria-label="Direct link to 4. Open it to students" title="Direct link to 4. Open it to students" translate="no">​</a></h2>
-<p>Press <strong>Quick replication</strong> on the row. The Workbench opens with a replication ready to configure. For a game these settings work well.</p>
+<ol>
+<li class="">Press <strong>Quick replication</strong> on the row. The Workbench opens in a new tab with a replication ready to configure.</li>
+<li class="">Choose <strong>LEIAs</strong> in the sub-menu of the replication and open your LEIA.</li>
+<li class="">Check that <strong>Model</strong> and <strong>API key</strong> are set. If you change them, press <strong>Save</strong>.</li>
+<li class="">Set <strong>Ask for student solution</strong> and <strong>Automatic evaluation</strong> with the values below.</li>
+<li class="">Choose <strong>General</strong> in the sub-menu and set <strong>Repeatable</strong>, <strong>Duration</strong> and <strong>Language</strong> with the values below.</li>
+<li class="">Turn on <strong>Active</strong>.</li>
+<li class="">Copy the <strong>Student link</strong> and give it to your students.</li>
+</ol>
+<p>For a game these settings work well.</p>
 <table><thead><tr><th>Setting</th><th>Suggested value</th><th>Why</th></tr></thead><tbody><tr><td><strong>Ask for student solution</strong></td><td>off</td><td>The win is visible in the transcript. Turn it on if you want students to type the word and get a score.</td></tr><tr><td><strong>Automatic evaluation</strong></td><td>off, or on if you ask for a solution</td><td>The evaluation compares the word with the solution.</td></tr><tr><td><strong>Repeatable</strong></td><td>on</td><td>Students like to play again.</td></tr><tr><td><strong>Duration</strong></td><td>10 or 15 minutes</td><td>Keeps the game short.</td></tr><tr><td><strong>Language</strong></td><td>the language of your class</td><td>The character answers in it.</td></tr></tbody></table>
-<p>Activate the replication and share the student link. See <a class="" href="/docs/next/teachers/workbench/replication-settings">Replication settings</a>.</p>
+<p>See <a class="" href="/docs/next/teachers/workbench/replication-settings">Replication settings</a>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-afterwards">5. Afterwards<a href="#5-afterwards" class="hash-link" aria-label="Direct link to 5. Afterwards" title="Direct link to 5. Afterwards" translate="no">​</a></h2>
-<p>In <strong>Conversations</strong> read how many questions each student needed and look at the supervisor flags for students who tried to cheat. See <a class="" href="/docs/next/teachers/workbench/results-and-export">Results, grading and export</a>.</p>
+<ol>
+<li class="">Choose <strong>Conversations</strong> in the sub-menu of the replication and press <strong>Open conversations</strong>.</li>
+<li class="">Click a session and read how many questions the student needed.</li>
+<li class="">Look at the <strong>Supervisor flags</strong> under the transcript to find students who tried to cheat.</li>
+</ol>
+<p>See <a class="" href="/docs/next/teachers/workbench/results-and-export">Results, grading and export</a>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="variations">Variations<a href="#variations" class="hash-link" aria-label="Direct link to Variations" title="Direct link to Variations" translate="no">​</a></h2>
 <ul>
 <li class="">Change the secret word by designing a new LEIA from this one and editing <strong>Details</strong> and <strong>Solution</strong>.</li>
 <li class="">Make several LEIAs with different words and put them in one activity with <strong>Single LEIA assignment</strong>. Each student gets one word.</li>
 <li class="">Give the game a time limit and ask students to submit the word as the solution, so the automatic evaluation records who won.</li>
-</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-tags-row"><div class="col"><b>Tags:</b><ul class="tags_jXut padding--none margin-left--sm"><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/docs/next/tags/tutorial">tutorial</a></li><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/docs/next/tags/scenario">scenario</a></li><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/docs/next/tags/game">game</a></li></ul></div></div><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/leia-org/web/tree/main/docs/tutorials/conversational-game.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"><span class="theme-last-updated">Last updated<!-- --> on <b><time datetime="2026-10-12T13:56:11.000Z" itemprop="dateModified">Oct 12, 2026</time></b> by <b>dangalcan</b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/next/tutorials/requirements-elicitation"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Scenario, a requirements elicitation interview</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/next/tutorials/programming-exercise"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Scenario, a programming exercise with the code editor</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#what-you-need" class="table-of-contents__link toc-highlight">What you need</a></li><li><a href="#1-design-the-leia" class="table-of-contents__link toc-highlight">1. Design the LEIA</a></li><li><a href="#2-add-the-supervisor" class="table-of-contents__link toc-highlight">2. Add the supervisor</a></li><li><a href="#3-test-it" class="table-of-contents__link toc-highlight">3. Test it</a></li><li><a href="#4-open-it-to-students" class="table-of-contents__link toc-highlight">4. Open it to students</a></li><li><a href="#5-afterwards" class="table-of-contents__link toc-highlight">5. Afterwards</a></li><li><a href="#variations" class="table-of-contents__link toc-highlight">Variations</a></li></ul></div></div></div></div></main></div></div></div><footer id="contacto" class="bg-black text-white"><div class="container-max py-24"><div class="border-t border-gray-800 pt-8"><div class="flex flex-col md:flex-row justify-between items-center gap-4"><div class="text-gray-400 text-sm">© <!-- -->2026<!-- --> LEIA Team. All rights reserved.</div></div></div></div></footer></div>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-tags-row"><div class="col"><b>Tags:</b><ul class="tags_jXut padding--none margin-left--sm"><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/docs/next/tags/tutorial">tutorial</a></li><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/docs/next/tags/scenario">scenario</a></li><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/docs/next/tags/game">game</a></li></ul></div></div><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/leia-org/web/tree/main/docs/tutorials/conversational-game.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"><span class="theme-last-updated">Last updated<!-- --> on <b><time datetime="2026-11-04T12:53:11.000Z" itemprop="dateModified">Nov 4, 2026</time></b> by <b>dangalcan</b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/next/tutorials/requirements-elicitation"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Scenario, a requirements elicitation interview</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/next/tutorials/programming-exercise"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Scenario, a programming exercise with the code editor</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#what-you-need" class="table-of-contents__link toc-highlight">What you need</a></li><li><a href="#1-design-the-leia" class="table-of-contents__link toc-highlight">1. Design the LEIA</a></li><li><a href="#2-add-the-supervisor" class="table-of-contents__link toc-highlight">2. Add the supervisor</a></li><li><a href="#3-test-it" class="table-of-contents__link toc-highlight">3. Test it</a></li><li><a href="#4-open-it-to-students" class="table-of-contents__link toc-highlight">4. Open it to students</a></li><li><a href="#5-afterwards" class="table-of-contents__link toc-highlight">5. Afterwards</a></li><li><a href="#variations" class="table-of-contents__link toc-highlight">Variations</a></li></ul></div></div></div></div></main></div></div></div><footer id="contacto" class="bg-black text-white"><div class="container-max py-24"><div class="border-t border-gray-800 pt-8"><div class="flex flex-col md:flex-row justify-between items-center gap-4"><div class="text-gray-400 text-sm">© <!-- -->2026<!-- --> LEIA Team. All rights reserved.</div></div></div></div></footer></div>
 </body>
 </html>
