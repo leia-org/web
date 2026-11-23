@@ -1,0 +1,8 @@
+{
+  "label": "Tutorials",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Goal-driven walkthroughs. Start with the quick start, then pick the teaching scenario closest to your course."
+  }
+}
