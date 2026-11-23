@@ -10,7 +10,6 @@ keywords:
   - OpenAI
   - Gemini
   - Ollama
-  - ALMA
   - model
   - provider
 authors:
@@ -38,9 +37,8 @@ Your administrator may have shared **system keys** with your account. They appea
 | **OpenAI** | `openai` | Text conversations, tool calls for widgets, the AI assistant of the Designer, the supervisor | Required for the AI assistant, the supervisor and any LEIA with widgets |
 | **Google Gemini** | `gemini` | Text conversations and the avatar and infographic images of a LEIA | Required to regenerate images |
 | **Ollama** | `ollama` | Open models served by an Ollama server you run yourself | Needs the **Base URL** of the server |
-| **ALMA** | `alma` | Models served by the ALMA platform of the University of Seville | Needs a Base URL and an ALMA key |
 
-The list of models offered for each provider is maintained by the platform, so it may change without any action on your part. Anthropic keys are accepted by the form but no model runs with them yet.
+The list of models offered for each provider is maintained by the platform, so it may change without any action on your part. **API Key Type** only offers providers that have at least one model.
 
 ## Your keys
 
@@ -90,7 +88,7 @@ The key appears in the list with the **Active** chip. If the form rejects the va
 | 3 | **API Key Type** | The provider. Changing it clears the model, because models belong to a provider. Required. |
 | 4 | **Status** | **Active** or **Inactive**. Inactive keys are kept but cannot be selected. |
 | 5 | **Default Model** | The model preselected wherever this key is used. The list depends on the provider. Required. |
-| 6 | **Base URL** | Where the provider lives. Only local or self-hosted providers such as Ollama and ALMA need it. |
+| 6 | **Base URL** | Where the provider lives. Only Ollama needs it, because it runs on a server of your own. |
 | 7 | **Management URL** | Optional link to the provider's dashboard. The Workbench shows it as a **Dashboard** link next to the model selector so you can check your usage. |
 | 8 | **Make this the default API Key** | Shown only when you already have at least one key. The new key becomes the default one. |
 | 9 | **Create Key** | Saves the key. The provider checks the format of the value, so a key with a typo is rejected here. |

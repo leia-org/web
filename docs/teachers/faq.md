@@ -24,7 +24,7 @@ Honest answers to the questions teachers ask most, plus the limits of the curren
 
 **I registered but I cannot see Activities or enter the Workbench.** New accounts get the instructor role. Activities, replications and the whole Workbench need the advanced role. Ask the LEIA team at [team@leia.ovh](mailto:team@leia.ovh).
 
-**Finish LEIA fails with "Failed to create behaviour resource".** Your account is an instructor and the LEIA has a new behaviour. Only the advanced and admin roles can create behaviours. Use **Design from this** on an existing LEIA and leave the behaviour as it is, or ask for the advanced role.
+**Finish LEIA fails with "Failed to create behaviour resource".** Your account is an instructor and the LEIA has a new behaviour. Only the advanced and admin roles can create behaviours. Use **Design from this** on an existing LEIA and leave the behaviour as it is, or ask for the advanced role. On an advanced or admin account, check that the **Tooltip** of the behaviour is not empty.
 
 **Can I make my LEIA public?** Only administrators publish. Everything you create is private until then. Private LEIAs still work in your own replications.
 
@@ -70,20 +70,19 @@ Honest answers to the questions teachers ask most, plus the limits of the curren
 
 **The automatic score is from 0 to 10 but I can type 0 to 100 in the Conversations page.** The two scales are different. The automatic evaluation returns 0 to 10. The manual score field accepts 0 to 100 and overwrites the automatic one. Pick one scale for your course.
 
-**The CSV has fewer columns than I expected.** The export has one row per message with the session id, the student, the start and end times, the message, who wrote it, the timestamp, the score and the evaluation. The configuration of the replication is not in the file. Production may include additional columns.
+**The CSV has fewer columns than I expected.** The export has one row per message with the session id, the student, the start and end times, the message, who wrote it, the timestamp, the score and the evaluation. The configuration of the replication is not in the file, and a score of 0 appears as an empty cell.
 
 **Where are the supervisor flags in the export?** They are not in the CSV. Read them in the Conversations page.
 
 **Are test sessions in the results?** It depends on how you started them. Sessions started with **Test session** on the LEIA page of a replication are hidden from the Conversations page and from the CSV. Sessions started through the **Demo / test link** are ordinary sessions under a throwaway identity, `demo` followed by random letters at `@test.com`, and they do appear in the Conversations page, in the counters and in the CSV. Recognise them by the `@test.com` address and leave those rows out of your grading. See [Results, grading and export](workbench/results-and-export.md).
 
-## Known problems of the development version
+## Known problems {#known-problems-of-the-development-version}
 
 - **The Live dashboard sends advanced accounts back to the replications list.** Open it through the share link instead. See [Live dashboard and spectating](workbench/live-and-spectate.md).
 - **Generate in transcription mode fails** with "Failed to create transcription session". Use **Auto Generate** or **JSON Edit**.
-- **New replications start with a model called "default" that no longer exists**, so the first activation fails with "Some Leias have invalid runner configurations". Pick a real model in every LEIA and save.
-- **Watch live and Share link do nothing**, the server refuses to create the spectate token.
+- **Without a default key, new replications start with a model called "default" and no key**, so the first activation fails with "Some Leias have invalid runner configurations". Pick a real model and a key in every LEIA and save.
+- **Watch live and Share link fail** with "Failed to generate spectate link", and **Watch live** also opens a blank tab. Read the conversation in the Conversations page.
 - **The Live dashboard does not show the flags raised before you opened it.** They are all in the Conversations page.
-- **Older replications do not appear in the list on a tall window.** The list loads ten at a time when you scroll, and a window where ten fit never scrolls. Make the window shorter.
 - **The Configuration view of a session is empty**, "No replication configuration was stored for this conversation".
 - **Data Usage settings cannot be saved**, **Save** answers "Error updating data usage settings". Students never see a consent dialog, so collect consent outside LEIA.
 - **The automatic transcript generator writes in Spanish** regardless of the language of the behaviour.
