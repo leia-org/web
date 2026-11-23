@@ -27,7 +27,16 @@ Anyone can register. What you can do afterwards depends on your role, so read th
 
 ## Register
 
-Open [designer.leia.ovh/register](https://designer.leia.ovh/register). The same account is used by the Designer and the Workbench.
+The same account is used by the Designer and the Workbench.
+
+1. Open [designer.leia.ovh/register](https://designer.leia.ovh/register).
+2. Type your address in **Email** (1).
+3. Type a **Password** (2) of at least 6 characters.
+4. Type it again in **Confirm password** (3).
+5. Wait for the verification check (4) to pass. **Register** stays disabled until then.
+6. Press **Register** (5).
+
+The login page opens and your account has the **instructor** role.
 
 ![Register form of the Designer](../img/teachers/accounts/02-register.webp)
 
@@ -44,7 +53,12 @@ The form validates in this order. Empty required fields, then the email format, 
 
 ## Log in
 
-Open [designer.leia.ovh/login](https://designer.leia.ovh/login).
+1. Open [designer.leia.ovh/login](https://designer.leia.ovh/login).
+2. Type the **Email** (1) you registered with and your **Password** (2).
+3. Wait for the verification check (3) to pass.
+4. Press **Login** (4).
+
+The LEIA library opens.
 
 ![Login form of the Designer](../img/teachers/accounts/01-login.webp)
 
@@ -59,6 +73,14 @@ Open [designer.leia.ovh/login](https://designer.leia.ovh/login).
 If you open the Designer while a session is still valid you land directly in the library. The session is refreshed every five minutes and every time the browser window regains focus. When the server rejects an expired session you are sent back to the login page, and when it rejects your role you see an **Access Denied** page with a **Go to Home** button and a **Switch Account** button that logs you out.
 
 The Workbench has its own sign-in page at [workbench.leia.ovh/login](https://workbench.leia.ovh/login) with the same email and password. It only admits the **advanced** and **admin** roles. An instructor sees the message "Instructors cannot access workbench administration." The student entrance of the Workbench is a different page and needs no account. See [What students see](workbench/students.md).
+
+### Log in to the Workbench
+
+1. Open [workbench.leia.ovh/login](https://workbench.leia.ovh/login).
+2. Type the same **Email** and **Password** as in the Designer.
+3. Press **Sign in**.
+
+The replications list opens. An instructor account stays on the page with the message "Instructors cannot access workbench administration."
 
 ## Find your way around the Designer
 
@@ -80,6 +102,25 @@ The Workbench has its own sign-in page at [workbench.leia.ovh/login](https://wor
 Administrators also see a **Users** entry in the sidebar that opens the user management page.
 
 ## Your profile
+
+### Change your email address
+
+1. Open **Profile** in the sidebar.
+2. Press **Edit** (2).
+3. Type the new address. It must be different from the current one.
+4. Press **Save**.
+
+**Email Address** (1) shows the new address. Use it the next time you log in.
+
+### Change your password
+
+1. Open **Profile** in the sidebar.
+2. Press **Change** (4).
+3. Type your **Current Password**.
+4. Type a **New Password** of at least 6 characters and repeat it in **Confirm New Password**.
+5. Press **Change Password**.
+
+Use the new password the next time you log in.
 
 ![Profile page](../img/teachers/accounts/03-profile.webp)
 
@@ -114,6 +155,14 @@ The AI assistant always writes a new behaviour together with the persona and the
 :::
 
 Everything you create is **private** by default. Other users only see it once an administrator publishes it. Write to the LEIA team at [team@leia.ovh](mailto:team@leia.ovh) to ask for the advanced role or to have a LEIA published.
+
+### Ask for the advanced role
+
+1. Open **Profile** in the sidebar and check your **Role**.
+2. Write to [team@leia.ovh](mailto:team@leia.ovh). Include the email of your account and the course you want to run.
+3. When the team confirms the change, log out and log in again.
+
+**Activities** appears in the sidebar of the Designer and the Workbench lets you in.
 
 ## Log out
 

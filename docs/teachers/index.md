@@ -21,6 +21,8 @@ authors:
 
 This guide explains every screen, button and field that a teacher meets while designing a LEIA, running it with students and reviewing the results. Read this page first. It introduces the vocabulary and the two applications, and it tells you which page of the guide answers each task.
 
+Each task is a numbered list of steps. A number in brackets points to the screenshot under the list, and the table below the screenshot explains every control.
+
 :::info Which version is described
 Due to updates some features may suffer minor changes.
 :::
@@ -86,19 +88,24 @@ flowchart LR
 
 | I want to | Go to |
 |---|---|
-| Create an account or understand what my role allows | [Accounts and roles](accounts-and-roles.md) |
-| Add an OpenAI, Gemini, Ollama or ALMA key | [API keys and models](api-keys.md) |
-| Find, test, duplicate or delete a LEIA | [The LEIA library](designer/index.md) |
+| Create an account | [Register](accounts-and-roles.md#register) |
+| Understand what my role allows | [The three roles](accounts-and-roles.md#the-three-roles) |
+| Add an OpenAI, Gemini, Ollama or ALMA key | [Add a key](api-keys.md#add-a-key) |
+| Find a LEIA | [Find a LEIA](designer/index.md#find-a-leia) |
+| Test a LEIA | [Start a test](designer/test-leia.md#start-a-test) |
+| Start a new LEIA from an existing one | [Start a new LEIA from this one](designer/index.md#start-a-new-leia-from-this-one) |
+| Delete a LEIA | [Delete a LEIA](designer/index.md#delete-a-leia) |
 | Build a LEIA from a description or a PDF | [Create a LEIA with the AI assistant](designer/create-leia.md) |
 | Know what every field of a persona, problem or behaviour does | [Persona, Problem and Behaviour fields](designer/components-reference.md) |
-| Add a code editor the student and LEIA share | [Code editor widget](designer/widgets.md) |
-| Let a second AI watch the conversation | [The supervisor](designer/supervisor.md) |
-| Prepare several LEIAs for the same class, or a group simulation | [Activities](designer/activities.md) |
-| Open an activity to students | [Workbench overview](workbench/index.md) and [Replication settings](workbench/replication-settings.md) |
-| Choose the model, the voice or the automatic evaluation | [LEIA settings in a replication](workbench/leia-settings.md) |
-| See the activity through the eyes of a student | [What students see](workbench/students.md) |
-| Watch a session while it happens | [Live dashboard and spectating](workbench/live-and-spectate.md) |
-| Read transcripts, change a score or download the data | [Results, grading and export](workbench/results-and-export.md) |
+| Add a code editor the student and LEIA share | [Add the editor](designer/widgets.md#add-the-editor) |
+| Let a second AI watch the conversation | [Enable and configure it](designer/supervisor.md#enable-and-configure-it) |
+| Prepare several LEIAs for the same class | [Give each student one LEIA](designer/activities.md#give-each-student-one-leia) |
+| Prepare a group simulation | [Put every LEIA in one conversation](designer/activities.md#put-every-leia-in-one-conversation) |
+| Open an activity to students | [Create a replication](workbench/index.md#create-a-replication) and [Open or close the replication](workbench/replication-settings.md#open-or-close-the-replication) |
+| Choose the model, the voice or the automatic evaluation | [Runner](workbench/leia-settings.md#runner), [Voice](workbench/leia-settings.md#voice) and [Ask for a solution and grade it](workbench/leia-settings.md#ask-for-a-solution-and-grade-it) |
+| See the activity through the eyes of a student | [Walk the path yourself](workbench/students.md#walk-the-path-yourself) |
+| Watch a session while it happens | [Watch a session as it happens](workbench/live-and-spectate.md#watch-a-session-as-it-happens) |
+| Read transcripts, change a score or download the data | [A session in detail](workbench/results-and-export.md#a-session-in-detail), [Scores](workbench/results-and-export.md#scores) and [The CSV file](workbench/results-and-export.md#the-csv-file) |
 | Check a limitation before planning a class | [Limitations and FAQ](faq.md) |
 
 ## Before you start
