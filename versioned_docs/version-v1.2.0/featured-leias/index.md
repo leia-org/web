@@ -18,6 +18,8 @@ authors:
     image_url: https://github.com/Dangalcan.png
 ---
 
+import TryItButton from '@site/src/components/TryItButton';
+
 # Featured LEIAs
 
 The featured LEIAs are the nine LEIAs the LEIA team maintains as examples of what the platform can do. Each one is published in the [LEIA library](../teachers/designer/index.md) of the Designer with the label **featured**, and each one has two public demo activities in the Workbench: one where you type and one where you talk.
@@ -34,25 +36,25 @@ The **voice** demos need a microphone. The chat is replaced by a stage with the 
 
 | | LEIA | You talk to | You practise | Text demo | Voice demo |
 |---|---|---|---|---|---|
-| ![Edgar Dijkstra](../img/featured-leias/code-tutor-loops-avatar.webp) | [Python loops tutor](code-tutor-loops.md) | Edgar Dijkstra, a patient Python teacher | Writing a `for` loop that filters and transforms a list, with tests you can run | [Try it](https://workbench.leia.ovh/?code=RMW20KV8ELLQ5NP30&email=_test_demo) | [Try it](https://workbench.leia.ovh/?code=RMW20MAYDU12EJGQF&email=_test_demo) |
-| ![Nora Aran](../img/featured-leias/code-tutor-anagram-avatar.webp) | [JavaScript anagram tutor](code-tutor-anagram.md) | Nora Aran, a computer science teacher | Solving the valid-anagram problem in JavaScript with hints but no code | [Try it](https://workbench.leia.ovh/?code=RMW20RM8EF100PPEH&email=_test_demo) | [Try it](https://workbench.leia.ovh/?code=RMW20SWBRJCP9HLYV&email=_test_demo) |
-| ![Sara Aran](../img/featured-leias/code-review-avatar.webp) | [Code defence interview](code-review.md) | Sara Aran, a strict programming teacher | Explaining your own JavaScript code in a one-question-at-a-time interview | [Try it](https://workbench.leia.ovh/?code=RMW20UQT6BBOI08KG&email=_test_demo) | [Try it](https://workbench.leia.ovh/?code=RMW20VWY11YESPIRT&email=_test_demo) |
+| ![Edgar Dijkstra](../img/featured-leias/code-tutor-loops-avatar.webp) | [Python loops tutor](code-tutor-loops.md) | Edgar Dijkstra, a patient Python teacher | Writing a `for` loop that filters and transforms a list, with tests you can run | <TryItButton href="https://workbench.leia.ovh/?code=RMW20KV8ELLQ5NP30&email=_test_demo" /> | <TryItButton href="https://workbench.leia.ovh/?code=RMW20MAYDU12EJGQF&email=_test_demo" mode="voice" /> |
+| ![Nora Aran](../img/featured-leias/code-tutor-anagram-avatar.webp) | [JavaScript anagram tutor](code-tutor-anagram.md) | Nora Aran, a computer science teacher | Solving the valid-anagram problem in JavaScript with hints but no code | <TryItButton href="https://workbench.leia.ovh/?code=RMW20RM8EF100PPEH&email=_test_demo" /> | <TryItButton href="https://workbench.leia.ovh/?code=RMW20SWBRJCP9HLYV&email=_test_demo" mode="voice" /> |
+| ![Sara Aran](../img/featured-leias/code-review-avatar.webp) | [Code defence interview](code-review.md) | Sara Aran, a strict programming teacher | Explaining your own JavaScript code in a one-question-at-a-time interview | <TryItButton href="https://workbench.leia.ovh/?code=RMW20UQT6BBOI08KG&email=_test_demo" /> | <TryItButton href="https://workbench.leia.ovh/?code=RMW20VWY11YESPIRT&email=_test_demo" mode="voice" /> |
 
 ## Requirements and process elicitation
 
 | | LEIA | You talk to | You practise | Text demo | Voice demo |
 |---|---|---|---|---|---|
-| ![Sara Aran](../img/featured-leias/re-inf-tickets-avatar.webp) | [Ticket platform requirements](re-inf-tickets.md) | Sara Aran, owner of a chain of theaters | Interviewing a client and drawing the conceptual model of an online ticket platform | [Try it](https://workbench.leia.ovh/?code=RMW1ZMJVYSGWUUZCD&email=_test_demo) | [Try it](https://workbench.leia.ovh/?code=RMW203MK1WB9WW18L&email=_test_demo) |
-| ![Maxine Mazatzin](../img/featured-leias/re-proc-loans-avatar.webp) | [Loan application process](re-proc-loans.md) | Maxine Mazatzin, credit analyst at a finance company | Discovering a business process step by step and modelling it in BPMN | [Try it](https://workbench.leia.ovh/?code=RMW20P7WLCK9S4R2J&email=_test_demo) | [Try it](https://workbench.leia.ovh/?code=RMW20QAA4M9IXI433&email=_test_demo) |
-| ![Beth Helms](../img/featured-leias/re-eth-shopiverse-avatar.webp) | [Shopiverse v2, requirements with ethical and legal risks](re-eth-shopiverse.md) | Beth Helms, a pushy marketing director | Eliciting requirements from a client who wants everything, and spotting the ethical and legal risks | [Try it](https://workbench.leia.ovh/?code=RMQ6BSQCM5I5PDLCI&email=_test_demo) | [Try it](https://workbench.leia.ovh/?code=RMW9EW9UD9HMKOAAP&email=_test_demo) |
+| ![Sara Aran](../img/featured-leias/re-inf-tickets-avatar.webp) | [Ticket platform requirements](re-inf-tickets.md) | Sara Aran, owner of a chain of theaters | Interviewing a client and drawing the conceptual model of an online ticket platform | <TryItButton href="https://workbench.leia.ovh/?code=RMW1ZMJVYSGWUUZCD&email=_test_demo" /> | <TryItButton href="https://workbench.leia.ovh/?code=RMW203MK1WB9WW18L&email=_test_demo" mode="voice" /> |
+| ![Maxine Mazatzin](../img/featured-leias/re-proc-loans-avatar.webp) | [Loan application process](re-proc-loans.md) | Maxine Mazatzin, credit analyst at a finance company | Discovering a business process step by step and modelling it in BPMN | <TryItButton href="https://workbench.leia.ovh/?code=RMW20P7WLCK9S4R2J&email=_test_demo" /> | <TryItButton href="https://workbench.leia.ovh/?code=RMW20QAA4M9IXI433&email=_test_demo" mode="voice" /> |
+| ![Beth Helms](../img/featured-leias/re-eth-shopiverse-avatar.webp) | [Shopiverse v2, requirements with ethical and legal risks](re-eth-shopiverse.md) | Beth Helms, a pushy marketing director | Eliciting requirements from a client who wants everything, and spotting the ethical and legal risks | <TryItButton href="https://workbench.leia.ovh/?code=RMQ6BSQCM5I5PDLCI&email=_test_demo" /> | <TryItButton href="https://workbench.leia.ovh/?code=RMW9EW9UD9HMKOAAP&email=_test_demo" mode="voice" /> |
 
 ## Dialogue, games and interviews
 
 | | LEIA | You talk to | You practise | Text demo | Voice demo |
 |---|---|---|---|---|---|
-| ![Sócrates](../img/featured-leias/socratic-justice-avatar.webp) | [A Socratic dialogue on justice](socratic-justice.md) | Sócrates, the Athenian philosopher | Defending your own idea of justice against questions and counterexamples | [Try it](https://workbench.leia.ovh/?code=RMW212TJ9RDSNGDEF&email=_test_demo) | [Try it](https://workbench.leia.ovh/?code=RMW2144IANUO7XRHX&email=_test_demo) |
-| ![Timmy](../img/featured-leias/game-secret-word-avatar.webp) | [The secret word game](game-secret-word.md) | Timmy, a funny friend who loves Italian culture | Guessing a secret word with yes-or-no questions | [Try it](https://workbench.leia.ovh/?code=RMW20H00NP1G9OO5G&email=_test_demo) | [Try it](https://workbench.leia.ovh/?code=RMW20I71S0Q8DGIR8&email=_test_demo) |
-| ![Eva Soto](../img/featured-leias/interview-leia-testimonial-avatar.webp) | [An interview about your LEIA experience](interview-leia-testimonial.md) | Eva Soto, an education technology specialist | Giving structured feedback about LEIA in a reflective interview | [Try it](https://workbench.leia.ovh/?code=RMW20XI4X7GGWUVXN&email=_test_demo) | [Try it](https://workbench.leia.ovh/?code=RMW20YDDV6DLUVV29&email=_test_demo) |
+| ![Sócrates](../img/featured-leias/socratic-justice-avatar.webp) | [A Socratic dialogue on justice](socratic-justice.md) | Sócrates, the Athenian philosopher | Defending your own idea of justice against questions and counterexamples | <TryItButton href="https://workbench.leia.ovh/?code=RMW212TJ9RDSNGDEF&email=_test_demo" /> | <TryItButton href="https://workbench.leia.ovh/?code=RMW2144IANUO7XRHX&email=_test_demo" mode="voice" /> |
+| ![Timmy](../img/featured-leias/game-secret-word-avatar.webp) | [The secret word game](game-secret-word.md) | Timmy, a funny friend who loves Italian culture | Guessing a secret word with yes-or-no questions | <TryItButton href="https://workbench.leia.ovh/?code=RMW20H00NP1G9OO5G&email=_test_demo" /> | <TryItButton href="https://workbench.leia.ovh/?code=RMW20I71S0Q8DGIR8&email=_test_demo" mode="voice" /> |
+| ![Eva Soto](../img/featured-leias/interview-leia-testimonial-avatar.webp) | [An interview about your LEIA experience](interview-leia-testimonial.md) | Eva Soto, an education technology specialist | Giving structured feedback about LEIA in a reflective interview | <TryItButton href="https://workbench.leia.ovh/?code=RMW20XI4X7GGWUVXN&email=_test_demo" /> | <TryItButton href="https://workbench.leia.ovh/?code=RMW20YDDV6DLUVV29&email=_test_demo" mode="voice" /> |
 
 ## What all of them share
 
