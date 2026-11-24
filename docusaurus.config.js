@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 // Public Telegram group where users ask questions and report problems.
-const TELEGRAM_URL = 'https://t.me/leia_users';
+const TELEGRAM_URL = 'https://t.me/leia_community';
 
  /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -124,7 +124,7 @@ const config = {
           {
             title: 'Support',
             items: [
-              { label: 'Telegram group: leia-users', href: TELEGRAM_URL },
+              { label: 'Telegram group: LEIA Community', href: TELEGRAM_URL },
               { label: 'Help and support', to: '/docs/next/support' },
               { label: 'Limitations and FAQ', to: '/docs/next/teachers/faq' },
             ],

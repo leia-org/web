@@ -157,4 +157,4 @@ The key disappears from the list.
 - **"Configure an API key before testing a LEIA".** You have no active key at all. Add one or ask your administrator for a system key.
 - **"This activity uses widgets, so its tool functions only run on a tool-capable provider".** The LEIA has a code editor. Only OpenAI models can call its tools, so choose an OpenAI key.
 - **A replication refuses to activate.** Every LEIA in it needs a model and a key. Open the LEIA in the replication, pick them and press **Save**. See [LEIA settings in a replication](workbench/leia-settings.md).
-- **Something else fails.** Ask in [leia-users on Telegram](https://t.me/leia_users). [Help and support](../support.md) lists what to include and what never to post.
+- **Something else fails.** Ask in [LEIA Community on Telegram](https://t.me/leia_community). [Help and support](../support.md) lists what to include and what never to post.
