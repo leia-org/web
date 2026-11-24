@@ -18,7 +18,7 @@ authors:
 
 # Limitations and FAQ
 
-Honest answers to the questions teachers ask most, plus the limits of the current version that are worth knowing before you plan a class. If your problem is not here, ask in [leia-users on Telegram](https://t.me/leia_users). See [Help and support](../support.md).
+Honest answers to the questions teachers ask most, plus the limits of the current version that are worth knowing before you plan a class. If your problem is not here, ask in [LEIA Community on Telegram](https://t.me/leia_community). See [Help and support](../support.md).
 
 ## Accounts and roles
 
@@ -90,7 +90,7 @@ Honest answers to the questions teachers ask most, plus the limits of the curren
 - **Data Usage settings cannot be saved**, **Save** answers "Error updating data usage settings". Students never see a consent dialog, so collect consent outside LEIA.
 - **The automatic transcript generator writes in Spanish** regardless of the language of the behaviour.
 
-If you find a problem that is not in this list, report it in [leia-users on Telegram](https://t.me/leia_users).
+If you find a problem that is not in this list, report it in [LEIA Community on Telegram](https://t.me/leia_community).
 
 ## Small things you may notice
 

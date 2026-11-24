@@ -8,7 +8,7 @@ keywords:
   - support
   - help
   - Telegram
-  - leia-users
+  - LEIA Community
   - bug report
 authors:
   - name: Dangalcan
@@ -18,9 +18,9 @@ authors:
 
 # Help and support
 
-If something in LEIA does not work as this documentation describes, or you cannot find how to do something, ask in **leia-users**, the public Telegram group where LEIA users and the LEIA team answer questions and collect problems.
+If something in LEIA does not work as this documentation describes, or you cannot find how to do something, ask in **LEIA Community**, the public Telegram group where LEIA users and the LEIA team answer questions and collect problems.
 
-**[Join leia-users on Telegram](https://t.me/leia_users)**
+**[Join LEIA Community on Telegram](https://t.me/leia_community)**
 
 ## Before you write
 
@@ -28,7 +28,7 @@ Many problems are already known and have a workaround. Look first at [Limitation
 
 ## Report a problem in the group
 
-1. Open [t.me/leia_users](https://t.me/leia_users) and join the group. You need a Telegram account, in the app or at [web.telegram.org](https://web.telegram.org).
+1. Open [t.me/leia_community](https://t.me/leia_community) and join the group. You need a Telegram account, in the app or at [web.telegram.org](https://web.telegram.org).
 2. Write one message per problem, with:
    - the application, **Designer** or **Workbench**, and the page or button where it happens;
    - what you did, step by step;

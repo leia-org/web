@@ -83,4 +83,4 @@ PORT_WORKBENCH_FRONTEND=3005
 
 Now you will be required to use strong passwords and keys. Do not forget to include your generated OpenAI apikey.
 
-If the deployment fails, ask in [leia-users on Telegram](https://t.me/leia_users). Never paste your `.env` file there, it holds your passwords and keys.
+If the deployment fails, ask in [LEIA Community on Telegram](https://t.me/leia_community). Never paste your `.env` file there, it holds your passwords and keys.
