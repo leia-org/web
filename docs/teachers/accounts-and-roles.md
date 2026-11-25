@@ -29,6 +29,20 @@ Anyone can register. What you can do afterwards depends on your role, so read th
 
 The same account is used by the Designer and the Workbench.
 
+This video shows the whole flow, from registering to the first [login](#log-in) (33 seconds, no sound).
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../img/teachers/accounts/register-poster.webp').default}
+  aria-label="Video: registering an account in the Designer and logging in with it">
+  <source src={require('../img/teachers/accounts/register.mp4').default} type="video/mp4" />
+  Your browser cannot play this video. Follow the steps below.
+</video>
+
 1. Open [designer.leia.ovh/register](https://designer.leia.ovh/register).
 2. Type your address in **Email** (1).
 3. Type a **Password** (2) of at least 6 characters.
