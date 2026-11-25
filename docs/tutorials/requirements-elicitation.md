@@ -34,6 +34,20 @@ The classic LEIA. The student plays the analyst, the LEIA plays a client who kno
 
 ## 1. Design the LEIA
 
+This video creates this same LEIA, Helen Park and her library, with the AI assistant, asks it two questions and finishes it (about 2.5 minutes, no sound, the waits for the AI are sped up). It goes straight to **Review LEIA**, without the edits of steps 4 to 12, and its names start with `docs-demo-`. It comes from [Create a LEIA with the AI assistant](../teachers/designer/create-leia.md).
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../img/teachers/create-leia/create-leia-poster.webp').default}
+  aria-label="Video: creating the library interview LEIA with the AI assistant">
+  <source src={require('../img/teachers/create-leia/create-leia.mp4').default} type="video/mp4" />
+  Your browser cannot play this video. Follow the steps below.
+</video>
+
 1. Press **Design** in the sidebar of the Designer.
 2. Type the description of the interview in the message box and press **Send message**. The brief used here was
 
@@ -93,6 +107,20 @@ See [Replication settings](../teachers/workbench/replication-settings.md) and [L
 
 ## 4. During the class
 
+This video shows what your students do meanwhile in a replication of the same interview: they join with the code, interview Helen, send the diagram and read the evaluation (about 2 minutes, no sound, the waits for the AI are sped up). It comes from [What students see](../teachers/workbench/students.md).
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../img/teachers/students/student-session-poster.webp').default}
+  aria-label="Video: a student joins the library interview, talks to Helen and submits a diagram">
+  <source src={require('../img/teachers/students/student-session.mp4').default} type="video/mp4" />
+  Your browser cannot play this video. Follow the steps below.
+</video>
+
 1. Choose **Live** in the sub-menu of the replication and press **Open live dashboard**.
 2. Check who has started, how many messages each student has exchanged and the supervisor flags if you enabled one.
 3. To read a conversation as it happens, select the session and press **Watch live**. If you get "Failed to generate spectate link", read it in **Conversations** instead.
@@ -100,6 +128,20 @@ See [Replication settings](../teachers/workbench/replication-settings.md) and [L
 See [Live dashboard and spectating](../teachers/workbench/live-and-spectate.md).
 
 ## 5. Grade
+
+This video grades a replication of the same interview: the counters, one session with its evaluation, supervisor flags and rendered diagram, and the CSV (just over a minute, no sound). It comes from [Results, grading and export](../teachers/workbench/results-and-export.md).
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../img/teachers/results/conversations-poster.webp').default}
+  aria-label="Video: reading the sessions of the library interview and downloading the CSV">
+  <source src={require('../img/teachers/results/conversations.mp4').default} type="video/mp4" />
+  Your browser cannot play this video. Follow the steps below.
+</video>
 
 1. Choose **Conversations** in the sub-menu of the replication and press **Open conversations**.
 2. Click a session and read the transcript, the evaluation and the submitted diagram, which is rendered.
