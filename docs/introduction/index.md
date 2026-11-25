@@ -34,6 +34,20 @@ LEIA (Learning with an Educational Intelligent Assistant) is a platform that let
 
 This page gives the big picture. The [Teacher guide](../teachers/index.md) explains every screen, button and field, and the [Tutorials](../tutorials/create-leia/index.md) walk through complete examples. For questions and problems, join [LEIA Community on Telegram](https://t.me/leia_community). See [Help and support](../support.md).
 
+This one-minute video shows the whole cycle with short clips from the other videos of this documentation: designing a LEIA with the AI assistant, adding a code editor, building an activity, replicating it, a student session, the supervisor and the results. It has no sound.
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../img/introduction/leia-in-one-minute-poster.webp').default}
+  aria-label="Video: LEIA in one minute, from designing a LEIA to grading the results">
+  <source src={require('../img/introduction/leia-in-one-minute.mp4').default} type="video/mp4" />
+  Your browser cannot play this video.
+</video>
+
 ---
 
 ## 1. General Workflow
