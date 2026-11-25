@@ -154,6 +154,20 @@ You can keep talking to the assistant. "Make Helen more reluctant to give detail
 
 You can also click a card and edit the fields yourself. Edited components are marked as new, so a new persona, problem or behaviour is created when you finish, even if the assistant reused an existing one.
 
+This video loads a LEIA with **Design from this**, asks the assistant to make the character more reluctant to give details, edits the persona by hand and then leaves with **Discard and leave**, so nothing is saved (under a minute, no sound, the wait for the AI is sped up). The LEIA is `docs-demo-library-booking-system`, made for this documentation.
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../../img/teachers/create-leia/refine-poster.webp').default}
+  aria-label="Video: asking the AI assistant for a change and editing the persona by hand">
+  <source src={require('../../img/teachers/create-leia/refine.mp4').default} type="video/mp4" />
+  Your browser cannot play this video. Follow the steps below.
+</video>
+
 ### Ask the assistant for a change
 
 1. Type the request in the message box, for example "Make Helen more reluctant to give details".
