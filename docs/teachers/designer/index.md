@@ -27,6 +27,20 @@ Every role can browse, test and design from the library. **Add to activity** and
 
 The library is the home page of the Designer. It lists every LEIA you are allowed to see, which means the public ones plus your own. Each row is a LEIA, and the buttons on the row cover everything you can do with it without opening it.
 
+This video searches and filters the library, then goes through the buttons of one row, the View dialog, Test settings, labels and the Delete dialog (about 2 minutes, no sound). It uses `docs-demo-library-booking-system`, a LEIA made for this documentation. The label form and the Delete dialog are cancelled, so nothing is changed.
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../../img/teachers/library/library-tour-poster.webp').default}
+  aria-label="Video: searching and filtering the LEIA library and the buttons of a LEIA row">
+  <source src={require('../../img/teachers/library/library-tour.mp4').default} type="video/mp4" />
+  Your browser cannot play this video. Follow the steps below.
+</video>
+
 ## Find a LEIA
 
 1. Type a word in **Search by name or description** (1). The list refreshes a moment after you stop typing.
