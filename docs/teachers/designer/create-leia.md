@@ -180,21 +180,36 @@ See [Test a LEIA](test-leia.md).
 
 Everything you do on this screen is saved as a draft on the server about one second after each change. The draft holds the components, the names, the labels, the assistant conversation, its settings and the supervisor settings.
 
+This video saves a draft, reopens it from **Continue drafts** and deletes it, then deletes a draft left over after **Finish LEIA** (just over a minute, no sound). The drafts belong to the demo account and start with `docs-demo-`.
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../../img/teachers/create-leia/drafts-poster.webp').default}
+  aria-label="Video: saving a LEIA draft, resuming it and deleting drafts">
+  <source src={require('../../img/teachers/create-leia/drafts.mp4').default} type="video/mp4" />
+  Your browser cannot play this video. Follow the steps below.
+</video>
+
 ### Leave and keep your work
 
 1. Press **Go back** (8 in the workspace above).
-2. Press **Save draft and leave** (2).
+2. Press **Save draft and leave** (3).
 
 The library opens. Your draft waits in **Continue drafts**.
 
 ![Keep this LEIA draft dialog](../../img/teachers/create-leia/06-keep-draft-dialog.webp)
 
-When you press **Go back** the dialog **Keep this LEIA draft?** offers two choices.
+When you press **Go back** the dialog **Keep this LEIA draft?** offers three choices.
 
 | # | Button | What it does |
 |---|---|---|
-| 1 | **Continue editing** | Stays on the screen. |
-| 2 | **Save draft and leave** | Saves and returns to the library. |
+| 1 | **Discard and leave** | Deletes the draft and returns to the library. Use it when you only looked around. |
+| 2 | **Continue editing** | Stays on the screen. |
+| 3 | **Save draft and leave** | Saves and returns to the library. |
 
 Closing the browser tab shows the browser's own "leave page" warning. The draft is already saved, so leaving is safe.
 
