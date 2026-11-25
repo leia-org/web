@@ -27,6 +27,20 @@ The supervisor is a second language model that reads the conversation in the bac
 
 Typical uses are watching for students who ask the character for the answer instead of eliciting it, for leading questions in an interview, for off-topic chat or for rude language.
 
+This video adds a supervisor to a LEIA, replicates it, shows the nudge a student receives after asking for the solution, and ends with the flags the teacher reads in the Workbench (3 minutes, no sound, the waits for the AI are sped up). It uses `docs-demo-library-booking-supervised`, a LEIA made for this documentation.
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../../img/teachers/supervisor/supervisor-poster.webp').default}
+  aria-label="Video: adding a supervisor to a LEIA, replicating it, the nudge a student receives and the flags in the Workbench">
+  <source src={require('../../img/teachers/supervisor/supervisor.mp4').default} type="video/mp4" />
+  Your browser cannot play this video. Follow the steps below.
+</video>
+
 ## Enable and configure it
 
 The supervisor is configured in the **Review** step of the design screen, so it belongs to the LEIA. Every replication of that LEIA runs with the same supervisor settings.
