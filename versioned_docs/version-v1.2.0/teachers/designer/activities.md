@@ -9,6 +9,7 @@ keywords:
   - LEIA
   - activity
   - experiment
+  - stage
   - publish
   - replicate
   - transcription
@@ -23,16 +24,30 @@ authors:
 # Activities
 
 :::info Who can do this
-The **advanced** and **admin** roles. The **Activities** entry of the sidebar is hidden for instructors.
+The **advanced** and **admin** roles. The **Activities** entry of the sidebar is hidden for instructors. Only administrators can **Publish** an activity. Advanced users replicate their own activities without publishing them.
 :::
 
-An activity is the unit the Workbench runs. It groups one or more LEIAs, decides whether students get one LEIA each or talk to all of them at once, and once **published** it becomes available to the Workbench, where it is called an experiment.
+An activity is the unit the Workbench runs. It groups one or more LEIAs in one or more stages, and decides in each stage whether students get one LEIA each or talk to all of them at once. The Workbench creates replications from it, and there it is called an experiment.
 
 The simplest activity has one LEIA. You get one for free with **Quick replication** in the library or with **Quick Replication** in the success dialog of the design screen. This page is for the cases where you want to prepare the activity yourself.
 
+This video creates an activity, adds two LEIAs from the library and shows its stage and the mode of each LEIA (1.5 minutes, no sound). It was recorded with `demo-assistant@leia.com`, an advanced account made for this documentation, so the activity is not published.
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../../img/teachers/activities/create-activity-poster.webp').default}
+  aria-label="Video: creating an activity and adding two LEIAs to it from the library">
+  <source src={require('../../img/teachers/activities/create-activity.mp4').default} type="video/mp4" />
+  Your browser cannot play this video. Follow the steps below.
+</video>
+
 ## The activities page
 
-Open **Activities** in the sidebar.
+Open **Activities** in the sidebar. The page lists your own activities and every published activity of other users. Nobody sees the unpublished activities of other users.
 
 ### Create an activity
 
@@ -40,18 +55,18 @@ Open **Activities** in the sidebar.
 2. Type the **Activity Name** in the **Create New Activity** dialog.
 3. Press **Create Activity**.
 
-The empty activity appears in the list. "An activity with that name already exists" means you must choose another name.
+The empty activity appears at the end of the list, with one stage. Names are unique across all users: `An item with the name "..." already exists` means you must choose another one.
 
 ### Remove a LEIA from an activity
 
-1. Press the arrow (6) of the activity to expand it.
-2. Press **Delete LEIA** (9) on the LEIA. It happens at once, without confirmation.
+1. Press the arrow (7) of the activity to expand it.
+2. Press **Delete LEIA** (11) on the LEIA. It happens at once, without confirmation.
 
-The LEIA disappears from the activity and stays in the library.
+The LEIA disappears from the activity and stays in the library. If it leaves a MultiLEIA stage with a single LEIA, that stage goes back to **Single LEIA assignment**.
 
 ### Delete an activity
 
-1. Find the activity in the list. The search box (2) helps if you have many.
+1. Find the activity in the list. The search box (2) and **Ownership** (3) help if you have many.
 2. Press **Delete** (5). It happens at once, without confirmation.
 
 The activity disappears from the list.
@@ -60,15 +75,19 @@ The activity disappears from the list.
 
 | # | Control | What it does |
 |---|---|---|
-| 1 | **New Activity** | Asks for a name and creates an empty activity. Names are unique, "An activity with that name already exists" means you must choose another one. |
-| 2 | Search | Filters the activities already loaded by name. The page loads more activities as you scroll down. |
-| 3 | LEIA count | How many LEIAs the activity holds. A **MultiLEIA** chip appears next to it when the conversation flow is set to MultiLEIA, and a **Published** chip once the activity is published. |
-| 4 | **Publish** | Makes the activity available to the Workbench. Only before publishing. |
-| 5 | **Delete** | Deletes the activity immediately, without confirmation. Only before publishing. |
-| 6 | Arrow | Expands or collapses the activity to show its conversation flow and its LEIAs. |
-| 7 | Eye | Opens the read-only view of the LEIA. |
-| 8 | **Mode** | **standard** or **transcription**. See [Mode](#mode). |
-| 9 | **Delete LEIA** | Removes the LEIA from the activity, without confirmation. Only before publishing. |
+| 1 | **New Activity** | Asks for a name and creates an empty activity with one stage. Names are unique across all users. |
+| 2 | Search | Filters the activities by name. The page loads more activities as you scroll down. |
+| 3 | **Ownership** | **All available activities** shows yours and every published activity of other users. **My activities** shows only yours. |
+| 4 | LEIA count | How many LEIAs the activity holds. A **Published** chip appears next to it once the activity is published. |
+| 5 | **Delete** | Deletes the activity immediately, without confirmation. Only on your own unpublished activities. |
+| 6 | **Replicate** | Opens the activity in the Workbench to create a replication, published or not. See [Replicate an activity](#replicate-an-activity). |
+| 7 | Arrow | Expands or collapses the activity to show its stages and its LEIAs. |
+| 8 | **Stage** | The stage the LEIA belongs to. |
+| 9 | Eye | Opens the read-only view of the LEIA. |
+| 10 | **Mode** | **standard** or **transcription**. See [Mode](#mode). |
+| 11 | **Delete LEIA** | Removes the LEIA from the activity, without confirmation. Only before publishing. |
+
+Administrators also see a **Publish** button on their own unpublished activities. See [Publish an activity](#publish-an-activity).
 
 ## Add LEIAs
 
@@ -76,30 +95,34 @@ There is no add button inside the activity. LEIAs come from the library and from
 
 1. In the LEIA library, move the mouse over a row and press **Add to activity**. After finishing a LEIA you can press **Add to Activity** in the success dialog instead.
 2. Choose an activity in **Select an Activity** (1), or type a new name to create one on the spot.
-3. Press **Add to Activity** (2).
-4. Repeat for each LEIA of the activity.
+3. Choose the **Stage** (2). With a single stage it is already selected.
+4. Press **Add to Activity** (3).
+5. Repeat for each LEIA of the activity.
 
-Open **Activities** and expand the activity to see its LEIAs.
+Open **Activities** and expand the activity to see its LEIAs. From the success dialog of the design screen, the Designer opens **Activities** for you.
 
 ![Add to activity dialog](../../img/teachers/activities/02-add-to-activity.webp)
 
 | # | Control | What it does |
 |---|---|---|
-| 1 | **Select an Activity** | Lists your unpublished activities. Type a new name to create an activity on the spot, the dialog says "New activity ... will be created on confirm". |
-| 2 | **Add to Activity** | Adds the LEIA. |
+| 1 | **Select an Activity** | Lists your unpublished activities. Type a new name to create an activity on the spot, the dialog says "New activity “...” will be created on confirm". |
+| 2 | **Stage** | The stage that receives the LEIA. It lists the saved stages of the activity. |
+| 3 | **Add to Activity** | Adds the LEIA. |
 
-The same dialog opens from the **Add to activity** button of a library row and from the **Add to Activity** button of the success dialog after finishing a LEIA.
+A LEIA cannot change stage. To move it, remove it from the activity and add it again with the other stage.
 
 ## Each LEIA inside the activity
 
-Expand the activity to see its LEIAs. Each one has the eye icon, the **Mode** selector and, before publishing, the **Delete LEIA** button described above.
+Expand the activity to see its LEIAs. Each one has its **Stage** chip, the eye icon, the **Mode** selector and, before publishing, the **Delete LEIA** button described above.
 
 ### Mode
 
 | Mode | Meaning |
 |---|---|
 | **standard** | The student talks to the LEIA. |
-| **transcription** | The student reads a prepared conversation and cannot write. Good for analysis tasks such as "find the requirements in this interview". Not available in MultiLEIA activities. |
+| **transcription** | The student reads a prepared conversation and cannot write. Good for analysis tasks such as "find the requirements in this interview". |
+
+**transcription** is disabled, with a tooltip that says why, in a MultiLEIA stage, for a LEIA that uses the output of an earlier stage, and in a stage whose conversation a later stage uses.
 
 ### Transcription mode
 
@@ -159,67 +182,100 @@ Once a transcript is stored, the chip turns into **Chat Messages** and the eye i
 
 ## Conversation flow
 
+An activity is a list of stages, shown under **Activity stages** when you expand it. Students go through the stages in order and move on with **Continue to next stage** in the Workbench. A new activity has one stage, which is all most classes need. Each stage has its own **Conversation mode**.
+
+### Add, move or remove stages
+
+1. Expand the activity.
+2. Press **Add stage** (9). The new stage goes at the end.
+3. Change the order with **Move up** and **Move down** (2). **Remove stage** (3) deletes a stage; it is disabled while the stage has LEIAs and when it is the only one.
+4. Press **Save stages** (10).
+
+Nothing is kept until you press **Save stages**. There is no discard button: reload the page to throw your changes away. Save a new stage before adding LEIAs to it, because **Add to activity** only offers saved stages.
+
 ### Give each student one LEIA
 
 1. Expand the activity.
-2. Set **Activity mode** (1) to **Single LEIA assignment**.
-3. Press **Save flow** (6).
+2. Set the **Conversation mode** (4) of the stage to **Single LEIA assignment**. It is the default.
+3. Press **Save stages** (10) if you changed it.
 
-Each new student receives the LEIA with the fewest sessions so far.
+Each new student receives the LEIA of the stage with the fewest sessions so far.
 
 ### Put every LEIA in one conversation
 
-1. Check that the activity has at least two LEIAs, none in transcription mode, and that every behaviour has the same process.
+1. Check that the stage has at least two LEIAs, none in transcription mode, and that every behaviour has the same process as the shared problem.
 2. Expand the activity.
-3. Set **Activity mode** (1) to **MultiLEIA conversation**.
-4. Choose the **Preferred first LEIA** (2).
-5. Set the **Maximum LEIA messages per round** (3).
-6. Choose the **Shared problem** (4).
-7. Write the **Shared task** (5).
-8. Press **Save flow** (6).
+3. Set the **Conversation mode** (4) of the stage to **MultiLEIA conversation**. The option stays disabled while the stage has fewer than two LEIAs or one in transcription mode.
+4. Choose the **Preferred first LEIA** (5).
+5. Choose the **Shared problem** (6).
+6. Set the **Maximum LEIA messages per round** (7).
+7. Write the **Shared task** (8).
+8. Press **Save stages** (10).
 
-A **MultiLEIA** chip appears next to the LEIA count.
-
-![Conversation flow editor](../../img/teachers/activities/05-conversation-flow.webp)
+![Activity stages editor with a MultiLEIA stage](../../img/teachers/activities/05-activity-stages.webp)
 
 | # | Field | What it does |
 |---|---|---|
-| 1 | **Activity mode** | **Single LEIA assignment** gives each student one LEIA, chosen among those of the activity to balance the load. **MultiLEIA conversation** puts every LEIA in the same chat. |
-| 2 | **Preferred first LEIA** | In MultiLEIA, the character that opens the conversation by default. |
-| 3 | **Maximum LEIA messages per round** | How many LEIA messages may follow one student message, from 1 to 8. The default is 2. An orchestrator decides who speaks and may stop earlier. |
-| 4 | **Shared problem** | In MultiLEIA, the problem every character plays. It supplies the scenario, the widgets, the solution and the evaluation. The problems of the other LEIAs are ignored. |
-| 5 | **Shared task** | A paragraph every character knows, describing the common scenario and the objective. |
-| 6 | **Save flow** | Saves the choices. Enabled only after a change. |
+| 1 | Stage number | The position of the stage, followed by the names of its LEIAs, or "No LEIAs assigned". |
+| 2 | **Move up** / **Move down** | Change the order of the stages. |
+| 3 | **Remove stage** | Deletes the stage. Disabled while it has LEIAs or when it is the only stage. |
+| 4 | **Conversation mode** | **Single LEIA assignment** gives each student one LEIA of the stage, chosen to balance the load. **MultiLEIA conversation** puts every LEIA of the stage in the same chat. |
+| 5 | **Preferred first LEIA** | In MultiLEIA, the character that opens the conversation by default. |
+| 6 | **Shared problem** | In MultiLEIA, the LEIA whose problem every character plays. It supplies the scenario, the widgets, the solution and the evaluation. The problems of the other LEIAs are ignored. The list shows LEIA names. |
+| 7 | **Maximum LEIA messages per round** | How many LEIA messages may follow one student message, from 1 to 8. The default is 2. An orchestrator decides who speaks and may stop earlier. |
+| 8 | **Shared task** | A paragraph every character knows, describing the common scenario and the objective. |
+| 9 | **Add stage** | Adds a stage at the end. |
+| 10 | **Save stages** | Saves the stages. Enabled only after a change. |
 
-MultiLEIA needs at least two LEIAs, none in transcription mode, and every behaviour must have the same process as the shared problem. Otherwise the editor explains what is missing. Voice is not available in MultiLEIA replications.
+In a MultiLEIA stage, conversation dynamics such as **LEIA Speaks First** and the stopping condition, and the widgets of the problem, are ignored; the editor warns about it when one of the LEIAs uses them. Voice is not available in MultiLEIA replications.
 
 :::tip Several LEIAs without MultiLEIA
-With **Single LEIA assignment** and several LEIAs, each student is given the LEIA with the fewest sessions so far. Use it to spread a class across variants of the same exercise, for example two clients with different requirements.
+With **Single LEIA assignment** and several LEIAs in a stage, each student is given the LEIA with the fewest sessions so far. Use it to spread a class across variants of the same exercise, for example two clients with different requirements.
 :::
+
+### Use the output of an earlier stage
+
+A behaviour can quote what happened in an earlier stage with `{{previousStage.outputs.conversation}}`, the conversation, or `{{previousStage.outputs.submitedSolution}}`, the solution the student submitted. When a LEIA of stage 2 or later uses one of them, its stage shows **Source of conversation output** or **Source of submitted solution output**.
+
+1. Choose the earlier stage the output comes from.
+2. Press **Save stages** (10).
+
+A LEIA in the first stage cannot use them: the editor says "Move this stage after its source stage." Saving without a source is allowed, publishing is not, which is what "Choose an earlier stage before publishing the activity." means. A stage whose conversation a later stage uses cannot hold LEIAs in transcription mode.
 
 ## Publish and replicate
 
 ### Publish an activity
 
-1. Expand the activity and check its LEIAs, their modes and the conversation flow. They cannot change afterwards.
-2. Press **Publish** (4 in the activities page above). There is no confirmation dialog.
+Only administrators publish, and only their own activities.
 
-A **Published** chip (1) appears and the activity becomes available in the Workbench.
+1. Expand the activity and check its stages, its LEIAs and their modes. They cannot change afterwards.
+2. Press **Publish**. There is no confirmation dialog.
 
-### Replicate a published activity
+A **Published** chip (1) appears. Every advanced user now finds the activity under **All available activities** and can replicate it.
 
-1. Press **Replicate** (2). The activity opens in the Workbench.
-2. Create the replication. See [Create a replication](../workbench/index.md#create-a-replication).
+Publishing needs at least one LEIA in every stage, every LEIA published, a source for every output an earlier stage must supply, and valid MultiLEIA stages. Otherwise the page shows what is missing.
 
 ![Published activity](../../img/teachers/activities/06-published-card.webp)
 
 | # | Control | What it does |
 |---|---|---|
-| 1 | **Published** | The activity is frozen. LEIAs, modes, transcripts and the conversation flow cannot change any more. |
+| 1 | **Published** | The activity is frozen. Its stages, LEIAs, modes and transcripts cannot change any more. |
 | 2 | **Replicate** | Opens the activity in the Workbench, where you create a replication. See [Workbench overview](../workbench/index.md). |
 
 :::caution Publishing cannot be undone
-There is no confirmation dialog. Check the LEIAs and the flow before pressing **Publish**. To change a published activity, create a new one. A published activity cannot be deleted from the Designer either.
+There is no confirmation dialog. Check the stages and the LEIAs before pressing **Publish**. To change a published activity, create a new one. A published activity cannot be deleted from the Designer either.
 :::
 
-Publishing needs at least one LEIA. The LEIAs of a published activity cannot be deleted from the library while the activity exists.
+### Replicate an activity
+
+Advanced users do not publish. They replicate their own activities directly, and so can administrators before publishing.
+
+1. Press **Replicate** (6 in the activities page above). The Workbench opens the activity in a new tab, on the **Experiment preview** page.
+2. Press **Create Replication**.
+3. Type the **Replication Name** and press **Create**. The new replication opens.
+
+See [Create a replication](../workbench/index.md#create-a-replication) for the rest.
+
+The replication is a copy of the activity at that moment: later changes to the activity do not reach it. Replication names are unique across all users and the field starts with the name of the activity. If a replication with that name already exists, as it does after a **Quick replication**, **Create** does nothing visible, so type another name. An unpublished activity is not checked the way publishing checks it, so a missing LEIA or source shows up in the Workbench when the replication starts.
+
+A LEIA cannot be deleted from the library while it belongs to any activity, published or not. The library says "Cannot delete LEIA: it is being used in N activity/activities." Remove it from those activities first.
