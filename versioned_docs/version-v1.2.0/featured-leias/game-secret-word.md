@@ -30,6 +30,20 @@ authors:
 Press **Start session**, then **Continue Task**. Suggested first message: "Hi Timmy, let's play! Is the secret word a living thing?"
 :::
 
+This video plays the game from the Designer with **Test LEIA** instead of the demo link, so it ends in the **Solution Editor** of the test chat rather than with **Send Solution** (just over a minute, no sound, the waits for the AI are sped up).
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../img/featured-leias/secret-word-test-poster.webp').default}
+  aria-label="Video: playing the secret word game with Test LEIA and grading the guessed word">
+  <source src={require('../img/featured-leias/secret-word-test.mp4').default} type="video/mp4" />
+  Your browser cannot play this video.
+</video>
+
 ## What the student does
 
 The student asks closed questions and narrows the word down from Timmy's answers. When they think they know it, they say it in the chat. To close the activity they press **Go to Editor**, type the word and press **Send Solution**.
