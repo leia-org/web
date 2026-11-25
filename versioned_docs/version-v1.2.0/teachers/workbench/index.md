@@ -94,6 +94,20 @@ The filters offer **My activities only**, **Published** or **Unpublished** and t
 
 ## Create a replication
 
+This video creates a replication of an activity with two LEIAs, gives each LEIA a model and turns on **Active** and **Repeatable** with a 45-minute limit (just under 1.5 minutes, no sound). It uses `docs-demo-requirements-interviews`, an activity made for this documentation.
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../../img/teachers/workbench/create-replication-poster.webp').default}
+  aria-label="Video: creating a replication in the Workbench and configuring its LEIAs and switches">
+  <source src={require('../../img/teachers/workbench/create-replication.mp4').default} type="video/mp4" />
+  Your browser cannot play this video. Follow the steps below.
+</video>
+
 1. Press **New Replication** at the top right of the replications list, or choose **Experiments** in the sidebar.
 2. Click the experiment (1 in the experiments list above).
 3. Press **Create Replication from this Experiment** (3 in the experiments list above).
