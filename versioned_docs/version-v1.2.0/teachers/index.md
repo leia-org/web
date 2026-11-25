@@ -54,8 +54,8 @@ The same account works in both applications. Students never need an account. The
 
 | Term | Meaning |
 |---|---|
-| **Activity** | A group of one or more LEIAs prepared in the Designer for a class. The Workbench calls activities **experiments**. An activity must be **published** before the Workbench can see it, and a published activity cannot be changed any more. |
-| **Replication** | One run of an activity in the Workbench. It has its own join code, its own switches (active, repeatable, time limit, language) and its own results. You can create as many replications of a published activity as you need, one per class group for instance. |
+| **Activity** | A group of one or more LEIAs, in one or more stages, prepared in the Designer for a class. The Workbench calls activities **experiments**. You can replicate your own activities at any time. Administrators can also **publish** an activity so that every advanced user can replicate it, and a published activity cannot be changed any more. |
+| **Replication** | One run of an activity in the Workbench. It has its own join code, its own switches (active, repeatable, time limit, language) and its own results. You can create as many replications of an activity as you need, one per class group for instance. Each one is a copy of the activity at the moment you create it. |
 | **Session** | One student working on one replication. A session has a transcript, an optional submitted solution, an evaluation and a score. |
 | **Label** | A coloured tag you attach to LEIAs to find them later in the library. |
 | **Widget** | An extra panel the student sees next to the chat, such as a code editor that LEIA can read, edit and test. Widgets are part of the problem. |
@@ -69,7 +69,7 @@ The same account works in both applications. Students never need an account. The
 flowchart LR
   A[Design a LEIA<br/>Designer] --> B[Test it<br/>Designer]
   B --> C[Add it to an activity<br/>Designer]
-  C --> D[Publish the activity<br/>Designer]
+  C --> D[Replicate the activity<br/>Designer]
   D --> E[Create a replication<br/>Workbench]
   E --> F[Configure model, voice,<br/>timer and switches<br/>Workbench]
   F --> G[Share the code<br/>with students]
@@ -79,8 +79,8 @@ flowchart LR
 
 1. **Design.** Describe the activity to the AI assistant or start from an existing LEIA. Adjust the persona, behaviour and problem. See [Create a LEIA with the AI assistant](designer/create-leia.md).
 2. **Test.** Chat with your LEIA and try the solution editor before any student sees it. See [Test a LEIA](designer/test-leia.md).
-3. **Group and publish.** Put the LEIA in an activity, optionally with other LEIAs, and publish it. See [Activities](designer/activities.md).
-4. **Replicate.** In the Workbench, create a replication of the published activity and configure it. See [Workbench overview](workbench/index.md) and [Replication settings](workbench/replication-settings.md).
+3. **Group.** Put the LEIA in an activity, optionally with other LEIAs. Only administrators publish activities; you do not need to. See [Activities](designer/activities.md).
+4. **Replicate.** Press **Replicate** on the activity, create the replication in the Workbench and configure it. See [Replicate an activity](designer/activities.md#replicate-an-activity), [Workbench overview](workbench/index.md) and [Replication settings](workbench/replication-settings.md).
 5. **Run.** Activate the replication and give students the code or the link. See [What students see](workbench/students.md).
 6. **Follow and grade.** Watch sessions live, read transcripts, check the automatic evaluation and download a CSV. See [Live dashboard and spectating](workbench/live-and-spectate.md) and [Results, grading and export](workbench/results-and-export.md).
 
