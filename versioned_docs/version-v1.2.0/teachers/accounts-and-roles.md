@@ -105,7 +105,7 @@ The replications list opens. An instructor account stays on the page with the me
 | 1 | **LEIA library** | The home page. Search, test and design LEIAs. See [The LEIA library](designer/index.md). |
 | 2 | **Continue drafts** | LEIAs you started designing and did not finish. See [Drafts](designer/create-leia.md#drafts-and-autosave). |
 | 3 | **Design** | Starts a new LEIA. See [Create a LEIA with the AI assistant](designer/create-leia.md). |
-| 4 | **Activities** | Groups of LEIAs ready to be published. Only visible to the advanced and admin roles. See [Activities](designer/activities.md). |
+| 4 | **Activities** | Groups of LEIAs that you replicate in the Workbench. Only visible to the advanced and admin roles. See [Activities](designer/activities.md). |
 | 5 | **Profile** | Your email, your role and the password change form. |
 | 6 | **API keys** | Language model keys. See [API keys and models](api-keys.md). |
 | 7 | **Logout** | Ends the session. |
@@ -156,7 +156,8 @@ The **My LEIAs** link currently returns to the library.
 | Create or edit behaviours | no | yes | yes |
 | Create LEIAs with the AI assistant | see note | yes | yes |
 | Add labels to your own LEIAs | yes | yes | yes |
-| Manage activities, add LEIAs to them, publish them | no | yes | yes |
+| Manage activities, add LEIAs to them, replicate them | no | yes | yes |
+| Publish activities | no | no | yes |
 | Quick replication from the library | no | yes | yes |
 | Sign in to the Workbench, create replications, see results | no | yes | yes |
 | Add your own API keys | yes | yes | yes |

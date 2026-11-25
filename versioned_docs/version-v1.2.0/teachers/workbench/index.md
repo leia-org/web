@@ -23,7 +23,7 @@ authors:
 The **advanced** and **admin** roles. Instructors are refused at the Workbench sign-in with "Instructors cannot access workbench administration."
 :::
 
-The Workbench is where activities meet students. You create a **replication** of a published activity, configure how it runs, share its code, follow the sessions and read the results. Students use the same site through a different door, the student login at the root of [workbench.leia.ovh](https://workbench.leia.ovh).
+The Workbench is where activities meet students. You create a **replication** of an activity, configure how it runs, share its code, follow the sessions and read the results. Students use the same site through a different door, the student login at the root of [workbench.leia.ovh](https://workbench.leia.ovh).
 
 ## Sign in
 
@@ -80,7 +80,7 @@ The list is sorted by last update and loads ten more replications each time you 
 
 ## Experiments
 
-Experiments are the activities published in the Designer. The Workbench does not edit them, it copies them into replications.
+Experiments are the activities of the Designer: your own, published or not, and every activity other users have published. The Workbench does not edit them, it copies them into replications.
 
 ![Experiments list](../../img/teachers/workbench/03-experiments.webp)
 
@@ -90,7 +90,7 @@ Experiments are the activities published in the Designer. The Workbench does not
 | 2 | Detail panel | Owner, number of LEIAs, modes and dates. |
 | 3 | **Create Replication from this Experiment** | Opens the preview to confirm. |
 
-The filters offer **Published** or **Unpublished** and the modes found in the list. Unpublished activities appear but cannot be replicated.
+The filters offer **My activities only**, **Published** or **Unpublished** and the modes found in the list. The unpublished ones are your own, and you can replicate them too.
 
 ## Create a replication
 
@@ -107,7 +107,7 @@ The workspace of the new replication opens. **Replicate** in the Designer takes 
 
 | # | Control | What it does |
 |---|---|---|
-| 1 | Preview | The activity as the Designer stored it, in JSON. Scroll it to check the LEIAs and the conversation flow before you replicate. |
+| 1 | Preview | The activity as the Designer stored it, in JSON. Scroll it to check the LEIAs and the stages before you replicate. |
 | 2 | **Create Replication** | Opens the naming dialog. |
 | 3 | **Go back** | Returns to the experiments list. |
 
@@ -122,7 +122,7 @@ The workspace of the new replication opens. **Replicate** in the Designer takes 
 A replication starts **inactive**, **not repeatable**, **untimed** and in English. Its LEIAs are preconfigured with your default API key, but the model must be chosen and saved in every LEIA before the replication can be activated. See [LEIA settings in a replication](leia-settings.md#runner). Everything else is adjustable in the workspace.
 
 :::tip The short way
-**Quick replication** in the Designer library does all of this for a single LEIA in one click, including publishing an activity named after the LEIA. Use the Workbench route when an activity has several LEIAs or when you want several replications of the same activity.
+**Quick replication** in the Designer library does all of this for a single LEIA in one click, including an activity named after the LEIA. Use the Workbench route when an activity has several LEIAs or when you want several replications of the same activity.
 :::
 
 ## The replication workspace

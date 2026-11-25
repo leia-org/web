@@ -96,6 +96,6 @@ If you find a problem that is not in this list, report it in [LEIA Community on 
 
 - A few dialogs and messages of the interface are in Spanish, for example the confirmation when you mark a key as default.
 - The **Language** field of a replication has an edit button labelled **Rename**.
-- Deleting an activity, removing a LEIA from an activity and publishing an activity happen without a confirmation dialog.
+- Deleting an activity and removing a LEIA from an activity happen without a confirmation dialog, and so does publishing one, which only administrators can do.
 - Some links of the Designer, such as **My LEIAs** in the profile, lead back to the library.
 - The student login form does not check that the email address is valid.

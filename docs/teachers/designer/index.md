@@ -101,7 +101,7 @@ The replication opens in the Workbench in a new tab. It starts inactive, so foll
 | 6 | **Test LEIA** | Starts a test conversation immediately with your default key and its model. See [Test a LEIA](test-leia.md). |
 | 7 | **Test settings** | Lets you choose the model and the key before testing. Hidden when you have no active key. |
 | 8 | **Add to activity** | Adds the LEIA to one of your unpublished activities, or to a new one you name on the spot. See [Activities](activities.md). |
-| 9 | **Quick replication** | Creates an activity with this single LEIA, publishes it, creates a replication in the Workbench and opens that replication in a new tab. The activity and the replication get the name of the LEIA. The fastest way from a LEIA to a class. |
+| 9 | **Quick replication** | Creates an activity with this single LEIA, creates a replication in the Workbench and opens that replication in a new tab. The activity and the replication get the name of the LEIA. The activity is published only when an administrator does it. The fastest way from a LEIA to a class. |
 | 10 | **Delete** | Removes the LEIA after you type its name. Refused while an activity uses it. |
 
 If a quick replication fails because an activity with that name already exists, a dialog named **Replicate activity** proposes the same name with the suffix `-v2`. Change it if you like and press **Replicate**.
