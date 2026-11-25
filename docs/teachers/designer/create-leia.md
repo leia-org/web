@@ -32,6 +32,20 @@ If you want a new exercise similar to one that already exists, start from a [fea
 
 This page follows the creation of a complete LEIA from a one-paragraph description, and explains every control of the design screen on the way. The example is a requirements interview with Helen Park, the manager of a small university library. Expect fifteen minutes the first time.
 
+This video shows the same example from start to finish. It goes through the brief, the assistant writing the persona, the behaviour and the problem, a short [test chat](#test-before-saving) and **Finish LEIA** (2.5 minutes, no sound, the waits for the AI are sped up). Its names start with `docs-demo-` because it was made for this documentation.
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../../img/teachers/create-leia/create-leia-poster.webp').default}
+  aria-label="Video: creating a LEIA with the AI assistant, testing it and finishing it">
+  <source src={require('../../img/teachers/create-leia/create-leia.mp4').default} type="video/mp4" />
+  Your browser cannot play this video. Follow the steps below.
+</video>
+
 ## Before you start
 
 - You need an **OpenAI** key, yours or a system key. The assistant and the supervisor only work with OpenAI. See [API keys and models](../api-keys.md).
