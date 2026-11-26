@@ -36,6 +36,20 @@ This page is the reference for the three editors that open when you click a comp
 
 Text between double braces, such as `{{persona.firstName}}`, is a placeholder that is filled in when the three components are combined. Placeholders are highlighted in purple in the editors. See [Placeholders](#placeholders).
 
+This video opens the three editors of `docs-demo-library-booking-system`, a LEIA made for this documentation, after **Design from this**: the persona and its JSON view, the problem with the PDF button, the Mermaid preview and the solution formats, and the behaviour with its placeholders (under 2 minutes, no sound). Every editor is closed with **Cancel** and the design is discarded, so nothing changes.
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../../img/teachers/components/editors-tour-poster.webp').default}
+  aria-label="Video: the persona, problem and behaviour editors of the design screen">
+  <source src={require('../../img/teachers/components/editors-tour.mp4').default} type="video/mp4" />
+  Your browser cannot play this video. Read the sections below.
+</video>
+
 ## Persona
 
 The persona is the character. Everything here is about who the character is, not about the exercise.

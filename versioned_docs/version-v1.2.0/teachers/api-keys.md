@@ -46,6 +46,20 @@ The list of models offered for each provider is maintained by the platform, so i
 
 Open **API keys** in the sidebar of the Designer. The Workbench has the same page under **API Keys**, and both show the same list.
 
+This video opens the page, reads the two system keys of a demo account and fills the **New API key** form without saving it (one minute, no sound). The masked key values are blurred in the video.
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../img/teachers/api-keys/api-keys-tour-poster.webp').default}
+  aria-label="Video: the API keys page and the New API key form">
+  <source src={require('../img/teachers/api-keys/api-keys-tour.mp4').default} type="video/mp4" />
+  Your browser cannot play this video. Follow the steps below.
+</video>
+
 ### Mark a key as default
 
 1. Press the star (4) of the key.

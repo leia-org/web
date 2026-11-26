@@ -29,6 +29,20 @@ The owner of the replication, administrators and anyone with its share link. Edi
 
 The **Conversations** section of a replication is where you read what happened, check the automatic evaluation, change a score and download everything. Sessions started with **Test session** are not listed and are not exported. Sessions started with the **Demo / test link** are listed and exported like any student session, under a `demo…@test.com` address, so skip those rows if you demonstrated the activity that way.
 
+This video opens the conversations of a replication, reads one session with its evaluation, supervisor flags and submitted diagram, and downloads the CSV (just over a minute, no sound). It uses the replication `docs-demo-library-booking-supervised` and two demo student sessions, all made for this documentation.
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../../img/teachers/results/conversations-poster.webp').default}
+  aria-label="Video: opening the conversations of a replication, reading a session and downloading the CSV">
+  <source src={require('../../img/teachers/results/conversations.mp4').default} type="video/mp4" />
+  Your browser cannot play this video. Follow the steps below.
+</video>
+
 ## The conversations page
 
 ### Open the results

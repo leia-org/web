@@ -29,7 +29,7 @@ In a MultiLEIA activity the student talks to several characters in the same chat
 
 - An account with the advanced role.
 - An OpenAI key or a system key.
-- Two or more LEIAs with the **same process**. They may share the problem or not, only one problem is used.
+- Two or more LEIAs whose behaviours have the **same process** as the problem you will share. They may share the problem or not, only one problem is used.
 
 ## 1. Design the characters
 
@@ -49,28 +49,27 @@ The library lists one LEIA per character.
 
 ## 2. Build the activity
 
-1. Open **Activities** and press **New Activity**. Name it, for example `Library booking requirements meeting`.
-2. In the library press **Add to activity** on each LEIA and choose the activity.
-3. Back in **Activities**, expand the activity and find **Conversation flow**.
-4. Fill in the fields with the values below.
-5. Press **Save flow** and check that no warning remains.
-6. Press **Publish**. There is no confirmation and it cannot be undone.
+1. Open **Activities** and press **New Activity**. Name it, for example `Library booking requirements meeting`. Names are unique across all users.
+2. In the library press **Add to activity** on each LEIA, choose the activity and keep **Stage 1**.
+3. Back in **Activities**, expand the activity. Under **Activity stages**, stage 1 lists both LEIAs.
+4. Set the **Conversation mode** of the stage to **MultiLEIA conversation** and fill in the fields with the values below.
+5. Press **Save stages** and check that no error appears.
 
-The activity shows the **Published** chip and the **Replicate** button. See [Activities](../teachers/designer/activities.md#conversation-flow).
+The activity is ready to replicate. Administrators may also press **Publish** so that every advanced user can replicate it; there is no confirmation and it cannot be undone. See [Put every LEIA in one conversation](../teachers/designer/activities.md#put-every-leia-in-one-conversation).
 
-![Conversation flow editor](../img/teachers/activities/05-conversation-flow.webp)
+![Activity stages editor with a MultiLEIA stage](../img/teachers/activities/05-activity-stages.webp)
 
 | Field | Value for this scenario |
 |---|---|
-| **Activity mode** | **MultiLEIA conversation** |
+| **Conversation mode** | **MultiLEIA conversation** |
 | **Preferred first LEIA** | Helen, the client who opens the meeting |
 | **Maximum LEIA messages per round** | 2, so both characters may react to one question |
-| **Shared problem** | Helen's LEIA, whose problem has the solution and the evaluation |
+| **Shared problem** | Helen's LEIA, whose problem has the solution and the evaluation. The list shows LEIA names |
 | **Shared task** | "A requirements meeting for the library booking web application. Helen represents the library, Omar represents IT. The student must gather the requirements and the constraints of both sides." |
 
 ## 3. Replicate and configure
 
-1. Press **Replicate** on the published activity. The Workbench opens.
+1. Press **Replicate** on the activity. The Workbench opens it in a new tab.
 2. Press **Create Replication**, type the **Replication Name** and press **Create**.
 3. Choose **LEIAs** in the sub-menu of the replication. A **MultiLEIA activity** banner summarises the flow.
 4. Open each LEIA, set its **Model** and **API key**, leave **Audio mode** on **None** and press **Save**. Without a model and a key on every LEIA the replication cannot be activated, and voice is not available in MultiLEIA.
@@ -93,4 +92,5 @@ At the end the student submits the solution of the shared problem and the evalua
 - Keep the number of characters small. Three is already a lot for a student to manage.
 - Give the characters visible disagreements. The orchestrator uses roles to decide who speaks, and conflicting roles make for a richer meeting.
 - The supervisor is configured per LEIA, not per activity. If you rely on its flags, run a **Test MultiLEIA** session first and check that they appear in the Live dashboard.
-- The conversation flow and the list of LEIAs freeze when you publish. Prepare a second activity if you want to try another combination.
+- A replication is a copy of the activity at the moment you create it. Later changes to the stages or the LEIAs of the activity do not reach it, so create a new replication after changing them. A published activity cannot change at all; prepare a second one to try another combination.
+- In a MultiLEIA stage, **LEIA Speaks First**, the stopping condition and the widgets of the problem are ignored.

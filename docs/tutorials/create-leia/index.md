@@ -29,6 +29,20 @@ If you want a new exercise similar to one that already exists, start from a [fea
 
 The fastest way to get a LEIA of your own is to start from one that already exists, change the character and the exercise, and save the result under a new name. You will reuse the behaviour, which is the part that tells the language model how to act, and you will only touch what makes your version different.
 
+This video follows the same path with the featured LEIA `re-inf-tickets`: **Design from this**, a new persona and problem, a short test and **Finish LEIA** (just under 3 minutes, no sound, the waits for the AI are sped up). It is the video of [Your own LEIA from a featured one](../create-from-featured.md), so it starts at **Design from this** instead of the search of step 1 and also edits the problem in the Code Editor. Its persona and problem are called `docs-demo-fithub-owner` and `docs-demo-fithub-membership`.
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../../img/tutorials/create-from-featured/from-featured-poster.webp').default}
+  aria-label="Video: a new LEIA from the featured LEIA re-inf-tickets with Design from this">
+  <source src={require('../../img/tutorials/create-from-featured/from-featured.mp4').default} type="video/mp4" />
+  Your browser cannot play this video. Follow the steps below.
+</video>
+
 ## 1. Pick a LEIA to start from
 
 1. Open the [LEIA library](../../teachers/designer/index.md).

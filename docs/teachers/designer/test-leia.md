@@ -25,6 +25,20 @@ Every role can test any LEIA it can see, with its own keys or with the system ke
 
 Testing means talking to the LEIA yourself, submitting a solution and reading the automatic evaluation, exactly as a student would but without leaving the Designer. Test sessions are private and never appear in the Workbench results.
 
+This video tests a LEIA from the library with **Test settings**, asks two questions, one of them for the solution, and evaluates an incomplete and a complete diagram in the **Solution Editor** (just under 2 minutes, no sound, the waits for the AI are sped up). It uses `docs-demo-fithub-membership`, a LEIA made for this documentation.
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../../img/teachers/test-leia/test-leia-poster.webp').default}
+  aria-label="Video: testing a LEIA from the library, chatting with it and evaluating two solutions">
+  <source src={require('../../img/teachers/test-leia/test-leia.mp4').default} type="video/mp4" />
+  Your browser cannot play this video. Follow the steps below.
+</video>
+
 ## Start a test
 
 There are three ways to start.

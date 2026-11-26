@@ -32,6 +32,20 @@ If you want a new exercise similar to one that already exists, start from a [fea
 
 This page follows the creation of a complete LEIA from a one-paragraph description, and explains every control of the design screen on the way. The example is a requirements interview with Helen Park, the manager of a small university library. Expect fifteen minutes the first time.
 
+This video shows the same example from start to finish. It goes through the brief, the assistant writing the persona, the behaviour and the problem, a short [test chat](#test-before-saving) and **Finish LEIA** (2.5 minutes, no sound, the waits for the AI are sped up). Its names start with `docs-demo-` because it was made for this documentation.
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../../img/teachers/create-leia/create-leia-poster.webp').default}
+  aria-label="Video: creating a LEIA with the AI assistant, testing it and finishing it">
+  <source src={require('../../img/teachers/create-leia/create-leia.mp4').default} type="video/mp4" />
+  Your browser cannot play this video. Follow the steps below.
+</video>
+
 ## Before you start
 
 - You need an **OpenAI** key, yours or a system key. The assistant and the supervisor only work with OpenAI. See [API keys and models](../api-keys.md).
@@ -140,6 +154,20 @@ You can keep talking to the assistant. "Make Helen more reluctant to give detail
 
 You can also click a card and edit the fields yourself. Edited components are marked as new, so a new persona, problem or behaviour is created when you finish, even if the assistant reused an existing one.
 
+This video loads a LEIA with **Design from this**, asks the assistant to make the character more reluctant to give details, edits the persona by hand and then leaves with **Discard and leave**, so nothing is saved (under a minute, no sound, the wait for the AI is sped up). The LEIA is `docs-demo-library-booking-system`, made for this documentation.
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../../img/teachers/create-leia/refine-poster.webp').default}
+  aria-label="Video: asking the AI assistant for a change and editing the persona by hand">
+  <source src={require('../../img/teachers/create-leia/refine.mp4').default} type="video/mp4" />
+  Your browser cannot play this video. Follow the steps below.
+</video>
+
 ### Ask the assistant for a change
 
 1. Type the request in the message box, for example "Make Helen more reluctant to give details".
@@ -166,21 +194,36 @@ See [Test a LEIA](test-leia.md).
 
 Everything you do on this screen is saved as a draft on the server about one second after each change. The draft holds the components, the names, the labels, the assistant conversation, its settings and the supervisor settings.
 
+This video saves a draft, reopens it from **Continue drafts** and deletes it, then deletes a draft left over after **Finish LEIA** (just over a minute, no sound). The drafts belong to the demo account and start with `docs-demo-`.
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../../img/teachers/create-leia/drafts-poster.webp').default}
+  aria-label="Video: saving a LEIA draft, resuming it and deleting drafts">
+  <source src={require('../../img/teachers/create-leia/drafts.mp4').default} type="video/mp4" />
+  Your browser cannot play this video. Follow the steps below.
+</video>
+
 ### Leave and keep your work
 
 1. Press **Go back** (8 in the workspace above).
-2. Press **Save draft and leave** (2).
+2. Press **Save draft and leave** (3).
 
 The library opens. Your draft waits in **Continue drafts**.
 
 ![Keep this LEIA draft dialog](../../img/teachers/create-leia/06-keep-draft-dialog.webp)
 
-When you press **Go back** the dialog **Keep this LEIA draft?** offers two choices.
+When you press **Go back** the dialog **Keep this LEIA draft?** offers three choices.
 
 | # | Button | What it does |
 |---|---|---|
-| 1 | **Continue editing** | Stays on the screen. |
-| 2 | **Save draft and leave** | Saves and returns to the library. |
+| 1 | **Discard and leave** | Deletes the draft and returns to the library. Use it when you only looked around. |
+| 2 | **Continue editing** | Stays on the screen. |
+| 3 | **Save draft and leave** | Saves and returns to the library. |
 
 Closing the browser tab shows the browser's own "leave page" warning. The draft is already saved, so leaving is safe.
 
@@ -277,6 +320,6 @@ Instructors only see **Go to LEIAs**.
 ## What to do next
 
 - Test the LEIA from the library with the model your students will use. See [Test a LEIA](test-leia.md).
-- Put it in an activity and publish it. See [Activities](activities.md).
+- Put it in an activity and press **Replicate**, or use **Quick replication** in the library. See [Activities](activities.md#replicate-an-activity).
 - Open the Workbench and create a replication. See [Workbench overview](../workbench/index.md).
 - To type the persona, the behaviour and the problem yourself instead of asking the assistant, administrators can follow [A LEIA by hand, without the assistant](../../tutorials/create-from-scratch.md).

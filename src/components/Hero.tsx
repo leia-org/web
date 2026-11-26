@@ -2,35 +2,44 @@ import React from 'react'
 import Link from '@docusaurus/Link'
 import { useBaseUrlUtils } from '@docusaurus/useBaseUrl'
 import { ArrowRight, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import universities from '../data/universities.json'
 import leias from '../data/leias.json'
-import FromPrebuiltComponentsGif from '../../static/gifs/FromPrebuiltComponents.gif'
-import DesignUsingExistingLEIAsGif from '../../static/gifs/DesignFromThis.gif'
-import ReplicateGif from '../../static/gifs/Replicate.gif'
-import StudentsGif from '../../static/gifs/Students.gif'
+
+// Short looping clips cut from the docs demo videos; the files live in static/landing-clips.
+type Clip = { src: string; poster: string; label: string }
+
 const Hero: React.FC = () => {
   const { withBaseUrl } = useBaseUrlUtils()
+  const reduceMotion = useReducedMotion()
+  const clip = (name: string, label: string): Clip => ({
+    src: withBaseUrl(`/landing-clips/${name}.mp4`),
+    poster: withBaseUrl(`/landing-clips/${name}-poster.webp`),
+    label,
+  })
   const universityItems = universities as Array<{ name: string; icon: string }>
   const leiasItems = leias as Array<{ name: string; description: string; image: string; link: string }>
-  const featureTemplates = [
+  const featureTemplates: Array<{ id: number; title: string; description: string; gifs: Clip[] }> = [
     {
       id: 1,
       title: 'Design your LEIA',
-      description: 'You can create your own from pre-built components or design it using existing LEIAs, you can also try your new LEIA and then add it to an activity.',
-      gifs: [FromPrebuiltComponentsGif, DesignUsingExistingLEIAsGif],
-    },    
+      description: 'Describe your activity to the AI assistant and it writes the character, its behaviour and the exercise for you, or start from an existing LEIA with Design from this. Then test your LEIA and add it to an activity.',
+      gifs: [
+        clip('design-assistant', 'The AI assistant writing a new LEIA'),
+        clip('design-from-this', 'A new LEIA started from an existing one with Design from this'),
+      ],
+    },
     {
       id: 2,
       title: 'Configure your Activity',
-      description: 'Now you can replicate your activity and customize the LEIA configuration, such as the LLM provider and submission and evaluation settings.',
-      gifs: [ReplicateGif],
+      description: 'Replicate the activity in the Workbench for your class: choose the model of each LEIA, ask for a solution and grade it automatically, set a time limit and share the code with your students.',
+      gifs: [clip('configure-replication', 'A replication being created and configured in the Workbench')],
     },
     {
       id: 3,
       title: 'Interaction with the LEIA',
-      description: 'Students can interact with the LEIA in a deeply immersive way using natural language and submit their answers, which will be automatically graded with feedback provided.',
-      gifs: [StudentsGif],
+      description: 'Students join with a code, talk to the LEIA in natural language and submit their answers, which are graded automatically with feedback.',
+      gifs: [clip('student-session', 'A student talking to the LEIA, submitting a diagram and reading the evaluation')],
     },
   ]
   const [activeGifByTemplate, setActiveGifByTemplate] = React.useState<Record<number, number>>(
@@ -248,12 +257,18 @@ const Hero: React.FC = () => {
                     <div className="relative w-full rounded-xl overflow-hidden shadow-md group">
                       <div className="relative h-52 md:h-56">
                         <AnimatePresence mode="sync" initial={false}>
-                          <motion.img
+                          <motion.video
                             key={`${template.id}-${activeGifByTemplate[template.id] ?? 0}`}
-                            src={template.gifs[activeGifByTemplate[template.id] ?? 0]}
-                            alt={`${template.title} preview`}
-                            className="absolute inset-0 w-full h-full object-cover"
-                            loading="lazy"
+                            src={template.gifs[activeGifByTemplate[template.id] ?? 0].src}
+                            poster={template.gifs[activeGifByTemplate[template.id] ?? 0].poster}
+                            aria-label={template.gifs[activeGifByTemplate[template.id] ?? 0].label}
+                            className="absolute inset-0 w-full h-full object-cover bg-white"
+                            autoPlay={!reduceMotion}
+                            controls={!!reduceMotion}
+                            loop
+                            muted
+                            playsInline
+                            preload={reduceMotion ? 'none' : 'auto'}
                             initial={{ opacity: 0, scale: 1.01 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.99 }}

@@ -29,6 +29,20 @@ A widget is an extra panel mounted next to the chat. The platform currently offe
 
 Widgets belong to the **problem**. They are configured in the **Activity setup** panel of the design screen, and the same panel appears at the bottom of the problem editor.
 
+This video adds the editor to a new LEIA, configures its problem, tests and tools, and tries it as a student (under 3 minutes, no sound, the waits for the AI are sped up). The LEIA in it, `docs-demo-palindrome-js-tutor`, was made for this documentation and is not in the library.
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../../img/teachers/widgets/editor-widget-poster.webp').default}
+  aria-label="Video: adding the code editor widget to a LEIA, configuring its tests and tools, and testing it">
+  <source src={require('../../img/teachers/widgets/editor-widget.mp4').default} type="video/mp4" />
+  Your browser cannot play this video. Follow the steps below.
+</video>
+
 ## Add the editor
 
 1. Open the design screen of a LEIA that already has a problem. **Add widget** (1) appears in the **Activity setup** panel.

@@ -27,6 +27,20 @@ Students need no account. Teachers can walk the same path with the **Demo / test
 
 This page follows a student from the join code to the end of the session, so you know what to explain in class and what each switch of the replication changes on their screen.
 
+This video follows one student through a whole session, from the join code to the evaluation (about 2 minutes, no sound, the waits for the AI are sped up). It uses the replication `docs-demo-library-booking-supervised` and the identifier `docs-demo-maria@example.com`, both made for this documentation.
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../../img/teachers/students/student-session-poster.webp').default}
+  aria-label="Video: a student joins a replication, talks to the LEIA, submits a diagram and reads the evaluation">
+  <source src={require('../../img/teachers/students/student-session.mp4').default} type="video/mp4" />
+  Your browser cannot play this video. Follow the steps below.
+</video>
+
 ## Steps to give your students
 
 Copy this list into your course page and add the link or the code.

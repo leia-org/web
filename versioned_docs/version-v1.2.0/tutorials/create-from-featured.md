@@ -30,6 +30,20 @@ The [featured LEIAs](../featured-leias/index.md) are the nine LEIAs the LEIA tea
 
 This tutorial does it end to end. It starts from the [ticket platform requirements](../featured-leias/re-inf-tickets.md) LEIA, where students interview a theater owner, and turns it into an interview with the owner of a gym chain about a membership app. Every screenshot comes from that run.
 
+This video does the same steps up to **Finish LEIA**, including the overrides in the Code Editor and a short test (just under 3 minutes, no sound, the waits for the AI are sped up). It was recorded in a separate run, so its persona and problem are called `docs-demo-fithub-owner` and `docs-demo-fithub-membership`.
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../img/tutorials/create-from-featured/from-featured-poster.webp').default}
+  aria-label="Video: creating your own LEIA from the featured LEIA re-inf-tickets with Design from this">
+  <source src={require('../img/tutorials/create-from-featured/from-featured.mp4').default} type="video/mp4" />
+  Your browser cannot play this video. Follow the steps below.
+</video>
+
 ## Which featured LEIA to start from
 
 Keep the behaviour: it is the part that tells the language model how to act, and the featured behaviours have been tuned in class. Change the persona and the problem, or only the problem.

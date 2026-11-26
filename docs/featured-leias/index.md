@@ -72,3 +72,17 @@ Featured LEIAs are public, so every teacher account can build on them:
 3. In the Workbench, adjust the [replication settings](../teachers/workbench/replication-settings.md) and the [LEIA settings](../teachers/workbench/leia-settings.md): model, voice, automatic evaluation.
 
 The coding LEIAs need an OpenAI model, because the code editor relies on tool calls. See the [code editor widget](../teachers/designer/widgets.md).
+
+Before you build on one, you can play any featured LEIA from the library with **Test LEIA**. This video does it with the secret word game (just over a minute, no sound, the waits for the AI are sped up).
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../img/featured-leias/secret-word-test-poster.webp').default}
+  aria-label="Video: testing the featured secret word game from the LEIA library">
+  <source src={require('../img/featured-leias/secret-word-test.mp4').default} type="video/mp4" />
+  Your browser cannot play this video.
+</video>

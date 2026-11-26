@@ -27,6 +27,20 @@ Every role can browse, test and design from the library. **Add to activity** and
 
 The library is the home page of the Designer. It lists every LEIA you are allowed to see, which means the public ones plus your own. Each row is a LEIA, and the buttons on the row cover everything you can do with it without opening it.
 
+This video searches and filters the library, then goes through the buttons of one row, the View dialog, Test settings, labels and the Delete dialog (about 2 minutes, no sound). It uses `docs-demo-library-booking-system`, a LEIA made for this documentation. The label form and the Delete dialog are cancelled, so nothing is changed.
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../../img/teachers/library/library-tour-poster.webp').default}
+  aria-label="Video: searching and filtering the LEIA library and the buttons of a LEIA row">
+  <source src={require('../../img/teachers/library/library-tour.mp4').default} type="video/mp4" />
+  Your browser cannot play this video. Follow the steps below.
+</video>
+
 ## Find a LEIA
 
 1. Type a word in **Search by name or description** (1). The list refreshes a moment after you stop typing.
@@ -101,7 +115,7 @@ The replication opens in the Workbench in a new tab. It starts inactive, so foll
 | 6 | **Test LEIA** | Starts a test conversation immediately with your default key and its model. See [Test a LEIA](test-leia.md). |
 | 7 | **Test settings** | Lets you choose the model and the key before testing. Hidden when you have no active key. |
 | 8 | **Add to activity** | Adds the LEIA to one of your unpublished activities, or to a new one you name on the spot. See [Activities](activities.md). |
-| 9 | **Quick replication** | Creates an activity with this single LEIA, publishes it, creates a replication in the Workbench and opens that replication in a new tab. The activity and the replication get the name of the LEIA. The fastest way from a LEIA to a class. |
+| 9 | **Quick replication** | Creates an activity with this single LEIA, creates a replication in the Workbench and opens that replication in a new tab. The activity and the replication get the name of the LEIA. The activity is published only when an administrator does it. The fastest way from a LEIA to a class. |
 | 10 | **Delete** | Removes the LEIA after you type its name. Refused while an activity uses it. |
 
 If a quick replication fails because an activity with that name already exists, a dialog named **Replicate activity** proposes the same name with the suffix `-v2`. Change it if you like and press **Replicate**.

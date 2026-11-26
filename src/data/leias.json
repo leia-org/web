@@ -1,7 +1,7 @@
 [
     {
         "name": "LEIA Voice Mode",
-        "description": "You can interact with the LEIA using your own voice! Just click the microphone button and start talking. LEIA will listen to your commands and respond accordingly, making it easier to use while coding or when your hands are busy. Try coding with it!",
+        "description": "You can talk to the LEIA with your own voice! Close the instructions, start speaking and the LEIA answers aloud, which is handy while your hands are on the keyboard. Try the Python loops tutor in voice mode!",
         "image": "/leias_images/Leia_voice_mode.png",
         "link": "https://workbench.leia.ovh/?code=RMW20MAYDU12EJGQF&email=_test_demo"
     },
@@ -13,13 +13,13 @@
     },
     {
         "name": "LEIA Requirements Elicitation",
-        "description": "There's a LEIA that helps you gather requirements for your software projects. You can model your requirements directly on our platform, and LEIA will review them, correct them, and explain any flaws it finds.",
+        "description": "A LEIA can play the client of a software project. Interview them to discover the requirements, draw your model on the platform and get it graded automatically, with feedback on what is missing.",
         "image": "/leias_images/Requirements_elicitation.png",
         "link": "https://workbench.leia.ovh/?code=RMW1ZMJVYSGWUUZCD&email=_test_demo"
     },
     {
         "name": "LEIA Game Mode",
-        "description": "You can play games with the LEIA! Whether it's a trivia quiz or a finding a word game, the LEIA is ready to challenge you and have fun together.",
+        "description": "You can play games with the LEIA! In the secret word game, Timmy thinks of a word and you guess it by asking questions he can only answer with yes or no.",
         "image": "/leias_images/Leia_game_mode.png",
         "link": "https://workbench.leia.ovh/?code=RMW20H00NP1G9OO5G&email=_test_demo"
     }

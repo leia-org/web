@@ -34,6 +34,20 @@ LEIA (Learning with an Educational Intelligent Assistant) is a platform that let
 
 This page gives the big picture. The [Teacher guide](../teachers/index.md) explains every screen, button and field, and the [Tutorials](../tutorials/create-leia/index.md) walk through complete examples. For questions and problems, join [LEIA Community on Telegram](https://t.me/leia_community). See [Help and support](../support.md).
 
+This one-minute video shows the whole cycle with short clips from the other videos of this documentation: designing a LEIA with the AI assistant, adding a code editor, building an activity, replicating it, a student session, the supervisor and the results. It has no sound.
+
+<video
+  controls
+  muted
+  playsInline
+  preload="metadata"
+  width="100%"
+  poster={require('../img/introduction/leia-in-one-minute-poster.webp').default}
+  aria-label="Video: LEIA in one minute, from designing a LEIA to grading the results">
+  <source src={require('../img/introduction/leia-in-one-minute.mp4').default} type="video/mp4" />
+  Your browser cannot play this video.
+</video>
+
 ---
 
 ## 1. General Workflow
@@ -46,7 +60,7 @@ The workflow of LEIA has five steps.
    - Defines the problem, including the expected solution and how it is evaluated.
    - Chooses or customises the persona the students will talk to, with its personality traits.
 2. **The instructor prepares an activity and a replication.**
-   - Groups one or more LEIAs in an activity and publishes it.
+   - Groups one or more LEIAs in an activity.
    - Creates a replication in the Workbench with a join code and operational settings, time limit, repeatable sessions, language, model and voice.
    - Optionally enables the automatic evaluation and a supervisor that watches the conversations.
 3. **Students join the activity** with the code and an email address, no account needed.
@@ -85,7 +99,7 @@ A LEIA can be tested from the Designer before any student sees it, and it stays 
 
 ### Activities and replications
 
-Published activities are replicated in the [LEIA Workbench](https://workbench.leia.ovh/). A replication has its own code, links and switches.
+Activities are replicated in the [LEIA Workbench](https://workbench.leia.ovh/). A replication has its own code, links and switches.
 
 ![Replication settings](../img/teachers/replication-settings/01-general-links.webp)
 
